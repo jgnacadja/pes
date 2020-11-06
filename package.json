@@ -11,6 +11,7 @@
     "axios": "^0.21.0",
     "buefy": "^0.9.4",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-algolia": "^2.1.4",
     "klaro-gridsome": "^1.0.3",
     "vue-disqus": "^4.0.1",
     "vue-infinite-loading": "^2.4.5",
