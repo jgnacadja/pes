@@ -16,6 +16,7 @@ module.exports = {
 
   plugins: [
     googleAnalytics,
+    algolia,
     klaro,
   ],
 };
