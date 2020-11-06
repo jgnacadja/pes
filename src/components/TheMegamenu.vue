@@ -183,7 +183,7 @@
       >
         <div class="column">
           <div
-            class="columns is-variable is-mobile is-vcentered is-centered is-marginless"
+            class="columns is-variable is-mobile is-vcentered is-centered is-marginless iswrapping"
           >
             <b-navbar-dropdown
               label="Qui sommes-nous?"
@@ -393,7 +393,7 @@ div.navbar-item.has-dropdown.is-mega.is-active {
 
 @media only screen and (min-width: 1024px) {
   .navbar.is-primary {
-    height: 4em;
+    height: 6em;
   }
 
   .studbrand {
@@ -403,6 +403,11 @@ div.navbar-item.has-dropdown.is-mega.is-active {
   .submenuitem {
     padding: 0% !important;
   }
+
+  .iswrapping {
+    white-space: nowrap;
+  }
+
 }
 
 @media only screen and (min-width: 769px) {
