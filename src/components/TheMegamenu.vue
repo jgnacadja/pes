@@ -431,6 +431,10 @@ div.navbar-item.has-dropdown.is-mega.is-active {
 }
 
 @media only screen and (min-width: 1024px) {
+  .submenuitem {
+    padding: 0% !important;
+  }
+
   .navbar.is-primary {
     height: 4em;
   }
@@ -487,10 +491,6 @@ div.navbar-item.has-dropdown.is-mega.is-active {
 
   .home-brand-slot-column {
     width: 15em !important;
-  }
-
-  .submenuitem {
-    padding: 0px !important;
   }
 }
 

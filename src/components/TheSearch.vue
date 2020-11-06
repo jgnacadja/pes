@@ -334,13 +334,9 @@ input.border-round {
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   .b-field {
     display: none;
-  }
-
-  .input-desktop {
-    margin-top: -3ex;
   }
 }
 
