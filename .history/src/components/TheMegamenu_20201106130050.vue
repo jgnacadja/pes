@@ -46,10 +46,16 @@
                 >Studely France</b-navbar-item
               >
 
-              <b-navbar-item tag="g-link" class="subitemchild" to=""
+              <b-navbar-item
+                tag="g-link"
+                class="subitemchild"
+                to=""
                 >Studely Cameroun</b-navbar-item
               >
-              <b-navbar-item tag="g-link" class="subitemchild" to=""
+              <b-navbar-item
+                tag="g-link"
+                class="subitemchild"
+                to=""
                 >Nos médias</b-navbar-item
               >
             </div>
@@ -107,10 +113,16 @@
                 class="subitemchild"
                 >Etudier en France</b-navbar-item
               >
-              <b-navbar-item tag="g-link" to="/parents/" class="subitemchild"
+              <b-navbar-item
+                tag="g-link"
+                to="/parents/"
+                class="subitemchild"
                 >Nos conseils</b-navbar-item
               >
-              <b-navbar-item tag="g-link" to="/parents/" class="subitemchild"
+              <b-navbar-item
+                tag="g-link"
+                to="/parents/"
+                class="subitemchild"
                 >Parents</b-navbar-item
               >
             </div>
@@ -141,7 +153,7 @@
                 tag="g-link"
                 class="subitemchild"
                 to="/partenaires/banque-assurance/"
-                >Banques & institutions financières</b-navbar-item
+                >Banques & Institutions financières</b-navbar-item
               >
             </div>
           </div>
@@ -232,7 +244,7 @@
                     class="subitemchild"
                     tag="g-link"
                     to="/nos-services/mon-compte-bancaire/"
-                    >Mon compte bancaire</b-navbar-item
+                    >Mon Compte bancaire</b-navbar-item
                   >
                   <b-navbar-item
                     class="subitemchild"
@@ -296,7 +308,7 @@
                     class="subitemchild"
                     tag="g-link"
                     to="/partenaires/banque-assurance/"
-                    >Banques & institutions financières</b-navbar-item
+                    >Banques & Institutions financières</b-navbar-item
                   >
                 </div>
               </div>
@@ -429,7 +441,7 @@ div.navbar-item.has-dropdown.is-mega.is-active {
 
 @media only screen and (min-width: 1024px) {
   .navbar.is-primary {
-    height: 4em;
+    height: 6em;
   }
 
   .studbrand {
