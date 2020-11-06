@@ -7,6 +7,18 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "gridsome": "^0.7.0"
+    "@gridsome/plugin-google-analytics": "^0.1.2",
+    "axios": "^0.21.0",
+    "buefy": "^0.9.4",
+    "gridsome": "^0.7.0",
+    "klaro-gridsome": "^1.0.3",
+    "vue-disqus": "^4.0.1",
+    "vue-infinite-loading": "^2.4.5",
+    "vue-instantsearch": "^3.4.2",
+    "vue-smooth-scrollbar": "^0.1.2"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.0.5"
   }
 }

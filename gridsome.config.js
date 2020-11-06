@@ -15,15 +15,7 @@ module.exports = {
   siteDescription: "Premier service financier dédié aux étudiants en mobilité vers la France : justification des ressources financières, logement étudiant, compte bancaire, assurances complètes",
 
   plugins: [
-    algolia,
-    contentful,
     googleAnalytics,
     klaro,
-    googleTM
   ],
-  templates: {
-    ContentfulPost: "/article/:title",
-    ContentfulCategory: "/category/:title",
-    ContentfulTag: "/tag/:title"
-  }
 };
