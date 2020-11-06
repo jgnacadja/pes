@@ -441,7 +441,7 @@ div.navbar-item.has-dropdown.is-mega.is-active {
 
 @media only screen and (min-width: 1024px) {
   .navbar.is-primary {
-    height: 6em;
+    height: 4em;
   }
 
   .studbrand {
