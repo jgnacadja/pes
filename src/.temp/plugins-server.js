@@ -1,5 +1,5 @@
-import plugin_gridsome_plugin_google_analytics_5 from "/home/rintio_pc1/Documents/studely-filliale/node_modules/@gridsome/plugin-google-analytics/gridsome.client.js"
-import plugin_klaro_gridsome_7 from "/home/rintio_pc1/Documents/studely-filliale/node_modules/klaro-gridsome/gridsome.client.js"
+import plugin_gridsome_plugin_google_analytics_5 from "/var/www/studely-filliale/node_modules/@gridsome/plugin-google-analytics/gridsome.client.js"
+import plugin_klaro_gridsome_7 from "/var/www/studely-filliale/node_modules/klaro-gridsome/gridsome.client.js"
 
 export default [
   {
