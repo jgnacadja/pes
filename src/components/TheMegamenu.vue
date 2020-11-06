@@ -41,15 +41,21 @@
             <div class="column is-2-desktop is-12-mobile">
               <b-navbar-item
                 tag="g-link"
-                class="is-mega-menu-title"
+                class="subitemchild"
                 to="/etudier-en-france/"
                 >Studely France</b-navbar-item
               >
 
-              <b-navbar-item tag="g-link" class="is-mega-menu-title" to=""
+              <b-navbar-item
+                tag="g-link"
+                class="subitemchild"
+                to=""
                 >Studely Cameroun</b-navbar-item
               >
-              <b-navbar-item tag="g-link" class="is-mega-menu-title" to=""
+              <b-navbar-item
+                tag="g-link"
+                class="subitemchild"
+                to=""
                 >Nos médias</b-navbar-item
               >
             </div>
@@ -68,25 +74,25 @@
               <b-navbar-item
                 tag="g-link"
                 to="/nos-services/ma-caution-bancaire/"
-                class="is-mega-menu-title"
+                class="subitemchild"
                 >Ma caution bancaire</b-navbar-item
               >
               <b-navbar-item
                 tag="g-link"
                 to="/nos-services/mon-logement/"
-                class="is-mega-menu-title"
+                class="subitemchild"
                 >Mon logement étudiant</b-navbar-item
               >
               <b-navbar-item
                 tag="g-link"
-                class="is-mega-menu-title"
+                class="subitemchild"
                 to="/nos-services/mon-compte-bancaire/"
                 >Mon compte bancaire</b-navbar-item
               >
               <b-navbar-item
                 tag="g-link"
                 to="/nos-services/mon-assurance/"
-                class="is-mega-menu-title"
+                class="subitemchild"
                 >Mon assurance</b-navbar-item
               >
             </div>
@@ -104,19 +110,19 @@
               <b-navbar-item
                 tag="g-link"
                 to="/etudier-en-france/"
-                class="is-mega-menu-title"
+                class="subitemchild"
                 >Etudier en France</b-navbar-item
               >
               <b-navbar-item
                 tag="g-link"
                 to="/parents/"
-                class="is-mega-menu-title"
+                class="subitemchild"
                 >Nos conseils</b-navbar-item
               >
               <b-navbar-item
                 tag="g-link"
                 to="/parents/"
-                class="is-mega-menu-title"
+                class="subitemchild"
                 >Parents</b-navbar-item
               >
             </div>
@@ -133,19 +139,19 @@
             <div class="column is-2-desktop is-12-mobile">
               <b-navbar-item
                 tag="g-link"
-                class="is-mega-menu-title"
+                class="subitemchild"
                 to="/partenaires/ecole/"
                 >Nos écoles partenaires</b-navbar-item
               >
               <b-navbar-item
                 tag="g-link"
-                class="is-mega-menu-title"
+                class="subitemchild"
                 to="/partenaires/immobilier/"
                 >Partenaires immobiliers</b-navbar-item
               >
               <b-navbar-item
                 tag="g-link"
-                class="is-mega-menu-title"
+                class="subitemchild"
                 to="/partenaires/banque-assurance/"
                 >Banques & Institutions financières</b-navbar-item
               >
@@ -161,16 +167,22 @@
           <div class="columns is-multiline">
             <div class="column is-3-desktop is-0-mobile"></div>
             <div class="column is-2-desktop is-12-mobile">
-              <b-navbar-item tag="g-link" class="is-mega-menu-title" to=""
+              <b-navbar-item
+                tag="g-link"
+                class="subitemchild is-mega-menu-title"
+                to=""
                 >Service client</b-navbar-item
               >
-              <b-navbar-item tag="g-link" to="" class="is-mega-menu-title"
+              <b-navbar-item
+                tag="g-link"
+                to=""
+                class="subitemchild is-mega-menu-title"
                 >Devenir partenaire</b-navbar-item
               >
               <b-navbar-item
                 tag="g-link"
                 to="/on-recrute/"
-                class="is-mega-menu-title"
+                class="subitemchild is-mega-menu-title"
                 >Carrières</b-navbar-item
               >
             </div>
@@ -192,14 +204,19 @@
             >
               <div class="columns is-multiline">
                 <div class="column is-2-desktop is-12-mobile">
-                  <b-navbar-item tag="g-link" to="/etudier-en-france/"
+                  <b-navbar-item
+                    class="subitemchild"
+                    tag="g-link"
+                    to="/etudier-en-france/"
                     >Studely France</b-navbar-item
                   >
 
-                  <b-navbar-item tag="g-link" to=""
+                  <b-navbar-item class="subitemchild" tag="g-link" to=""
                     >Studely Cameroun</b-navbar-item
                   >
-                  <b-navbar-item tag="g-link" to="">Nos médias</b-navbar-item>
+                  <b-navbar-item class="subitemchild" tag="g-link" to=""
+                    >Nos médias</b-navbar-item
+                  >
                 </div>
               </div>
             </b-navbar-dropdown>
@@ -212,19 +229,27 @@
               <div class="columns is-multiline">
                 <div class="column is-2-desktop is-12-mobile">
                   <b-navbar-item
+                    class="subitemchild"
                     tag="g-link"
                     to="/nos-services/ma-caution-bancaire/"
                     >Ma caution bancaire</b-navbar-item
                   >
-                  <b-navbar-item tag="g-link" to="/nos-services/mon-logement/"
+                  <b-navbar-item
+                    class="subitemchild"
+                    tag="g-link"
+                    to="/nos-services/mon-logement/"
                     >Mon logement étudiant</b-navbar-item
                   >
                   <b-navbar-item
+                    class="subitemchild"
                     tag="g-link"
                     to="/nos-services/mon-compte-bancaire/"
                     >Mon Compte bancaire</b-navbar-item
                   >
-                  <b-navbar-item tag="g-link" to="/nos-services/mon-assurance/"
+                  <b-navbar-item
+                    class="subitemchild"
+                    tag="g-link"
+                    to="/nos-services/mon-assurance/"
                     >Mon assurance</b-navbar-item
                   >
                 </div>
@@ -238,13 +263,22 @@
             >
               <div class="columns is-multiline">
                 <div class="column is-2-desktop is-12-mobile">
-                  <b-navbar-item tag="g-link" to="/etudier-en-france/"
+                  <b-navbar-item
+                    class="subitemchild"
+                    tag="g-link"
+                    to="/etudier-en-france/"
                     >Etudier en France</b-navbar-item
                   >
-                  <b-navbar-item tag="g-link" to="/parents/"
+                  <b-navbar-item
+                    class="subitemchild"
+                    tag="g-link"
+                    to="/parents/"
                     >Nos conseils</b-navbar-item
                   >
-                  <b-navbar-item tag="g-link" to="/parents/"
+                  <b-navbar-item
+                    class="subitemchild"
+                    tag="g-link"
+                    to="/parents/"
                     >Parents</b-navbar-item
                   >
                 </div>
@@ -258,13 +292,20 @@
             >
               <div class="columns is-multiline">
                 <div class="column is-2-desktop is-12-mobile">
-                  <b-navbar-item tag="g-link" to="/partenaires/ecole/"
+                  <b-navbar-item
+                    class="subitemchild"
+                    tag="g-link"
+                    to="/partenaires/ecole/"
                     >Nos écoles partenaires</b-navbar-item
                   >
-                  <b-navbar-item tag="g-link" to="/partenaires/immobilier/"
+                  <b-navbar-item
+                    class="subitemchild"
+                    tag="g-link"
+                    to="/partenaires/immobilier/"
                     >Partenaires immobiliers</b-navbar-item
                   >
                   <b-navbar-item
+                    class="subitemchild"
                     tag="g-link"
                     to="/partenaires/banque-assurance/"
                     >Banques & Institutions financières</b-navbar-item
@@ -280,13 +321,16 @@
             >
               <div class="columns is-multiline">
                 <div class="column is-2-desktop is-12-mobile">
-                  <b-navbar-item tag="g-link" to=""
+                  <b-navbar-item class="subitemchild" tag="g-link" to=""
                     >Service client</b-navbar-item
                   >
-                  <b-navbar-item tag="g-link" to=""
+                  <b-navbar-item class="subitemchild" tag="g-link" to=""
                     >Devenir partenaire</b-navbar-item
                   >
-                  <b-navbar-item tag="g-link" to="/on-recrute/"
+                  <b-navbar-item
+                    class="subitemchild"
+                    tag="g-link"
+                    to="/on-recrute/"
                     >Carrières</b-navbar-item
                   >
                 </div>
@@ -301,7 +345,7 @@
       <div
         class="columns is-variable is-mobile is-centered has-text-centered has-background-success is-marginless is-paddingless"
       >
-        <b-navbar-item href="https://espace.studely.com">
+        <b-navbar-item class="subitemchild" href="https://espace.studely.com">
           <div
             class="columns is-multiline has-text-white is-marginless is-paddingless is-centered has-text-centered"
           >
@@ -387,8 +431,12 @@ div.navbar-item.has-dropdown.is-mega.is-active {
   }
 }
 
-.navbar-item {
+.submenuitem {
   font-weight: bold;
+}
+
+.subitemchild {
+  font-weight: lighter;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -399,15 +447,14 @@ div.navbar-item.has-dropdown.is-mega.is-active {
   .studbrand {
     padding: 12%;
   }
-
+  /* 
   .submenuitem {
     padding: 0% !important;
-  }
+  } */
 
   .iswrapping {
     white-space: nowrap;
   }
-
 }
 
 @media only screen and (min-width: 769px) {
@@ -480,11 +527,19 @@ div.navbar-item.has-dropdown.is-mega.is-active {
   .home-brand-slot-column-mobile {
     width: 12em;
   }
+
+  .subitemchild {
+    font-weight: lighter !important;
+  }
 }
 
 @media only screen and (min-width: 415px) and (max-width: 768px) {
   .home-brand-slot-column-mobile {
     width: 18em;
+  }
+
+  .subitemchild {
+    font-weight: lighter !important;
   }
 }
 
