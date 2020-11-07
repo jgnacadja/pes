@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.2",
+    "@gridsome/source-contentful": "^0.6.0",
     "axios": "^0.21.0",
+    "babel-runtime": "^6.26.0",
     "buefy": "^0.9.4",
     "gridsome": "^0.7.0",
     "gridsome-plugin-algolia": "^2.1.4",
@@ -16,6 +18,7 @@
     "vue-disqus": "^4.0.1",
     "vue-infinite-loading": "^2.4.5",
     "vue-instantsearch": "^3.4.2",
+    "vue-markdown": "^2.2.4",
     "vue-smooth-scrollbar": "^0.1.2"
   },
   "devDependencies": {
