@@ -185,7 +185,7 @@
               collapsible
             >
               <div class="columns is-multiline">
-                <div class="column is-2-desktop is-12-mobile">
+                <div class="column is-12-desktop is-12-mobile">
                   <b-navbar-item
                     class="subitemchild"
                     tag="g-link"
@@ -209,7 +209,7 @@
               collapsible
             >
               <div class="columns is-multiline">
-                <div class="column is-2-desktop is-12-mobile">
+                <div class="column is-12-desktop is-12-mobile">
                   <b-navbar-item
                     class="subitemchild"
                     tag="g-link"
@@ -244,7 +244,7 @@
               collapsible
             >
               <div class="columns is-multiline">
-                <div class="column is-2-desktop is-12-mobile">
+                <div class="column is-12-desktop is-12-mobile">
                   <b-navbar-item
                     class="subitemchild"
                     tag="g-link"
@@ -273,7 +273,7 @@
               collapsible
             >
               <div class="columns is-multiline">
-                <div class="column is-2-desktop is-12-mobile">
+                <div class="column is-12-desktop is-12-mobile">
                   <b-navbar-item
                     class="subitemchild"
                     tag="g-link"
@@ -302,7 +302,7 @@
               collapsible
             >
               <div class="columns is-multiline">
-                <div class="column is-2-desktop is-12-mobile">
+                <div class="column is-12-desktop is-12-mobile">
                   <b-navbar-item class="subitemchild" tag="g-link" to=""
                     >Service client</b-navbar-item
                   >
