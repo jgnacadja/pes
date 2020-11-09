@@ -44,14 +44,12 @@
               </b-navbar-item>
             </div>
             <div class="column is-narrow">
-              <b-navbar-item
-                href="https://www.linkedin.com/company/linkedindestudely/"
-              >
+              <b-navbar-item href="https://www.instagram.com/studelyofficiel/">
                 <b-icon
                   pack="fab"
-                  icon="linkedin-in"
+                  icon="instagram"
                   size="is-small"
-                  type="is-black"
+                  :type="typemedia"
                 />
               </b-navbar-item>
             </div>
@@ -212,11 +210,11 @@
                 </div>
                 <div class="column is-narrow is-paddingless">
                   <b-navbar-item
-                    href="https://www.linkedin.com/company/linkedindestudely/"
+                    href="https://www.instagram.com/studelyofficiel/"
                   >
                     <b-icon
                       pack="fab"
-                      icon="linkedin-in"
+                      icon="instagram"
                       size="is-small"
                       :type="typemedia"
                     />
