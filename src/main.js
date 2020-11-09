@@ -12,7 +12,7 @@ import SmoothScrollbar from "vue-smooth-scrollbar";
 import InstantSearch from "vue-instantsearch";
 import Axios from "axios";
 
-export default function (Vue, { router, head, isClient }) {
+export default function(Vue, { router, head, isClient }) {
   // Add attributes to HTML tag
   head.htmlAttrs = { lang: "fr" };
 
@@ -66,5 +66,4 @@ export default function (Vue, { router, head, isClient }) {
   Vue.use(SmoothScrollbar);
 
   Vue.use(InstantSearch);
-
 }
