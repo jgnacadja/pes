@@ -32,8 +32,10 @@
     <template slot="start" wrapper-class="column is-12">
       <div class="is-hidden-desktop">
         <div class="column is-narrow is-paddingless">
-          <div class="columns is-variable is-mobile is-centered">
-            <div class="column is-narrow">
+          <div
+            class="columns is-variable is-mobile has-text-centered is-centered"
+          >
+            <div class="column">
               <b-navbar-item href="https://www.facebook.com/StudelyFrance/">
                 <b-icon
                   pack="fab"
@@ -43,13 +45,13 @@
                 />
               </b-navbar-item>
             </div>
-            <div class="column is-narrow">
+            <div class="column">
               <b-navbar-item href="https://www.instagram.com/studelyofficiel/">
                 <b-icon
                   pack="fab"
                   icon="instagram"
                   size="is-small"
-                  :type="typemedia"
+                  type="is-black"
                 />
               </b-navbar-item>
             </div>
