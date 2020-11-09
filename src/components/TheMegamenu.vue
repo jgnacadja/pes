@@ -568,11 +568,6 @@ div.navbar-item.has-dropdown.is-mega.is-active {
   .subitemchild {
     font-weight: lighter !important;
   }
-
-  .navbar-item {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-  }
 }
 
 @media only screen and (min-width: 415px) and (max-width: 768px) {
