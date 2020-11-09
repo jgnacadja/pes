@@ -180,6 +180,10 @@ section.container {
   height: 4em;
 }
 
+.subitemchild:hover {
+  font-weight: bold;
+}
+
 .subitemchild:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
