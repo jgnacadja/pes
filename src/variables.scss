@@ -219,3 +219,9 @@ section.container {
   width: 100%;
   left: 0;
 }
+
+@media only screen and (max-width: 768px) {
+  .navbar-link {
+    padding-top: 6% !important;
+  }
+}
