@@ -60,7 +60,7 @@
 
         <b-navbar-dropdown
           label="Qui sommes-nous ?"
-          class="column is-mega is-paddingless"
+          class="column is-mega sub-navbar"
           collapsible
         >
           <div class="columns is-multiline">
@@ -85,7 +85,7 @@
 
         <b-navbar-dropdown
           label="Nos services"
-          class="column is-mega is-paddingless"
+          class="column is-mega sub-navbar"
           collapsible
         >
           <div class="columns is-multiline">
@@ -122,7 +122,7 @@
 
         <b-navbar-dropdown
           label="Etudier en France"
-          class="column is-mega is-paddingless"
+          class="column is-mega sub-navbar"
           collapsible
         >
           <div class="columns is-multiline">
@@ -144,7 +144,11 @@
           </div>
         </b-navbar-dropdown>
 
-        <b-navbar-dropdown label="Nos partenaires" class="column" collapsible>
+        <b-navbar-dropdown
+          label="Nos partenaires"
+          class="column is-mega sub-navbar"
+          collapsible
+        >
           <div class="columns is-multiline is-paddingless">
             <div class="column is-3-desktop is-0-mobile is-paddingless"></div>
             <div class="column is-2-desktop is-12-mobile is-paddingless">
@@ -170,7 +174,11 @@
           </div>
         </b-navbar-dropdown>
 
-        <b-navbar-dropdown label="Contactez-nous" class="column" collapsible>
+        <b-navbar-dropdown
+          label="Contactez-nous"
+          class="column is-mega sub-navbar"
+          collapsible
+        >
           <div class="columns is-multiline">
             <div class="column is-3-desktop is-0-mobile"></div>
             <div class="column is-2-desktop is-12-mobile">
