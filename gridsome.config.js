@@ -12,10 +12,18 @@ const googleTM = require("./plugin.googleTM");
 
 module.exports = {
   siteName: "Studely",
-  siteDescription: "Premier service financier dédié aux étudiants en mobilité vers la France : justification des ressources financières, logement étudiant, compte bancaire, assurances complètes",
+  siteDescription:
+    "Premier service financier dédié aux étudiants en mobilité vers la France : justification des ressources financières, logement étudiant, compte bancaire, assurances complètes",
 
   plugins: [
+    algolia,
+    contentful,
     googleAnalytics,
-    klaro,
+    klaro
   ],
+  templates: {
+    ContentfulPost: "/article/:title",
+    ContentfulCategory: "/category/:title",
+    ContentfulTag: "/tag/:title",
+  },
 };

@@ -31,36 +31,9 @@
 
     <template slot="start" wrapper-class="column is-12">
       <div class="is-hidden-desktop">
-        <div class="column is-narrow is-paddingless">
-          <div
-            class="columns is-variable is-mobile has-text-centered is-centered"
-          >
-            <div class="column">
-              <b-navbar-item href="https://www.facebook.com/StudelyFrance/">
-                <b-icon
-                  pack="fab"
-                  icon="facebook"
-                  size="is-small"
-                  type="is-black"
-                />
-              </b-navbar-item>
-            </div>
-            <div class="column">
-              <b-navbar-item href="https://www.instagram.com/studelyofficiel/">
-                <b-icon
-                  pack="fab"
-                  icon="instagram"
-                  size="is-small"
-                  type="is-black"
-                />
-              </b-navbar-item>
-            </div>
-          </div>
-        </div>
-
         <b-navbar-dropdown
           label="Qui sommes-nous ?"
-          class="column is-mega sub-navbar"
+          class="column is-mega"
           collapsible
         >
           <div class="columns is-multiline">
@@ -85,7 +58,7 @@
 
         <b-navbar-dropdown
           label="Nos services"
-          class="column is-mega sub-navbar"
+          class="column is-mega"
           collapsible
         >
           <div class="columns is-multiline">
@@ -122,7 +95,7 @@
 
         <b-navbar-dropdown
           label="Etudier en France"
-          class="column is-mega sub-navbar"
+          class="column is-mega"
           collapsible
         >
           <div class="columns is-multiline">
@@ -146,12 +119,12 @@
 
         <b-navbar-dropdown
           label="Nos partenaires"
-          class="column is-mega sub-navbar"
+          class="column is-mega"
           collapsible
         >
-          <div class="columns is-multiline is-paddingless">
-            <div class="column is-3-desktop is-0-mobile is-paddingless"></div>
-            <div class="column is-2-desktop is-12-mobile is-paddingless">
+          <div class="columns is-multiline">
+            <div class="column is-3-desktop is-0-mobile"></div>
+            <div class="column is-2-desktop is-12-mobile">
               <b-navbar-item
                 tag="g-link"
                 class="subitemchild"
@@ -176,27 +149,33 @@
 
         <b-navbar-dropdown
           label="Contactez-nous"
-          class="column is-mega sub-navbar"
+          class="column is-mega"
           collapsible
         >
           <div class="columns is-multiline">
             <div class="column is-3-desktop is-0-mobile"></div>
             <div class="column is-2-desktop is-12-mobile">
-              <b-navbar-item tag="g-link" class="subitemchild" to=""
+              <b-navbar-item
+                tag="g-link"
+                class="subitemchild is-mega-menu-title"
+                to=""
                 >Service client</b-navbar-item
               >
-              <b-navbar-item tag="g-link" to="" class="subitemchild"
+              <b-navbar-item
+                tag="g-link"
+                to=""
+                class="subitemchild is-mega-menu-title"
                 >Devenir partenaire</b-navbar-item
               >
-              <b-navbar-item tag="g-link" to="/on-recrute/" class="subitemchild"
+              <b-navbar-item
+                tag="g-link"
+                to="/on-recrute/"
+                class="subitemchild is-mega-menu-title"
                 >Carrières</b-navbar-item
               >
             </div>
           </div>
         </b-navbar-dropdown>
-        <div class="column is-mega">
-          <TheSearch />
-        </div>
       </div>
 
       <div
@@ -206,40 +185,13 @@
           <div
             class="columns is-variable is-mobile is-vcentered is-centered is-marginless iswrapping"
           >
-            <div class="column is-narrow social-medias">
-              <div class="columns is-variable is-mobile is-vcentered">
-                <div class="column is-narrow is-paddingless">
-                  <b-navbar-item href="https://www.facebook.com/StudelyFrance/">
-                    <b-icon
-                      pack="fab"
-                      icon="facebook"
-                      size="is-small"
-                      :type="typemedia"
-                    />
-                  </b-navbar-item>
-                </div>
-                <div class="column is-narrow is-paddingless">
-                  <b-navbar-item
-                    href="https://www.instagram.com/studelyofficiel/"
-                  >
-                    <b-icon
-                      pack="fab"
-                      icon="instagram"
-                      size="is-small"
-                      :type="typemedia"
-                    />
-                  </b-navbar-item>
-                </div>
-              </div>
-            </div>
-
             <b-navbar-dropdown
               label="Qui sommes-nous ?"
               class="column is-medium submenuitem"
               collapsible
             >
               <div class="columns is-multiline">
-                <div class="column is-12-desktop is-12-mobile">
+                <div class="column is-2-desktop is-12-mobile">
                   <b-navbar-item
                     class="subitemchild"
                     tag="g-link"
@@ -263,7 +215,7 @@
               collapsible
             >
               <div class="columns is-multiline">
-                <div class="column is-12-desktop is-12-mobile">
+                <div class="column is-2-desktop is-12-mobile">
                   <b-navbar-item
                     class="subitemchild"
                     tag="g-link"
@@ -298,7 +250,7 @@
               collapsible
             >
               <div class="columns is-multiline">
-                <div class="column is-12-desktop is-12-mobile">
+                <div class="column is-2-desktop is-12-mobile">
                   <b-navbar-item
                     class="subitemchild"
                     tag="g-link"
@@ -327,7 +279,7 @@
               collapsible
             >
               <div class="columns is-multiline">
-                <div class="column is-12-desktop is-12-mobile">
+                <div class="column is-2-desktop is-12-mobile">
                   <b-navbar-item
                     class="subitemchild"
                     tag="g-link"
@@ -356,7 +308,7 @@
               collapsible
             >
               <div class="columns is-multiline">
-                <div class="column is-12-desktop is-12-mobile">
+                <div class="column is-2-desktop is-12-mobile">
                   <b-navbar-item class="subitemchild" tag="g-link" to=""
                     >Service client</b-navbar-item
                   >
@@ -372,7 +324,6 @@
                 </div>
               </div>
             </b-navbar-dropdown>
-            <TheSearch />
           </div>
         </div>
       </div>
@@ -404,10 +355,7 @@
 </template>
 
 <script scoped>
-import TheSearch from "~/components/TheSearch.vue";
-
 export default {
-  components: { TheSearch },
   data() {
     return {
       typeNavbar: "is-primary",
@@ -479,16 +427,7 @@ div.navbar-item.has-dropdown.is-mega.is-active {
   font-weight: lighter;
 }
 
-.navbar-dropdown {
-  font-size: 0.875rem;
-  padding-bottom: 5.5rem !important;
-}
-
 @media only screen and (min-width: 1024px) {
-  .submenuitem {
-    padding: 0% !important;
-  }
-
   .navbar.is-primary {
     height: 4em;
   }
@@ -546,6 +485,10 @@ div.navbar-item.has-dropdown.is-mega.is-active {
   .home-brand-slot-column {
     width: 15em !important;
   }
+
+  .submenuitem {
+    padding: 0px !important;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -585,12 +528,6 @@ div.navbar-item.has-dropdown.is-mega.is-active {
 
   .subitemchild {
     font-weight: lighter !important;
-  }
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1600px) {
-  .social-medias {
-    display: none !important;
   }
 }
 
