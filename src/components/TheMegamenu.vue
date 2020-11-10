@@ -208,7 +208,7 @@
           >
             <div class="column is-narrow social-medias">
               <div class="columns is-variable is-mobile is-vcentered">
-                <div class="column is-narrow is-paddingless">
+                <div class="column is-narrow paddingless-right">
                   <b-navbar-item href="https://www.facebook.com/StudelyFrance/">
                     <b-icon
                       pack="fab"
@@ -218,7 +218,7 @@
                     />
                   </b-navbar-item>
                 </div>
-                <div class="column is-narrow is-paddingless">
+                <div class="column is-narrow paddingless-left">
                   <b-navbar-item
                     href="https://www.instagram.com/studelyofficiel/"
                   >
@@ -433,6 +433,14 @@ if (typeof window !== "undefined") {
 
 <style scoped lang="scss">
 @import "../variables.scss";
+
+.paddingless-left {
+  padding-left: 0% !important;
+}
+
+.paddingless-right {
+  padding-right: 0% !important;
+}
 
 .mon-espace {
   background-color: #48c774;

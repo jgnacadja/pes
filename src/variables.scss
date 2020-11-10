@@ -26,6 +26,10 @@ $body-family: $family-secondary;
 
 $variable-columns: false;
 
+body {
+  font-display: swap;
+}
+
 .column {
   padding: 0.75rem !important;
 }
@@ -42,11 +46,13 @@ h1,
 .fig-title,
 .title {
   font-family: $family-sans-serif;
+  font-display: swap;
 }
 
 h1,
 h2 {
   font-family: $family-sans-serif;
+  font-display: swap;
 }
 h2,
 .subtitle {
@@ -88,6 +94,7 @@ section.container {
   text-align: center;
   margin: auto;
   margin-top: 5.4rem;
+  font-display: swap;
 }
 
 .section-title {
@@ -95,6 +102,7 @@ section.container {
   font-weight: 700;
   line-height: 1.4rem;
   text-align: center;
+  font-display: swap;
 }
 
 .title-14 {
