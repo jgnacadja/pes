@@ -3,10 +3,58 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
 
     <section class="grid-services center-over-1920">
-      <video class="video-banner" playsinline autoplay muted loop>
-        <source src="video-banner.webm" type="video/webm" />
-        <source src="video-banner.mp4" type="video/mp4" />
-      </video>
+      <div
+        class="columns is-vcentered is-centered is-multiline has-text-centered"
+      >
+        <div class="column is-12 is-marginless is-paddingless">
+          <b-carousel
+            :arrow="arrow"
+            :arrow-both="arrowBoth"
+            :arrow-hover="arrowHover"
+            :icon-pack="iconPack"
+            :icon-prev="iconPrev"
+            :icon-next="iconNext"
+            :icon-size="iconSize"
+            :autoplay="true"
+            :interval="10000"
+            :pause-hover="false"
+          >
+            <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
+              <section
+                :class="`hero is-medium diapo has-text-white `"
+                :style="{ backgroundImage: `url('${carousel.image}')` }"
+              >
+                <div class="hero-body has-text-left">
+                  <div class="columns is-multiline has-text-left">
+                    <div class="column is-8 is-offset-1">
+                      <h1 class="title has-text-white">{{ carousel.title }}</h1>
+                    </div>
+                    <br />
+                    <div
+                      class="column is-offset-1 is-half-desktop is-12-mobile content-16"
+                    >
+                      {{ carousel.description }}
+                    </div>
+                    <div
+                      class="column column is-offset-1 is-half-desktop is-12-mobile content-16"
+                      v-if="carousel.button"
+                    >
+                      <b-button
+                        tag="a"
+                        :href="carousel.link"
+                        type="is-success"
+                        class="button-service is-large"
+                      >
+                        <strong>{{ carousel.button }}</strong>
+                      </b-button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </b-carousel-item>
+          </b-carousel>
+        </div>
+      </div>
       <!--tablet -->
       <div
         class="columns is-multiline is-centered is-mobile is-hidden-mobile is-hidden-desktop"
@@ -127,55 +175,9 @@
                 </div>
               </div>
             </div>
-            <div class="column is-1 is-hidden-mobile">
-              <div class="columns is-multiline is-vcentered">
-                <div class="column is-12"></div>
-                <div class="column is-12"></div>
-                <div class="column is-12"></div>
-                <div class="column is-12"></div>
-                <div class="column is-12">
-                  <figure class="image">
-                    <g-image
-                      class="link-parent-partenaire"
-                      src="~/assets/index/ligne-parent-partenaire.svg"
-                      fit="inside"
-                    />
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="column is-3-desktop is-12-mobile">
-              <div class="columns is-multiline is-centered">
-                <div class="column is-12 temoignage-partenaire">
-                  <figure class="image is-3by2">
-                    <iframe
-                      class="has-ratio"
-                      src="https://www.youtube.com/embed/UEnTDdzXogQ"
-                      allowfullscreen
-                    ></iframe>
-                  </figure>
-                </div>
-                <div class="column is-12">
-                  <h2 class="is-spaced has-text-primary">Partenaires</h2>
-                </div>
-                <div class="column is-12 content-16">
-                  « ... des projets d'études, des projets de vie, la Banque
-                  Postale est là pour vous aider à les réaliser »
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="section container has-text-centered">
-      <h1 class="title has-text-primary">
-        Découvrez notre présence en Afrique
-      </h1>
-      <g-link to="/contactez-nous/">
-        <g-image src="~/assets/index/carte_pays.svg" />
-      </g-link>
     </section>
 
     <section class="section container has-text-centered">
@@ -315,6 +317,58 @@ export default {
           image: "/index-carousel-images/actu-cameroun.jpg",
         },
       ],
+
+      //Main carrousel
+
+      arrow: true,
+      arrowBoth: false,
+      arrowHover: false,
+      iconPack: "mdi",
+      iconPrev: "arrow-left",
+      iconNext: "arrow-right",
+      iconSize: "",
+      carousels: [
+        {
+          title: "L'art de vivre à la Française",
+          color: "info",
+          image: "/etudier-en-france/1.jpg",
+          description:
+            " Etudier en France c’est aller à la rencontre de « l’art de vivre à la française ». Une occasion pour les étudiants internationaux de découvrir une gastronomie mondialement reconnue, un patrimoine plein d’histoire et de profiter d’une offre culturelle riche et variée qui feront de votre séjour étudiant une expérience unique.",
+          button: "J'y souscris",
+          link: "https://espace.studely.com",
+        },
+        {
+          title:
+            "Une vie étudiante attractive dans un environnement international",
+          color: "success",
+          image: "/etudier-en-france/2.jpg",
+          description:
+            "L’enseignement supérieur français séduit de nombreux étudiants internationaux venus du monde entier, favorisant des rencontres uniques, multiculturelles et hautement enrichissantes.",
+        },
+
+        {
+          title: "L'excellence de l'offre de formations en France",
+          color: "warning",
+          image: "/etudier-en-france/3.jpg",
+          description:
+            "La France est mondialement reconnue pour la qualité de son enseignement supérieur. Elle est la première destination étudiante francophone au monde.",
+        },
+        {
+          title: "L’environnement favorable à la recherche et à l’innovation",
+          color: "info",
+          image: "/etudier-en-france/4.jpg",
+          description:
+            "Les étudiants peuvent compter sur un cadre privilégié pour mener à bien leurs projets innovants et profiter d'un réseau de recherche mondial et d’enseignants prisés.",
+        },
+        {
+          title:
+            "L'approfondissement d'une langue internationale : le français",
+          color: "success",
+          image: "/etudier-en-france/5.jpg",
+          description:
+            "Vous ne le saviez peut-être pas mais la langue française est la 5ème langue la plus parlée dans le monde, ainsi que le plus apprise après l’anglais. Elle est également la 3ème langue des affaires et la 2ème langue d’information internationale selon l'Organisation internationale de la Francophonie (OIF). Alors, pourquoi attendre venir étudier en France ?",
+        },
+      ],
     };
   },
 };
@@ -323,5 +377,18 @@ export default {
 <style>
 .home-links a {
   margin-right: 1rem;
+}
+
+.diapo {
+  min-height: 40em;
+  background-size: cover;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.content-16 {
+  font-size: 1.5em;
 }
 </style>
