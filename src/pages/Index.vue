@@ -8,6 +8,7 @@
       >
         <div class="column is-12 is-marginless is-paddingless">
           <b-carousel
+            :indicator="indicator"
             :arrow="arrow"
             :arrow-both="arrowBoth"
             :arrow-hover="arrowHover"
@@ -15,7 +16,7 @@
             :icon-prev="iconPrev"
             :icon-next="iconNext"
             :icon-size="iconSize"
-            :autoplay="true"
+            :autoplay="false"
             :interval="10000"
             :pause-hover="false"
           >
@@ -31,7 +32,7 @@
                     </div>
                     <br />
                     <div
-                      class="column is-offset-1 is-half-desktop is-12-mobile content-16"
+                      class="column is-offset-1 is-half-desktop is-12-mobile content-24 content-16"
                     >
                       {{ carousel.description }}
                     </div>
@@ -105,9 +106,9 @@
           </div>
         </div>
       </div>
-
-      <services />
     </section>
+
+    <services />
 
     <section class="section has-text-centered is-centered">
       <div class="columns is-multiline is-centered">
@@ -180,12 +181,19 @@
       </div>
     </section>
 
+    <section class="section container has-text-centered is-centered">
+      <h1 class="title has-text-primary">A propos de Studely Cameroun</h1>
+      <br />
+      <br />
+      <Apropos />
+    </section>
+
     <section class="section container has-text-centered">
       <h1 class="title has-text-primary">Studely, en quelques chiffres</h1>
       <br />
       <br />
       <div class="columns is-variable is-3 is-multiline is-centered">
-        <div class="column is-2">
+        <div class="column">
           <g-image src="~/assets/index/chiffres-cles/4000_1.svg" fit="inside" />
           <h2 class="title">+4000</h2>
           <h3 class="subtitle">
@@ -193,7 +201,10 @@
             <br />accompagnés
           </h3>
         </div>
-        <div class="column is-2">
+        <div class="is-hidden-touch mt-6">
+          <g-image src="~/assets/index/1.png" fit="inside" />
+        </div>
+        <div class="column">
           <g-image src="~/assets/index/chiffres-cles/91.svg" fit="inside" />
           <h2 class="title">91%</h2>
           <h3 class="subtitle">
@@ -201,7 +212,10 @@
             <br />concrétisés
           </h3>
         </div>
-        <div class="column is-2">
+        <div class="is-hidden-touch mt-6">
+          <g-image src="~/assets/index/2.png" fit="inside" />
+        </div>
+        <div class="column">
           <g-image src="~/assets/index/chiffres-cles/15.svg" fit="inside" />
           <h2 class="title">15</h2>
           <h3 class="subtitle">
@@ -209,7 +223,10 @@
             <br />sommes présents
           </h3>
         </div>
-        <div class="column is-2">
+        <div class="is-hidden-touch mt-6">
+          <g-image src="~/assets/index/3.png" fit="inside" />
+        </div>
+        <div class="column">
           <g-image src="~/assets/index/chiffres-cles/50.svg" fit="inside" />
           <h2 class="title">+50</h2>
           <h3 class="subtitle">
@@ -217,7 +234,10 @@
             <br />dans le monde
           </h3>
         </div>
-        <div class="column is-2">
+        <div class="is-hidden-touch mt-6">
+          <g-image src="~/assets/index/4.png" fit="inside" />
+        </div>
+        <div class="column">
           <g-image src="~/assets/index/chiffres-cles/30M.svg" fit="inside" />
           <h2 class="title">+30M</h2>
           <h3 class="subtitle">
@@ -270,11 +290,13 @@
 <script>
 import services from "~/components/services.vue";
 import Partner from "~/components/Partner.vue";
+import Apropos from "~/components/Apropos.vue";
 
 export default {
   components: {
     services,
     Partner,
+    Apropos,
   },
   metaInfo: {
     title: "Studely : Etudier en France en toute sérénité !",
@@ -320,53 +342,23 @@ export default {
 
       //Main carrousel
 
-      arrow: true,
+      arrow: false,
       arrowBoth: false,
       arrowHover: false,
       iconPack: "mdi",
       iconPrev: "arrow-left",
       iconNext: "arrow-right",
       iconSize: "",
+      indicator: false,
       carousels: [
         {
-          title: "L'art de vivre à la Française",
+          title: "Un projet d'études en France",
           color: "info",
-          image: "/etudier-en-france/1.jpg",
+          image: "/index/header.jpg",
           description:
-            " Etudier en France c’est aller à la rencontre de « l’art de vivre à la française ». Une occasion pour les étudiants internationaux de découvrir une gastronomie mondialement reconnue, un patrimoine plein d’histoire et de profiter d’une offre culturelle riche et variée qui feront de votre séjour étudiant une expérience unique.",
+            "Studely Cameroun m'accompagne dans toutes mes démarches post-admission.",
           button: "J'y souscris",
           link: "https://espace.studely.com",
-        },
-        {
-          title:
-            "Une vie étudiante attractive dans un environnement international",
-          color: "success",
-          image: "/etudier-en-france/2.jpg",
-          description:
-            "L’enseignement supérieur français séduit de nombreux étudiants internationaux venus du monde entier, favorisant des rencontres uniques, multiculturelles et hautement enrichissantes.",
-        },
-
-        {
-          title: "L'excellence de l'offre de formations en France",
-          color: "warning",
-          image: "/etudier-en-france/3.jpg",
-          description:
-            "La France est mondialement reconnue pour la qualité de son enseignement supérieur. Elle est la première destination étudiante francophone au monde.",
-        },
-        {
-          title: "L’environnement favorable à la recherche et à l’innovation",
-          color: "info",
-          image: "/etudier-en-france/4.jpg",
-          description:
-            "Les étudiants peuvent compter sur un cadre privilégié pour mener à bien leurs projets innovants et profiter d'un réseau de recherche mondial et d’enseignants prisés.",
-        },
-        {
-          title:
-            "L'approfondissement d'une langue internationale : le français",
-          color: "success",
-          image: "/etudier-en-france/5.jpg",
-          description:
-            "Vous ne le saviez peut-être pas mais la langue française est la 5ème langue la plus parlée dans le monde, ainsi que le plus apprise après l’anglais. Elle est également la 3ème langue des affaires et la 2ème langue d’information internationale selon l'Organisation internationale de la Francophonie (OIF). Alors, pourquoi attendre venir étudier en France ?",
         },
       ],
     };
@@ -388,7 +380,7 @@ export default {
   font-size: 3rem;
 }
 
-.content-16 {
-  font-size: 1.5em;
+.content-24 {
+  font-size: 2em;
 }
 </style>
