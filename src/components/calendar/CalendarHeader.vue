@@ -1,19 +1,11 @@
 <template>
-  <div class="single-date-picker__calendar-month-header">
-    <div class="single-date-picker__arrow left" @click="toggleMonth(-1)">
-      <b-icon
-        pack="fas"
-        icon="long-arrow-alt-left"
-        size="is-large"
-      />
+  <div class="single-date__calendar-month-header">
+    <div class="single-date__arrow left" @click="toggleMonth(-1)">
+      <b-icon pack="fas" icon="long-arrow-alt-left" size="is-large" />
     </div>
-    <div class="single-date-picker__year">{{ fullMonth }}.{{ year }}</div>
-    <div class="single-date-picker__arrow right" @click="toggleMonth(1)">
-      <b-icon
-        pack="fas"
-        icon="long-arrow-alt-right"
-        size="is-large"
-      />
+    <div class="single-date__year">{{ fullMonth }}.{{ year }}</div>
+    <div class="single-date__arrow right" @click="toggleMonth(1)">
+      <b-icon pack="fas" icon="long-arrow-alt-right" size="is-large" />
     </div>
   </div>
 </template>
@@ -62,22 +54,21 @@ b-icon {
   color: #1968ad;
 }
 
-.single-date-picker__calendar-month-header {
+.single-date__calendar-month-header {
   padding: 15px;
   display: flex;
   justify-content: space-between;
   border-radius: 10px 10px 0 0;
   align-items: center;
   color: #1968ad;
-  border-bottom: 2px;
-  border-bottom-color: #1867a9;
+  border-bottom: 3px solid #1b66a9;
 
-  .single-date-picker__year {
+  .single-date__year {
     font-weight: 900;
     font-size: 3em;
     text-transform: capitalize;
   }
-  .single-date-picker__arrow {
+  .single-date__arrow {
     cursor: pointer;
   }
 }

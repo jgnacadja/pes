@@ -86,7 +86,7 @@
               <span class="title main-box-title">Découvrez notre agenda</span>
             </div>
             <div class="column">
-              <CalendarView />
+              <Calendar />
             </div>
           </div>
         </div>
@@ -96,11 +96,11 @@
 </template>
 
 <script>
-import CalendarView from "~/components/calendar/CalendarView.vue";
+import Calendar from "~/components/calendar/Calendar.vue";
 
 export default {
   components: {
-    CalendarView,
+    Calendar,
   },
 };
 </script>
