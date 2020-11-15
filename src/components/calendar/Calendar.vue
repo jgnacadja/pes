@@ -13,7 +13,30 @@
   </div>
 </template>
 
+<static-query>
+query {
+  events: allContentfulEvent(order: DESC) {
+    edges {
+      node {
+        id
+        title
+        description
+        date
+        startTime
+        endTime
+        image {
+          file {
+            url
+          }
+        }
+      }
+    }
+  }
+}
+</static-query>
+
 <script>
+import moment from "moment";
 import CalendarHeader from "~/components/calendar/CalendarHeader.vue";
 import Event from "~/components/calendar/Event.vue";
 
@@ -95,7 +118,17 @@ export default {
         },
       ],
       currentEvents: [],
+      dates: [],
     };
+  },
+  mounted() {
+    // Array store only dates
+    for (var i = 0; i < this.$static.events.edges.length; i++) {
+      this.dates.push(
+        moment(this.$static.events.edges[i].node.date).format("MM/YYYY")
+      );
+    }
+    this.dates = [...new Set(this.dates)];
   },
   computed: {
     numDays() {
@@ -105,9 +138,11 @@ export default {
     isCurrentMonth() {
       return this.todayMonth === this.month;
     },
+
     isCurrentYear() {
       return this.todayYear === this.year;
     },
+
     isSelected() {
       if (this.selectedDate) {
         return this.selectedDate.year === this.year &&
@@ -119,9 +154,9 @@ export default {
     },
   },
   watch: {
-    date(val) {
+    /* date(val) {
       this.setDate(val);
-    },
+    }, */
   },
   created() {
     const date = new Date();
@@ -139,55 +174,220 @@ export default {
         : 0;
 
     this.currentYearEvents(this.mostRecentYear(), this.mostRecentMonth());
+
+    var latest = new Date(Math.max.apply(null, this.events));
   },
   methods: {
-    mostRecentYear() {
-      var recentYearEvent = this.events.sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    mostOlderYear() {
+      var olderYearEvent = this.$static.events.edges.sort(
+        (a, b) =>
+          new Date(a.node.date).getTime() - new Date(b.node.date).getTime()
       )[0];
-      return new Date(recentYearEvent.date).getFullYear();
+      return new Date(olderYearEvent.node.date).getFullYear();
+    },
+
+    mostOlderMonth() {
+      var olderYearEvent = this.$static.events.edges.sort(
+        (a, b) =>
+          new Date(a.node.date).getTime() - new Date(b.node.date).getTime()
+      )[0];
+      return new Date(olderYearEvent.node.date).getMonth();
+    },
+
+    mostRecentYear() {
+      var recentYearEvent = this.$static.events.edges.sort(
+        (a, b) =>
+          new Date(b.node.date).getTime() - new Date(a.node.date).getTime()
+      )[0];
+      return new Date(recentYearEvent.node.date).getFullYear();
     },
 
     mostRecentMonth() {
-      var recentYearEvent = this.events.sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      var recentYearEvent = this.$static.events.edges.sort(
+        (a, b) =>
+          new Date(b.node.date).getTime() - new Date(a.node.date).getTime()
       )[0];
-      return new Date(recentYearEvent.date).getMonth();
+      return new Date(recentYearEvent.node.date).getMonth();
     },
 
     currentYearEvents(currentY, currentM) {
-      var currentEventsByYear = this.events.filter(
-        ({ date }) => new Date(date).getFullYear() === currentY
+      var currentEventsByYear = this.$static.events.edges.filter(
+        (e) => new Date(e.node.date).getFullYear() === currentY
       );
 
       this.currentEvents = currentEventsByYear.filter(
-        ({ date }) => new Date(date).getMonth() === currentM
+        (e) => new Date(e.node.date).getMonth() === currentM
       );
     },
-    generateDatesInWeek(startDate, startDay, numDays) {
-      const datesInWeek = new Array(7).fill(0);
-      for (let i = 0; i < numDays; i += 1) {
-        datesInWeek[startDay + i] = startDate + i;
-      }
-      return datesInWeek;
+
+    currentYearEventsFilter(currentY, currentM) {
+      var currentEventsByYear = this.$static.events.edges.filter(
+        (e) => new Date(e.node.date).getFullYear() === currentY
+      );
+
+      return currentEventsByYear.filter(
+        (e) => new Date(e.node.date).getMonth() === currentM
+      );
     },
+
+    minusOneMonth(d) {
+      const month = d.getMonth();
+      d.setMonth(d.getMonth() - 1);
+      while (month === d.getMonth()) {
+        d.setDate(d.getDate() - 1);
+      }
+      return d;
+    },
+
+    plusOneMonth(d) {
+      const month = d.getMonth();
+      d.setMonth(d.getMonth() + 1);
+      while (month === d.getMonth()) {
+        d.setDate(d.getDate() + 1);
+      }
+      return d;
+    },
+
     toggleMonth(direction) {
+      let thismonth = this.month;
+      let thisyear = this.year;
+
       let newMonth = this.month + Number(direction);
       let newYear = this.year;
+
+      if (direction === 1) {
+        thismonth += 2;
+        if (thismonth < 0) {
+          thismonth = 1;
+          thisyear += 1;
+        }
+
+        if (thismonth > 11) {
+          if (thismonth > 12) {
+            thismonth = 1;
+            thisyear += 1;
+          } else {
+            thismonth = 12;
+          }
+        }
+      } else {
+        if (thismonth <= 0) {
+          thismonth = 12;
+          thisyear -= 1;
+        }
+
+        if (thismonth > 11) {
+          if (thismonth > 12) {
+            thismonth = 1;
+            thisyear += 1;
+          } else {
+            thismonth = 12;
+          }
+        }
+      }
+
       if (newMonth < 0) {
         newMonth = 11;
         newYear -= 1;
       }
+
       if (newMonth > 11) {
         newMonth = 0;
         newYear += 1;
       }
-      if (newYear >= 1970) {
-        this.month = newMonth;
-        this.year = newYear;
-        this.currentYearEvents(this.year, this.month);
+
+      var beforedates = this.dates.filter(function (d) {
+        return (
+          new Date("01/" + d) - new Date("01/" + thismonth + "/" + thisyear) < 0
+        );
+      });
+
+      var afterdates = this.dates.filter(function (d) {
+        return (
+          new Date("01/" + d) - new Date("01/" + thismonth + "/" + thisyear) > 0
+        );
+      });
+
+      var date;
+
+      if (direction === 1) {
+        date = afterdates[afterdates.length - 1];
+      } else {
+        date = beforedates[0];
+      }
+
+      if (date === undefined) {
+        if (
+          (thismonth + "/" + thisyear).toString() !==
+            moment(
+              new Date(
+                new Date(
+                  moment("01/" + this.dates[0]).format("YYYY/DD/MM")
+                ).setMonth(
+                  new Date(
+                    moment("01/" + this.dates[0]).format("YYYY/DD/MM")
+                  ).getMonth() + 1
+                )
+              )
+            )
+              .format("MM/YYYY")
+              .toString() &&
+          (thismonth + "/" + thisyear).toString() !==
+            moment(
+              new Date(
+                new Date(
+                  moment("01/" + this.dates[this.dates.length - 1]).format(
+                    "YYYY/DD/MM"
+                  )
+                ).setMonth(
+                  new Date(
+                    moment("01/" + this.dates[this.dates.length - 1]).format(
+                      "YYYY/DD/MM"
+                    )
+                  ).getMonth() - 1
+                )
+              )
+            ).format("MM/YYYY")
+        ) {
+          "11/2019".toString();
+          if (direction === 1) {
+            this.month = new Date(
+              moment("01/" + thismonth + "/" + thisyear).format("YYYY/DD/MM")
+            ).getMonth();
+            this.year = new Date(
+              moment("01/" + thismonth + "/" + thisyear).format("YYYY/DD/MM")
+            ).getFullYear();
+
+            this.currentYearEvents(this.year, this.month);
+          } else {
+            this.month = new Date(
+              moment("01/" + thismonth + "/" + thisyear).format("YYYY/DD/MM")
+            ).getMonth();
+            this.year = new Date(
+              moment("01/" + thismonth + "/" + thisyear).format("YYYY/DD/MM")
+            ).getFullYear();
+
+            this.currentYearEvents(this.year, this.month);
+          }
+        } else {
+          return null;
+        }
+      } else {
+        if (
+          new Date(moment("01/" + date).format("YYYY/DD/MM")).getFullYear() >=
+          1970
+        ) {
+          this.month = new Date(
+            moment("01/" + date).format("YYYY/DD/MM")
+          ).getMonth();
+          this.year = new Date(
+            moment("01/" + date).format("YYYY/DD/MM")
+          ).getFullYear();
+          this.currentYearEvents(this.year, this.month);
+        }
       }
     },
+
     selectDate(date) {
       if (date) {
         this.selectedDate = {
@@ -198,6 +398,7 @@ export default {
         this.$emit("selectDate", this.selectedDate);
       }
     },
+
     setDate(date) {
       this.year = date.year;
       this.month = date.month;

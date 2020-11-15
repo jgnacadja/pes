@@ -2,30 +2,37 @@
   <div class="columns is-12 event">
     <div class="column is-3">
       <div class="column content-view content-view-day is-paddingless">
-        {{ event.date | day }}
+        {{ event.node.date | day }}
       </div>
       <div class="column content-view is-paddingless">
-        {{ event.date | month }}
+        {{ event.node.date | month }}
       </div>
     </div>
     <div class="">
-      <div class="cal-separator"></div>
+      <div class="cal-separator" v-if="event.node.image === null"></div>
+      <g-image
+        class="image-event"
+        v-if="event.node.image"
+        :src="event.node.image.file.url"
+      ></g-image>
     </div>
     <div class="column has-text-left is-7 content-view-body">
       <div class="column is-paddingless content-view-hour">
-        {{ event.starthour }} - {{ event.endhour }}
+        {{ event.node.startTime | format }} - {{ event.node.endTime | format }}
       </div>
       <div class="column is-paddingless content-view-title">
-        {{ event.title }}
+        {{ event.node.title }}
       </div>
       <div class="column is-paddingless content-view-description">
-        {{ event.description }}
+        {{ event.node.description }}
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import moment from "moment";
+
 export default {
   props: {
     event: {
@@ -40,10 +47,14 @@ export default {
   created() {},
   filters: {
     // Filter definitions
+    format(value) {
+      var time = moment(String(value)).format("HH:mm");
+      return time;
+    },
     day(value) {
       var days = ["01", "02", "03", "04", "04", "05", "06", "07", "08", "09"];
-
-      if (new Date(value).getDate() < 10) {
+      var date = moment(String(value)).format("YYYY/MM/DD");
+      if (new Date(date).getDate() < 10) {
         return days[new Date(value).getDate()];
       } else {
         return new Date(value).getDate();
@@ -64,8 +75,8 @@ export default {
         "Novembre",
         "Décembre",
       ];
-
-      return months[new Date(value).getMonth()];
+      var date = moment(String(value)).format("YYYY/MM/DD");
+      return months[new Date(date).getMonth()];
     },
   },
   methods: {
@@ -116,5 +127,13 @@ export default {
 
 .event {
   border-bottom: 1px solid #1b66a9;
+}
+
+.image-event {
+  width: 5em;
+  margin-left: -3ex;
+  height: 6em;
+  margin-top: 2ex;
+  margin-right: 4ex;
 }
 </style>
