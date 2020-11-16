@@ -72,4 +72,12 @@ b-icon {
     cursor: pointer;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .single-date__year {
+    font-weight: 900;
+    font-size: 2em !important;
+    text-transform: capitalize;
+  }
+}
 </style>

@@ -6,7 +6,7 @@
       <div
         class="columns is-vcentered is-centered is-multiline has-text-centered"
       >
-        <div class="column is-12 is-marginless is-paddingless">
+        <div class="column is-12">
           <b-carousel
             :indicator="indicator"
             :arrow="arrow"
@@ -382,5 +382,19 @@ export default {
 
 .content-24 {
   font-size: 2em;
+}
+
+@media only screen and (max-width: 414px) {
+  .content-24 {
+    font-size: 1.5em;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .button-service {
+    font-size: 1em !important;
+  }
 }
 </style>

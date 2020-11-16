@@ -7,10 +7,20 @@
       <div class="column is-9 mt-6">
         <div class="columns is-12">
           <div class="column is-10 has-text-left">
-            <div class="column">
-              <span class="title main-box-title"
-                >Un mot de notre directeur</span
-              >
+            <div class="columns is-12 is-mobile">
+              <div class="column is-10">
+                <span class="title main-box-title"
+                  >Un mot de notre directeur</span
+                >
+              </div>
+              <div class="column extern-link is-2 mt-3">
+                <b-icon
+                  pack="fas"
+                  icon="chevron-right"
+                  size="is-large"
+                  type="is-white"
+                />
+              </div>
             </div>
             <div class="column">
               <span class="title main-box-subtitle"
@@ -30,26 +40,29 @@
               <g-link>Lire Plus</g-link>
             </div>
           </div>
-          <div class="column is-2 mt-3">
-            <b-icon
-              pack="fas"
-              icon="chevron-right"
-              size="is-large"
-              type="is-white"
-            />
-          </div>
         </div>
       </div>
     </div>
 
     <div class="columns is-12">
-      <div class="column is-5 main-box-left">
+      <div class="column is-5 is-12-mobile main-box-left">
         <div class="columns is-12">
-          <div class="column is-10 has-text-left">
-            <div class="column">
-              <span class="title main-box-title">Notre équipe</span>
+          <div class="column is-12 has-text-left">
+            <div class="columns is-12 is-mobile">
+              <div class="column is-10 mt-3">
+                <span class="title main-box-title">Notre équipe</span>
+              </div>
+              <div class="column is-2 mt-3">
+                <b-icon
+                  pack="fas"
+                  icon="chevron-right"
+                  size="is-large"
+                  type="is-white"
+                />
+              </div>
             </div>
-            <div class="columns is-12">
+
+            <div class="columns is-12 is-mobile">
               <div class="column is-6">
                 <div class="column">
                   <g-image src="~/assets/index/teams/long_team.png" />
@@ -68,21 +81,13 @@
               </div>
             </div>
           </div>
-          <div class="column is-2 mt-3">
-            <b-icon
-              pack="fas"
-              icon="chevron-right"
-              size="is-large"
-              type="is-white"
-            />
-          </div>
         </div>
       </div>
 
       <div class="column is-7 main-box-right">
         <div class="columns is-12">
           <div class="column is-12 has-text-left">
-            <div class="column">
+            <div class="column mt-2">
               <span class="title main-box-title">Découvrez notre agenda</span>
             </div>
             <div class="column">
@@ -129,6 +134,19 @@ export default {
 
 .content-12 {
   color: white;
+}
+
+.extern-link {
+  text-align: end;
+  margin-left: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+  .extern-link {
+    text-align: end;
+    margin-left: -7%;
+    margin-top: 0% !important;
+  }
 }
 
 @media only screen and (max-width: 414px) {

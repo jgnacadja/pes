@@ -1,6 +1,6 @@
 <template>
-  <div class="columns is-12 event">
-    <div class="column is-3">
+  <div class="columns is-12 event is-mobile">
+    <div class="column is-3 mobile-position">
       <div class="column content-view content-view-day is-paddingless">
         {{ event.node.date | day }}
       </div>
@@ -8,7 +8,10 @@
         {{ event.node.date | month }}
       </div>
     </div>
-    <div class="">
+    <div class="is-hidden-desktop">
+      <div class="cal-separator"></div>
+    </div>
+    <div class="is-hidden-touch">
       <div class="cal-separator" v-if="event.node.image === null"></div>
       <g-image
         class="image-event"
@@ -135,5 +138,50 @@ export default {
   height: 6em;
   margin-top: 2ex;
   margin-right: 4ex;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-position {
+    margin-top: 1.5em;
+    margin-left: 0.5em;
+  }
+
+  .image-event {
+    display: none;
+  }
+
+  .content-view {
+    font-size: 0.8em;
+  }
+
+  .content-view-day {
+    color: #1b66a9;
+    font-size: 0.8em;
+  }
+
+  .content-view-description {
+    color: #1b66a9;
+    font-size: 0.8em;
+  }
+
+  .content-view-title {
+    font-weight: bold;
+    color: #1b66a9;
+    font-size: 0.8em;
+  }
+
+  .content-view {
+    color: #1b66a9;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 1ex;
+  }
+
+  .cal-separator {
+    margin-top: 3.8ex;
+    margin-left: 1em;
+    border-left: 1.2ex solid #1b66a9;
+    height: 4em;
+  }
 }
 </style>
