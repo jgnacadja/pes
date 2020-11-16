@@ -12,6 +12,7 @@
     "axios": "^0.21.0",
     "babel-runtime": "^6.26.0",
     "buefy": "^0.9.4",
+    "datejs": "^1.0.0-rc3",
     "gridsome": "^0.7.0",
     "gridsome-plugin-algolia": "^2.1.4",
     "gridsome-plugin-bundle-analyzer": "^1.0.0",
