@@ -17,6 +17,7 @@
     "gridsome-plugin-algolia": "^2.1.4",
     "gridsome-plugin-bundle-analyzer": "^1.0.0",
     "klaro-gridsome": "^1.0.3",
+    "urijs": "^1.19.2",
     "vue-disqus": "^4.0.1",
     "vue-infinite-loading": "^2.4.5",
     "vue-instantsearch": "^3.4.2",

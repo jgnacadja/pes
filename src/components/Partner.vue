@@ -12,7 +12,7 @@
       :autoplay="true"
       :interval="10000"
       :pause-hover="false"
-      style="box-shadow: unset;"
+      style="box-shadow: unset"
     >
       <template slot="item" slot-scope="props">
         <div class="column is-6-desktop is-12-mobile">
@@ -27,6 +27,12 @@
 
 <script>
 export default {
+  props: {
+    partners: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data() {
     return {
       isImageModalActive: false,
@@ -47,33 +53,44 @@ export default {
         perList: 4,
         slides: [
           {
-            image: "/index-partner-slides/ARPEJ.png"
+            image: "/index-partner-slides/ARPEJ.png",
           },
           {
-            image: "/index-partner-slides/LOGO AppartStudy-Vertical-RVB.png"
+            image: "/index-partner-slides/LOGO AppartStudy-Vertical-RVB.png",
           },
           {
-            image: "/index-partner-slides/logo_kley.png"
+            image: "/index-partner-slides/logo_kley.png",
           },
           {
-            image: "/index-partner-slides/logo-Les-Estudines-BD.jpg"
+            image: "/index-partner-slides/logo-Les-Estudines-BD.jpg",
           },
           {
-            image: "/index-partner-slides/logo-logifac-blanc.png"
+            image: "/index-partner-slides/logo-logifac-blanc.png",
           },
           {
-            image: "/index-partner-slides/logo-zen-etudes.png"
+            image: "/index-partner-slides/logo-zen-etudes.png",
           },
           {
-            image: "/index-partner-slides/nexity.png"
+            image: "/index-partner-slides/nexity.png",
           },
           {
-            image: "/index-partner-slides/studelites.jpg"
-          }
-        ]
+            image: "/index-partner-slides/studelites.jpg",
+          },
+        ],
       },
     };
-  }
+  },
+  created() {
+    var slides = [];
+    for (var i = 0; i < this.partners.length; i++) {
+      var obj = {}; // <---- Move declaration inside loop
+
+      obj["image"] = this.partners[i].file.url;
+      slides.push(obj);
+    }
+    console.log(slides);
+    //this.slides = slides;
+  },
 };
 </script>
 <style scoped lang="scss">

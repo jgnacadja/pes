@@ -22,12 +22,12 @@
                 />
               </div>
             </div>
-            <div class="column">
+            <div class="column is-paddingless main-box-sub">
               <span class="title main-box-subtitle"
                 >Arsenne Kapnang, Country Manager Cameroun</span
               >
             </div>
-            <div class="column content-12">
+            <div class="column content-12 is-paddingless">
               L’idée de poursuivre mes
               <span class="has-text-weight-bold">études à l’étranger</span>
               m’a toujours motivé, même si je savais que le défi était colossal.
@@ -36,7 +36,7 @@
               <span class="has-text-weight-bold">courage</span> nécessaire pour
               franchir le pas, de l’idée à sa réalisation.
             </div>
-            <div class="column content-12-link">
+            <div class="column content-12-link is-paddingless">
               <g-link>Lire Plus</g-link>
             </div>
           </div>
@@ -52,7 +52,7 @@
               <div class="column is-10 mt-3">
                 <span class="title main-box-title">Notre équipe</span>
               </div>
-              <div class="column is-2 mt-3">
+              <div class="column is-2 mt-3 external-link">
                 <b-icon
                   pack="fas"
                   icon="chevron-right"
@@ -160,6 +160,20 @@ export default {
     padding-top: 1em;
     padding-right: unset;
   }
+
+  .main-box-title {
+    font-size: 1em;
+  }
+
+  .external-link {
+    font-size: 0.8em;
+      text-align: end;
+    margin-top: 0.3em !important;
+  }
+
+  .extern-link {
+    margin-top: -0.8em !important;
+  }
 }
 
 .ADN-g-image {
@@ -167,6 +181,11 @@ export default {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.main-box-sub {
+  margin-top: -1em;
+  margin-bottom: 1em;
 }
 </style>
 
