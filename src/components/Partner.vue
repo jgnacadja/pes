@@ -51,45 +51,27 @@ export default {
         iconPack: "fas",
         iconSize: "is-large",
         perList: 4,
-        slides: [
-          {
-            image: "/index-partner-slides/ARPEJ.png",
-          },
-          {
-            image: "/index-partner-slides/LOGO AppartStudy-Vertical-RVB.png",
-          },
-          {
-            image: "/index-partner-slides/logo_kley.png",
-          },
-          {
-            image: "/index-partner-slides/logo-Les-Estudines-BD.jpg",
-          },
-          {
-            image: "/index-partner-slides/logo-logifac-blanc.png",
-          },
-          {
-            image: "/index-partner-slides/logo-zen-etudes.png",
-          },
-          {
-            image: "/index-partner-slides/nexity.png",
-          },
-          {
-            image: "/index-partner-slides/studelites.jpg",
-          },
-        ],
+        slides: [],
       },
     };
   },
-  created() {
-    var slides = [];
-    for (var i = 0; i < this.partners.length; i++) {
-      var obj = {}; // <---- Move declaration inside loop
+  mounted() {
+    this.getPartners();
+  },
+  methods: {
+    getPartners() {
+      let items = [];
 
-      obj["image"] = this.partners[i].file.url;
-      slides.push(obj);
-    }
-    console.log(slides);
-    //this.slides = slides;
+      let partners = this.partners;
+      partners.forEach(function (item) {
+        let objet = {
+          image: item.file.url,
+        };
+        items.push(objet);
+      });
+
+      this.partenaires.slides = items;
+    },
   },
 };
 </script>
