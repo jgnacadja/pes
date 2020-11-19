@@ -9,9 +9,9 @@
           <div class="column is-10 has-text-left">
             <div class="columns is-12 is-mobile">
               <div class="column is-10">
-                <span class="title main-box-title"
-                  >Un mot de notre directeur</span
-                >
+                <span class="title main-box-title">{{
+                  about.aboutSection.title
+                }}</span>
               </div>
               <div class="column extern-link is-2 mt-3">
                 <b-icon
@@ -23,9 +23,9 @@
               </div>
             </div>
             <div class="column is-paddingless main-box-sub">
-              <span class="title main-box-subtitle"
-                >Arsenne Kapnang, Country Manager Cameroun</span
-              >
+              <span class="title main-box-subtitle">{{
+                about.aboutSection.subtitle
+              }}</span>
             </div>
             <div class="column content-12 is-paddingless">
               L’idée de poursuivre mes
@@ -37,7 +37,7 @@
               franchir le pas, de l’idée à sa réalisation.
             </div>
             <div class="column content-12-link is-paddingless">
-              <g-link>Lire Plus</g-link>
+              <g-link>{{ about.aboutSection.button.title }}</g-link>
             </div>
           </div>
         </div>
@@ -50,33 +50,35 @@
           <div class="column is-12 has-text-left">
             <div class="columns is-12 is-mobile">
               <div class="column is-10 mt-3">
-                <span class="title main-box-title">Notre équipe</span>
+                <span class="title main-box-title">{{ about.team.title }}</span>
               </div>
               <div class="column is-2 mt-3 external-link">
-                <b-icon
-                  pack="fas"
-                  icon="chevron-right"
-                  size="is-large"
-                  type="is-white"
-                />
+                <g-link>
+                  <b-icon
+                    pack="fas"
+                    icon="chevron-right"
+                    size="is-large"
+                    type="is-white"
+                  />
+                </g-link>
               </div>
             </div>
 
             <div class="columns is-12 is-mobile">
               <div class="column is-6">
                 <div class="column">
-                  <g-image src="~/assets/index/teams/long_team.png" />
+                  <g-image :src="about.team.teamOne.file.url" />
                 </div>
                 <div class="column">
-                  <g-image src="~/assets/index/teams/short_team.png" />
+                  <g-image :src="about.team.teamTwo.file.url" />
                 </div>
               </div>
               <div class="column is-6 ml-3">
                 <div class="column">
-                  <g-image src="~/assets/index/teams/short_team.png" />
+                  <g-image :src="about.team.teamThree.file.url" />
                 </div>
                 <div class="column">
-                  <g-image src="~/assets/index/teams/long_team.png" />
+                  <g-image :src="about.team.teamFour.file.url" />
                 </div>
               </div>
             </div>
@@ -88,10 +90,12 @@
         <div class="columns is-12">
           <div class="column is-12 has-text-left">
             <div class="column mt-2">
-              <span class="title main-box-title">Découvrez notre agenda</span>
+              <span class="title main-box-title">
+                {{ about.events.title }}</span
+              >
             </div>
             <div class="column">
-              <Calendar />
+              <Calendar :eventsList="about.events.events" />
             </div>
           </div>
         </div>
@@ -106,6 +110,12 @@ import Calendar from "~/components/calendar/Calendar.vue";
 export default {
   components: {
     Calendar,
+  },
+  props: {
+    about: {
+      type: Object,
+      default: () => [],
+    },
   },
 };
 </script>
@@ -167,7 +177,7 @@ export default {
 
   .external-link {
     font-size: 0.8em;
-      text-align: end;
+    text-align: end;
     margin-top: 0.3em !important;
   }
 

@@ -55,6 +55,10 @@ export default {
       default: 0,
       validator: (value) => value >= 0 && value <= 6,
     },
+    eventsList: {
+      type: Array,
+      default: () => [],
+    },
   },
   data() {
     return {
@@ -159,6 +163,7 @@ export default {
     }, */
   },
   created() {
+    console.log(this.events)
     const date = new Date();
 
     this.year = this.mostRecentYear();

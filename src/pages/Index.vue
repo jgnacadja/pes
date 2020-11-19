@@ -188,10 +188,13 @@
     </section>
 
     <section class="section container has-text-centered is-centered">
-      <h1 class="title has-text-primary">A propos de Studely Cameroun</h1>
+      <h1 class="title has-text-primary">
+        {{ $page.page.aboutSectionTitle }}
+        {{ $page.page.aboutSection[0].country | Upper }}
+      </h1>
       <br />
       <br />
-      <Apropos />
+      <Apropos :about="$page.page.aboutSection[0]" />
     </section>
 
     <section class="section container has-text-centered">
@@ -200,7 +203,11 @@
       <br />
       <div class="columns is-variable is-3 is-multiline is-centered">
         <div class="column">
-          <g-image :src="$page.page.stats[0].image.file.url" fit="inside" />
+          <g-image
+            :src="$page.page.stats[0].image.file.url"
+            class="image-fit"
+            fit="inside"
+          />
           <h2 class="title">{{ $page.page.stats[0].title }}</h2>
           <h3 class="subtitle">
             {{ $page.page.stats[0].description }}
@@ -210,7 +217,11 @@
           <g-image src="~/assets/index/1.png" fit="inside" />
         </div>
         <div class="column">
-          <g-image :src="$page.page.stats[1].image.file.url" fit="inside" />
+          <g-image
+            :src="$page.page.stats[1].image.file.url"
+            class="image-fit"
+            fit="inside"
+          />
           <h2 class="title">{{ $page.page.stats[1].title }}</h2>
           <h3 class="subtitle">
             {{ $page.page.stats[1].description }}
@@ -220,7 +231,11 @@
           <g-image src="~/assets/index/2.png" fit="inside" />
         </div>
         <div class="column">
-          <g-image :src="$page.page.stats[2].image.file.url" fit="inside" />
+          <g-image
+            :src="$page.page.stats[2].image.file.url"
+            class="image-fit"
+            fit="inside"
+          />
           <h2 class="title">{{ $page.page.stats[2].title }}</h2>
           <h3 class="subtitle">
             {{ $page.page.stats[2].description }}
@@ -230,7 +245,11 @@
           <g-image src="~/assets/index/3.png" fit="inside" />
         </div>
         <div class="column">
-          <g-image :src="$page.page.stats[3].image.file.url" fit="inside" />
+          <g-image
+            :src="$page.page.stats[3].image.file.url"
+            class="image-fit"
+            fit="inside"
+          />
           <h2 class="title">{{ $page.page.stats[3].title }}</h2>
           <h3 class="subtitle">
             {{ $page.page.stats[3].description }}
@@ -240,7 +259,11 @@
           <g-image src="~/assets/index/4.png" fit="inside" />
         </div>
         <div class="column">
-          <g-image :src="$page.page.stats[4].image.file.url" fit="inside" />
+          <g-image
+            :src="$page.page.stats[4].image.file.url"
+            class="image-fit"
+            fit="inside"
+          />
           <h2 class="title">{{ $page.page.stats[4].title }}</h2>
           <h3 class="subtitle">
             {{ $page.page.stats[4].description }}
@@ -258,10 +281,8 @@
       <Partner :partners="$page.page.partners.images" />
     </section>
 
-    {{ $page.page }}
-
     <section class="section container has-text-centered">
-      <h1 class="title has-text-primary">Ils parlent de nous</h1>
+      <h1 class="title has-text-primary">{{ $page.page.feedsSectionTitle }}</h1>
 
       <b-carousel
         :icon-pack="iconPack"
@@ -273,7 +294,7 @@
             <section class="section container">
               <div class="columns is-desktop is-vcentered">
                 <div class="column is-3">
-                  <g-image :src="carousel.image" />
+                  <g-image :src="carousel.image.file.url" />
                 </div>
                 <div class="column">
                   <h2 class="subtitle">
@@ -399,9 +420,11 @@ query Page($path: String! = "/index") {
       }
       events {
         title
-        events {
+        events (order: DESC) {
+          id
           title
           description
+          date
           startTime
           endTime
           image {
@@ -475,37 +498,7 @@ export default {
       iconPack: "fas",
       iconSize: "is-large",
       pauseHover: false,
-      carousels: [
-        {
-          description:
-            "Simplification, coûts moindres, meilleure intégration dans le pays d’accueil… Cette appli de Fintech est très prometteuse pour de nombreux étudiants africains !",
-          source: "Jury du Prix Challenge Digital Africa 2017",
-          image: "/index-carousel-images/digital-africa.jpg",
-        },
-        {
-          description:
-            "Votre équipe est motivée, complémentaire et compétente, avec des expériences passées dans les domaines couverts par le projet",
-          source: "Ninon Duval, Bond'innov (Janvier 2018)",
-          image: "/index-carousel-images/bondinnov.jpg",
-        },
-        {
-          description:
-            "Première plateforme spécialiste de la caution bancaire pour étudiants internationaux qui souhaitent poursuivre leurs études en France.",
-          source: "Jury du Prix Challenge Digital Africa 2017",
-          image: "/index-carousel-images/RFI.jpg",
-        },
-        {
-          description: "Studely, meilleur promoteur des études à l’étranger",
-          source: "Matin Libre (Octobre 2018)",
-          image: "/index-carousel-images/matin-libre.jpg",
-        },
-        {
-          description:
-            "Studely aide les étudiants africains à étudier à l’étranger",
-          source: "Actu Cameroun (Juillet 2019)",
-          image: "/index-carousel-images/actu-cameroun.jpg",
-        },
-      ],
+      carousels: [],
 
       //Main carrousel
 
@@ -520,17 +513,9 @@ export default {
       autoPlay: false,
       pauseHover: false,
 
-      carousel: [
-        {
-          title: "Un projet d'études en France",
-          color: "info",
-          image: "/index/header.jpg",
-          description:
-            "Studely Cameroun m'accompagne dans toutes mes démarches post-admission.",
-          button: "J'y souscris",
-          link: "https://espace.studely.com",
-        },
-      ],
+      carousel: [],
+
+      about: [],
     };
   },
   created() {
@@ -589,8 +574,25 @@ export default {
       this.autoPlay = this.$page.page.carrouselBlock.autoPlay;
       this.pauseHover = this.$page.page.carrouselBlock.pauseHover;
 
+      //filter carousel by domain
+
       var carousel = this.$page.page.carrouselBlock.carrouselBlock;
       this.carousel = carousel.filter((item) => item.country === subdomain);
+
+      this.carousels = this.$page.page.feeds;
+
+      //filter about by domain
+
+      var about = this.$page.page.aboutSection;
+      this.about = about.filter((item) => item.country === subdomain);
+    },
+  },
+  filters: {
+    // Filter definitions
+    Upper(value) {
+      const leftletter = value.substring(0, 1);
+      const rightvalue = value.substring(1);
+      return leftletter.toUpperCase() + rightvalue;
     },
   },
 };
@@ -626,5 +628,10 @@ export default {
   .button-service {
     font-size: 1em !important;
   }
+}
+
+.image-fit {
+  width: 80px;
+  height: 80px;
 }
 </style>
