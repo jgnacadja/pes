@@ -407,16 +407,6 @@ query Page($path: String! = "/index") {
             url
           }
         }
-        teamThree {
-          file {
-            url
-          }
-        }
-        teamFour {
-          file {
-            url
-          }
-        }
       }
       events {
         title
@@ -519,7 +509,7 @@ export default {
     };
   },
   created() {
-    this.checkCountry(this.isSubdomain("https://www.cm.studely.com"));
+    this.checkCountry(this.isSubdomain("https://www.cameroun.studely.com"));
   },
   methods: {
     isSubdomain(url) {

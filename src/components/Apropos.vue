@@ -28,13 +28,9 @@
               }}</span>
             </div>
             <div class="column content-12 is-paddingless">
-              L’idée de poursuivre mes
-              <span class="has-text-weight-bold">études à l’étranger</span>
-              m’a toujours motivé, même si je savais que le défi était colossal.
-              L’échéance approchant, j’ai réussi à trouver en moi, et grâce au
-              soutien de mes proches, le
-              <span class="has-text-weight-bold">courage</span> nécessaire pour
-              franchir le pas, de l’idée à sa réalisation.
+              <vue-markdown class="content" id="about-content">{{
+                about.aboutSection.description
+              }}</vue-markdown>
             </div>
             <div class="column content-12-link is-paddingless">
               <g-link>{{ about.aboutSection.button.title }}</g-link>
@@ -75,10 +71,10 @@
               </div>
               <div class="column is-6 ml-3">
                 <div class="column">
-                  <g-image :src="about.team.teamThree.file.url" />
+                  <g-image :src="about.team.teamTwo.file.url" />
                 </div>
                 <div class="column">
-                  <g-image :src="about.team.teamFour.file.url" />
+                  <g-image :src="about.team.teamOne.file.url" />
                 </div>
               </div>
             </div>
@@ -106,10 +102,12 @@
 
 <script>
 import Calendar from "~/components/calendar/Calendar.vue";
+import VueMarkdown from "vue-markdown";
 
 export default {
   components: {
     Calendar,
+    VueMarkdown,
   },
   props: {
     about: {
