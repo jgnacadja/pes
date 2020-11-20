@@ -209,9 +209,7 @@
             fit="inside"
           />
           <h2 class="title">{{ $page.page.stats[0].title }}</h2>
-          <h3 class="subtitle">
-            {{ $page.page.stats[0].description }}
-          </h3>
+          <h3 class="subtitle" v-html="$page.page.stats[0].description"></h3>
         </div>
         <div class="is-hidden-touch mt-6">
           <g-image src="~/assets/index/1.png" fit="inside" />
@@ -223,9 +221,7 @@
             fit="inside"
           />
           <h2 class="title">{{ $page.page.stats[1].title }}</h2>
-          <h3 class="subtitle">
-            {{ $page.page.stats[1].description }}
-          </h3>
+          <h3 class="subtitle" v-html="$page.page.stats[1].description"></h3>
         </div>
         <div class="is-hidden-touch mt-6">
           <g-image src="~/assets/index/2.png" fit="inside" />
@@ -237,9 +233,7 @@
             fit="inside"
           />
           <h2 class="title">{{ $page.page.stats[2].title }}</h2>
-          <h3 class="subtitle">
-            {{ $page.page.stats[2].description }}
-          </h3>
+          <h3 class="subtitle" v-html="$page.page.stats[2].description"></h3>
         </div>
         <div class="is-hidden-touch mt-6">
           <g-image src="~/assets/index/3.png" fit="inside" />
@@ -251,9 +245,7 @@
             fit="inside"
           />
           <h2 class="title">{{ $page.page.stats[3].title }}</h2>
-          <h3 class="subtitle">
-            {{ $page.page.stats[3].description }}
-          </h3>
+          <h3 class="subtitle" v-html="$page.page.stats[3].description"></h3>
         </div>
         <div class="is-hidden-touch mt-6">
           <g-image src="~/assets/index/4.png" fit="inside" />
@@ -265,9 +257,7 @@
             fit="inside"
           />
           <h2 class="title">{{ $page.page.stats[4].title }}</h2>
-          <h3 class="subtitle">
-            {{ $page.page.stats[4].description }}
-          </h3>
+          <h3 class="subtitle" v-html="$page.page.stats[4].description"></h3>
         </div>
       </div>
     </section>
@@ -410,7 +400,7 @@ query Page($path: String! = "/index") {
       }
       events {
         title
-        events (order: DESC) {
+        events (sortBy: "date", order: ASC) {
           id
           title
           description

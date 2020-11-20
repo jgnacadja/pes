@@ -109,6 +109,12 @@ export default {
       this.dates.push(moment(this.eventsList[i].date).format("MM/YYYY"));
     }
     this.dates = [...new Set(this.dates)];
+
+    this.eventsList.sort(function (a, b) {
+      // Turn your strings into dates, and then subtract them
+      // to get a value that is either negative, positive, or zero.
+      return new Date(a.date) - new Date(b.date);
+    });
   },
   computed: {
     numDays() {
@@ -147,6 +153,8 @@ export default {
     this.todayDate = date.getDate();
     this.todayYear = date.getFullYear();
     this.todayMonth = date.getMonth();
+
+    console.log(this.eventsList);
 
     this.weekStartDay =
       this.firstDayOfWeek >= 0 && this.firstDayOfWeek <= 6
