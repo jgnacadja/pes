@@ -109,12 +109,6 @@ export default {
       this.dates.push(moment(this.eventsList[i].date).format("MM/YYYY"));
     }
     this.dates = [...new Set(this.dates)];
-
-    this.eventsList.sort(function (a, b) {
-      // Turn your strings into dates, and then subtract them
-      // to get a value that is either negative, positive, or zero.
-      return new Date(a.date) - new Date(b.date);
-    });
   },
   computed: {
     numDays() {
@@ -204,6 +198,12 @@ export default {
       this.currentEvents = currentEventsByYear.filter(
         (e) => new Date(e.date).getMonth() === currentM
       );
+
+      this.currentEvents.sort(function (a, b) {
+        // Turn your strings into dates, and then subtract them
+        // to get a value that is either negative, positive, or zero.
+        return new Date(a.date) - new Date(b.date);
+      });
     },
 
     currentYearEventsFilter(currentY, currentM) {

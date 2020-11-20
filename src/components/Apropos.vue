@@ -63,18 +63,30 @@
             <div class="columns is-12 is-mobile">
               <div class="column is-6">
                 <div class="column">
-                  <g-image :src="about.team.teamOne.file.url" />
+                  <g-image
+                    class="image-team"
+                    :src="about.team.teamOne.file.url"
+                  />
                 </div>
                 <div class="column">
-                  <g-image :src="about.team.teamTwo.file.url" />
+                  <g-image
+                    class="image-team"
+                    :src="about.team.teamTwo.file.url"
+                  />
                 </div>
               </div>
               <div class="column is-6 ml-3">
                 <div class="column">
-                  <g-image :src="about.team.teamTwo.file.url" />
+                  <g-image
+                    class="image-team"
+                    :src="about.team.teamTwo.file.url"
+                  />
                 </div>
                 <div class="column">
-                  <g-image :src="about.team.teamOne.file.url" />
+                  <g-image
+                    class="image-team"
+                    :src="about.team.teamOne.file.url"
+                  />
                 </div>
               </div>
             </div>
@@ -147,6 +159,12 @@ export default {
 .extern-link {
   text-align: end;
   margin-left: 10%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .image-team {
+    max-width: 75%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
