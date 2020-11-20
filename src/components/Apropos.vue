@@ -161,7 +161,7 @@ export default {
   margin-left: 10%;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .image-team {
     max-width: 75%;
   }
