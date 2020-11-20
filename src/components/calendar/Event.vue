@@ -2,32 +2,32 @@
   <div class="columns is-12 event is-mobile">
     <div class="column is-3 mobile-position">
       <div class="column content-view content-view-day is-paddingless">
-        {{ event.node.date | day }}
+        {{ event.date | day }}
       </div>
       <div class="column content-view is-paddingless">
-        {{ event.node.date | month }}
+        {{ event.date | month }}
       </div>
     </div>
     <div class="is-hidden-desktop">
       <div class="cal-separator"></div>
     </div>
     <div class="is-hidden-touch">
-      <div class="cal-separator" v-if="event.node.image === null"></div>
+      <div class="cal-separator" v-if="event.image === null"></div>
       <g-image
         class="image-event"
-        v-if="event.node.image"
-        :src="event.node.image.file.url"
+        v-if="event.image"
+        :src="event.image.file.url"
       ></g-image>
     </div>
     <div class="column has-text-left is-7 content-view-body">
       <div class="column is-paddingless content-view-hour">
-        {{ event.node.startTime | format }} - {{ event.node.endTime | format }}
+        {{ event.startTime | format }} - {{ event.endTime | format }}
       </div>
       <div class="column is-paddingless content-view-title">
-        {{ event.node.title }}
+        {{ event.title }}
       </div>
       <div class="column is-paddingless content-view-description">
-        {{ event.node.description }}
+        {{ event.description }}
       </div>
     </div>
   </div>

@@ -12,7 +12,7 @@
       :autoplay="true"
       :interval="10000"
       :pause-hover="false"
-      style="box-shadow: unset;"
+      style="box-shadow: unset"
     >
       <template slot="item" slot-scope="props">
         <div class="column is-6-desktop is-12-mobile">
@@ -27,6 +27,12 @@
 
 <script>
 export default {
+  props: {
+    partners: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data() {
     return {
       isImageModalActive: false,
@@ -45,35 +51,28 @@ export default {
         iconPack: "fas",
         iconSize: "is-large",
         perList: 4,
-        slides: [
-          {
-            image: "/index-partner-slides/ARPEJ.png"
-          },
-          {
-            image: "/index-partner-slides/LOGO AppartStudy-Vertical-RVB.png"
-          },
-          {
-            image: "/index-partner-slides/logo_kley.png"
-          },
-          {
-            image: "/index-partner-slides/logo-Les-Estudines-BD.jpg"
-          },
-          {
-            image: "/index-partner-slides/logo-logifac-blanc.png"
-          },
-          {
-            image: "/index-partner-slides/logo-zen-etudes.png"
-          },
-          {
-            image: "/index-partner-slides/nexity.png"
-          },
-          {
-            image: "/index-partner-slides/studelites.jpg"
-          }
-        ]
+        slides: [],
       },
     };
-  }
+  },
+  mounted() {
+    this.getPartners();
+  },
+  methods: {
+    getPartners() {
+      let items = [];
+
+      let partners = this.partners;
+      partners.forEach(function (item) {
+        let objet = {
+          image: item.file.url,
+        };
+        items.push(objet);
+      });
+
+      this.partenaires.slides = items;
+    },
+  },
 };
 </script>
 <style scoped lang="scss">

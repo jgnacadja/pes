@@ -13,28 +13,6 @@
   </div>
 </template>
 
-<static-query>
-query {
-  events: allContentfulEvent(order: DESC) {
-    edges {
-      node {
-        id
-        title
-        description
-        date
-        startTime
-        endTime
-        image {
-          file {
-            url
-          }
-        }
-      }
-    }
-  }
-}
-</static-query>
-
 <script>
 import moment from "moment";
 import CalendarHeader from "~/components/calendar/CalendarHeader.vue";
@@ -54,6 +32,10 @@ export default {
       type: Number,
       default: 0,
       validator: (value) => value >= 0 && value <= 6,
+    },
+    eventsList: {
+      type: Array,
+      default: () => [],
     },
   },
   data() {
@@ -123,10 +105,8 @@ export default {
   },
   mounted() {
     // Array store only dates
-    for (var i = 0; i < this.$static.events.edges.length; i++) {
-      this.dates.push(
-        moment(this.$static.events.edges[i].node.date).format("MM/YYYY")
-      );
+    for (var i = 0; i < this.eventsList.length; i++) {
+      this.dates.push(moment(this.eventsList[i].date).format("MM/YYYY"));
     }
     this.dates = [...new Set(this.dates)];
   },
@@ -168,6 +148,8 @@ export default {
     this.todayYear = date.getFullYear();
     this.todayMonth = date.getMonth();
 
+    console.log(this.eventsList);
+
     this.weekStartDay =
       this.firstDayOfWeek >= 0 && this.firstDayOfWeek <= 6
         ? this.firstDayOfWeek
@@ -179,54 +161,58 @@ export default {
   },
   methods: {
     mostOlderYear() {
-      var olderYearEvent = this.$static.events.edges.sort(
-        (a, b) =>
-          new Date(a.node.date).getTime() - new Date(b.node.date).getTime()
+      var olderYearEvent = this.eventsList.sort(
+        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
       )[0];
-      return new Date(olderYearEvent.node.date).getFullYear();
+
+      return new Date(olderYearEvent.date).getFullYear();
     },
 
     mostOlderMonth() {
-      var olderYearEvent = this.$static.events.edges.sort(
-        (a, b) =>
-          new Date(a.node.date).getTime() - new Date(b.node.date).getTime()
+      var olderYearEvent = this.eventsList.sort(
+        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
       )[0];
-      return new Date(olderYearEvent.node.date).getMonth();
+      return new Date(olderYearEvent.date).getMonth();
     },
 
     mostRecentYear() {
-      var recentYearEvent = this.$static.events.edges.sort(
-        (a, b) =>
-          new Date(b.node.date).getTime() - new Date(a.node.date).getTime()
+      var recentYearEvent = this.eventsList.sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
       )[0];
-      return new Date(recentYearEvent.node.date).getFullYear();
+      return new Date(recentYearEvent.date).getFullYear();
     },
 
     mostRecentMonth() {
-      var recentYearEvent = this.$static.events.edges.sort(
-        (a, b) =>
-          new Date(b.node.date).getTime() - new Date(a.node.date).getTime()
+      var recentYearEvent = this.eventsList.sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
       )[0];
-      return new Date(recentYearEvent.node.date).getMonth();
+      return new Date(recentYearEvent.date).getMonth();
     },
 
     currentYearEvents(currentY, currentM) {
-      var currentEventsByYear = this.$static.events.edges.filter(
-        (e) => new Date(e.node.date).getFullYear() === currentY
+      var currentEventsByYear = [];
+      currentEventsByYear = this.eventsList.filter(
+        (e) => new Date(e.date).getFullYear() === currentY
       );
 
       this.currentEvents = currentEventsByYear.filter(
-        (e) => new Date(e.node.date).getMonth() === currentM
+        (e) => new Date(e.date).getMonth() === currentM
       );
+
+      this.currentEvents.sort(function (a, b) {
+        // Turn your strings into dates, and then subtract them
+        // to get a value that is either negative, positive, or zero.
+        return new Date(a.date) - new Date(b.date);
+      });
     },
 
     currentYearEventsFilter(currentY, currentM) {
-      var currentEventsByYear = this.$static.events.edges.filter(
-        (e) => new Date(e.node.date).getFullYear() === currentY
+      var currentEventsByYear = this.eventsList.filter(
+        (e) => new Date(e.date).getFullYear() === currentY
       );
 
       return currentEventsByYear.filter(
-        (e) => new Date(e.node.date).getMonth() === currentM
+        (e) => new Date(e.date).getMonth() === currentM
       );
     },
 

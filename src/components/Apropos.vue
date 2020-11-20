@@ -9,9 +9,9 @@
           <div class="column is-10 has-text-left">
             <div class="columns is-12 is-mobile">
               <div class="column is-10">
-                <span class="title main-box-title"
-                  >Un mot de notre directeur</span
-                >
+                <span class="title main-box-title">{{
+                  about.aboutSection.title
+                }}</span>
               </div>
               <div class="column extern-link is-2 mt-3">
                 <b-icon
@@ -22,22 +22,18 @@
                 />
               </div>
             </div>
-            <div class="column">
-              <span class="title main-box-subtitle"
-                >Arsenne Kapnang, Country Manager Cameroun</span
-              >
+            <div class="column is-paddingless main-box-sub">
+              <span class="title main-box-subtitle">{{
+                about.aboutSection.subtitle
+              }}</span>
             </div>
-            <div class="column content-12">
-              L’idée de poursuivre mes
-              <span class="has-text-weight-bold">études à l’étranger</span>
-              m’a toujours motivé, même si je savais que le défi était colossal.
-              L’échéance approchant, j’ai réussi à trouver en moi, et grâce au
-              soutien de mes proches, le
-              <span class="has-text-weight-bold">courage</span> nécessaire pour
-              franchir le pas, de l’idée à sa réalisation.
+            <div class="column content-12 is-paddingless">
+              <vue-markdown class="content" id="about-content">{{
+                about.aboutSection.description
+              }}</vue-markdown>
             </div>
-            <div class="column content-12-link">
-              <g-link>Lire Plus</g-link>
+            <div class="column content-12-link is-paddingless">
+              <g-link>{{ about.aboutSection.button.title }}</g-link>
             </div>
           </div>
         </div>
@@ -50,33 +46,47 @@
           <div class="column is-12 has-text-left">
             <div class="columns is-12 is-mobile">
               <div class="column is-10 mt-3">
-                <span class="title main-box-title">Notre équipe</span>
+                <span class="title main-box-title">{{ about.team.title }}</span>
               </div>
-              <div class="column is-2 mt-3">
-                <b-icon
-                  pack="fas"
-                  icon="chevron-right"
-                  size="is-large"
-                  type="is-white"
-                />
+              <div class="column is-2 mt-3 external-link">
+                <g-link>
+                  <b-icon
+                    pack="fas"
+                    icon="chevron-right"
+                    size="is-large"
+                    type="is-white"
+                  />
+                </g-link>
               </div>
             </div>
 
             <div class="columns is-12 is-mobile">
               <div class="column is-6">
                 <div class="column">
-                  <g-image src="~/assets/index/teams/long_team.png" />
+                  <g-image
+                    class="image-team"
+                    :src="about.team.teamOne.file.url"
+                  />
                 </div>
                 <div class="column">
-                  <g-image src="~/assets/index/teams/short_team.png" />
+                  <g-image
+                    class="image-team"
+                    :src="about.team.teamTwo.file.url"
+                  />
                 </div>
               </div>
               <div class="column is-6 ml-3">
                 <div class="column">
-                  <g-image src="~/assets/index/teams/short_team.png" />
+                  <g-image
+                    class="image-team"
+                    :src="about.team.teamTwo.file.url"
+                  />
                 </div>
                 <div class="column">
-                  <g-image src="~/assets/index/teams/long_team.png" />
+                  <g-image
+                    class="image-team"
+                    :src="about.team.teamOne.file.url"
+                  />
                 </div>
               </div>
             </div>
@@ -88,10 +98,12 @@
         <div class="columns is-12">
           <div class="column is-12 has-text-left">
             <div class="column mt-2">
-              <span class="title main-box-title">Découvrez notre agenda</span>
+              <span class="title main-box-title">
+                {{ about.events.title }}</span
+              >
             </div>
             <div class="column">
-              <Calendar />
+              <Calendar :eventsList="about.events.events" />
             </div>
           </div>
         </div>
@@ -102,10 +114,18 @@
 
 <script>
 import Calendar from "~/components/calendar/Calendar.vue";
+import VueMarkdown from "vue-markdown";
 
 export default {
   components: {
     Calendar,
+    VueMarkdown,
+  },
+  props: {
+    about: {
+      type: Object,
+      default: () => [],
+    },
   },
 };
 </script>
@@ -141,6 +161,12 @@ export default {
   margin-left: 10%;
 }
 
+@media only screen and (min-width: 1024px) {
+  .image-team {
+    max-width: 75%;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .extern-link {
     text-align: end;
@@ -160,6 +186,20 @@ export default {
     padding-top: 1em;
     padding-right: unset;
   }
+
+  .main-box-title {
+    font-size: 1em;
+  }
+
+  .external-link {
+    font-size: 0.8em;
+    text-align: end;
+    margin-top: 0.3em !important;
+  }
+
+  .extern-link {
+    margin-top: -0.8em !important;
+  }
 }
 
 .ADN-g-image {
@@ -167,6 +207,11 @@ export default {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.main-box-sub {
+  margin-top: -1em;
+  margin-bottom: 1em;
 }
 </style>
 

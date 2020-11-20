@@ -16,14 +16,16 @@
             :icon-prev="iconPrev"
             :icon-next="iconNext"
             :icon-size="iconSize"
-            :autoplay="false"
+            :autoplay="autoPlay"
             :interval="10000"
-            :pause-hover="false"
+            :pause-hover="pauseHover"
           >
-            <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
+            <b-carousel-item v-for="(carousel, i) in carousel" :key="i">
               <section
                 :class="`hero is-medium diapo has-text-white `"
-                :style="{ backgroundImage: `url('${carousel.image}')` }"
+                :style="{
+                  backgroundImage: `url('${carousel.image.file.url}')`,
+                }"
               >
                 <div class="hero-body has-text-left">
                   <div class="columns is-multiline has-text-left">
@@ -38,15 +40,15 @@
                     </div>
                     <div
                       class="column column is-offset-1 is-half-desktop is-12-mobile content-16"
-                      v-if="carousel.button"
+                      v-if="carousel.button.title"
                     >
                       <b-button
                         tag="a"
-                        :href="carousel.link"
+                        :href="carousel.button.link"
                         type="is-success"
                         class="button-service is-large"
                       >
-                        <strong>{{ carousel.button }}</strong>
+                        <strong>{{ carousel.button.title }}</strong>
                       </b-button>
                     </div>
                   </div>
@@ -108,12 +110,14 @@
       </div>
     </section>
 
-    <services />
+    <services :services="$page.page.services" />
 
     <section class="section has-text-centered is-centered">
       <div class="columns is-multiline is-centered">
         <div class="column is-12">
-          <h1 class="title has-text-primary">Témoignages</h1>
+          <h1 class="title has-text-primary">
+            {{ $page.page.testimonialsSectionTitle }}
+          </h1>
         </div>
         <div class="column is-12 is-hidden-mobile"></div>
         <div class="column is-12 is-hidden-mobile"></div>
@@ -125,17 +129,18 @@
                   <figure class="image is-3by2">
                     <iframe
                       class="has-ratio"
-                      src="https://www.youtube.com/embed/YAx6zsqTpbU"
+                      :src="$page.page.testimonials[0].url"
                       allowfullscreen
                     ></iframe>
                   </figure>
                 </div>
                 <div class="column is-12">
-                  <h2 class="is-spaced has-text-primary">Étudiants</h2>
+                  <h2 class="is-spaced has-text-primary">
+                    {{ $page.page.testimonials[0].title }}
+                  </h2>
                 </div>
                 <div class="column is-12 content-16">
-                  « L'accompagnement a été très bénéfique tout au long de la
-                  procédure... »
+                  {{ $page.page.testimonials[0].description }}
                 </div>
               </div>
             </div>
@@ -162,17 +167,18 @@
                   <figure class="image is-3by2">
                     <iframe
                       class="has-ratio"
-                      src="https://www.youtube.com/embed/75BRir3-0Ho"
+                      :src="$page.page.testimonials[1].url"
                       allowfullscreen
                     ></iframe>
                   </figure>
                 </div>
                 <div class="column is-12">
-                  <h2 class="is-spaced has-text-primary">Parents</h2>
+                  <h2 class="is-spaced has-text-primary">
+                    {{ $page.page.testimonials[1].title }}
+                  </h2>
                 </div>
                 <div class="column is-12 content-16">
-                  « Tous les documents présentés par Studely étaient vérifiés et
-                  vérifiables »
+                  {{ $page.page.testimonials[1].description }}
                 </div>
               </div>
             </div>
@@ -182,81 +188,91 @@
     </section>
 
     <section class="section container has-text-centered is-centered">
-      <h1 class="title has-text-primary">A propos de Studely Cameroun</h1>
+      <h1 class="title has-text-primary">
+        {{ $page.page.aboutSectionTitle }}
+        {{ $page.page.aboutSection[0].country | Upper }}
+      </h1>
       <br />
       <br />
-      <Apropos />
+      <Apropos :about="$page.page.aboutSection[0]" />
     </section>
 
     <section class="section container has-text-centered">
-      <h1 class="title has-text-primary">Studely, en quelques chiffres</h1>
+      <h1 class="title has-text-primary">{{ $page.page.statsSectionTitle }}</h1>
       <br />
       <br />
       <div class="columns is-variable is-3 is-multiline is-centered">
         <div class="column">
-          <g-image src="~/assets/index/chiffres-cles/4000_1.svg" fit="inside" />
-          <h2 class="title">+4000</h2>
-          <h3 class="subtitle">
-            étudiants
-            <br />accompagnés
-          </h3>
+          <g-image
+            :src="$page.page.stats[0].image.file.url"
+            class="image-fit"
+            fit="inside"
+          />
+          <h2 class="title">{{ $page.page.stats[0].title }}</h2>
+          <h3 class="subtitle" v-html="$page.page.stats[0].description"></h3>
         </div>
         <div class="is-hidden-touch mt-6">
           <g-image src="~/assets/index/1.png" fit="inside" />
         </div>
         <div class="column">
-          <g-image src="~/assets/index/chiffres-cles/91.svg" fit="inside" />
-          <h2 class="title">91%</h2>
-          <h3 class="subtitle">
-            de projets d'études
-            <br />concrétisés
-          </h3>
+          <g-image
+            :src="$page.page.stats[1].image.file.url"
+            class="image-fit"
+            fit="inside"
+          />
+          <h2 class="title">{{ $page.page.stats[1].title }}</h2>
+          <h3 class="subtitle" v-html="$page.page.stats[1].description"></h3>
         </div>
         <div class="is-hidden-touch mt-6">
           <g-image src="~/assets/index/2.png" fit="inside" />
         </div>
         <div class="column">
-          <g-image src="~/assets/index/chiffres-cles/15.svg" fit="inside" />
-          <h2 class="title">15</h2>
-          <h3 class="subtitle">
-            pays où nous
-            <br />sommes présents
-          </h3>
+          <g-image
+            :src="$page.page.stats[2].image.file.url"
+            class="image-fit"
+            fit="inside"
+          />
+          <h2 class="title">{{ $page.page.stats[2].title }}</h2>
+          <h3 class="subtitle" v-html="$page.page.stats[2].description"></h3>
         </div>
         <div class="is-hidden-touch mt-6">
           <g-image src="~/assets/index/3.png" fit="inside" />
         </div>
         <div class="column">
-          <g-image src="~/assets/index/chiffres-cles/50.svg" fit="inside" />
-          <h2 class="title">+50</h2>
-          <h3 class="subtitle">
-            collaborateurs
-            <br />dans le monde
-          </h3>
+          <g-image
+            :src="$page.page.stats[3].image.file.url"
+            class="image-fit"
+            fit="inside"
+          />
+          <h2 class="title">{{ $page.page.stats[3].title }}</h2>
+          <h3 class="subtitle" v-html="$page.page.stats[3].description"></h3>
         </div>
         <div class="is-hidden-touch mt-6">
           <g-image src="~/assets/index/4.png" fit="inside" />
         </div>
         <div class="column">
-          <g-image src="~/assets/index/chiffres-cles/30M.svg" fit="inside" />
-          <h2 class="title">+30M</h2>
-          <h3 class="subtitle">
-            de fonds
-            <br />d'étudiants gérés
-          </h3>
+          <g-image
+            :src="$page.page.stats[4].image.file.url"
+            class="image-fit"
+            fit="inside"
+          />
+          <h2 class="title">{{ $page.page.stats[4].title }}</h2>
+          <h3 class="subtitle" v-html="$page.page.stats[4].description"></h3>
         </div>
       </div>
     </section>
 
     <section class="section container has-text-centered">
-      <h1 class="title has-text-primary">Ils nous font confiance</h1>
+      <h1 class="title has-text-primary">
+        {{ $page.page.partnersSectionTitle }}
+      </h1>
       <br />
       <br />
-      <Partner />
+      <Partner :partners="$page.page.partners.images" />
     </section>
 
     <section class="section container has-text-centered">
-      <h1 class="title has-text-primary">Ils parlent de nous</h1>
+      <h1 class="title has-text-primary">{{ $page.page.feedsSectionTitle }}</h1>
 
       <b-carousel
         :icon-pack="iconPack"
@@ -268,7 +284,7 @@
             <section class="section container">
               <div class="columns is-desktop is-vcentered">
                 <div class="column is-3">
-                  <g-image :src="carousel.image" />
+                  <g-image :src="carousel.image.file.url" />
                 </div>
                 <div class="column">
                   <h2 class="subtitle">
@@ -286,6 +302,160 @@
     </section>
   </Layout>
 </template>
+
+<page-query>
+query Page($path: String! = "/index") {
+  page: contentfulPage(path: $path) {
+    id
+    path
+    title
+    coverVideo {
+      file {
+        url
+      }
+    }
+    carrouselBlock {
+      indicator
+      arrow
+      arrowBoth
+      arrowHover
+      autoPlay
+      pauseHover
+      carrouselBlock {
+        title
+        image {
+          file {
+            url
+          }
+        }
+        description
+        button {
+          title
+          link
+        }
+        country
+      }
+    }
+    services {
+      title
+      description
+      coverImage {
+        file {
+          url
+        }
+      }
+      button {
+        title
+        link
+      }
+      pictoBefore {
+        file {
+          url
+        }
+      }
+      pictoAfter {
+        file {
+          url
+        }
+      }
+    }
+    testimonialsSectionTitle
+    testimonials {
+      title
+      date
+      url
+      description
+    }
+    aboutSectionTitle
+    aboutSection {
+      title
+      aboutSection {
+        title
+        image {
+          title
+          file {
+            url
+          }
+          description
+        }
+        subtitle
+        description
+        button {
+          title
+          link
+        }
+      }
+      team {
+        title
+        teamOne {
+          file {
+            url
+          }
+        }
+        teamTwo {
+          file {
+            url
+          }
+        }
+      }
+      events {
+        title
+        events (sortBy: "date", order: ASC) {
+          id
+          title
+          description
+          date
+          startTime
+          endTime
+          image {
+            file {
+              url
+            }
+          }
+        }
+      }
+      country
+    }
+    statsSectionTitle
+    stats {
+      title
+      image {
+        file {
+          url
+        }
+      }
+      description
+    }
+    partnersSectionTitle
+    partners {
+      images {
+        file {
+          url
+        }
+      }
+    }
+    feedsSectionTitle
+    feeds {
+      title
+      image {
+        file {
+          url
+        }
+      }
+      source
+      description
+    }
+  }
+
+  countries: allContentfulListeFiliales {
+    edges {
+      node {
+        countries
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 import services from "~/components/services.vue";
@@ -308,37 +478,7 @@ export default {
       iconPack: "fas",
       iconSize: "is-large",
       pauseHover: false,
-      carousels: [
-        {
-          description:
-            "Simplification, coûts moindres, meilleure intégration dans le pays d’accueil… Cette appli de Fintech est très prometteuse pour de nombreux étudiants africains !",
-          source: "Jury du Prix Challenge Digital Africa 2017",
-          image: "/index-carousel-images/digital-africa.jpg",
-        },
-        {
-          description:
-            "Votre équipe est motivée, complémentaire et compétente, avec des expériences passées dans les domaines couverts par le projet",
-          source: "Ninon Duval, Bond'innov (Janvier 2018)",
-          image: "/index-carousel-images/bondinnov.jpg",
-        },
-        {
-          description:
-            "Première plateforme spécialiste de la caution bancaire pour étudiants internationaux qui souhaitent poursuivre leurs études en France.",
-          source: "Jury du Prix Challenge Digital Africa 2017",
-          image: "/index-carousel-images/RFI.jpg",
-        },
-        {
-          description: "Studely, meilleur promoteur des études à l’étranger",
-          source: "Matin Libre (Octobre 2018)",
-          image: "/index-carousel-images/matin-libre.jpg",
-        },
-        {
-          description:
-            "Studely aide les étudiants africains à étudier à l’étranger",
-          source: "Actu Cameroun (Juillet 2019)",
-          image: "/index-carousel-images/actu-cameroun.jpg",
-        },
-      ],
+      carousels: [],
 
       //Main carrousel
 
@@ -350,18 +490,90 @@ export default {
       iconNext: "arrow-right",
       iconSize: "",
       indicator: false,
-      carousels: [
-        {
-          title: "Un projet d'études en France",
-          color: "info",
-          image: "/index/header.jpg",
-          description:
-            "Studely Cameroun m'accompagne dans toutes mes démarches post-admission.",
-          button: "J'y souscris",
-          link: "https://espace.studely.com",
-        },
-      ],
+      autoPlay: false,
+      pauseHover: false,
+
+      carousel: [],
+
+      about: [],
     };
+  },
+  created() {
+    this.checkCountry(this.isSubdomain("https://www.cameroun.studely.com"));
+  },
+  methods: {
+    isSubdomain(url) {
+      // IF THERE, REMOVE WHITE SPACE FROM BOTH ENDS
+      url = url.replace(new RegExp(/^\s+/), ""); // START
+      url = url.replace(new RegExp(/\s+$/), ""); // END
+
+      // IF FOUND, CONVERT BACK SLASHES TO FORWARD SLASHES
+      url = url.replace(new RegExp(/\\/g), "/");
+
+      // IF THERE, REMOVES 'http://', 'https://' or 'ftp://' FROM THE START
+      url = url.replace(new RegExp(/^http\:\/\/|^https\:\/\/|^ftp\:\/\//i), "");
+
+      // IF THERE, REMOVES 'www.' FROM THE START OF THE STRING
+      url = url.replace(new RegExp(/^www\./i), "");
+
+      // REMOVE COMPLETE STRING FROM FIRST FORWARD SLASH ON
+      url = url.replace(new RegExp(/\/(.*)/), "");
+
+      // REMOVES '.??.??' OR '.???.??' FROM END - e.g. '.CO.UK', '.COM.AU'
+      if (url.match(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i))) {
+        url = url.replace(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i), "");
+
+        // REMOVES '.??' or '.???' or '.????' FROM END - e.g. '.US', '.COM', '.INFO'
+      } else if (url.match(new RegExp(/\.[a-z]{2,4}$/i))) {
+        url = url.replace(new RegExp(/\.[a-z]{2,4}$/i), "");
+      }
+      return url;
+    },
+
+    checkCountry(url) {
+      // CHECK TO SEE IF THERE IS A DOT '.' LEFT IN THE STRING
+
+      if (url.match(new RegExp(/\./g)) ? true : false) {
+        var subdomain = url.split(/\.(?=[^\.]+$)/)[0];
+
+        var countries = this.$page.countries.edges[0].node.countries;
+
+        var country = countries.filter((item) => item === subdomain);
+
+        if (country.length > 0) {
+          this.loadCountryData(subdomain);
+        }
+      }
+    },
+
+    loadCountryData(subdomain) {
+      this.arrow = this.$page.page.carrouselBlock.arrow;
+      this.arrowBoth = this.$page.page.carrouselBlock.arrowBoth;
+      this.arrowHover = this.$page.page.carrouselBlock.arrowHover;
+      this.indicator = this.$page.page.carrouselBlock.indicator;
+      this.autoPlay = this.$page.page.carrouselBlock.autoPlay;
+      this.pauseHover = this.$page.page.carrouselBlock.pauseHover;
+
+      //filter carousel by domain
+
+      var carousel = this.$page.page.carrouselBlock.carrouselBlock;
+      this.carousel = carousel.filter((item) => item.country === subdomain);
+
+      this.carousels = this.$page.page.feeds;
+
+      //filter about by domain
+
+      var about = this.$page.page.aboutSection;
+      this.about = about.filter((item) => item.country === subdomain);
+    },
+  },
+  filters: {
+    // Filter definitions
+    Upper(value) {
+      const leftletter = value.substring(0, 1);
+      const rightvalue = value.substring(1);
+      return leftletter.toUpperCase() + rightvalue;
+    },
   },
 };
 </script>
@@ -396,5 +608,10 @@ export default {
   .button-service {
     font-size: 1em !important;
   }
+}
+
+.image-fit {
+  width: 80px;
+  height: 80px;
 }
 </style>
