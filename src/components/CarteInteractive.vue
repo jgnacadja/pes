@@ -1,7 +1,6 @@
 
 <template>
-  <article  class="examples__block">
-  
+  <article class="examples__block">
     <svg viewBox="269 150 826 615">
       <g id="Contour">
         <path
@@ -29,7 +28,10 @@
                       />
                       <path class="st1" d="M606.5,355.6c0,0-3-2-4-3" />
                     </g>
-                    <path class="st1" d="M593.5,279.6c0,0,4-1,6,1s5,3,7,4s6-2,6-2" />
+                    <path
+                      class="st1"
+                      d="M593.5,279.6c0,0,4-1,6,1s5,3,7,4s6-2,6-2"
+                    />
                   </g>
                   <path
                     class="st1"
@@ -238,7 +240,7 @@
         />
       </g>
     </svg>
-    <div class="examples__block__map__tooltip" style="display: none;"></div>
+    <div class="examples__block__map__tooltip" style="display: none"></div>
   </article>
 </template>
 
@@ -286,7 +288,7 @@
   fill: #f4bc44;
 }
 
-#Madagaskar{
-  fill : whitesmoke;
+#Madagaskar {
+  fill: whitesmoke;
 }
 </style>

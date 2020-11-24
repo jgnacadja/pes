@@ -6,19 +6,19 @@
         &nbsp;&nbsp;
         <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
         &nbsp;&nbsp;
-        {{ categorie | Upper}}
+        {{ categorie | Upper }}
       </span>
       <span v-if="tag != ''">
         &nbsp;&nbsp;
         <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
         &nbsp;&nbsp;
-        {{ tag | Upper}}
+        {{ tag | Upper }}
       </span>
       <span v-if="article != ''">
         &nbsp;&nbsp;
         <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
         &nbsp;&nbsp;
-        {{ article | Upper}}
+        {{ article | Upper }}
       </span>
     </div>
   </div>
