@@ -8,11 +8,18 @@
         {{ event.date | month }}
       </div>
     </div>
-    <div class="is-hidden-desktop">
-      <div class="cal-separator"></div>
-    </div>
-    <div class="is-hidden-touch">
+    <div class="box-image is-hidden-desktop">
       <div class="cal-separator" v-if="event.image === null"></div>
+      <g-image
+        class="image-event"
+        v-if="event.image"
+        :src="event.image.file.url"
+      ></g-image>
+    </div>
+    <div class="box-image is-hidden-touch">
+      <div class="cal-separator" v-if="event.image === null"></div>
+
+      <div class="cal-separator cal-separator-desktop" v-if="event.image"></div>
       <g-image
         class="image-event"
         v-if="event.image"
@@ -45,6 +52,11 @@ export default {
     isSelected: {
       type: Number,
       default: 0,
+    },
+    data() {
+      return {
+        hover: true,
+      };
     },
   },
   created() {},
@@ -132,22 +144,51 @@ export default {
   border-bottom: 1px solid #1b66a9;
 }
 
-.image-event {
-  width: 5em;
-  margin-left: -3ex;
-  height: 6em;
-  margin-top: 2ex;
-  margin-right: 4ex;
+@media only screen and (min-width: 769px) {
+  .event:hover .image-event {
+    display: block;
+  }
+
+  .event:hover .cal-separator-desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .image-event {
+    width: 5em;
+    margin-left: -3ex;
+    height: 6em;
+    margin-top: 2ex;
+    margin-right: 4ex;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .image-event {
+    width: 3em;
+    margin-left: 0ex;
+    height: 4em;
+    margin-top: 4ex;
+    margin-right: 0ex;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 768px) {
+  .image-event {
+    width: 5em;
+    margin-left: 2ex;
+    height: 6em;
+    margin-top: 2ex;
+    margin-right: 4ex;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .mobile-position {
     margin-top: 1.5em;
     margin-left: 0.5em;
-  }
-
-  .image-event {
-    display: none;
   }
 
   .content-view {

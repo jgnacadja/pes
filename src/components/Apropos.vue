@@ -61,7 +61,7 @@
             </div>
 
             <div class="columns is-12 is-mobile">
-              <div class="column is-6">
+              <div class="column is-6 left-team">
                 <div class="column">
                   <g-image
                     class="image-team"
@@ -75,7 +75,7 @@
                   />
                 </div>
               </div>
-              <div class="column is-6 ml-3">
+              <div class="column is-6 right-team">
                 <div class="column">
                   <g-image
                     class="image-team"
@@ -159,6 +159,15 @@ export default {
 .extern-link {
   text-align: end;
   margin-left: 10%;
+}
+
+.left-team {
+  margin-right: -3em;
+  margin-left: 4em;
+}
+
+.right-team {
+  margin-left: -1em;
 }
 
 @media only screen and (min-width: 1024px) {
