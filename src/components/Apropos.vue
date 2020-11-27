@@ -64,13 +64,13 @@
               <div class="column is-6 left-team">
                 <div class="column">
                   <g-image
-                    class="image-team"
+                    class="image"
                     :src="about.team.teamOne.file.url"
                   />
                 </div>
                 <div class="column">
                   <g-image
-                    class="image-team"
+                    class="image"
                     :src="about.team.teamTwo.file.url"
                   />
                 </div>
@@ -78,13 +78,13 @@
               <div class="column is-6 right-team">
                 <div class="column">
                   <g-image
-                    class="image-team"
+                    class="image"
                     :src="about.team.teamTwo.file.url"
                   />
                 </div>
                 <div class="column">
                   <g-image
-                    class="image-team"
+                    class="image"
                     :src="about.team.teamOne.file.url"
                   />
                 </div>
@@ -161,19 +161,19 @@ export default {
   margin-left: 10%;
 }
 
-.left-team {
+/*.left-team {
   margin-right: -3em;
   margin-left: 4em;
 }
 
 .right-team {
   margin-left: -1em;
-}
+}*/
 
 @media only screen and (min-width: 1024px) {
-  .image-team {
+  /*.image-team {
     max-width: 75%;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 768px) {
