@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 <template>
-  <div id="single-date" class="single-date__calendar-view">
+  <div id="single-date" class="single-date__calendar-view full-height">
     <div>
       <CalendarHeader :year="year" :month="month" @toggleMonth="toggleMonth" />
     </div>
@@ -409,5 +409,11 @@ export default {
   background-color: white;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
   color: #0d1e44;
+}
+
+@media only screen and (min-width: 769px) {
+  .full-height {
+    height: 90% !important;
+  }
 }
 </style>

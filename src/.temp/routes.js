@@ -1,6 +1,6 @@
-const c1 = () => import(/* webpackChunkName: "page--src--templates--contentful-post-vue" */ "/workspace/studely-filliale/src/templates/ContentfulPost.vue")
-const c2 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/workspace/studely-filliale/node_modules/gridsome/app/pages/404.vue")
-const c3 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/workspace/studely-filliale/src/pages/Index.vue")
+const c1 = () => import(/* webpackChunkName: "page--src--templates--contentful-post-vue" */ "/home/rintio_pc1/Documents/studely-filliale/src/templates/ContentfulPost.vue")
+const c2 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/home/rintio_pc1/Documents/studely-filliale/node_modules/gridsome/app/pages/404.vue")
+const c3 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/home/rintio_pc1/Documents/studely-filliale/src/pages/Index.vue")
 
 export default [
   {

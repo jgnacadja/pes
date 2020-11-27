@@ -65,6 +65,7 @@ export default {
   },
   data() {
     return {
+      arrowHover: false,
       isImageModalActive: false,
       isCardModalActive: false,
       iconPack: "fas",
