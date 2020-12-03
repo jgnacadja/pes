@@ -1,7 +1,10 @@
 <template>
   <section class="section has-text-centered is-centered is-paddingless">
     <!--mobile -->
-    <div class="columns is-multiline is-centered is-hidden-tablet" style="padding-top:5%">
+    <div
+      class="columns is-multiline is-centered is-hidden-tablet"
+      style="padding-top: 5%"
+    >
       <div class="column is-10-desktop">
         <div class="columns is-multiline is-centered is-gapless">
           <div class="column is-3-desktop">
@@ -9,45 +12,35 @@
               <div class="column is-12 is-paddingless">
                 <div class="grid cs-style-3 is-paddingless">
                   <div class="column is-12 has-text-centered">
-                    <h2 class="has-text-primary">Ma caution bancaire</h2>
+                    <h2 class="has-text-primary">{{ services[0].title }}</h2>
                   </div>
                   <figure>
-                    <g-link to="/nos-services/ma-caution-bancaire/">
-                      <g-image src="~/assets/index/nos-services/caution-bancaire.jpg" />
+                    <g-link :to="services[0].button.link">
+                      <g-image :src="services[0].coverImage.file.url" />
                       <figcaption class="figcaption-blue">
                         <br />
                         <div class="tile content is-small text-size-mobile">
-                          Studely me facilite la justification de mes ressources
-                          financières pour l’obtention de mon Visa grâce à un
-                          accompagnement personnalisé.
+                          {{ services[0].description }}
                         </div>
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
                     <div class="column is-mobile is-child is-3 feat-icon">
                       <g-image
-                        src="~/assets/index/nos-services/AVI-1.svg"
+                        :src="services[0].pictoBefore.file.url"
                         class="first"
                         fit="inside"
                       />
                       <g-image
-                        src="~/assets/index/nos-services/AVI-2.svg"
+                        :src="services[0].pictoAfter.file.url"
                         class="second"
                         fit="inside"
                       />
                     </div>
                   </div>
-                </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>Je souscris au service</strong>
-                  </b-button>
                 </div>
               </div>
             </div>
@@ -72,46 +65,38 @@
               <div class="column is-12 is-paddingless">
                 <div class="grid cs-style-3 is-paddingless">
                   <span class="column is-12 is-mobile has-text-centered">
-                    <h2 class="has-text-primary">Mon logement étudiant</h2>
+                    <h2 class="has-text-primary">
+                      {{ services[1].title }}
+                    </h2>
                   </span>
                   <figure>
-                    <g-link to="/nos-services/mon-logement/">
-                      <g-image src="~/assets/index/nos-services/logement.jpg" />
+                    <g-link :to="services[1].button.link">
+                      <g-image :src="services[1].coverImage.file.url" />
 
                       <figcaption class="figcaption-green">
                         <br />
                         <div class="tile content is-small text-size-mobile">
-                          Studely m’accompagne de la recherche de logement
-                          étudiant en France à la signature du bail depuis mon
-                          pays.
+                          {{ services[1].description }}
                         </div>
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
                     <div class="column is-mobile is-child is-3 feat-icon">
                       <g-image
-                        src="~/assets/index/nos-services/Logement-1.svg"
+                        :src="services[1].pictoBefore.file.url"
                         class="first"
                         fit="inside"
                       />
                       <g-image
-                        src="~/assets/index/nos-services/logement-2.svg"
+                        :src="services[1].pictoAfter.file.url"
                         class="second"
                         fit="inside"
                       />
                     </div>
                   </div>
-                </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>J'effectue ma demande</strong>
-                  </b-button>
                 </div>
               </div>
             </div>
@@ -127,44 +112,35 @@
               <div class="column is-12">
                 <div class="grid cs-style-3 is-paddingless">
                   <span class="column is-12 is-mobile has-text-centered">
-                    <h2 class="has-text-primary">Mon compte bancaire</h2>
+                    <h2 class="has-text-primary">{{ services[2].title }}</h2>
                   </span>
                   <figure>
-                    <g-link to="/nos-services/mon-compte-bancaire/">
-                      <g-image src="~/assets/index/nos-services/compte-bancaire.jpg" />
+                    <g-link :to="services[2].button.link">
+                      <g-image :src="services[2].coverImage.file.url" />
                       <figcaption class="figcaption-blue">
                         <br />
                         <div class="tile content is-small text-size-mobile">
-                          J'ouvre mon compte bancaire en France depuis mon pays
-                          d'origine, pour étudier en France en toute sérénité.
+                          {{ services[2].description }}
                         </div>
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
                     <div class="column is-mobile is-child is-3 feat-icon">
                       <g-image
-                        src="~/assets/index/nos-services/banque-1.svg"
+                        :src="services[2].pictoBefore.file.url"
                         class="first"
                         fit="inside"
                       />
                       <g-image
-                        src="~/assets/index/nos-services/banque-2.svg"
+                        :src="services[2].pictoAfter.file.url"
                         class="second"
                         fit="inside"
                       />
                     </div>
                   </div>
-                </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>J'ouvre mon compte</strong>
-                  </b-button>
                 </div>
               </div>
             </div>
@@ -182,50 +158,43 @@
               </div>
             </div>
           </div>
-          <div class="column is-3-desktop" style="margin-top: -3%;">
+          <div class="column is-3-desktop" style="margin-top: -3%">
             <div class="columns is-multiline is-centered">
               <div class="column is-12">
                 <div class="grid cs-style-3 is-paddingless">
                   <span class="column is-12 is-mobile has-text-centered">
-                    <h2 class="has-text-primary">Mon assurance</h2>
+                    <h2 class="has-text-primary">{{ services[3].title }}</h2>
                   </span>
                   <figure>
-                    <g-link to="/nos-services/mon-assurance/">
-                      <g-image src="~/assets/index/nos-services/assurance.jpg" />
+                    <g-link :to="services[3].button.link">
+                      <g-image :src="services[3].coverImage.file.url" />
                       <figcaption class="figcaption-red">
                         <br />
                         <div class="tile content is-small">
-                          C'est l'assurance qui couvre mon séjour de moins de 3
-                          mois en France, quel que soit mon pays de provenance,
-                          et qui me permet d’obtenir un Visa pour la France !
+                          {{ services[3].description }}
                         </div>
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
-                    <div id="service-icon" class="column is-mobile is-child is-3 feat-icon">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
+                    <div
+                      id="service-icon"
+                      class="column is-mobile is-child is-3 feat-icon"
+                    >
                       <g-image
-                        src="~/assets/index/nos-services/assurance-1.svg"
+                        :src="services[3].pictoBefore.file.url"
                         class="first"
                         fit="inside"
                       />
                       <g-image
-                        src="~/assets/index/nos-services/assurance-2.svg"
+                        :src="services[3].pictoAfter.file.url"
                         class="second"
                         fit="inside"
                       />
                     </div>
                   </div>
-                </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>Je souhaite en bénéficier</strong>
-                  </b-button>
                 </div>
               </div>
             </div>
@@ -251,13 +220,18 @@
                 <div class="grid cs-style-3 is-paddingless">
                   <span
                     class="fig-title column is-12 is-mobile has-text-centered"
-                  >Ma caution bancaire</span>
+                    >Ma caution bancaire</span
+                  >
                   <figure>
                     <g-link to="/nos-services/ma-caution-bancaire/">
-                      <g-image src="~/assets/index/nos-services/caution-bancaire.jpg" />
+                      <g-image
+                        src="~/assets/index/nos-services/caution-bancaire.jpg"
+                      />
                       <figcaption class="figcaption-blue">
                         <br />
-                        <div class="tile content figcaption-description is-medium">
+                        <div
+                          class="tile content figcaption-description is-medium"
+                        >
                           Studely me facilite la justification de mes ressources
                           financières pour l’obtention de mon Visa grâce à un
                           accompagnement personnalisé.
@@ -265,7 +239,9 @@
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
                     <div class="column is-mobile is-child is-3 feat-icon">
                       <g-image
                         src="~/assets/index/nos-services/AVI-1.svg"
@@ -279,16 +255,6 @@
                       />
                     </div>
                   </div>
-                </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>Je souscris au service</strong>
-                  </b-button>
                 </div>
               </div>
             </div>
@@ -317,14 +283,17 @@
                 <div class="grid cs-style-3 is-paddingless">
                   <span
                     class="fig-title column is-12 is-mobile has-text-centered"
-                  >Mon logement étudiant</span>
+                    >Mon logement étudiant</span
+                  >
                   <figure>
                     <g-link to="/nos-services/mon-logement/">
                       <g-image src="~/assets/index/nos-services/logement.jpg" />
 
                       <figcaption class="figcaption-green">
                         <br />
-                        <div class="tile content figcaption-description is-medium">
+                        <div
+                          class="tile content figcaption-description is-medium"
+                        >
                           Studely m’accompagne de la recherche de logement
                           étudiant en France à la signature du bail depuis mon
                           pays.
@@ -332,7 +301,9 @@
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
                     <div class="column is-mobile is-child is-3 feat-icon">
                       <g-image
                         src="~/assets/index/nos-services/Logement-1.svg"
@@ -347,23 +318,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>J'ouvre mon compte</strong>
-                  </b-button>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="columns is-multiline is-centered is-mobile is-hidden-mobile is-hidden-desktop">
+    <div
+      class="columns is-multiline is-centered is-mobile is-hidden-mobile is-hidden-desktop"
+    >
       <div class="column is-10-desktop">
         <div class="columns is-multiline is-centered is-gapless is-mobile">
           <div class="column is-3-desktop is-4-mobile">
@@ -399,20 +362,27 @@
                 <div class="grid cs-style-3 is-paddingless">
                   <span
                     class="fig-title column is-12 is-mobile has-text-centered"
-                  >Mon compte bancaire</span>
+                    >Mon compte bancaire</span
+                  >
                   <figure>
                     <g-link to="/nos-services/mon-compte-bancaire/">
-                      <g-image src="~/assets/index/nos-services/compte-bancaire.jpg" />
+                      <g-image
+                        src="~/assets/index/nos-services/compte-bancaire.jpg"
+                      />
                       <figcaption class="figcaption-blue">
                         <br />
-                        <div class="tile content figcaption-description is-medium">
+                        <div
+                          class="tile content figcaption-description is-medium"
+                        >
                           J'ouvre mon compte bancaire en France depuis mon pays
                           d'origine, pour étudier en France en toute sérénité.
                         </div>
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
                     <div class="column is-mobile is-child is-3 feat-icon">
                       <g-image
                         src="~/assets/index/nos-services/banque-1.svg"
@@ -427,16 +397,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>Je souhaite en bénéficier</strong>
-                  </b-button>
-                </div>
               </div>
             </div>
           </div>
@@ -449,17 +409,24 @@
               </div>
             </div>
           </div>
-          <div class="column is-3-desktop is-4-mobile" style="margin-top: -3%;">
+          <div class="column is-3-desktop is-4-mobile" style="margin-top: -3%">
             <div class="columns is-multiline is-centered">
               <div class="column is-12">
                 <div class="grid cs-style-3 is-paddingless">
-                  <span class="fig-title column is-12 is-mobile has-text-centered">Mon assurance</span>
+                  <span
+                    class="fig-title column is-12 is-mobile has-text-centered"
+                    >Mon assurance</span
+                  >
                   <figure>
                     <g-link to="/nos-services/mon-assurance/">
-                      <g-image src="~/assets/index/nos-services/assurance.jpg" />
+                      <g-image
+                        src="~/assets/index/nos-services/assurance.jpg"
+                      />
                       <figcaption class="figcaption-red">
                         <br />
-                        <div class="tile content figcaption-description is-medium">
+                        <div
+                          class="tile content figcaption-description is-medium"
+                        >
                           C'est l'assurance qui couvre mon séjour de moins de 3
                           mois en France, quel que soit mon pays de provenance,
                           et qui me permet d’obtenir un Visa pour la France !
@@ -467,8 +434,13 @@
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
-                    <div id="service-icon" class="column is-mobile is-child is-3 feat-icon">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
+                    <div
+                      id="service-icon"
+                      class="column is-mobile is-child is-3 feat-icon"
+                    >
                       <g-image
                         src="~/assets/index/nos-services/assurance-1.svg"
                         class="first"
@@ -482,16 +454,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>J'effectue ma demande</strong>
-                  </b-button>
-                </div>
               </div>
             </div>
           </div>
@@ -504,7 +466,9 @@
     </div>
 
     <!--desktop -->
-    <div class="columns is-multiline is-centered is-mobile is-hidden-touch columns-1-desktop">
+    <div
+      class="columns is-multiline is-centered is-mobile is-hidden-touch columns-1-desktop"
+    >
       <div class="column is-10-desktop">
         <div class="columns is-multiline is-centered is-gapless is-mobile">
           <div class="column is-3-desktop is-4-mobile">
@@ -518,13 +482,18 @@
                 <div class="grid cs-style-3 is-paddingless">
                   <span
                     class="fig-title column is-12 is-mobile has-text-centered"
-                  >Ma caution bancaire</span>
+                    >Ma caution bancaire</span
+                  >
                   <figure>
                     <g-link to="/nos-services/ma-caution-bancaire/">
-                      <g-image src="~/assets/index/nos-services/caution-bancaire.jpg" />
+                      <g-image
+                        src="~/assets/index/nos-services/caution-bancaire.jpg"
+                      />
                       <figcaption class="figcaption-blue">
                         <br />
-                        <div class="tile content figcaption-description is-medium">
+                        <div
+                          class="tile content figcaption-description is-medium"
+                        >
                           Studely me facilite la justification de mes ressources
                           financières pour l’obtention de mon Visa grâce à un
                           accompagnement personnalisé.
@@ -532,7 +501,9 @@
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
                     <div class="column is-mobile is-child is-3 feat-icon">
                       <g-image
                         src="~/assets/index/nos-services/AVI-1.svg"
@@ -546,16 +517,6 @@
                       />
                     </div>
                   </div>
-                </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>Je souscris au service</strong>
-                  </b-button>
                 </div>
               </div>
             </div>
@@ -584,14 +545,17 @@
                 <div class="grid cs-style-3 is-paddingless">
                   <span
                     class="fig-title column is-12 is-mobile has-text-centered"
-                  >Mon logement étudiant</span>
+                    >Mon logement étudiant</span
+                  >
                   <figure>
                     <g-link to="/nos-services/mon-logement/">
                       <g-image src="~/assets/index/nos-services/logement.jpg" />
 
                       <figcaption class="figcaption-green">
                         <br />
-                        <div class="tile content figcaption-description is-medium">
+                        <div
+                          class="tile content figcaption-description is-medium"
+                        >
                           Studely m’accompagne de la recherche de logement
                           étudiant en France à la signature du bail depuis mon
                           pays.
@@ -599,7 +563,9 @@
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
                     <div class="column is-mobile is-child is-3 feat-icon">
                       <g-image
                         src="~/assets/index/nos-services/Logement-1.svg"
@@ -613,16 +579,6 @@
                       />
                     </div>
                   </div>
-                </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>J'effectue ma demande</strong>
-                  </b-button>
                 </div>
               </div>
             </div>
@@ -664,20 +620,27 @@
                 <div class="grid cs-style-3 is-paddingless">
                   <span
                     class="fig-title column is-12 is-mobile has-text-centered"
-                  >Mon compte bancaire</span>
+                    >Mon compte bancaire</span
+                  >
                   <figure>
                     <g-link to="/nos-services/mon-compte-bancaire/">
-                      <g-image src="~/assets/index/nos-services/compte-bancaire.jpg" />
+                      <g-image
+                        src="~/assets/index/nos-services/compte-bancaire.jpg"
+                      />
                       <figcaption class="figcaption-blue">
                         <br />
-                        <div class="tile content figcaption-description is-medium">
+                        <div
+                          class="tile content figcaption-description is-medium"
+                        >
                           J'ouvre mon compte bancaire en France depuis mon pays
                           d'origine, pour étudier en France en toute sérénité.
                         </div>
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
                     <div class="column is-mobile is-child is-3 feat-icon">
                       <g-image
                         src="~/assets/index/nos-services/banque-1.svg"
@@ -691,16 +654,6 @@
                       />
                     </div>
                   </div>
-                </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>J'ouvre mon compte</strong>
-                  </b-button>
                 </div>
               </div>
             </div>
@@ -718,17 +671,24 @@
               </div>
             </div>
           </div>
-          <div class="column is-3-desktop is-4-mobile" style="margin-top: -3%;">
+          <div class="column is-3-desktop is-4-mobile" style="margin-top: -3%">
             <div class="columns is-multiline is-centered">
               <div class="column is-12">
                 <div class="grid cs-style-3 is-paddingless">
-                  <span class="fig-title column is-12 is-mobile has-text-centered">Mon assurance</span>
+                  <span
+                    class="fig-title column is-12 is-mobile has-text-centered"
+                    >Mon assurance</span
+                  >
                   <figure>
                     <g-link to="/nos-services/mon-assurance/">
-                      <g-image src="~/assets/index/nos-services/assurance.jpg" />
+                      <g-image
+                        src="~/assets/index/nos-services/assurance.jpg"
+                      />
                       <figcaption class="figcaption-red">
                         <br />
-                        <div class="tile content figcaption-description is-medium">
+                        <div
+                          class="tile content figcaption-description is-medium"
+                        >
                           C'est l'assurance qui couvre mon séjour de moins de 3
                           mois en France, quel que soit mon pays de provenance,
                           et qui me permet d’obtenir un Visa pour la France !
@@ -736,8 +696,13 @@
                       </figcaption>
                     </g-link>
                   </figure>
-                  <div class="columns column is-mobile is-centered is-12 service-picto">
-                    <div id="service-icon" class="column is-mobile is-child is-3 feat-icon">
+                  <div
+                    class="columns column is-mobile is-centered is-12 service-picto"
+                  >
+                    <div
+                      id="service-icon"
+                      class="column is-mobile is-child is-3 feat-icon"
+                    >
                       <g-image
                         src="~/assets/index/nos-services/assurance-1.svg"
                         class="first"
@@ -751,16 +716,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="column is-12 content-16">
-                  <b-button
-                    tag="a"
-                    href="https://espace.studely.com"
-                    type="is-success"
-                    class="button-service"
-                  >
-                    <strong>Je souhaite en bénéficier</strong>
-                  </b-button>
-                </div>
               </div>
             </div>
           </div>
@@ -772,6 +727,12 @@
 
 <script>
 export default {
+  props: {
+    services: {
+      type: Array,
+      default: () => [],
+    },
+  },
   metaInfo: {
     title: "Studely : Etudier en France en toute sérénité !",
     meta: [
@@ -780,7 +741,7 @@ export default {
         content:
           "Premier service financier dédié aux étudiants en mobilité vers la France : justification des ressources financières, logement étudiant, compte bancaire, assurances complètes",
       },
-    ]
+    ],
   },
   data() {
     return {};

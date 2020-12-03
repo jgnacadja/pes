@@ -20,27 +20,52 @@
           <br />
           <h6>
             <b :class="bclass" :v-show="message">{{ message }}</b>
-          </h6>Suivez-nous
-          &nbsp;
+          </h6>
+          Suivez-nous &nbsp;
           <a href="https://www.facebook.com/StudelyFrance/">
-            <b-icon pack="fab" icon="facebook" size="is-medium" type="is-white" />
-          </a>&nbsp;
+            <b-icon
+              pack="fab"
+              icon="facebook"
+              size="is-medium"
+              type="is-white"
+            /> </a
+          >&nbsp;
           <a href="https://www.instagram.com/studelyofficiel/">
-            <b-icon pack="fab" icon="instagram" size="is-medium" type="is-white" />
-          </a>&nbsp;
+            <b-icon
+              pack="fab"
+              icon="instagram"
+              size="is-medium"
+              type="is-white"
+            /> </a
+          >&nbsp;
           <a href="https://twitter.com/studelyofficiel">
-            <b-icon pack="fab" icon="twitter" size="is-medium" type="is-white" />
+            <b-icon
+              pack="fab"
+              icon="twitter"
+              size="is-medium"
+              type="is-white"
+            />
           </a>
           &nbsp;
           <a href="https://www.linkedin.com/company/linkedindestudely">
-            <b-icon pack="fab" icon="linkedin" size="is-medium" type="is-white" />
-          </a>&nbsp;
+            <b-icon
+              pack="fab"
+              icon="linkedin"
+              size="is-medium"
+              type="is-white"
+            /> </a
+          >&nbsp;
           <a href="https://www.youtube.com/channel/UCpd-GbAseIuTLtutXSy8dAA">
-            <b-icon pack="fab" icon="youtube" size="is-medium" type="is-white" />
+            <b-icon
+              pack="fab"
+              icon="youtube"
+              size="is-medium"
+              type="is-white"
+            />
           </a>
           &nbsp;
         </div>
-        <div class="column" style="padding-top:3.3em;">
+        <div class="column" style="padding-top: 3.3em">
           <div class="columns is-variable is-centered">
             <div class="column is-4 is-offset-1">
               <ul>
@@ -61,7 +86,9 @@
                   <g-link to="/on-recrute/">Carrières</g-link>
                 </li>
                 <li>
-                  <g-link to="/espace-documentaire">Ressources documentaires</g-link>
+                  <g-link to="/espace-documentaire"
+                    >Ressources documentaires</g-link
+                  >
                 </li>
                 <li>
                   <g-link to="/">Plan du site</g-link>

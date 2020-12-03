@@ -243,10 +243,19 @@ section.container {
 }
 
 .no-padding {
-  padding: 0px !important
+  padding: 0px !important;
 }
 
 .content-12-link a {
   color: white !important;
   text-decoration: underline;
+}
+
+#about-content strong {
+  color: white !important;
+}
+
+.carousel-arrow .icon {
+  background-color: transparent !important;
+  border: none !important;
 }
