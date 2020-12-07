@@ -60,33 +60,21 @@
               </div>
             </div>
 
-            <div class="columns is-12 is-mobile">
-              <div class="column is-6">
+            <div class="columns is-12 is-mobile partner-height">
+              <div class="column is-6 left-team">
                 <div class="column">
-                  <g-image
-                    class="image-team"
-                    :src="about.team.teamOne.file.url"
-                  />
+                  <g-image class="image" :src="about.team.teamOne.file.url" />
                 </div>
                 <div class="column">
-                  <g-image
-                    class="image-team"
-                    :src="about.team.teamTwo.file.url"
-                  />
+                  <g-image class="image" :src="about.team.teamTwo.file.url" />
                 </div>
               </div>
-              <div class="column is-6 ml-3">
+              <div class="column is-6 right-team">
                 <div class="column">
-                  <g-image
-                    class="image-team"
-                    :src="about.team.teamTwo.file.url"
-                  />
+                  <g-image class="image" :src="about.team.teamTwo.file.url" />
                 </div>
                 <div class="column">
-                  <g-image
-                    class="image-team"
-                    :src="about.team.teamOne.file.url"
-                  />
+                  <g-image class="image" :src="about.team.teamOne.file.url" />
                 </div>
               </div>
             </div>
@@ -95,14 +83,14 @@
       </div>
 
       <div class="column is-7 main-box-right">
-        <div class="columns is-12">
+        <div class="columns is-12 full-height">
           <div class="column is-12 has-text-left">
             <div class="column mt-2">
               <span class="title main-box-title">
                 {{ about.events.title }}</span
               >
             </div>
-            <div class="column">
+            <div class="column full-height">
               <Calendar :eventsList="about.events.events" />
             </div>
           </div>
@@ -161,10 +149,19 @@ export default {
   margin-left: 10%;
 }
 
+/*.left-team {
+  margin-right: -3em;
+  margin-left: 4em;
+}
+
+.right-team {
+  margin-left: -1em;
+}*/
+
 @media only screen and (min-width: 1024px) {
-  .image-team {
+  /*.image-team {
     max-width: 75%;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 768px) {
@@ -212,6 +209,16 @@ export default {
 .main-box-sub {
   margin-top: -1em;
   margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 769px) {
+  .full-height {
+    height: 100%;
+  }
+
+  .partner-height {
+    margin-top: -4ex;
+  }
 }
 </style>
 
