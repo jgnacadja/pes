@@ -35,168 +35,10 @@
           <div
             class="columns is-variable is-mobile has-text-centered is-centered"
           >
-            <div class="column">
-              <b-navbar-item href="https://www.facebook.com/StudelyFrance/">
-                <b-icon
-                  pack="fab"
-                  icon="facebook"
-                  size="is-small"
-                  type="is-black"
-                />
-              </b-navbar-item>
-            </div>
-            <div class="column">
-              <b-navbar-item href="https://www.instagram.com/studelyofficiel/">
-                <b-icon
-                  pack="fab"
-                  icon="instagram"
-                  size="is-small"
-                  type="is-black"
-                />
-              </b-navbar-item>
-            </div>
+            
           </div>
         </div>
 
-        <b-navbar-dropdown
-          label="Qui sommes-nous ?"
-          class="column is-mega sub-navbar"
-          collapsible
-        >
-          <div class="columns is-multiline">
-            <div class="column is-3-desktop is-0-mobile"></div>
-            <div class="column is-2-desktop is-12-mobile">
-              <b-navbar-item
-                tag="g-link"
-                class="subitemchild"
-                to="/etudier-en-france/"
-                >Studely France</b-navbar-item
-              >
-
-              <b-navbar-item tag="g-link" class="subitemchild" to=""
-                >Studely Cameroun</b-navbar-item
-              >
-              <b-navbar-item tag="g-link" class="subitemchild" to=""
-                >Nos médias</b-navbar-item
-              >
-            </div>
-          </div>
-        </b-navbar-dropdown>
-
-        <b-navbar-dropdown
-          label="Nos services"
-          class="column is-mega sub-navbar"
-          collapsible
-        >
-          <div class="columns is-multiline">
-            <div class="column is-3-desktop is-0-mobile"></div>
-
-            <div class="column is-2-desktop is-12-mobile">
-              <b-navbar-item
-                tag="g-link"
-                to="/nos-services/ma-caution-bancaire/"
-                class="subitemchild"
-                >Ma caution bancaire</b-navbar-item
-              >
-              <b-navbar-item
-                tag="g-link"
-                to="/nos-services/mon-logement/"
-                class="subitemchild"
-                >Mon logement étudiant</b-navbar-item
-              >
-              <b-navbar-item
-                tag="g-link"
-                class="subitemchild"
-                to="/nos-services/mon-compte-bancaire/"
-                >Mon compte bancaire</b-navbar-item
-              >
-              <b-navbar-item
-                tag="g-link"
-                to="/nos-services/mon-assurance/"
-                class="subitemchild"
-                >Mon assurance</b-navbar-item
-              >
-            </div>
-          </div>
-        </b-navbar-dropdown>
-
-        <b-navbar-dropdown
-          label="Etudier en France"
-          class="column is-mega sub-navbar"
-          collapsible
-        >
-          <div class="columns is-multiline">
-            <div class="column is-3-desktop is-0-mobile"></div>
-            <div class="column is-2-desktop is-12-mobile">
-              <b-navbar-item
-                tag="g-link"
-                to="/etudier-en-france/"
-                class="subitemchild"
-                >Etudier en France</b-navbar-item
-              >
-              <b-navbar-item tag="g-link" to="/parents/" class="subitemchild"
-                >Nos conseils</b-navbar-item
-              >
-              <b-navbar-item tag="g-link" to="/parents/" class="subitemchild"
-                >Parents</b-navbar-item
-              >
-            </div>
-          </div>
-        </b-navbar-dropdown>
-
-        <b-navbar-dropdown
-          label="Nos partenaires"
-          class="column is-mega sub-navbar"
-          collapsible
-        >
-          <div class="columns is-multiline is-paddingless">
-            <div class="column is-3-desktop is-0-mobile is-paddingless"></div>
-            <div class="column is-2-desktop is-12-mobile is-paddingless">
-              <b-navbar-item
-                tag="g-link"
-                class="subitemchild"
-                to="/partenaires/ecole/"
-                >Nos écoles partenaires</b-navbar-item
-              >
-              <b-navbar-item
-                tag="g-link"
-                class="subitemchild"
-                to="/partenaires/immobilier/"
-                >Partenaires immobiliers</b-navbar-item
-              >
-              <b-navbar-item
-                tag="g-link"
-                class="subitemchild"
-                to="/partenaires/banque-assurance/"
-                >Banques & institutions financières</b-navbar-item
-              >
-            </div>
-          </div>
-        </b-navbar-dropdown>
-
-        <b-navbar-dropdown
-          label="Contactez-nous"
-          class="column is-mega sub-navbar"
-          collapsible
-        >
-          <div class="columns is-multiline">
-            <div class="column is-3-desktop is-0-mobile"></div>
-            <div class="column is-2-desktop is-12-mobile">
-              <b-navbar-item tag="g-link" class="subitemchild" to=""
-                >Service client</b-navbar-item
-              >
-              <b-navbar-item tag="g-link" to="" class="subitemchild"
-                >Devenir partenaire</b-navbar-item
-              >
-              <b-navbar-item tag="g-link" to="/on-recrute/" class="subitemchild"
-                >Carrières</b-navbar-item
-              >
-            </div>
-          </div>
-        </b-navbar-dropdown>
-        <div class="column is-mega">
-          <TheSearch />
-        </div>
       </div>
 
       <div
@@ -372,7 +214,7 @@
                 </div>
               </div>
             </b-navbar-dropdown>
-            <TheSearch />
+           
           </div>
         </div>
       </div>
@@ -404,10 +246,10 @@
 </template>
 
 <script scoped>
-import TheSearch from "~/components/TheSearch.vue";
+// import TheSearch from "~/components/TheSearch.vue";
 
 export default {
-  components: { TheSearch },
+ 
   data() {
     return {
       typeNavbar: "is-primary",
