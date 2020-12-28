@@ -24,13 +24,10 @@
             <nav data-target='toggle-nav'>
                 <ul class='nav__links'>
                     <li class='nav__item'>
-                        <a href="https://blog.place-des-entreprises.beta.gouv.fr">Actu aides</a>
+                        <a href="/comment-ca-marche">Comment ça marche ?</a>
                     </li>
                     <li class='nav__item'>
-                        <a href="/comment_ca_marche.html">Comment ça marche ?</a>
-                    </li>
-                    <li class='nav__item'>
-                        <a id="experts_login" href="/mon_compte/sign_in">Accès conseillers</a>
+                        <a id="experts_login" href="/mon-compte/">Accès conseillers</a>
                     </li>
                 </ul>
             </nav>

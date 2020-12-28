@@ -1,7 +1,5 @@
 <template>
   <Layout>
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-
       <section class='section section-white less-padding'>
         <div class='container'>
             <div class='columns'>
