@@ -22,15 +22,15 @@ export default function(Vue, { router, head, isClient }) {
     content: "width=device-width, initial-scale=1.0, shrink-to-fit=no",
   });
 
-  // Import Adobe Fonts
-  head.link.push({
-    rel: "stylesheet",
-    href: "https://use.typekit.net/bur4tax.css",
-  });
   // Import Font Awesome
   head.link.push({
     rel: "stylesheet",
     href: "https://use.fontawesome.com/releases/v5.12.0/css/all.css",
+  });
+
+  head.link.push({
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap",
   });
 //   head.script.push({
 //     src: "crisp.js",

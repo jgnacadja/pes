@@ -15,7 +15,7 @@ module.exports = {
     "Un dispositif de la chambre de commerce et d'industrie du BENIN",
 
   plugins: [
-    // contentful
+    sourceFilesystem
   ],
   templates: {
    // ContentfulPost: "/article/:title",

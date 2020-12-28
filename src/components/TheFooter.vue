@@ -1,117 +1,42 @@
 <template>
-  <footer id="footer" class="footer has-background-success has-text-white">
-    <div class="contain">
-      <div class="columns is-variable is-desktop has-text-white">
-        <div class="column is-3-desktop is-two-thirds-tablet is-offset-1">
-          <h3>Newsletter</h3>
-          <br />
-          <b-field>
-            <iframe
-              class="mj-w-res-iframe bfieldStyle"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-              src="https://app.mailjet.com/widget/iframe/2l0Z/F86"
-              width="100%"
-              height="220px"
-            ></iframe>
-          </b-field>
-          <br />
-          <h6>
-            <b :class="bclass" :v-show="message">{{ message }}</b>
-          </h6>
-          Suivez-nous &nbsp;
-          <a href="https://www.facebook.com/StudelyFrance/">
-            <b-icon
-              pack="fab"
-              icon="facebook"
-              size="is-medium"
-              type="is-white"
-            /> </a
-          >&nbsp;
-          <a href="https://www.instagram.com/studelyofficiel/">
-            <b-icon
-              pack="fab"
-              icon="instagram"
-              size="is-medium"
-              type="is-white"
-            /> </a
-          >&nbsp;
-          <a href="https://twitter.com/studelyofficiel">
-            <b-icon
-              pack="fab"
-              icon="twitter"
-              size="is-medium"
-              type="is-white"
-            />
-          </a>
-          &nbsp;
-          <a href="https://www.linkedin.com/company/linkedindestudely">
-            <b-icon
-              pack="fab"
-              icon="linkedin"
-              size="is-medium"
-              type="is-white"
-            /> </a
-          >&nbsp;
-          <a href="https://www.youtube.com/channel/UCpd-GbAseIuTLtutXSy8dAA">
-            <b-icon
-              pack="fab"
-              icon="youtube"
-              size="is-medium"
-              type="is-white"
-            />
-          </a>
-          &nbsp;
-        </div>
-        <div class="column" style="padding-top: 3.3em">
-          <div class="columns is-variable is-centered">
-            <div class="column is-4 is-offset-1">
-              <ul>
-                <li>
-                  <g-link to="/qui-sommes-nous/">Qui sommes-nous?</g-link>
-                </li>
-                <li>
-                  <g-link to="/partenaires/">Devenir Partenaire</g-link>
-                </li>
-                <li>
-                  <g-link to="/contactez-nous/">Contactez-nous</g-link>
-                </li>
-              </ul>
-            </div>
-            <div class="column is-4">
-              <ul>
-                <li>
-                  <g-link to="/on-recrute/">Carrières</g-link>
-                </li>
-                <li>
-                  <g-link to="/espace-documentaire"
-                    >Ressources documentaires</g-link
-                  >
-                </li>
-                <li>
-                  <g-link to="/">Plan du site</g-link>
-                </li>
-              </ul>
-            </div>
-            <div class="column is-4">
-              <ul>
-                <li>
-                  <g-link to="/faq/">FAQ</g-link>
-                </li>
-                <li>
-                  <g-link to="/mentions-legales/">Mentions légales</g-link>
-                </li>
-                <li>
-                  <g-link to="/cgu/">CGU</g-link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <footer class='footer_PE'>
+      <div class='container'>
+      <ul class='footer__links'>
+          <li class='marianne'>
+            <figure class="image is-128x128">
+              <img alt="Logo Marianne République Française" src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+          </li><br>
+          <li class='france-relance'>
+            <figure class="image is-128x128">
+              <img alt="Logo France Relance" src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+          </li>
+      </ul>
+      <ul class='footer__links'>
+          <li class='title'>
+              <img alt="Logo Place des Entreprises" class="logo-footer" src="https://bulma.io/images/placeholders/128x128.png">
+              <span style="color: #ffffff;">place-des-entreprises.beta.gouv.fr</span>
+          </li>
+          <li class='beta-link'><a href="https://beta.gouv.fr/startups/place-des-entreprises">Une startup d’État de beta.gouv</a></li>
+          <li class='social-network'>
+              <a target="_blank" rel="noopener" href="#"><i aria-hidden='true' class='fab fa-linkedin'></i>
+              <span class='visually-hidden'>Linkedin</span>
+              </a><a target="_blank" rel="noopener" href="#"><i aria-hidden='true' class='fab fa-twitter'></i>
+              <span class='visually-hidden'>Twitter</span>
+              </a><a target="_blank" rel="noopener" href="#"><i aria-hidden='true' class='fab fa-github'></i>
+              <span class='visually-hidden'>Github</span>
+              </a>
+          </li>
+      </ul>
+      <ul class='footer__links'>
+          <li><a href="/cgu">Conditions d’utilisation</a></li>
+          <li><a href="/mentions_d_information">Mentions d&#39;information</a></li>
+          <li><a href="/mentions_legales">Mentions légales</a></li>
+          <li><a href="/stats">Statistiques</a></li>
+          <li><a href="https://www.numerique.gouv.fr/dinum/">DINUM</a></li>
+      </ul>
       </div>
-    </div>
   </footer>
 </template>
 <script type="text/javascript" src="https://app.mailjet.com/statics/js/iframeResizer.min.js"></script>
@@ -226,39 +151,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../variables.scss";
 
-a {
-  color: $white;
-  line-height: 2.5em;
-}
-
-.footer {
-  font-family: $family-sans-serif;
-}
-
-.rounded {
-  border-radius: 12px;
-}
-
-/* @media only screen and (min-width: 769px) {
-  #footer {
-    position: fixed;
-  }
-} */
-
-@media screen and (max-width: 1023px) {
-  #footer {
-    position: relative !important;
-    top: auto;
-    left: auto;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #content {
-    padding-bottom: 0;
-  }
-}
 </style>
