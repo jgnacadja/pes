@@ -20,7 +20,10 @@
                     </div>
                 </div>
                 <div class="columns" id='image-home'>
-                    <img alt="" src="dist/img/home.png" />
+                    <figure class="image is-128x128">
+                        <img src="https://bulma.io/images/placeholders/256x256.png">
+                    </figure>
+                    <!-- <img alt="" src="dist/img/home.png" /> -->
                 </div>
             </div>
         </div>
@@ -49,7 +52,9 @@
                 <div class="column card">
                   <div class="card-content">
                     <div class="content">
-                        <h2 class="title is-2"><a  href="/aide-entreprises/recrutement-formation#section-breadcrumbs">Recruter ou former vos salariés, améliorer l’organisation du travail</a></h2>
+                        <div class="block">
+                        <h2 class="title is-2 block"><a  href="/aide-entreprises/recrutement-formation#section-breadcrumbs">Recruter ou former vos salariés, améliorer l’organisation du travail</a></h2>
+                        </div>
                         <p>S’informer sur les aides à l’embauche, à l'apprentissage, trouver des candidats, identifier la bonne formation, être accompagné sur la GPEC, améliorer l’efficacité en entreprise par l’organisation du travail. </p>
                         <button class='button small is-link'>Choisir</button>
                     </div>
@@ -58,7 +63,7 @@
 
                 <div class='column card block-link'>
                     <div class='card__content'>
-                    <h2 class="title is-2"><a  href="/aide-entreprises/financement-projets#section-breadcrumbs">Financer vos investissements</a></h2>
+                    <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/financement-projets#section-breadcrumbs">Financer vos investissements</a></h2></div>
                     <p>Identifier les solutions financières possibles, les aides aux projets innovants, aux investissements techniques touchant à la santé-sécurité des salariés, à la rénovation de vos locaux, à l’implantation sur un nouveau territoire.</p>
                     </div>
                     <div class='discover_button'>
@@ -67,7 +72,7 @@
                 </div>
                 <div class='column card block-link'>
                     <div class='card__content'>
-                    <h2 class="title is-2"><a  href="/aide-entreprises/entreprise-en-difficulte#section-breadcrumbs">Résoudre un problème de trésorerie, financier ou contractuel</a></h2>
+                    <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/entreprise-en-difficulte#section-breadcrumbs">Résoudre un problème de trésorerie, financier ou contractuel</a></h2></div>
                     <p>Demander une avance de trésorerie, une médiation du crédit, un étalement de vos charges, faire un diagnostic de votre situation, résoudre un différend avec un partenaire privé ou public.</p>
                     </div>
                     <div class='discover_button'>
@@ -78,7 +83,7 @@
             <div class='columns row'>
                 <div class='column card block-link'>
                     <div class='card__content'>
-                    <h2 class="title is-2"><a  href="/aide-entreprises/droit-du-travail#section-breadcrumbs">Être conseillé en droit du travail</a></h2>
+                    <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/droit-du-travail#section-breadcrumbs">Être conseillé en droit du travail</a></h2></div>
                     <p>S’informer sur les formalités d’embauche, la rédaction du contrat de travail, le calcul de rémunérations ou des congés, la mise en place de l'activité partielle, sécuriser un licenciement économique ou une rupture conventionnelle collective.</p>
                     </div>
                     <div class='discover_button'>
@@ -87,7 +92,7 @@
                 </div>
                 <div class='column card block-link'>
                     <div class='card__content'>
-                    <h2 class="title is-2"><a  href="/aide-entreprises/developpement-commercial#section-breadcrumbs">Rebondir et développer votre activité commerciale</a></h2>
+                    <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/developpement-commercial#section-breadcrumbs">Rebondir et développer votre activité commerciale</a></h2></div>
                     <p>Faire un point sur votre stratégie, diversifier votre activité, trouver de nouveaux clients, rejoindre un club d’entreprise, s’étendre à l’international.</p>
                     </div>
                     <div class='discover_button'>
@@ -96,7 +101,7 @@
                 </div>
                 <div class='column card block-link'>
                     <div class='card__content'>
-                    <h2 class="title is-2"><a  href="/aide-entreprises/internet-web#section-breadcrumbs">Développer votre activité sur internet</a></h2>
+                    <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/internet-web#section-breadcrumbs">Développer votre activité sur internet</a></h2></div>
                     <p>Créer votre site internet, mettre en place un click and collect, améliorer votre visibilité sur internet, protéger vos données.</p>
                     </div>
                     <div class='discover_button'>
@@ -107,8 +112,8 @@
             <div class='columns row'>
                 <div class='column card block-link'>
                     <div class='card__content'>
-                    <h2 class="title is-2"><a  href="/aide-entreprises/environnement-transition-ecologique#section-breadcrumbs">Environnement &amp; transition écologique</a></h2>
-                    <p>Optimiser vos consommations d’énergie, valoriser vos déchets par la revente de matière, éco-concevoir un produit, mettre en place une démarche bas carbone.</p>
+                        <div class="block"><h2 class="title is-2 "><a  href="/aide-entreprises/environnement-transition-ecologique#section-breadcrumbs">Environnement &amp; transition écologique</a></h2></div>
+                        <p>Optimiser vos consommations d’énergie, valoriser vos déchets par la revente de matière, éco-concevoir un produit, mettre en place une démarche bas carbone.</p>
                     </div>
                     <div class='discover_button'>
                     <button class='button small is-link'>Choisir</button>
@@ -116,7 +121,7 @@
                 </div>
                 <div class='column card block-link'>
                     <div class='card__content'>
-                    <h2 class="title is-2"><a  href="/aide-entreprises/sante-securite-travail#section-breadcrumbs">Garantir la santé et la sécurité au travail, les règles d&#39;hygiène</a></h2>
+                    <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/sante-securite-travail#section-breadcrumbs">Garantir la santé et la sécurité au travail, les règles d&#39;hygiène</a></h2></div>
                     <p>Réviser votre document unique d'évaluation des risques professionnels, former vos salariés à la prévention des risques professionnels, connaître les règles d'hygiène, améliorer la qualité de vie au travail pour être plus performant.</p>
                     </div>
                     <div class='discover_button'>
@@ -125,7 +130,7 @@
                 </div>
                 <div class='column card block-link'>
                     <div class='card__content'>
-                    <h2 class="title is-2"><a  href="/aide-entreprises/cession-reprise#section-breadcrumbs">Transmettre ou reprendre une entreprise</a></h2>
+                    <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/cession-reprise#section-breadcrumbs">Transmettre ou reprendre une entreprise</a></h2></div>
                     <p>Réaliser un diagnostic pour valoriser votre entreprise, trouver un repreneur ou un cédant, connaître les aides à la reprise, accompagnement global jusqu’à la signature.</p>
                     </div>
                     <div class='discover_button'>
