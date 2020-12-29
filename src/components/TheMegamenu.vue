@@ -1,8 +1,8 @@
 <template>
   <header class="section">
     <div class="block notification full-width error region-alerte">
-      <div class="block container">
-        <p>
+      <div class="block container contentMarge" >
+        <p class="notif_content">
           <b>Place des Entreprises</b> est un service public ouvert uniquement
           en Hauts-de-France et en Île-de-France.
         </p>
@@ -13,11 +13,11 @@
         >
       </div>
     </div>
-    <div class="container">
-      <div class="navbar__container">
+    <div class="container ">
+      <div class="navbar__container contentMarge">
         <a class="navbar__home" href="/">
           <div class="columns">
-            <div class="column is-narrow">
+            <div class="column is-narrow ">
               <figure class="navbar__logo image is-128x128">
                 <img
                   alt="logo République française"
@@ -34,11 +34,7 @@
                   src="https://bulma.io/images/placeholders/128x128.png"
                 />
               </figure>
-              <br />
-              <i
-                >Un dispositif de la chambre de commerce et d'industrie du
-                BENIN</i
-              >
+              
             </div>
           </div>
 

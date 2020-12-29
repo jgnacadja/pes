@@ -1,17 +1,13 @@
 <template>
-  <footer class='footer_PE'>
+  <footer class='footer_PE contentMarge'>
       <div class='container'>
       <ul class='footer__links'>
           <li class='marianne'>
-            <figure class="image is-128x128">
+            <figure class="image is-96x96">
               <img alt="Logo Marianne République Française" src="https://bulma.io/images/placeholders/128x128.png">
             </figure>
           </li><br>
-          <li class='france-relance'>
-            <figure class="image is-128x128">
-              <img alt="Logo France Relance" src="https://bulma.io/images/placeholders/128x128.png">
-            </figure>
-          </li>
+          
       </ul>
       <ul class='footer__links'>
           <li class='title'>

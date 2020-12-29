@@ -1,17 +1,16 @@
 <template>
-  <Layout>
-      <section class='section section-white less-padding'>
-        <div class='container'>
-            <div class='columns'>
-                <div class='column home-title is-two-third-desktop is-12-mobile'>
+  <Layout >
+        <section class='section section-white less-padding'>
+            <div class='container'>
+                <div class='columns contentMarge'>
+                    <div class='column home-title is-two-third-desktop is-12-mobile'>
                     <div class="columns is-multiline">
                         <div class="column is-8">
-                            <h1>
+                            <h1 class="title is-4">
                             Entrepises, vous avez un projet, une difficulté, une question du quotidien ?
                             </h1>
                         </div>
-                       <div class="column is-8">
-                   
+                       <div class="column is-8 subtitle">
                            Un service a mesure de vos besoins : vous êtes rappelé par LE conseiller qui peut vous aider.
                        </div>
                     </div>
@@ -20,11 +19,11 @@
                     
                     <div class="columns has-text-center">
                         <div class="column links">
-                             <a class="button is-link" href="#scroll-section"><i class='fas fa-phone-alt'></i>
+                            <a class="button is-link" href="#scroll-section"><i class='fas fa-phone-alt'></i>
                             Échanger avec un conseiller
                             </a>
                         </div>
-                        <div class="column links">
+                        <div class="column links decoration">
                             <a href="/comment-ca-marche">Comment ça marche</a>
                         </div>
                     </div>
@@ -40,17 +39,30 @@
         </section>
         <section class='section section-light-grey blank-section' id='scroll-section'></section>
         <section class='section section-grey' id='section-thematiques'>
-        <div class='container'>
+        <div class='container contentMarge'>
             <div class='block-link'>
                 <div class='emphasis notification warning'>
-                    <div class='emphasis-header'>
-                    <figure class="image ">
-                        <img alt="logo-france-relance" title="logo-france-relance" class="is-rounded" src="https://bulma.io/images/placeholders/256x256.png">
-                    </figure>
-                    <h2>Impulse : Accélérateur du développement des PME </h2>
+                    <div class="columns">
+
+                        <div class="column is-1">
+                            <figure class="is-128x128">
+                                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                            </figure>
+                        </div>
+
+                        <div class="column is-2">
+                            <h6 class="title is-6"># France Relance, les mesures de soutien aux TPE & PME : </h6>
+                        </div>
+                        <div class="column is-7">
+                            <span>Être conseillé sur l'activité partielle de longue durée, la formation de vos salariés, les aides à l'embauche, votre stratégie d'entreprise...</span>
+                        </div>
+
+                        <div class="column is-2">
+                            <div id='button-discover'>
+                                <a class="button-outline small primary is-link" href="/aide-entreprises/relance.html">Découvrir les mesures</a></div>
+                        </div>
+                    
                     </div>
-                    <span>Impulse  vous aide à vous structurer et vous développer pour gagner en performance. Des conseillers, consultants et formateurs vous accompagnent dans la réalisation de diagnostics et de plans d’actions personnalisés, jusqu’à la mesure des résultats concrets.</span>
-                    <div id='button-discover'><a class="button-outline small primary" href="/aide-entreprises/relance.html">Découvrir les mesures</a></div>
                 </div>
             </div>
             <div class="block">
@@ -129,7 +141,7 @@
         <section class='section section-lightest-grey section-partners'>
         <div class='container text-center'>
             <div class='logo-list'>
-                <img alt="cci" title="cci" class="institution_logo" src="https://bulma.io/images/placeholders/128x128.png">
+                <img alt="cci" title="cci" class="institution_logo" src="https://bulma.io/images/placeholders/256x256.png">
                 <img alt="cma" title="cma" class="institution_logo" src="https://bulma.io/images/placeholders/128x128.png">
                 <img alt="pole-emploi" title="pole-emploi" class="institution_logo" src="https://bulma.io/images/placeholders/128x128.png">
                 <img alt="apec" title="apec" class="institution_logo" src="https://bulma.io/images/placeholders/128x128.png">
@@ -138,7 +150,7 @@
                 <img alt="dgfip" title="dgfip" class="institution_logo" src="https://bulma.io/images/placeholders/128x128.png">
                 <img alt="urssaf" title="urssaf" class="institution_logo" src="https://bulma.io/images/placeholders/128x128.png">
             </div>
-            <div class='title'>
+            <div class="subtitle">
                 <p>Place des Entreprises vous met en relation avec le conseiller qui peut vous aider.</p>
                 <p>Découvrez <a href='/comment_ca_marche.html#liste-partenaires'>plus de 50 partenaires</a> à votre service.</p>
             </div>
@@ -146,10 +158,10 @@
         </section>
         <section class='section section-white' id='container-newsletter'>
         <div class='container'>
-            <h2 class='section__title'>
+            <h2 class='section__title title'>
                 Découvrez les nouveaux accompagnements publics :
             </h2>
-            <p class='section__subtitle'>
+            <p class='section__subtitle subtitle'>
                 Découvrez chaque mois comment une administration ou un organisme public peut aider votre entreprise
             <div class='ui divider hidden'></div>
             </p>
@@ -163,8 +175,20 @@
                 </div>
             </form>
         </div>
-        </section>  
-    </Layout>
+    </section>  
+    
+      
+
+
+
+
+
+
+
+
+
+
+</Layout>
 
 </template>
 

@@ -63,6 +63,26 @@
     --theme-info-border: var(--light-blue);
     --theme-info-bg: var(--lighter-blue)
    }
+
+   div .subtitle{
+      font-family:'Poppins', Arial, sans-serif;
+      font-weight: 100;
+   }
+
+   .notif_content{
+      margin: 20px !important;
+   }
+
+   .contentMarge{
+      padding-left: 70px !important;
+      padding-right: 70px !important;
+   }
+
+   .decoration a{ 
+      text-decoration: underline !important;
+   }
+
+
    body {
     font-family:"Poppins", Arial, sans-serif;
     font-size:16px;
@@ -76,7 +96,7 @@
    h4,
    h5,
    h6 {
-    font-family:"Poppins", "Trebuchet MS", sans-serif
+    font-family:"Source Sans Pro", "Trebuchet MS", sans-serif
    }
    h1:first-child,
    h2:first-child,
@@ -2900,7 +2920,7 @@
    .notification.region-alerte .container {
     display:flex;
     justify-content:space-between;
-    align-items:center
+    align-items:center,
    }
    @media (max-width: 549px) {
     .notification.region-alerte p {
