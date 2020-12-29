@@ -1,47 +1,42 @@
 <template>
-  <footer class="footer_PE">
-    <div class="container">
-      <ul class="footer__links">
-        <li class="marianne">
-          <figure class="image">
-            <g-image
-              src="~/assets/logo/logo-ccib.png"
-              alt="Chambre de commerce et d'industrie du BENIN"
-              class="navbar__logo"
-              fit="inside"
-            />
-          </figure>
-        </li>
+  <footer class='footer_PE'>
+      <div class='container'>
+      <ul class='footer__links'>
+          <li class='marianne'>
+            <figure class="image is-128x128">
+              <img alt="Logo Marianne République Française" src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+          </li><br>
+          <li class='france-relance'>
+            <figure class="image is-128x128">
+              <img alt="Logo France Relance" src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+          </li>
       </ul>
-      <ul class="footer__links">
-        <li class="title">
-          <g-image
-            src="~/assets/logo/impulse.png"
-            alt="Impulse: Place des entreprises"
-            class="navbar__domain"
-            fit="inside"
-          />
-        </li>
-        <li class="social-network">
-          <a
-            target="_blank"
-            rel="noopener"
-            href="https://github.com/jgnacadja/pes"
-            ><i aria-hidden="true" class="fab fa-github"></i>
-            <span class="visually-hidden">Github</span>
-          </a>
-        </li>
+      <ul class='footer__links'>
+          <li class='title'>
+              <img alt="Logo Place des Entreprises" class="logo-footer" src="https://bulma.io/images/placeholders/128x128.png">
+              <span style="color: #ffffff;">place-des-entreprises.beta.gouv.fr</span>
+          </li>
+          <li class='beta-link'><a href="https://beta.gouv.fr/startups/place-des-entreprises">Une startup d’État de beta.gouv</a></li>
+          <li class='social-network'>
+              <a target="_blank" rel="noopener" href="#"><i aria-hidden='true' class='fab fa-linkedin'></i>
+              <span class='visually-hidden'>Linkedin</span>
+              </a><a target="_blank" rel="noopener" href="#"><i aria-hidden='true' class='fab fa-twitter'></i>
+              <span class='visually-hidden'>Twitter</span>
+              </a><a target="_blank" rel="noopener" href="#"><i aria-hidden='true' class='fab fa-github'></i>
+              <span class='visually-hidden'>Github</span>
+              </a>
+          </li>
       </ul>
-      <ul class="footer__links">
-        <li><a href="/cgu">Conditions d’utilisation</a></li>
-        <li>
-          <a href="/mentions_d_information">Mentions d&#39;information</a>
-        </li>
-        <li><a href="/mentions_legales">Mentions légales</a></li>
-        <li><a href="/stats">Statistiques</a></li>
-        <li><a href="https://www.numerique.gouv.fr/dinum/">DINUM</a></li>
+      <ul class='footer__links'>
+          <li><a href="/cgu">Conditions d’utilisation</a></li>
+          <li><a href="/mentions_d_information">Mentions d&#39;information</a></li>
+          <li><a href="/mentions_legales">Mentions légales</a></li>
+          <li><a href="/stats">Statistiques</a></li>
+          <li><a href="https://www.numerique.gouv.fr/dinum/">DINUM</a></li>
       </ul>
-    </div>
+      </div>
   </footer>
 </template>
 <script type="text/javascript" src="https://app.mailjet.com/statics/js/iframeResizer.min.js"></script>
@@ -156,4 +151,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 </style>
