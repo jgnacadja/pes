@@ -3,25 +3,30 @@
       <section class='section section-white less-padding'>
         <div class='container'>
             <div class='columns'>
-                <div class='column home-title'>
+                <div class='column home-title is-half-desktop is-12-mobile'>
                     <h1 class="title is-3">
-                    TPE &amp; PME, vous avez un projet, une difficulté, une question du quotidien ?
+                    Entrepises, vous avez un projet, une difficulté, une question du quotidien ?
                     </h1>
                     <p>
                     Service public simple et rapide : vous êtes rappelé par LE conseiller qui peut vous aider.
                     </p>
-                    <div class='links'>
-                    <a class="button is-link" href="#scroll-section"><i class='fas fa-phone-alt'></i>
-                    Échanger avec un conseiller
-                    </a>
-                    <a href="/comment_ca_marche.html">Comment ça marche</a>
+                    
+                    <div class="columns">
+                        <div class="column links">
+                             <a class="button is-link" href="#scroll-section"><i class='fas fa-phone-alt'></i>
+                            Échanger avec un conseiller
+                            </a>
+                        <div>
+                        <div class="column ">
+                            <a href="/comment-ca-marche">Comment ça marche</a>
+                        </div>
                     </div>
+                    
                 </div>
-                <div class="columns" id='image-home'>
-                    <figure class="image is-128x128">
+                <div class="column is-half-desktop is-8-mobile has-text-center" id='image-home'>
+                    <figure class="image is-5by4">
                         <img src="https://bulma.io/images/placeholders/256x256.png">
                     </figure>
-                    <!-- <img alt="" src="dist/img/home.png" /> -->
                 </div>
             </div>
         </div>
@@ -35,7 +40,7 @@
                     <figure class="image is-1286x128">
                         <img alt="logo-france-relance" title="logo-france-relance" class="is-rounded" src="https://bulma.io/images/placeholders/256x256.png">
                     </figure>
-                    <h2># France Relance, les mesures de soutien aux TPE &amp; PME : </h2>
+                    <h2># France Relance, les mesures de soutien aux entrepises : </h2>
                     </div>
                     <span>Être conseillé sur l'activité partielle de longue durée, la formation de vos salariés, les aides à l'embauche, votre stratégie d'entreprise...</span>
                     <div id='button-discover'><a class="button-outline small primary" href="/aide-entreprises/relance.html">Découvrir les mesures</a></div>

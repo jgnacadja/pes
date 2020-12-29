@@ -1,5 +1,5 @@
-const c1 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/home/rintio/Documents/Programmation/SYLVERE/RINTIO/pes/node_modules/gridsome/app/pages/404.vue")
-const c2 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/home/rintio/Documents/Programmation/SYLVERE/RINTIO/pes/src/pages/Index.vue")
+const c1 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/workspace/pes/node_modules/gridsome/app/pages/404.vue")
+const c2 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/workspace/pes/src/pages/Index.vue")
 
 export default [
   {
