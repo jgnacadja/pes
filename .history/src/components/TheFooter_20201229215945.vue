@@ -1,5 +1,4 @@
 <template>
-
   <footer class="footer_PE">
     <div class="container">
       <ul class="footer__links">
@@ -22,12 +21,17 @@
             class="navbar__domain"
             fit="inside"
           />
+          <span style="color: #ffffff"
+            >Accélérateur du développement des PME
+          </span>
+        </li>
+        <li class="beta-link">
+          <a href="https://beta.gouv.fr/startups/place-des-entreprises"
+            >Une startup d’État de beta.gouv</a
+          >
         </li>
         <li class="social-network">
-          <a
-            target="_blank"
-            rel="noopener"
-            href="https://github.com/jgnacadja/pes"
+          <a target="_blank" rel="noopener" href="#"
             ><i aria-hidden="true" class="fab fa-github"></i>
             <span class="visually-hidden">Github</span>
           </a>

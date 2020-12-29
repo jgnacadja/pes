@@ -1,43 +1,45 @@
 <template>
   <header class="section">
     <div class="block notification full-width error region-alerte">
-      <div class="block container contentMarge" >
-        <p class="notif_content">
+      <div class="block container">
+        <p>
           <b>Place des Entreprises</b> est un service public ouvert uniquement
           en Hauts-de-France et en Île-de-France.
         </p>
         <a
-          class="button small warning is-link"
+          class="button small warning"
           href="/comment_ca_marche.html#section-newsletter"
           >En savoir plus</a
         >
       </div>
     </div>
-    <div class="container ">
-      <div class="navbar__container contentMarge">
+    <div class="container">
+      <div class="navbar__container">
         <a class="navbar__home" href="/">
           <div class="columns">
-
-            <div class="column is-5">
-              <figure class="image">
+            <div class="column is-narrow">
+              <figure class="navbar__logo image is-128x128">
                 <g-image
                   src="~/assets/logo/logo-ccib.png"
-                  alt="Chambre de commerce et d'industrie du BENIN"
+                  alt="logo Chambre de commerce et d'industrie du BENIN"
                   class="navbar__logo"
                   fit="inside"
                 />
               </figure>
             </div>
-            <div class="column is-5">
-              <figure class="image">
-                <g-image
-                  src="~/assets/logo/impulse.png"
-                  alt="Impulse: Place des entreprises"
+            <div class="column is-narrow">
+              <figure class="navbar__logo image is-128x128">
+                <img
+                  alt="logo Place des Entreprises"
                   class="navbar__domain"
-                  fit="inside"
+                  src="https://bulma.io/images/placeholders/128x128.png"
                 />
               </figure>
               <br />
+              <i
+                >Un dispositif de la chambre de commerce et d'industrie du
+                BENIN</i
+              >
             </div>
           </div>
 
@@ -53,10 +55,10 @@
         </a>
         <nav data-target="toggle-nav">
           <ul class="nav__links">
-            <li class="nav__item itemA">
+            <li class="nav__item">
               <a href="/comment-ca-marche">Comment ça marche ?</a>
             </li>
-            <li class="nav__item itemA">
+            <li class="nav__item">
               <a id="experts_login" href="/mon-compte/">Accès conseillers</a>
             </li>
           </ul>

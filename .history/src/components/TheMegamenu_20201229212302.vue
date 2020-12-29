@@ -1,23 +1,22 @@
 <template>
   <header class="section">
     <div class="block notification full-width error region-alerte">
-      <div class="block container contentMarge" >
-        <p class="notif_content">
+      <div class="block container">
+        <p>
           <b>Place des Entreprises</b> est un service public ouvert uniquement
           en Hauts-de-France et en Île-de-France.
         </p>
         <a
-          class="button small warning is-link"
+          class="button small warning"
           href="/comment_ca_marche.html#section-newsletter"
           >En savoir plus</a
         >
       </div>
     </div>
-    <div class="container ">
-      <div class="navbar__container contentMarge">
+    <div class="container">
+      <div class="navbar__container">
         <a class="navbar__home" href="/">
           <div class="columns">
-
             <div class="column is-5">
               <figure class="image">
                 <g-image
@@ -36,6 +35,10 @@
                   class="navbar__domain"
                   fit="inside"
                 />
+                <i
+                  >Un dispositif de la chambre de commerce et d'industrie du
+                  BENIN</i
+                >
               </figure>
               <br />
             </div>
@@ -53,10 +56,10 @@
         </a>
         <nav data-target="toggle-nav">
           <ul class="nav__links">
-            <li class="nav__item itemA">
+            <li class="nav__item">
               <a href="/comment-ca-marche">Comment ça marche ?</a>
             </li>
-            <li class="nav__item itemA">
+            <li class="nav__item">
               <a id="experts_login" href="/mon-compte/">Accès conseillers</a>
             </li>
           </ul>
