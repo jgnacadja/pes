@@ -16,32 +16,25 @@
     <div class="container">
       <div class="navbar__container">
         <a class="navbar__home" href="/">
+          <figure class="navbar__logo image is-128x128">
+            <img
+              alt="logo République française"
+              class="navbar__logo"
+              src="https://bulma.io/images/placeholders/128x128.png"
+            />
+          </figure>
+          <figure class="navbar__logo image is-128x128">
+            <img
+              alt="logo Place des Entreprises"
+              class="navbar__domain"
+              src="https://bulma.io/images/placeholders/128x128.png"
+            />
+          </figure>
           <div class="columns">
-            <div class="column is-narrow">
-              <figure class="navbar__logo image is-128x128">
-                <img
-                  alt="logo République française"
-                  class="navbar__logo"
-                  src="https://bulma.io/images/placeholders/128x128.png"
-                />
-              </figure>
-            </div>
-            <div class="column is-narrow">
-              <figure class="navbar__logo image is-128x128">
-                <img
-                  alt="logo Place des Entreprises"
-                  class="navbar__domain"
-                  src="https://bulma.io/images/placeholders/128x128.png"
-                />
-              </figure>
-              <br />
-              <i
-                >Un dispositif de la chambre de commerce et d'industrie du
-                BENIN</i
-              >
+            <div class="column">
+              un dispositif de la chambre de commerce et d'industrie du BENIN
             </div>
           </div>
-
           <button
             aria-label="Déplier menu"
             class="burger-btn"

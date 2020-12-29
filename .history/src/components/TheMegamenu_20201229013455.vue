@@ -17,7 +17,7 @@
       <div class="navbar__container">
         <a class="navbar__home" href="/">
           <div class="columns">
-            <div class="column is-narrow">
+            <div class="column">
               <figure class="navbar__logo image is-128x128">
                 <img
                   alt="logo République française"
@@ -26,7 +26,7 @@
                 />
               </figure>
             </div>
-            <div class="column is-narrow">
+            <div class="column">
               <figure class="navbar__logo image is-128x128">
                 <img
                   alt="logo Place des Entreprises"

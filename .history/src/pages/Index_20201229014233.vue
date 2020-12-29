@@ -74,7 +74,7 @@
                 <div class='column card block-link'>
                     <div class='card__content'>
                     <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/financement-projets#section-breadcrumbs">Financer vos investissements</a></h2></div>
-                    <p>Identifier les solutions financières possibles, les aides aux projets innovants, aux investissements techniques touchant à la santé-sécurité des salariés, à la rénovation de vos locaux, à l’implantation sur une nouvelle région.</p>
+                    <p>Identifier les solutions financières possibles, les aides aux projets innovants, aux investissements techniques touchant à la santé-sécurité des salariés, à la rénovation de vos locaux, à l’implantation sur un nouveau territoire.</p>
                     </div>
                     <div class='discover_button'>
                     <button class='button small is-link'>Choisir</button>

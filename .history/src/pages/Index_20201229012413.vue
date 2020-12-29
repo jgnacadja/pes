@@ -5,14 +5,14 @@
             <div class='columns'>
                 <div class='column home-title is-two-third-desktop is-12-mobile'>
                     <div class="columns is-multiline">
-                        <div class="column is-8">
-                            <h1>
+                        <div class="column">
+                            <h1 class="title">
                             Entrepises, vous avez un projet, une difficulté, une question du quotidien ?
                             </h1>
                         </div>
-                       <div class="column is-8">
+                       <div class="column">
                    
-                           Un service a mesure de vos besoins : vous êtes rappelé par LE conseiller qui peut vous aider.
+                            Service public simple et rapide : vous êtes rappelé par LE conseiller qui peut vous aider.
                        </div>
                     </div>
                     
@@ -44,12 +44,12 @@
             <div class='block-link'>
                 <div class='emphasis notification warning'>
                     <div class='emphasis-header'>
-                    <figure class="image ">
+                    <figure class="image is-1286x128">
                         <img alt="logo-france-relance" title="logo-france-relance" class="is-rounded" src="https://bulma.io/images/placeholders/256x256.png">
                     </figure>
-                    <h2>Impulse : Accélérateur du développement des PME </h2>
+                    <h2># France Relance, les mesures de soutien aux entrepises : </h2>
                     </div>
-                    <span>Impulse  vous aide à vous structurer et vous développer pour gagner en performance. Des conseillers, consultants et formateurs vous accompagnent dans la réalisation de diagnostics et de plans d’actions personnalisés, jusqu’à la mesure des résultats concrets.</span>
+                    <span>Être conseillé sur l'activité partielle de longue durée, la formation de vos salariés, les aides à l'embauche, votre stratégie d'entreprise...</span>
                     <div id='button-discover'><a class="button-outline small primary" href="/aide-entreprises/relance.html">Découvrir les mesures</a></div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                   <div class="card-content">
                     <div class="content">
                         <div class="block">
-                        <h2 class="title is-2 block"><a  href="/aide-entreprises/recrutement-formation#section-breadcrumbs">Recruter ou former vos salariés</a></h2>
+                        <h2 class="title is-2 block"><a  href="/aide-entreprises/recrutement-formation#section-breadcrumbs">Recruter ou former vos salariés, améliorer l’organisation du travail</a></h2>
                         </div>
                         <p>S’informer sur les aides à l’embauche, à l'apprentissage, trouver des candidats, identifier la bonne formation, être accompagné sur la GPEC, améliorer l’efficacité en entreprise par l’organisation du travail. </p>
                         <button class='button small is-link'>Choisir</button>
@@ -74,7 +74,7 @@
                 <div class='column card block-link'>
                     <div class='card__content'>
                     <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/financement-projets#section-breadcrumbs">Financer vos investissements</a></h2></div>
-                    <p>Identifier les solutions financières possibles, les aides aux projets innovants, aux investissements techniques touchant à la santé-sécurité des salariés, à la rénovation de vos locaux, à l’implantation sur une nouvelle région.</p>
+                    <p>Identifier les solutions financières possibles, les aides aux projets innovants, aux investissements techniques touchant à la santé-sécurité des salariés, à la rénovation de vos locaux, à l’implantation sur un nouveau territoire.</p>
                     </div>
                     <div class='discover_button'>
                     <button class='button small is-link'>Choisir</button>
@@ -93,7 +93,7 @@
             <div class='columns row'>
                 <div class='column card block-link'>
                     <div class='card__content'>
-                    <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/droit-du-travail#section-breadcrumbs">Être conseillé en droit des affaires</a></h2></div>
+                    <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/droit-du-travail#section-breadcrumbs">Être conseillé en droit du travail</a></h2></div>
                     <p>S’informer sur les formalités d’embauche, la rédaction du contrat de travail, le calcul de rémunérations ou des congés, la mise en place de l'activité partielle, sécuriser un licenciement économique ou une rupture conventionnelle collective.</p>
                     </div>
                     <div class='discover_button'>
@@ -111,6 +111,35 @@
                 </div>
                 <div class='column card block-link'>
                     <div class='card__content'>
+                    <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/internet-web#section-breadcrumbs">Développer votre activité sur internet</a></h2></div>
+                    <p>Créer votre site internet, mettre en place un click and collect, améliorer votre visibilité sur internet, protéger vos données.</p>
+                    </div>
+                    <div class='discover_button'>
+                    <button class='button small is-link'>Choisir</button>
+                    </div>
+                </div>
+            </div>
+            <div class='columns row'>
+                <div class='column card block-link'>
+                    <div class='card__content'>
+                        <div class="block"><h2 class="title is-2 "><a  href="/aide-entreprises/environnement-transition-ecologique#section-breadcrumbs">Environnement &amp; transition écologique</a></h2></div>
+                        <p>Optimiser vos consommations d’énergie, valoriser vos déchets par la revente de matière, éco-concevoir un produit, mettre en place une démarche bas carbone.</p>
+                    </div>
+                    <div class='discover_button'>
+                    <button class='button small is-link'>Choisir</button>
+                    </div>
+                </div>
+                <div class='column card block-link'>
+                    <div class='card__content'>
+                    <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/sante-securite-travail#section-breadcrumbs">Garantir la santé et la sécurité au travail, les règles d&#39;hygiène</a></h2></div>
+                    <p>Réviser votre document unique d'évaluation des risques professionnels, former vos salariés à la prévention des risques professionnels, connaître les règles d'hygiène, améliorer la qualité de vie au travail pour être plus performant.</p>
+                    </div>
+                    <div class='discover_button'>
+                    <button class='button small is-link'>Choisir</button>
+                    </div>
+                </div>
+                <div class='column card block-link'>
+                    <div class='card__content'>
                     <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/cession-reprise#section-breadcrumbs">Transmettre ou reprendre une entreprise</a></h2></div>
                     <p>Réaliser un diagnostic pour valoriser votre entreprise, trouver un repreneur ou un cédant, connaître les aides à la reprise, accompagnement global jusqu’à la signature.</p>
                     </div>
@@ -119,7 +148,6 @@
                     </div>
                 </div>
             </div>
-            
             <p class='block text-center contact-us'>
                 <b>Pour toute autre demande,</b>
                 <b><a href="/aide-entreprises/contactez-nous">cliquez ici !</a></b>

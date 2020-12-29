@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head de notre page -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment ça marche | Place des Entreprises</title>
+
+    <!-- Bulma import -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/css/main.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Font Awersome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+</head>
+
+<!-- Body -->
+<body>
+
+
+    <header class='section'>
+        <div class='block notification full-width error region-alerte'>
+            <div class='block container'>
+                <p><b>Place des Entreprises</b> est un service public ouvert uniquement en Hauts-de-France et en Île-de-France.</p>
+                <a class="button small warning" href="/comment_ca_marche.html#section-newsletter">En savoir plus</a>
+            </div>
+        </div>
+        <div class='container'>
+        <div class='navbar__container'>
+            <a class='navbar__home' href='/'>
+            <img alt="logo République française" class="navbar__logo" src="dist/img/logoFrancaise.png" />
+            <img alt="logo Place des Entreprises" class="navbar__domain" src="/dist/img/placeDesEntreprises.svg" />
+            <button aria-label='Déplier menu' class='burger-btn' data-action='toggle-nav'>
+            <span class='burger-btn__bar'></span>
+            <span class='burger-btn__bar'></span>
+            <span class='burger-btn__bar'></span>
+            </button>
+            </a>
+            <nav data-target='toggle-nav'>
+                <ul class='nav__links'>
+                    <li class='nav__item'>
+                        <a href="https://blog.place-des-entreprises.beta.gouv.fr">Actu aides</a>
+                    </li>
+                    <li class='nav__item'>
+                        <a href="/comment_ca_marche.html">Comment ça marche ?</a>
+                    </li>
+                    <li class='nav__item'>
+                        <a id="experts_login" href="/mon_compte/sign_in">Accès conseillers</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </header>
+ <main>
+    <section class='section section-white landing'>
+       <div class='container container'>
+          <h1>Place des Entreprises, comment ça marche ?</h1>
+          <p class='subtitle'>Porté par le Ministère de l’Économie et du Ministère du Travail, le service Place des Entreprises rassemble de nombreux partenaires publics et parapublics chargés d’accompagner les TPE &amp; PME.</p>
+       </div>
+    </section>
+    <section class='section section-light-grey landing small-padding' id='section-breadcrumbs'>
+       <div class='container breadcrumbs'>
+          <a href="/">Accueil</a><span class="arrow">›</span>Comment ça marche ?
+       </div>
+    </section>
+    <section class='section section-white landing'>
+       <div class='container explanations'>
+          <div class='row'>
+             <div class='col'>
+                <div class='icon'>
+                   <img alt="" src="/dist/img/picto1.png" />
+                </div>
+                <h2>
+                   Choisissez un sujet et
+                   <span class='blue'>
+                   déposez votre demande
+                   </span>
+                </h2>
+                <p>
+                   Décrivez votre projet ou votre problème en donnant quelques éléments de contexte.
+                </p>
+             </div>
+             <div class='col'>
+                <div class='icon'>
+                   <img alt="" src="/dist/img/picto3.png" />
+                </div>
+                <h2>
+                   Nous identifions
+                   <span class='blue'>
+                   le bon conseiller
+                   </span>
+                   sur votre territoire.
+                </h2>
+                <p>
+                   Nous identifions, parmi l’ensemble des partenaires publics et parapublics, le conseiller compétent pour votre demande sur votre territoire.
+                </p>
+             </div>
+             <div class='col'>
+                <div class='icon'>
+                   <img alt="" src="/dist/img/picto2.png" />
+                </div>
+                <h2>
+                   <span class='blue'>
+                   Le conseiller vous contacte
+                   </span>
+                   directement pour vous aider sous 5 jours*.
+                </h2>
+                <p>
+                   Le conseiller compétent pour votre demande vous contacte et vous accompagne en fonction de votre situation.
+                </p>
+                <p class='asterisk'>
+                   * Délai moyen de prise en charge
+                </p>
+             </div>
+          </div>
+          <div id='learn-more'>
+             <a class="button large is-link" href="/#section-thematiques">Déposez votre demande</a>
+          </div>
+       </div>
+    </section>
+    <section class='section section-grey' id='liste-partenaires'>
+       <div class='container'>
+          <h2>Place des Entreprises vous met en relation avec le conseiller qui peut vous aider parmi plus de 50 partenaires publics et parapublics :</h2>
+          <div class='logo-list'>
+            <img alt="cci" title="cci" class="institution_logo" src="dist/img/cci.png" />
+            <img alt="cma" title="cma" class="institution_logo" src="dist/img/cma.png" />
+            <img alt="pole-emploi" title="pole-emploi" class="institution_logo" src="dist/img/pole-emploie.png" />
+            <img alt="apec" title="apec" class="institution_logo" src="dist/img/apec.png" />
+            <img alt="banque-de-france" title="banque-de-france" class="institution_logo" src="dist/img/banque-de-france.png" />
+            <img alt="bpi-france" title="bpi-france" class="institution_logo" src="dist/img/bpi-france.png" />
+            <img alt="dgfip" title="dgfip" class="institution_logo" src="dist/img/dgfip.png" />
+            <img alt="urssaf" title="urssaf" class="institution_logo" src="dist/img/urssaf.png" />
+        </div>
+          <div class='row partners-list'>
+             <ul>
+                <li>AGEFIPH</li>
+                <li>ANACT</li>
+                <li>APEC</li>
+                <li>Agences de développement</li>
+                <li>BPI France</li>
+                <li>CARSAT</li>
+             </ul>
+             <ul>
+                <li>Cap Emploi</li>
+                <li>Chambre d’Agriculture France</li>
+                <li>DGE</li>
+                <li>DGEFP</li>
+                <li>DIRECCTE</li>
+                <li>Douanes</li>
+             </ul>
+             <ul>
+                <li>FAF TT</li>
+                <li>France Initiative</li>
+                <li>GEIQ</li>
+                <li>INPI</li>
+                <li>Intercommunalités</li>
+                <li>Maisons de l’emploi</li>
+             </ul>
+             <ul>
+                <li>Missions Locales</li>
+                <li>Médiateur des entreprises</li>
+                <li>OPCO - AGEFOS PME (Entreprises de proximité)</li>
+                <li>OPCO - AKTO</li>
+                <li>OPCO - OCAPIAT</li>
+                <li>Préfectures</li>
+             </ul>
+          </div>
+       </div>
+    </section>
+    <section class='section section-color'>
+       <div class='container'>
+          <div class='row'>
+             <div class='stats-item'>
+                <div>
+                   false
+                </div>
+                <div class='text'>
+                   Entreprises aidées
+                </div>
+             </div>
+             <div class='stats-item'>
+                <div>
+                   4043
+                </div>
+                <div class='text'>
+                   Besoins identifiés
+                </div>
+             </div>
+             <div class='stats-item'>
+                <div>
+                   1985
+                </div>
+                <div class='text'>
+                   Conseillers publics
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    <section class='section section-grey' id='section-testimonials'>
+       <div class='container'>
+          <h2>
+             Ces chefs d’entreprises utilisent déjà le service. Et vous ?
+          </h2>
+          <div class='cards'>
+             <div class='row'>
+                <div class='card'>
+                   <div class='card__content'>
+                      <q>
+                      Place des Entreprises est très réactive et pratique ! Ils nous ont permis une mise en relation rapide avec les bonnes personnes quand nous en avions besoin.
+                      <br>
+                      Nous avons donc pu clôturer notre dossier dans les délais.
+                      </q>
+                   </div>
+                   <div class='card__extra'>
+                      <div class='article__author'>
+                         Clément Francomme
+                         <br>
+                         CEO de
+                         <strong>UTOCAT</strong>
+                         (10 à 19 salariés)
+                      </div>
+                   </div>
+                </div>
+                <div class='card'>
+                   <div class='card__content'>
+                      <q>
+                      J’ai découvert qu’il existait des partenaires publics experts de mes besoins d’entreprise. Ils m’ont accompagné sur des questions de ressources humaines, de développement commercial et de réglementation.
+                      <br>
+                      Ils font un super job.
+                      </q>
+                   </div>
+                   <div class='card__extra'>
+                      <div class='article__author'>
+                         Christophe B.
+                         <br>
+                         Dirigeant de
+                         <strong>SOS Impact 02</strong>
+                         (1 à 2 salariés)
+                      </div>
+                   </div>
+                </div>
+                <div class='card'>
+                   <div class='card__content'>
+                      <q>
+                      Grâce à Place des Entreprises, nous avons été contactés par 5 organismes différents prêts à nous conseiller ou nous aider de diverses manières pour le financement de notre nouvel investissement.
+                      <br>
+                      Un grand merci pour votre réactivité.
+                      </q>
+                   </div>
+                   <div class='card__extra'>
+                      <div class='article__author'>
+                         Thérèse Debarge
+                         <br>
+                         <strong>Emballages Hocq</strong>
+                         (20 à 49 salariés)
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    <section class='section section-white' id='section-newsletter'>
+       <div class='container'>
+          <div class='notification error'>
+             <p>Le service est progressivement déployé dans les régions volontaires. <b>Il sera prochainement ouvert en Bretagne.</b><br/>Si vous souhaitez être informé de l’ouverture du service dans votre région, n’hésitez pas à vous abonner à la newsletter !</p>
+          </div>
+          <h2 class='section__title'>
+             Découvrez les nouveaux accompagnements publics :
+          </h2>
+          <p class='section__subtitle'>
+             Découvrez chaque mois comment une administration ou un organisme public peut aider votre entreprise
+          <div class='ui divider hidden'></div>
+          </p>
+          <form action="/newsletters" accept-charset="UTF-8" method="post">
+             <input type="hidden" name="authenticity_token" value="AwIDDP8J+cnBf0mOchDFJfLVJDE22YLPG/Pjk20+5qfhzmJaJRjcYZz3ShfY7HhoyXvjGS0AzeKkBlCihGDvVw==" />
+             <div class='form__group'>
+                <div class='input__group'>
+                   <input placeholder="Votre adresse email" aria-label="Votre adresse email" required="required" type="email" name="email" id="email" />
+                   <input type="submit" name="commit" value="S’abonner" class="button is-link" data-disable-with="S’abonner" />
+                </div>
+             </div>
+          </form>
+       </div>
+    </section>
+    <section class='section section-grey' id='section-contact-us'>
+       <div class='container'>
+          <h2 class='section__title'>Vous souhaitez rejoindre le partenariat ?</h2>
+          <p>Contactez-nous à <a target="_blank" href="mailto:contact@place-des-entreprises.beta.gouv.fr">contact@place-des-entreprises.beta.gouv.fr</a>.</p>
+       </div>
+    </section>
+ </main>
+ <footer class='footer'>
+    <div class='container'>
+    <ul class='footer__links'>
+        <li class='marianne'>
+            <img alt="Logo Marianne République Française" src="dist/img/logoFrancaise1.png" />
+        </li>
+        <li class='france-relance'>
+            <img alt="Logo France Relance" src="dist/img/logoRelance1.png" />
+        </li>
+    </ul>
+    <ul class='footer__links'>
+        <li class='title'>
+            <img alt="Logo Place des Entreprises" class="logo-footer" src="dist/img/place-des-entreprises-logo.png"/>
+            <span style="color: #ffffff;">place-des-entreprises.beta.gouv.fr</span>
+        </li>
+        <li class='beta-link'><a href="https://beta.gouv.fr/startups/place-des-entreprises">Une startup d’État de beta.gouv</a></li>
+        <li class='social-network'>
+            <a target="_blank" rel="noopener" href="#"><i aria-hidden='true' class='fab fa-linkedin'></i>
+            <span class='visually-hidden'>Linkedin</span>
+            </a><a target="_blank" rel="noopener" href="#"><i aria-hidden='true' class='fab fa-twitter'></i>
+            <span class='visually-hidden'>Twitter</span>
+            </a><a target="_blank" rel="noopener" href="#"><i aria-hidden='true' class='fab fa-github'></i>
+            <span class='visually-hidden'>Github</span>
+            </a>
+        </li>
+    </ul>
+    <ul class='footer__links'>
+        <li><a href="/cgu">Conditions d’utilisation</a></li>
+        <li><a href="/mentions_d_information">Mentions d&#39;information</a></li>
+        <li><a href="/mentions_legales">Mentions légales</a></li>
+        <li><a href="/stats">Statistiques</a></li>
+        <li><a href="https://www.numerique.gouv.fr/dinum/">DINUM</a></li>
+    </ul>
+    </div>
+</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="dist/js/main.js"></script>
+</body>
+</html>
