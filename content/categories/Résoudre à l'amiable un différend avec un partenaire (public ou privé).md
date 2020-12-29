@@ -1,6 +1,5 @@
 ---
 title: Résoudre à l'amiable un différend avec un partenaire (public ou privé)
-
 subcategory: "entreprise-en-difficulte"
 ---
 

@@ -7,7 +7,7 @@
                     <div class="columns is-multiline">
                         <div class="column is-8">
                             <h1>
-                            Entrepises, vous avez un projet, une difficulté, une question du quotidien ?
+                            Entreprises, vous avez un projet, une difficulté, une question du quotidien ?
                             </h1>
                         </div>
                        <div class="column is-8">
@@ -57,8 +57,8 @@
                 <p class='card-section-header'>Vous souhaitez</p>
             </div>
 
-                <Category />
-            
+              <Category :isSubcategorie="isSubcategorie" :categories="$page.categories.edges"/>
+              
             <p class='block text-center contact-us'>
                 <b>Pour toute autre demande,</b>
                 <b><a href="/aide-entreprises/contactez-nous">cliquez ici !</a></b>
@@ -108,6 +108,18 @@
 </template>
 
 <page-query>
+query {
+  categories: allCategory {
+    edges {
+      node {
+        id
+        title
+        category
+        content
+      }
+    }
+  }
+}
 </page-query>
 
 <script>
@@ -120,7 +132,11 @@ export default {
   metaInfo: {
     title: "Place des entreprises!",
   },
-
+  data() {
+    return {
+      isSubcategorie: false,
+    };
+  },
   filters: {
     // Filter definitions
     Upper(value) {
