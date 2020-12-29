@@ -14,12 +14,8 @@ module.exports = {
   siteDescription:
     "Un dispositif de la chambre de commerce et d'industrie du BENIN",
 
-  plugins: [
-    sourceFilesystem
-  ],
+  plugins: [sourceFilesystem],
   templates: {
-   // ContentfulPost: "/article/:title",
-   // ContentfulCategory: "/category/:title",
-    // ContentfulTag: "/tag/:title",
+    Category: "/category/:title",
   },
 };
