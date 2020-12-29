@@ -57,8 +57,25 @@
                 <p class='card-section-header'>Vous souhaitez</p>
             </div>
 
-              <Category :isSubcategorie="isSubcategorie" :categories="$page.categories.edges"/>
-              
+
+            <div class='columns row'>
+                <Category :category="categories[0]"/>
+
+                <Category :category="categories[1]"/>
+
+                <Category :category="categories[2]"/>
+
+            </div>
+            <div class='columns row'>
+                
+                <Category :category="categories[3]"/>
+
+                <Category :category="categories[4]"/>
+
+                <Category :category="categories[5]"/>
+
+            </div>
+
             <p class='block text-center contact-us'>
                 <b>Pour toute autre demande,</b>
                 <b><a href="/aide-entreprises/contactez-nous">cliquez ici !</a></b>
@@ -135,7 +152,20 @@ export default {
   data() {
     return {
       isSubcategorie: false,
+      categories: [],
     };
+  },
+  mounted() {
+    this.filterCategory();
+  },
+  methods: {
+    filterCategory() {
+      var result = this.$page.categories.edges.filter(function (e) {
+        return e.node.category !== "";
+      });
+
+      this.categories = result;
+    },
   },
   filters: {
     // Filter definitions
