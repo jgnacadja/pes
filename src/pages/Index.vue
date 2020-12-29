@@ -78,7 +78,7 @@
                         <h2 class="title is-2 block"><a  href="/aide-entreprises/recrutement-formation#section-breadcrumbs">Recruter ou former vos salariés</a></h2>
                         </div>
                         <p class="article_content">S’informer sur les aides à l’embauche, à l'apprentissage, trouver des candidats, identifier la bonne formation, être accompagné sur la GPEC, améliorer l’efficacité en entreprise par l’organisation du travail. </p>
-                        <button class='button small is-link'>Choisir</button>
+                        <button class='button small'>Choisir</button>
                     </div>
                   </div>
                 </div>
@@ -89,7 +89,7 @@
                     <p class="article_content">Identifier les solutions financières possibles, les aides aux projets innovants, aux investissements techniques touchant à la santé-sécurité des salariés, à la rénovation de vos locaux, à l’implantation sur une nouvelle région.</p>
                     </div>
                     <div class='discover_button'>
-                    <button class='button small is-link'>Choisir</button>
+                    <button class='button small'>Choisir</button>
                     </div>
                 </div>
                 <div class='column card block-link'>
@@ -98,7 +98,7 @@
                     <p class="article_content">Demander une avance de trésorerie, une médiation du crédit, un étalement de vos charges, faire un diagnostic de votre situation, résoudre un différend avec un partenaire privé ou public.</p>
                     </div>
                     <div class='discover_button'>
-                    <button class='button small is-link'>Choisir</button>
+                    <button class='button small'>Choisir</button>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                     <p class="article_content">S’informer sur les formalités d’embauche, la rédaction du contrat de travail, le calcul de rémunérations ou des congés, la mise en place de l'activité partielle, sécuriser un licenciement économique ou une rupture conventionnelle collective.</p>
                     </div>
                     <div class='discover_button'>
-                    <button class='button small is-link'>Choisir</button>
+                    <button class='button small'>Choisir</button>
                     </div>
                 </div>
                 <div class='column card block-link'>
@@ -118,7 +118,7 @@
                     <p class="article_content">Faire un point sur votre stratégie, diversifier votre activité, trouver de nouveaux clients, rejoindre un club d’entreprise, s’étendre à l’international.</p>
                     </div>
                     <div class='discover_button'>
-                    <button class='button small is-link'>Choisir</button>
+                    <button class='button small'>Choisir</button>
                     </div>
                 </div>
                 <div class='column card block-link'>
@@ -127,7 +127,7 @@
                     <p class="article_content">Réaliser un diagnostic pour valoriser votre entreprise, trouver un repreneur ou un cédant, connaître les aides à la reprise, accompagnement global jusqu’à la signature.</p>
                     </div>
                     <div class='discover_button'>
-                    <button class='button small is-link'>Choisir</button>
+                    <button class='button small'>Choisir</button>
                     </div>
                 </div>
             </div>
@@ -170,7 +170,7 @@
                 <div class='form__group'>
                     <div class='input__group'>
                     <input placeholder="Votre adresse email" aria-label="Votre adresse email" required="required" type="email" name="email" id="email" />
-                    <input type="submit" name="commit" value="S’abonner" class="button is-link" data-disable-with="S’abonner" />
+                    <input type="submit" name="commit" value="S’abonner" class="button" data-disable-with="S’abonner" />
                     </div>
                 </div>
             </form>
