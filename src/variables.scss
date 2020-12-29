@@ -71,6 +71,7 @@
 
    .notif_content{
       margin: 20px !important;
+      font-size: 14px;
    }
 
    .contentMarge{
@@ -2311,6 +2312,8 @@
     margin:2rem 0 0 0
    }
    .emphasis {
+    border:2px solid #CC5C00 !important;
+    padding:calc(var(--space-s) - 1px) !important;
     margin-top:-6.5rem;
     margin-bottom:3rem;
     display:flex;

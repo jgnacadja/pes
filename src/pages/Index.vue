@@ -132,9 +132,9 @@
                 </div>
             </div>
             
-            <p class='block text-center contact-us'>
+            <p class='block text-center contact-us decoration'>
                 <b>Pour toute autre demande,</b>
-                <b><a href="/aide-entreprises/contactez-nous">cliquez ici !</a></b>
+                <b><a href="/aide-entreprises/contactez-nous"> cliquez ici !</a></b>
             </p>
         </div>
         </section>
@@ -150,7 +150,7 @@
                 <img alt="dgfip" title="dgfip" class="institution_logo" src="https://bulma.io/images/placeholders/128x128.png">
                 <img alt="urssaf" title="urssaf" class="institution_logo" src="https://bulma.io/images/placeholders/128x128.png">
             </div>
-            <div class="subtitle">
+            <div class="subtitle decoration">
                 <p>Place des Entreprises vous met en relation avec le conseiller qui peut vous aider.</p>
                 <p>Découvrez <a href='/comment_ca_marche.html#liste-partenaires'>plus de 50 partenaires</a> à votre service.</p>
             </div>

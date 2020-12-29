@@ -7,7 +7,7 @@
           en Hauts-de-France et en Île-de-France.
         </p>
         <a
-          class="button small warning"
+          class="button small warning is-link"
           href="/comment_ca_marche.html#section-newsletter"
           >En savoir plus</a
         >
