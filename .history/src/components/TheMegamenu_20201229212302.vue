@@ -35,6 +35,10 @@
                   class="navbar__domain"
                   fit="inside"
                 />
+                <i
+                  >Un dispositif de la chambre de commerce et d'industrie du
+                  BENIN</i
+                >
               </figure>
               <br />
             </div>

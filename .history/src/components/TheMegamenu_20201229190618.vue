@@ -17,26 +17,29 @@
       <div class="navbar__container">
         <a class="navbar__home" href="/">
           <div class="columns">
-            <div class="column is-5">
-              <figure class="image">
+            <div class="column is-narrow">
+              <figure class="navbar__logo image is-128x128">
                 <g-image
                   src="~/assets/logo/logo-ccib.png"
-                  alt="Chambre de commerce et d'industrie du BENIN"
+                  alt="logo Chambre de commerce et d'industrie du BENIN"
                   class="navbar__logo"
                   fit="inside"
                 />
               </figure>
             </div>
-            <div class="column is-5">
-              <figure class="image">
-                <g-image
-                  src="~/assets/logo/impulse.png"
-                  alt="Impulse: Place des entreprises"
+            <div class="column is-narrow">
+              <figure class="navbar__logo image is-128x128">
+                <img
+                  alt="logo Place des Entreprises"
                   class="navbar__domain"
-                  fit="inside"
+                  src="https://bulma.io/images/placeholders/128x128.png"
                 />
               </figure>
               <br />
+              <i
+                >Un dispositif de la chambre de commerce et d'industrie du
+                BENIN</i
+              >
             </div>
           </div>
 

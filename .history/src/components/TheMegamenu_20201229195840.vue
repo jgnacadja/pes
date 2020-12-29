@@ -17,8 +17,8 @@
       <div class="navbar__container">
         <a class="navbar__home" href="/">
           <div class="columns">
-            <div class="column is-5">
-              <figure class="image">
+            <div class="column is-narrow">
+              <figure class="navbar__logo image">
                 <g-image
                   src="~/assets/logo/logo-ccib.png"
                   alt="Chambre de commerce et d'industrie du BENIN"
@@ -27,8 +27,8 @@
                 />
               </figure>
             </div>
-            <div class="column is-5">
-              <figure class="image">
+            <div class="column is-narrow">
+              <figure class="navbar__logo image">
                 <g-image
                   src="~/assets/logo/impulse.png"
                   alt="Impulse: Place des entreprises"
@@ -37,6 +37,10 @@
                 />
               </figure>
               <br />
+              <i
+                >Un dispositif de la chambre de commerce et d'industrie du
+                BENIN</i
+              >
             </div>
           </div>
 

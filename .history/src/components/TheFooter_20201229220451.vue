@@ -22,6 +22,11 @@
             fit="inside"
           />
         </li>
+        <li class="beta-link">
+          <a href="https://beta.gouv.fr/startups/place-des-entreprises"
+            >Accélérateur du développement des PME</a
+          >
+        </li>
         <li class="social-network">
           <a
             target="_blank"
