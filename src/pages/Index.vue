@@ -19,7 +19,7 @@
                     
                     <div class="columns has-text-center">
                         <div class="column links is-6">
-                            <a class="button is-link" href="#scroll-section"><i class='fas fa-phone-alt'></i>
+                            <a class="button" href="#scroll-section"><i class='fas fa-phone-alt'></i>
                             Échanger avec un conseiller
                             </a>
                         </div>

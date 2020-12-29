@@ -1,5 +1,4 @@
 <template>
-
   <footer class="footer_PE">
     <div class="container">
       <ul class="footer__links">
