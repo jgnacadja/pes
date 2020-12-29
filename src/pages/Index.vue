@@ -5,12 +5,12 @@
                 <div class='columns contentMarge'>
                     <div class='column home-title is-two-third-desktop is-12-mobile'>
                     <div class="columns is-multiline">
-                        <div class="column is-8">
+                        <div class="column is-11">
                             <h1 class="title is-4">
                             Entrepises, vous avez un projet, une difficulté, une question du quotidien ?
                             </h1>
                         </div>
-                       <div class="column is-8 subtitle">
+                       <div class="column is-10 subtitle">
                            Un service a mesure de vos besoins : vous êtes rappelé par LE conseiller qui peut vous aider.
                        </div>
                     </div>
@@ -50,11 +50,11 @@
                             </figure>
                         </div>
 
-                        <div class="column is-2">
+                        <div class="column is-3">
                             <h6 class="title is-6"># France Relance, les mesures de soutien aux TPE & PME : </h6>
                         </div>
-                        <div class="column is-7">
-                            <span>Être conseillé sur l'activité partielle de longue durée, la formation de vos salariés, les aides à l'embauche, votre stratégie d'entreprise...</span>
+                        <div class="column is-6 has-text-left">
+                            Être conseillé sur l'activité partielle de longue durée, la formation de vos salariés, les aides à l'embauche, votre stratégie d'entreprise...
                         </div>
 
                         <div class="column is-2">
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="block">
-                <p class='card-section-header'>Vous souhaitez</p>
+                <p class='card-section-header title'>Vous souhaitez</p>
             </div>
 
             
@@ -77,7 +77,7 @@
                         <div class="block">
                         <h2 class="title is-2 block"><a  href="/aide-entreprises/recrutement-formation#section-breadcrumbs">Recruter ou former vos salariés</a></h2>
                         </div>
-                        <p>S’informer sur les aides à l’embauche, à l'apprentissage, trouver des candidats, identifier la bonne formation, être accompagné sur la GPEC, améliorer l’efficacité en entreprise par l’organisation du travail. </p>
+                        <p class="article_content">S’informer sur les aides à l’embauche, à l'apprentissage, trouver des candidats, identifier la bonne formation, être accompagné sur la GPEC, améliorer l’efficacité en entreprise par l’organisation du travail. </p>
                         <button class='button small is-link'>Choisir</button>
                     </div>
                   </div>
@@ -86,7 +86,7 @@
                 <div class='column card block-link'>
                     <div class='card__content'>
                     <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/financement-projets#section-breadcrumbs">Financer vos investissements</a></h2></div>
-                    <p>Identifier les solutions financières possibles, les aides aux projets innovants, aux investissements techniques touchant à la santé-sécurité des salariés, à la rénovation de vos locaux, à l’implantation sur une nouvelle région.</p>
+                    <p class="article_content">Identifier les solutions financières possibles, les aides aux projets innovants, aux investissements techniques touchant à la santé-sécurité des salariés, à la rénovation de vos locaux, à l’implantation sur une nouvelle région.</p>
                     </div>
                     <div class='discover_button'>
                     <button class='button small is-link'>Choisir</button>
@@ -95,7 +95,7 @@
                 <div class='column card block-link'>
                     <div class='card__content'>
                     <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/entreprise-en-difficulte#section-breadcrumbs">Résoudre un problème de trésorerie, financier ou contractuel</a></h2></div>
-                    <p>Demander une avance de trésorerie, une médiation du crédit, un étalement de vos charges, faire un diagnostic de votre situation, résoudre un différend avec un partenaire privé ou public.</p>
+                    <p class="article_content">Demander une avance de trésorerie, une médiation du crédit, un étalement de vos charges, faire un diagnostic de votre situation, résoudre un différend avec un partenaire privé ou public.</p>
                     </div>
                     <div class='discover_button'>
                     <button class='button small is-link'>Choisir</button>
@@ -106,7 +106,7 @@
                 <div class='column card block-link'>
                     <div class='card__content'>
                     <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/droit-du-travail#section-breadcrumbs">Être conseillé en droit des affaires</a></h2></div>
-                    <p>S’informer sur les formalités d’embauche, la rédaction du contrat de travail, le calcul de rémunérations ou des congés, la mise en place de l'activité partielle, sécuriser un licenciement économique ou une rupture conventionnelle collective.</p>
+                    <p class="article_content">S’informer sur les formalités d’embauche, la rédaction du contrat de travail, le calcul de rémunérations ou des congés, la mise en place de l'activité partielle, sécuriser un licenciement économique ou une rupture conventionnelle collective.</p>
                     </div>
                     <div class='discover_button'>
                     <button class='button small is-link'>Choisir</button>
@@ -115,7 +115,7 @@
                 <div class='column card block-link'>
                     <div class='card__content'>
                     <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/developpement-commercial#section-breadcrumbs">Rebondir et développer votre activité commerciale</a></h2></div>
-                    <p>Faire un point sur votre stratégie, diversifier votre activité, trouver de nouveaux clients, rejoindre un club d’entreprise, s’étendre à l’international.</p>
+                    <p class="article_content">Faire un point sur votre stratégie, diversifier votre activité, trouver de nouveaux clients, rejoindre un club d’entreprise, s’étendre à l’international.</p>
                     </div>
                     <div class='discover_button'>
                     <button class='button small is-link'>Choisir</button>
@@ -124,7 +124,7 @@
                 <div class='column card block-link'>
                     <div class='card__content'>
                     <div class="block"><h2 class="title is-2"><a  href="/aide-entreprises/cession-reprise#section-breadcrumbs">Transmettre ou reprendre une entreprise</a></h2></div>
-                    <p>Réaliser un diagnostic pour valoriser votre entreprise, trouver un repreneur ou un cédant, connaître les aides à la reprise, accompagnement global jusqu’à la signature.</p>
+                    <p class="article_content">Réaliser un diagnostic pour valoriser votre entreprise, trouver un repreneur ou un cédant, connaître les aides à la reprise, accompagnement global jusqu’à la signature.</p>
                     </div>
                     <div class='discover_button'>
                     <button class='button small is-link'>Choisir</button>

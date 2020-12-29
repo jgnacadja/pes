@@ -70,17 +70,27 @@
    }
 
    .notif_content{
-      margin: 20px !important;
-      font-size: 14px;
+      margin: 1.25em !important;
+      font-size: 0.875em;
    }
 
    .contentMarge{
-      padding-left: 70px !important;
-      padding-right: 70px !important;
+      padding-left: 4.375em !important;
+      padding-right: 4.375em !important;
    }
 
    .decoration a{ 
       text-decoration: underline !important;
+   }
+
+   .article_content {
+      font-weight: 100; 
+      font-size: 1em;
+   }
+
+   .itemA{
+      font-weight: 200; 
+      font-size: 1em;
    }
 
 
