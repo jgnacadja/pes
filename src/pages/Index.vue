@@ -51,10 +51,10 @@
                         </div>
 
                         <div class="column is-3">
-                            <h6 class="title is-6"># France Relance, les mesures de soutien aux TPE & PME : </h6>
+                            <h6 class="title is-6">Impulse : Accélérateur du développement des PME </h6>
                         </div>
                         <div class="column is-6 has-text-left">
-                            Être conseillé sur l'activité partielle de longue durée, la formation de vos salariés, les aides à l'embauche, votre stratégie d'entreprise...
+                            Impulse  vous aide à vous structurer et vous développer pour gagner en performance. Des conseillers, consultants et formateurs vous accompagnent dans la réalisation de diagnostics et de plans d’actions personnalisés, jusqu’à la mesure des résultats concrets.
                         </div>
 
                         <div class="column is-2">
