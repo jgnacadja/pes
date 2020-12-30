@@ -1,45 +1,7 @@
 <template>
   <Layout>
-    <section class="section section-white less-padding">
-      <div class="container">
-        <div class="columns contentMarge">
-          <div class="column home-title is-two-third-desktop is-12-mobile">
-            <div class="columns is-multiline">
-              <div class="column is-8">
-                <h1>
-                  Entreprises, vous avez un projet, une difficulté, une question
-                  du quotidien ?
-                </h1>
-              </div>
-              <div class="column is-10 subtitle">
-                Un service a mesure de vos besoins : vous êtes rappelé par LE
-                conseiller qui peut vous aider.
-              </div>
-            </div>
+    <Welcome />
 
-            <div class="columns has-text-center">
-              <div class="column links is-6">
-                <a class="button" href="#scroll-section"
-                  ><i class="fas fa-phone-alt"></i>
-                  Échanger avec un conseiller
-                </a>
-              </div>
-              <div class="column links decoration">
-                <a href="/comment-ca-marche">Comment ça marche</a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="column is-one-third-desktop is-8-mobile has-text-center"
-            id="image-home"
-          >
-            <figure class="image">
-              <img src="https://bulma.io/images/placeholders/600x480.png" />
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
     <section
       class="section section-light-grey blank-section"
       id="scroll-section"
@@ -49,7 +11,7 @@
         <div class="block-link">
           <div class="emphasis notification warning">
             <div class="columns">
-              <div class="column is-1">
+              <div class="column is-1 is-hidden-mobile">
                 <figure class="is-128x128">
                   <img
                     class="is-rounded"
@@ -58,10 +20,27 @@
                 </figure>
               </div>
 
-              <div class="column is-3">
+              <div class="column is-3 is-hidden-mobile">
                 <h6 class="title is-6">
                   Impulse : Accélérateur du développement des PME
                 </h6>
+              </div>
+
+              <div class="columns is-mobile is-hidden-desktop">
+                <div class="column section is-4">
+                  <figure class="is-128x128">
+                    <img
+                      class="is-rounded"
+                      src="https://bulma.io/images/placeholders/128x128.png"
+                    />
+                  </figure>
+                </div>
+
+                <div class="column section is-8">
+                  <h6 class="title is-6">
+                    Impulse : Accélérateur du développement des PME
+                  </h6>
+                </div>
               </div>
               <div class="column is-6 has-text-left">
                 Impulse vous aide à vous structurer et vous développer pour
@@ -71,8 +50,18 @@
                 résultats concrets.
               </div>
 
-              <div class="column is-2">
+              <div class="column is-2 is-hidden-mobile">
                 <div id="button-discover">
+                  <a
+                    class="button-outline small primary is-link"
+                    href="/aide-entreprises/relance.html"
+                    >Découvrir les mesures</a
+                  >
+                </div>
+              </div>
+
+              <div class="column is-2 is-hidden-desktop">
+                <div id="button-discover is-pulled-right">
                   <a
                     class="button-outline small primary is-link"
                     href="/aide-entreprises/relance.html"
@@ -117,7 +106,7 @@
       <div class="container text-center">
         <div class="logo-list">
           <img
-            alt="cci"
+            alt="ANPME"
             title="cci"
             class="institution_logo"
             src="https://bulma.io/images/placeholders/256x256.png"
@@ -230,6 +219,7 @@ query {
         category
         content
         principal
+        path
       }
     }
   }
@@ -242,6 +232,7 @@ query {
         category
         content
         principal
+        path
       }
     }
   }
@@ -249,10 +240,12 @@ query {
 </page-query>
 
 <script>
+import Welcome from "~/components/Welcome.vue";
 import Category from "~/components/Category.vue";
 
 export default {
   components: {
+    Welcome,
     Category,
   },
   metaInfo: {

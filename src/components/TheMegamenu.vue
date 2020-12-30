@@ -7,7 +7,7 @@
           régions du BENIN.
         </p>
         <a
-          class="button small warning is-link"
+          class="button small warning is-link is-header-link"
           href="/comment_ca_marche.html#section-newsletter"
           >En savoir plus</a
         >
@@ -16,8 +16,8 @@
     <div class="container">
       <div class="navbar__container contentMarge">
         <a class="navbar__home" href="/">
-          <div class="columns">
-            <div class="column is-5">
+          <div class="columns is-mobile">
+            <div class="column is-5-desktop">
               <figure class="image">
                 <g-image
                   src="~/assets/logo/logo-ccib.png"
@@ -27,7 +27,7 @@
                 />
               </figure>
             </div>
-            <div class="column is-5">
+            <div class="column is-5-desktop">
               <figure class="image">
                 <g-image
                   src="~/assets/logo/impulse.png"
@@ -93,4 +93,17 @@ if (typeof window !== "undefined") {
 </script>
 
 <style scoped lang="scss">
+.is-header-link {
+  padding-top: 0.5em !important;
+}
+
+@media only screen and (max-width: 415px) {
+  .notification {
+    margin-bottom: -2em !important;
+  }
+
+  .navbar__domain {
+    width: 50%;
+  }
+}
 </style>

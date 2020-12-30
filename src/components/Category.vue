@@ -1,5 +1,5 @@
 <template>
-  <g-link :to="category.node.title">
+  <g-link :to="category.node.path">
     <div class="card__content">
       <div class="block">
         <h2 class="title is-2">
@@ -23,7 +23,7 @@ export default {
     },
   },
   created() {
-    //console.log(this.category);
+    console.log(this.category);
   },
 };
 </script>
