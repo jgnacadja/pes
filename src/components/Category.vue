@@ -1,22 +1,17 @@
 <template>
-  <div class="column card block-link">
-    <g-link :to="category.node.title">
-      <div class="card__content">
-        <div class="block">
-          <h2 class="title is-2">
-            <a
-              href="/aide-entreprises/developpement-commercial#section-breadcrumbs"
-              >{{ category.node.title }}</a
-            >
-          </h2>
-        </div>
-        <p v-html="category.node.content"></p>
+  <g-link :to="category.node.title">
+    <div class="card__content">
+      <div class="block">
+        <h2 class="title is-2">
+          {{ category.node.title }}
+        </h2>
       </div>
-      <div class="discover_button">
-        <button class="button small is-link">Choisir</button>
-      </div>
-    </g-link>
-  </div>
+      <p v-html="category.node.content"></p>
+    </div>
+    <div class="discover_button">
+      <button class="button small is-link">Choisir</button>
+    </div>
+  </g-link>
 </template>
 
 <script>
