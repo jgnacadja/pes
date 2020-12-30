@@ -5,7 +5,7 @@
       &nbsp;&nbsp;
       <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
       &nbsp;&nbsp; TPE & PME,
-      {{ $page.categories.edges[0].node.meta }}
+      <!-- {{ $page.categories.edges[0].node.meta }} -->
     </div>
   </div>
 </template>
