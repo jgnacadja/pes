@@ -29,8 +29,18 @@ export default function(Vue, { router, head, isClient }) {
   });
 
   head.link.push({
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+  });
+
+  head.link.push({
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap",
+  });
+
+  head.link.push({
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap",
   });
 //   head.script.push({
 //     src: "crisp.js",
