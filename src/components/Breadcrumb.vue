@@ -2,10 +2,12 @@
   <div class="columns is-variable is-2 is-vcentered">
     <div ref="breadcrumb" class="column is-12">
       <a href="/">Acceuil</a>
-      &nbsp;&nbsp;
-      <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
-      &nbsp;&nbsp; TPE & PME,
-      <!-- {{ $page.categories.edges[0].node.meta }} -->
+      <span v-if="category != ''">
+        &nbsp;&nbsp;
+        <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
+        &nbsp;&nbsp; TPE & PME,
+        {{ category }}
+      </span>
     </div>
   </div>
 </template>
@@ -24,7 +26,6 @@ query CategoryPage($path: String!) {
       }
     }
   }
-}
 </page-query>
 
 <script>

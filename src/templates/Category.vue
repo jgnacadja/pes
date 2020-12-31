@@ -81,7 +81,7 @@ export default {
   },
   mounted() {
     this.categories = this.chunkArray(this.$page.categories.edges, this.split);
-    this.category = this.categories[0][0].node.subcategory;
+    this.category = this.categories[0][0].node.meta;
   },
   methods: {
     chunkArray(arr, chunkCount) {
