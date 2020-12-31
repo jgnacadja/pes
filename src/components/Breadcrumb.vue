@@ -1,48 +1,41 @@
 <template>
   <div class="columns is-variable is-2 is-vcentered">
     <div ref="breadcrumb" class="column is-12">
-      Blog Studely
-      <span v-if="categorie != ''">
+      <a href="/">Acceuil</a>
+      <span v-if="category != ''">
         &nbsp;&nbsp;
         <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
-        &nbsp;&nbsp;
-        {{ categorie | Upper }}
-      </span>
-      <span v-if="tag != ''">
-        &nbsp;&nbsp;
-        <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
-        &nbsp;&nbsp;
-        {{ tag | Upper }}
-      </span>
-      <span v-if="article != ''">
-        &nbsp;&nbsp;
-        <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
-        &nbsp;&nbsp;
-        {{ article | Upper }}
+        &nbsp;&nbsp; Entreprises,
+        {{ category }}
       </span>
     </div>
   </div>
 </template>
 
+<page-query>
+query CategoryPage($path: String!) {
+  categories: allCategory(filter: { path: { eq: $path } }) {
+    edges {
+      node {
+        id
+        title
+        meta
+        category
+        content
+        path
+      }
+    }
+  }
+}
+</page-query>
+
 <script>
 export default {
   props: {
-    categorie: {
+    category: {
       type: String,
       default() {
-        return "";
-      },
-    },
-    tag: {
-      type: String,
-      default() {
-        return "";
-      },
-    },
-    article: {
-      type: String,
-      default() {
-        return "";
+        return {};
       },
     },
   },
@@ -60,7 +53,7 @@ export default {
     };
   },
   mounted() {
-    this.$refs["breadcrumb"].lastElementChild.className = "has-text-primary";
+    //this.$refs["breadcrumb"].lastElementChild.className = "has-text-primary";
   },
 };
 </script>

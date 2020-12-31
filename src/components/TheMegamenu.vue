@@ -1,24 +1,23 @@
 <template>
   <header class="section">
     <div class="block notification full-width error region-alerte">
-      <div class="block container contentMarge" >
+      <div class="block container contentMarge">
         <p class="notif_content">
-          <b>Place des Entreprises</b> est un service public ouvert uniquement
-          en Hauts-de-France et en Île-de-France.
+          <b>Impulse</b> est un service public ouvert uniquement pour les
+          régions économiques du BENIN.
         </p>
         <a
-          class="button small warning is-link"
+          class="button small warning is-link is-header-link"
           href="/comment_ca_marche.html#section-newsletter"
           >En savoir plus</a
         >
       </div>
     </div>
-    <div class="container ">
+    <div class="container">
       <div class="navbar__container contentMarge">
         <a class="navbar__home" href="/">
-          <div class="columns">
-
-            <div class="column is-5">
+          <div class="columns is-mobile">
+            <div class="column is-5-desktop">
               <figure class="image">
                 <g-image
                   src="~/assets/logo/logo-ccib.png"
@@ -28,7 +27,7 @@
                 />
               </figure>
             </div>
-            <div class="column is-5">
+            <div class="column is-5-desktop">
               <figure class="image">
                 <g-image
                   src="~/assets/logo/impulse.png"
@@ -53,10 +52,10 @@
         </a>
         <nav data-target="toggle-nav">
           <ul class="nav__links">
-            <li class="nav__item itemA">
+            <li class="nav__item">
               <a href="/comment-ca-marche">Comment ça marche ?</a>
             </li>
-            <li class="nav__item itemA">
+            <li class="nav__item">
               <a id="experts_login" href="/mon-compte/">Accès conseillers</a>
             </li>
           </ul>
@@ -94,4 +93,17 @@ if (typeof window !== "undefined") {
 </script>
 
 <style scoped lang="scss">
+.is-header-link {
+  padding-top: 0.5em !important;
+}
+
+@media only screen and (max-width: 415px) {
+  .notification {
+    margin-bottom: -2em !important;
+  }
+
+  .navbar__domain {
+    width: 50%;
+  }
+}
 </style>
