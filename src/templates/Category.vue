@@ -6,21 +6,166 @@
         <Breadcrumb :category="category" />
       </div>
     </section>
-    <section class="section section-grey">
-      <div class="container contentMarge">
+    <section class="section section-grey" id="section-thematiques">
+      <div class="container contentMarge is-card-content">
         <div class="block">
           <p class="card-section-header title">Vous souhaitez</p>
           <br /><br />
         </div>
 
-        <div class="columns row pb-6" v-for="edge in categories" :key="edge">
+        <div
+          class="columns row pb-6 contentMarge"
+          v-for="edge in categories"
+          :key="edge"
+        >
           <div
             class="column card block-link"
             v-for="node in edge"
             :key="node.id"
+            v-bind:class="[isOnlyOne]"
           >
             <Category :category="node" />
           </div>
+        </div>
+      </div>
+      <p class="block text-center contact-us decoration">
+        <b>Vous souhaitez être accompagné sur un autre sujet ?</b>
+        <b><g-link to="/"> Découvrez les autres sujets.</g-link></b>
+      </p>
+    </section>
+    <section class="section section-lightest-grey section-partners">
+      <div class="columns contentMarge row">
+        <div class="column card procedure-card">
+          <div class="card-content">
+            <div class="content">
+              <div class="block has-text-centered">
+                <g-image
+                  alt="picto1"
+                  title="picto1"
+                  class="procedure-card-image"
+                  src="~/assets/procedure/picto1.png"
+                />
+              </div>
+              <h2 class="title is-2">
+                Choisissez un sujet et
+                <span class="is-green">déposez votre demande</span>
+              </h2>
+              <p class="article_content">
+                Décrivez votre projet ou votre problème en donnant quelques
+                éléments de contexte.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column card procedure-card">
+          <div class="card-content">
+            <div class="content">
+              <div class="block has-text-centered">
+                <g-image
+                  alt="picto2"
+                  title="picto2"
+                  class="procedure-card-image"
+                  src="~/assets/procedure/picto2.png"
+                />
+              </div>
+              <h2 class="title is-2">
+                Nous identifions
+                <span class="is-green">le bon conseiller sur</span> votre
+                territoire.
+              </h2>
+              <p class="article_content">
+                Nous identifions, parmi l’ensemble des partenaires publics et
+                parapublics, le conseiller compétent pour votre demande sur
+                votre territoire.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column card procedure-card">
+          <div class="card-content">
+            <div class="content">
+              <div class="block has-text-centered">
+                <g-image
+                  alt="picto3"
+                  title="picto3"
+                  class="procedure-card-image"
+                  src="~/assets/procedure/picto3.png"
+                />
+              </div>
+              <h2 class="title is-2">
+                <span class="is-green">Le conseiller vous contacte</span>
+                directement pour vous aider sous 5 jours*.
+              </h2>
+              <p class="article_content">
+                Le conseiller compétent pour votre demande vous contacte et vous
+                accompagne en fonction de votre situation.
+                <br />
+                <em class="detail-info">* Délai moyen de prise en charge </em>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-partners">
+      <div class="subtitle has-text-centered decoration">
+        <p>
+          Place des Entreprises est un service du Ministère de l’Economie et du
+          Ministère du Travail, en partenariat avec :
+        </p>
+      </div>
+      <div class="container text-center">
+        <div class="logo-list">
+          <g-image
+            alt="ANPME"
+            title="ANPME"
+            class="institution_logo"
+            src="~/assets/partners/ANPME.png"
+          />
+
+          <g-image
+            alt="APIEX_LOGO"
+            title="APIEX_LOGO"
+            class="institution_logo"
+            src="~/assets/partners/APIEX_LOGO.png"
+          />
+
+          <g-image
+            alt="CEPEPE-1"
+            title="CEPEPE-1"
+            class="institution_logo"
+            src="~/assets/partners/CEPEPE-1.png"
+          />
+
+          <g-image
+            alt="CNSS"
+            title="CNSS"
+            class="institution_logo"
+            src="~/assets/partners/CNSS.png"
+          />
+
+          <g-image
+            alt="DGI"
+            title="DGI"
+            class="institution_logo"
+            src="~/assets/partners/DGI.png"
+          />
+
+          <g-image
+            alt="Ecobank"
+            title="Ecobank"
+            class="institution_logo"
+            src="~/assets/partners/Ecobank.png"
+          />
+
+          <g-image
+            alt="UBA"
+            title="UBA"
+            class="institution_logo"
+            src="~/assets/partners/UBA.png"
+          />
         </div>
       </div>
     </section>
@@ -43,7 +188,7 @@ query CategoryPage($id: String!) {
     }
   }
 }
-</page-query>
+</page-query>Breadcrumb
 
 <script>
 import Welcome from "~/components/Welcome.vue";
@@ -77,6 +222,7 @@ export default {
       categories: [],
       split: 2,
       category: "",
+      isOnlyOne: "",
     };
   },
   mounted() {
@@ -97,10 +243,82 @@ export default {
 <style scoped lang="scss">
 @import "../variables.scss";
 
+.is-green {
+  color: #177c38;
+}
+
+.detail-info {
+  font-size: 0.8em;
+}
+
 .section-top {
   padding-top: 2em;
   padding-bottom: 2em;
   background-color: #fafbfc;
   background-color: var(--lightest-grey);
+}
+
+@media only screen and (min-width: 1024px) {
+  .contentMarges {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .is-category-touch {
+    margin-bottom: 2em;
+  }
+
+  .is-notif-description {
+    margin-top: -4em;
+  }
+
+  .card-section-header {
+    font-size: 1.7rem;
+    line-height: 1.25em;
+    font-family: "Evolventa", "lato", "sans-serif";
+    font-weight: bold;
+  }
+}
+
+.is-card-content a:hover {
+  text-decoration: none;
+  color: black;
+}
+.is-card-content a {
+  text-decoration: none;
+  color: black;
+}
+
+section .card {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+
+section .card:hover {
+  border: 2px solid #0053b3;
+  border: 2px solid var(--greenP);
+  background-color: transparent;
+  padding: 0px;
+}
+
+.procedure-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+
+.procedure-card:hover {
+  border: none;
+  border-color: transparent !important;
+  padding: 0px;
+}
+
+.procedure-card-image {
+  width: 30%;
 }
 </style>
