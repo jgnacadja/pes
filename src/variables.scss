@@ -1,73 +1,77 @@
-:root {
-  --greenP: #177c38;
-  --greenPSecondary: #d67143;
-  --light-blue: #007452;
-  --dark-blue: #006b63;
-  --darker-blue: #006069;
-  --lighter-blue: #b4e1fa;
-  --white: #fff;
-  --lightest-grey: #fafbfc;
-  --lighter-grey: #ebeff3;
-  --light-grey: #c9d3df;
-  --grey: #adb9c9;
-  --dark-grey: #8393a7;
-  --darker-grey: #53657d;
-  --darkest-grey: #26353f;
-  --black: #1c1c1c;
-  --green: #03bd5b;
-  --light-green: #daf5e7;
-  --orange: #ff9947;
-  --dark-orange: #cc5c00;
-  --light-orange: #fff0e4;
-  --red: #d52a03;
-  --dark-red: #ab2b1e;
-  --light-red: #ffefe5;
-  --mobile-min: 400px;
-  --mobile-max: 549px;
-  --phablet-min: 550px;
-  --phablet-max: 749px;
-  --tablet-min: 750px;
-  --tablet-max: 999px;
-  --desktop-min: 1000px;
-  --space-xxs: 0.25em;
-  --space-xs: 0.5em;
-  --space-s: 1em;
-  --space-m: 1.5em;
-  --space-l: 2em;
-  --space-xl: 3em;
-  --theme-primary: var(--greenP);
-  --theme-primary-light: var(--light-blue);
-  --theme-primary-dark: var(--dark-blue);
-  --theme-secondary: var(--greenPSecondary);
-  --theme-secondary-darken: var(--dark-blue);
-  --theme-border: var(--grey);
-  --theme-border-lighter: var(--light-grey);
-  --theme-border-active: var(--light-blue);
-  --theme-border-radius: 3px;
-  --theme-background-white: var(--white);
-  --theme-background-grey: var(--lighter-grey);
-  --theme-background-color: var(--greenP);
-  --theme-background-color-dark: var(--darker-blue);
-  --theme-background-gradient: linear-gradient(
-    to left,
-    var(--greenP),
-    var(--dark-blue)
-  );
-  --theme-background-dark: var(--black);
-  --theme-box-shadow: 0 1px 2px rgba(201, 211, 223, 0.2);
-  --theme-label-text: var(--darker-grey);
-  --theme-light-text: var(--white);
-  --theme-dark-text: var(--darkest-grey);
-  --theme-success-border: var(--green);
-  --theme-success-bg: var(--light-green);
-  --theme-warning-border: var(--orange);
-  --theme-warning-bg: var(--light-orange);
-  --theme-error-border: var(--red);
-  --theme-error-bg: var(--light-red);
-  --theme-info-border: var(--light-blue);
-  --theme-info-bg: var(--lighter-blue);
-}
 
+// General colors
+//$scheme-main: $light;
+
+// Typography
+$family-primary: Poppins, Arial, sans-serif;
+$family-secondary: 'Open Sans', sans-serif;
+$body-family: $family-secondary;
+
+:root {
+    --greenP: #177C38;
+    --greenPSecondary: #D67143;
+    --light-blue: #007452;
+    --dark-blue: #006b63;
+    --darker-blue: #006069;
+    --lighter-blue: #b4e1fa;
+    --white: #fff;
+    --lightest-grey: #fafbfc;
+    --lighter-grey: #ebeff3;
+    --light-grey: #c9d3df;
+    --grey: #adb9c9;
+    --dark-grey: #8393a7;
+    --darker-grey: #53657d;
+    --darkest-grey: #26353f;
+    --black: #1c1c1c;
+    --green: #03bd5b;
+    --light-green: #daf5e7;
+    --orange: #ff9947;
+    --dark-orange: #cc5c00;
+    --light-orange: #fff0e4;
+    --red: #d52a03;
+    --dark-red: #ab2b1e;
+    --light-red: #FFEFE5;
+    --mobile-min: 400px;
+    --mobile-max: 549px;
+    --phablet-min: 550px;
+    --phablet-max: 749px;
+    --tablet-min: 750px;
+    --tablet-max: 999px;
+    --desktop-min: 1000px;
+    --space-xxs: 0.25em;
+    --space-xs: 0.5em;
+    --space-s: 1em;
+    --space-m: 1.5em;
+    --space-l: 2em;
+    --space-xl: 3em;
+    --theme-primary: var(--greenP);
+    --theme-primary-light: var(--light-blue);
+    --theme-primary-dark: var(--dark-blue);
+    --theme-secondary: var(--greenPSecondary);
+    --theme-secondary-darken: var(--dark-blue);
+    --theme-border: var(--grey);
+    --theme-border-lighter: var(--light-grey);
+    --theme-border-active: var(--light-blue);
+    --theme-border-radius: 3px;
+    --theme-background-white: var(--white);
+    --theme-background-grey: var(--lighter-grey);
+    --theme-background-color: var(--greenP);
+    --theme-background-color-dark: var(--darker-blue);
+    --theme-background-gradient: linear-gradient(to left, var(--greenP), var(--dark-blue));
+    --theme-background-dark: var(--black);
+    --theme-box-shadow: 0 1px 2px rgba(201, 211, 223, 0.2);
+    --theme-label-text: var(--darker-grey);
+    --theme-light-text: var(--white);
+    --theme-dark-text: var(--darkest-grey);
+    --theme-success-border: var(--green);
+    --theme-success-bg: var(--light-green);
+    --theme-warning-border: var(--orange);
+    --theme-warning-bg: var(--light-orange);
+    --theme-error-border: var(--red);
+    --theme-error-bg: var(--light-red);
+    --theme-info-border: var(--light-blue);
+    --theme-info-bg: var(--lighter-blue)
+   }
 div .subtitle {
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 100;
@@ -98,7 +102,7 @@ div .subtitle {
 }
 
 body {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: $family-secondary; // "Poppins", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5em;
   -webkit-font-smoothing: antialiased;
@@ -110,7 +114,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Source Sans Pro", "Trebuchet MS", sans-serif;
+  font-family: $family-primary; // "Source Sans Pro", "Trebuchet MS", sans-serif;
 }
 h1:first-child,
 h2:first-child,

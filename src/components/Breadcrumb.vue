@@ -5,7 +5,7 @@
       <span v-if="category != ''">
         &nbsp;&nbsp;
         <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
-        &nbsp;&nbsp; TPE & PME,
+        &nbsp;&nbsp; Entreprises,
         {{ category }}
       </span>
     </div>
@@ -26,6 +26,7 @@ query CategoryPage($path: String!) {
       }
     }
   }
+}
 </page-query>
 
 <script>
