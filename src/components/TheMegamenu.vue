@@ -4,7 +4,7 @@
       <div class="block container contentMarge">
         <p class="notif_content">
           <b>Impulse</b> est un service public ouvert uniquement pour les
-          régions du BENIN.
+          régions économiques du BENIN.
         </p>
         <a
           class="button small warning is-link is-header-link"
@@ -52,10 +52,10 @@
         </a>
         <nav data-target="toggle-nav">
           <ul class="nav__links">
-            <li class="nav__item itemA">
+            <li class="nav__item">
               <a href="/comment-ca-marche">Comment ça marche ?</a>
             </li>
-            <li class="nav__item itemA">
+            <li class="nav__item">
               <a id="experts_login" href="/mon-compte/">Accès conseillers</a>
             </li>
           </ul>

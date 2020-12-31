@@ -12,7 +12,7 @@ import axios from "axios";
 // import InstantSearch from "vue-instantsearch";
 import Axios from "axios";
 
-export default function(Vue, { router, head, isClient }) {
+export default function (Vue, { router, head, isClient }) {
   // Add attributes to HTML tag
   head.htmlAttrs = { lang: "fr" };
 
@@ -35,45 +35,19 @@ export default function(Vue, { router, head, isClient }) {
 
   head.link.push({
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap", // primary text
   });
 
   head.link.push({
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap", // secondary text 
   });
-//   head.script.push({
-//     src: "crisp.js",
-//   });
-
-  // pixel twitter
-//   head.script.push({
-//     src: "pixel-twitter.js",
-//   });
-
-  // Import Klaro Cookie Consent
-//   head.script.push({
-//     src: "config.js",
-//   });
-//   head.script.push({
-//     src: "klaro.js",
-//   });
 
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
-
   // Register our Bulma component library
   Vue.use(Buefy);
-
-  // Register VueDisqus
- // Vue.use(VueDisqus);
-
   //http requests via axios
   Vue.use(Axios);
 
-//   Vue.use(InfiniteLoading);
-
-//   Vue.use(SmoothScrollbar);
-
-//   Vue.use(InstantSearch);
 }

@@ -5,7 +5,7 @@
       <span v-if="category != ''">
         &nbsp;&nbsp;
         <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
-        &nbsp;&nbsp; TPE & PME,
+        &nbsp;&nbsp; Entreprises,
         {{ category }}
       </span>
     </div>
@@ -13,6 +13,20 @@
 </template>
 
 <page-query>
+query CategoryPage($path: String!) {
+  categories: allCategory(filter: { path: { eq: $path } }) {
+    edges {
+      node {
+        id
+        title
+        meta
+        category
+        content
+        path
+      }
+    }
+  }
+}
 </page-query>
 
 <script>
