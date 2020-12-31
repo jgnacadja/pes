@@ -1,10 +1,9 @@
-
 // General colors
 //$scheme-main: $light;
 
 // Typography
 $family-primary: Poppins, Arial, sans-serif;
-$family-secondary: 'Open Sans', sans-serif;
+$family-secondary: "Open Sans", sans-serif;
 $body-family: $family-secondary;
 
 $secondary-color : #D67143;
@@ -182,7 +181,6 @@ body {
   color: var(--theme-dark-text);
   padding: 0;
   margin: 0;
-  overflow: auto;
 }
 a,
 button {
