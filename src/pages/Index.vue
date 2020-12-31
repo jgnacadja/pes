@@ -42,7 +42,7 @@
                   </h6>
                 </div>
               </div>
-              <div class="column is-6 has-text-left">
+              <div class="column is-6 has-text-left is-notif-description">
                 Impulse vous aide à vous structurer et vous développer pour
                 gagner en performance. Des conseillers, consultants et
                 formateurs vous accompagnent dans la réalisation de diagnostics
@@ -76,7 +76,27 @@
           <p class="card-section-header title">Vous souhaitez</p>
         </div>
 
-        <div class="columns row">
+        <div class="columns is-multiline is-hidden-desktop contentMarge">
+          <div
+            class="column card is-category-touch block-link"
+            v-for="edge in $page.categories.edges"
+            :key="edge.node.id"
+          >
+            <Category :category="edge" />
+          </div>
+        </div>
+
+        <div class="columns is-multiline is-hidden-desktop contentMarge">
+          <div
+            class="column card is-category-touch block-link"
+            v-for="edge in $page.categoriesTwo.edges"
+            :key="edge.node.id"
+          >
+            <Category :category="edge" />
+          </div>
+        </div>
+
+        <div class="columns is-multiline row is-hidden-touch contentMarges">
           <div
             class="column card block-link"
             v-for="edge in $page.categories.edges"
@@ -86,7 +106,7 @@
           </div>
         </div>
 
-        <div class="columns row">
+        <div class="columns is-multiline row is-hidden-touch contentMarges">
           <div
             class="column card block-link"
             v-for="edge in $page.categoriesTwo.edges"
@@ -281,4 +301,20 @@ export default {
 </script>
 
 <style>
+@media only screen and (min-width: 1024px) {
+  .contentMarges {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .is-category-touch {
+    margin-bottom: 2em;
+  }
+
+  .is-notif-description {
+    margin-top: -4em;
+  }
+}
 </style>
