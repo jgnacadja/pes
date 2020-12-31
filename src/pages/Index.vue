@@ -105,53 +105,53 @@
     <section class="section section-lightest-grey section-partners">
       <div class="container text-center">
         <div class="logo-list">
-          <img
+          <g-image
             alt="ANPME"
-            title="cci"
+            title="ANPME"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/256x256.png"
+            src="~/assets/partners/ANPME.png"
           />
-          <img
-            alt="cma"
-            title="cma"
+
+          <g-image
+            alt="APIEX_LOGO"
+            title="APIEX_LOGO"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/APIEX_LOGO.png"
           />
-          <img
-            alt="pole-emploi"
-            title="pole-emploi"
+
+          <g-image
+            alt="CEPEPE-1"
+            title="CEPEPE-1"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/CEPEPE-1.png"
           />
-          <img
-            alt="apec"
-            title="apec"
+
+          <g-image
+            alt="CNSS"
+            title="CNSS"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/CNSS.png"
           />
-          <img
-            alt="banque-de-france"
-            title="banque-de-france"
+
+          <g-image
+            alt="DGI"
+            title="DGI"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/DGI.png"
           />
-          <img
-            alt="bpi-france"
-            title="bpi-france"
+
+          <g-image
+            alt="Ecobank"
+            title="Ecobank"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/Ecobank.png"
           />
-          <img
-            alt="dgfip"
-            title="dgfip"
+
+          <g-image
+            alt="UBA"
+            title="UBA"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
-          />
-          <img
-            alt="urssaf"
-            title="urssaf"
-            class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/UBA.png"
           />
         </div>
         <div class="subtitle decoration">

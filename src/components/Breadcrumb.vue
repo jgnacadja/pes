@@ -13,19 +13,6 @@
 </template>
 
 <page-query>
-query CategoryPage($path: String!) {
-  categories: allCategory(filter: { path: { eq: $path } }) {
-    edges {
-      node {
-        id
-        title
-        meta
-        category
-        content
-        path
-      }
-    }
-  }
 </page-query>
 
 <script>
