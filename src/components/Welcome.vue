@@ -38,7 +38,12 @@
           id="image-home"
         >
           <figure class="image">
-            <img src="https://bulma.io/images/placeholders/600x480.png" />
+            <g-image
+              src="~/assets/header.png"
+              alt="Impulse"
+              class="is-rounded"
+              fit="inside"
+            />
           </figure>
         </div>
       </div>
