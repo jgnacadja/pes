@@ -57,7 +57,27 @@
           <p class="card-section-header title">Vous souhaitez</p>
         </div>
 
-        <div class="columns row">
+        <div class="columns is-multiline is-hidden-desktop contentMarge">
+          <div
+            class="column card is-category-touch block-link"
+            v-for="edge in $page.categories.edges"
+            :key="edge.node.id"
+          >
+            <Category :category="edge" />
+          </div>
+        </div>
+
+        <div class="columns is-multiline is-hidden-desktop contentMarge">
+          <div
+            class="column card is-category-touch block-link"
+            v-for="edge in $page.categoriesTwo.edges"
+            :key="edge.node.id"
+          >
+            <Category :category="edge" />
+          </div>
+        </div>
+
+        <div class="columns is-multiline row is-hidden-touch contentMarges">
           <div
             class="column card block-link"
             v-for="edge in $page.categories.edges"
@@ -67,7 +87,7 @@
           </div>
         </div>
 
-        <div class="columns row">
+        <div class="columns is-multiline row is-hidden-touch contentMarges">
           <div
             class="column card block-link"
             v-for="edge in $page.categoriesTwo.edges"
@@ -86,53 +106,53 @@
     <section class="section section-lightest-grey section-partners">
       <div class="container text-center">
         <div class="logo-list">
-          <img
+          <g-image
             alt="ANPME"
-            title="cci"
+            title="ANPME"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/256x256.png"
+            src="~/assets/partners/ANPME.png"
           />
-          <img
-            alt="cma"
-            title="cma"
+
+          <g-image
+            alt="APIEX_LOGO"
+            title="APIEX_LOGO"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/APIEX_LOGO.png"
           />
-          <img
-            alt="pole-emploi"
-            title="pole-emploi"
+
+          <g-image
+            alt="CEPEPE-1"
+            title="CEPEPE-1"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/CEPEPE-1.png"
           />
-          <img
-            alt="apec"
-            title="apec"
+
+          <g-image
+            alt="CNSS"
+            title="CNSS"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/CNSS.png"
           />
-          <img
-            alt="banque-de-france"
-            title="banque-de-france"
+
+          <g-image
+            alt="DGI"
+            title="DGI"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/DGI.png"
           />
-          <img
-            alt="bpi-france"
-            title="bpi-france"
+
+          <g-image
+            alt="Ecobank"
+            title="Ecobank"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/Ecobank.png"
           />
-          <img
-            alt="dgfip"
-            title="dgfip"
+
+          <g-image
+            alt="UBA"
+            title="UBA"
             class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
-          />
-          <img
-            alt="urssaf"
-            title="urssaf"
-            class="institution_logo"
-            src="https://bulma.io/images/placeholders/128x128.png"
+            src="~/assets/partners/UBA.png"
           />
         </div>
         <div class="subtitle decoration">
@@ -262,4 +282,27 @@ export default {
 </script>
 
 <style>
+@media only screen and (min-width: 1024px) {
+  .contentMarges {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .is-category-touch {
+    margin-bottom: 2em;
+  }
+
+  .is-notif-description {
+    margin-top: -4em;
+  }
+
+  .card-section-header {
+    font-size: 1.7rem;
+    line-height: 1.25em;
+    font-family: "Evolventa", "lato", "sans-serif";
+    font-weight: bold;
+  }
+}
 </style>

@@ -23,7 +23,7 @@ export default {
     },
   },
   created() {
-    console.log(this.category);
+    //console.log(this.category);
   },
 };
 </script>
