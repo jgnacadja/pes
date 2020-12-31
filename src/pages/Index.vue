@@ -316,5 +316,12 @@ export default {
   .is-notif-description {
     margin-top: -4em;
   }
+
+  .card-section-header {
+    font-size: 1.7rem;
+    line-height: 1.25em;
+    font-family: "Evolventa", "lato", "sans-serif";
+    font-weight: bold;
+  }
 }
 </style>

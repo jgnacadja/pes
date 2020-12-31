@@ -70,7 +70,7 @@ export default {
 
 @media only screen and (max-width: 415px) {
   .footer_PE {
-    height: 42em;
+    height: 30em;
   }
 }
 </style>
