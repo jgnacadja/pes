@@ -10,39 +10,29 @@
       <div class="container contentMarge">
         <div class="block-link">
           <div class="emphasis notification warning">
-            <div class="columns">
-              <div class="column is-1 is-hidden-mobile">
-                <figure class="is-128x128">
-                  <img
-                    class="is-rounded"
-                    src="https://bulma.io/images/placeholders/128x128.png"
-                  />
-                </figure>
-              </div>
+            <div class="columns is-vcentered has-text-centered is-variable">
+              <div class="column is-4-desktop is-12-mobile">
+                <div class="columns is-variable has-text-left">
+                  <div class="column is-4-desktop is-3-mobile">
+                    <figure class="is-128x128">
+                      <g-image
+                        src="~/assets/logo/logoMini.png"
+                        alt="Impulse"
+                        class="is-rounded"
+                        fit="inside"
+                      />
+                    </figure>
+                  </div>
 
-              <div class="column is-3 is-hidden-mobile">
-                <h6 class="title is-6">
-                  Impulse : Accélérateur du développement des entreprises
-                </h6>
-              </div>
-
-              <div class="columns is-mobile is-hidden-desktop">
-                <div class="column section is-4">
-                  <figure class="is-128x128">
-                    <img
-                      class="is-rounded"
-                      src="https://bulma.io/images/placeholders/128x128.png"
-                    />
-                  </figure>
-                </div>
-
-                <div class="column section is-8">
-                  <h6 class="title is-6">
-                    Impulse : Accélérateur du développement des entreprises
-                  </h6>
+                  <div class="column is-8">
+                    <h6 class="title is-6">
+                      #Impulse, accélérateur du développement des entreprises
+                    </h6>
+                  </div>
                 </div>
               </div>
-              <div class="column is-6 has-text-left">
+
+              <div class="column is-6 has-text-justified">
                 Impulse vous aide à vous structurer et vous développer pour
                 gagner en performance. Des conseillers, consultants et
                 formateurs vous accompagnent dans la réalisation de diagnostics
@@ -50,18 +40,8 @@
                 résultats concrets.
               </div>
 
-              <div class="column is-2 is-hidden-mobile">
+              <div class="column is-2-desktop is-8-mobile">
                 <div id="button-discover">
-                  <a
-                    class="button-outline small primary is-link"
-                    href="/aide-entreprises/relance.html"
-                    >Découvrir les mesures</a
-                  >
-                </div>
-              </div>
-
-              <div class="column is-2 is-hidden-desktop">
-                <div id="button-discover is-pulled-right">
                   <a
                     class="button-outline small primary is-link"
                     href="/aide-entreprises/relance.html"
@@ -72,6 +52,7 @@
             </div>
           </div>
         </div>
+
         <div class="block">
           <p class="card-section-header title">Vous souhaitez</p>
         </div>
