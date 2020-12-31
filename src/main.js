@@ -45,19 +45,9 @@ export default function (Vue, { router, head, isClient }) {
 
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
-
   // Register our Bulma component library
   Vue.use(Buefy);
-
-  // Register VueDisqus
-  // Vue.use(VueDisqus);
-
   //http requests via axios
   Vue.use(Axios);
 
-  //   Vue.use(InfiniteLoading);
-
-  //   Vue.use(SmoothScrollbar);
-
-  //   Vue.use(InstantSearch);
 }

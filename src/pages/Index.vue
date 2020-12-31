@@ -22,7 +22,7 @@
 
               <div class="column is-3 is-hidden-mobile">
                 <h6 class="title is-6">
-                  Impulse : Accélérateur du développement des PME
+                  Impulse : Accélérateur du développement des entreprises
                 </h6>
               </div>
 
@@ -38,7 +38,7 @@
 
                 <div class="column section is-8">
                   <h6 class="title is-6">
-                    Impulse : Accélérateur du développement des PME
+                    Impulse : Accélérateur du développement des entreprises
                   </h6>
                 </div>
               </div>

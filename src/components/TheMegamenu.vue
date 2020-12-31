@@ -52,10 +52,10 @@
         </a>
         <nav data-target="toggle-nav">
           <ul class="nav__links">
-            <li class="nav__item itemA">
+            <li class="nav__item">
               <a href="/comment-ca-marche">Comment ça marche ?</a>
             </li>
-            <li class="nav__item itemA">
+            <li class="nav__item">
               <a id="experts_login" href="/mon-compte/">Accès conseillers</a>
             </li>
           </ul>
