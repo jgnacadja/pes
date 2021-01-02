@@ -1,7 +1,9 @@
 <template>
   <section class="section section-lightest-grey section-partners">
-    <div class="columns contentMarge row">
-      <div class="column card procedure-card">
+    <div
+      class="columns contentMarge row container is-centered has-text-centered"
+    >
+      <div class="column card procedure-card has-text-justified">
         <div class="card-content">
           <div class="content">
             <div class="block has-text-centered">
@@ -24,7 +26,7 @@
         </div>
       </div>
 
-      <div class="column card procedure-card">
+      <div class="column card procedure-card has-text-justified">
         <div class="card-content">
           <div class="content">
             <div class="block has-text-centered">
@@ -49,7 +51,7 @@
         </div>
       </div>
 
-      <div class="column card procedure-card">
+      <div class="column card procedure-card has-text-justified">
         <div class="card-content">
           <div class="content">
             <div class="block has-text-centered">
