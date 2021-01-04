@@ -11,7 +11,7 @@
               </h1>
             </div>
             <div class="column is-10 subtitle">
-              Un service a mesure de vos besoins : vous êtes rappelé par LE
+              Un service a mesure de vos besoins : vous êtes rappelé par le
               conseiller qui peut vous aider.
             </div>
           </div>
@@ -38,7 +38,12 @@
           id="image-home"
         >
           <figure class="image">
-            <img src="https://bulma.io/images/placeholders/600x480.png" />
+            <g-image
+              src="~/assets/header.png"
+              alt="Impulse"
+              class="is-rounded"
+              fit="inside"
+            />
           </figure>
         </div>
       </div>

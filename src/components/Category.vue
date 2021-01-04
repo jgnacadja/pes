@@ -22,9 +22,7 @@ export default {
       default: () => [],
     },
   },
-  created() {
-    //console.log(this.category);
-  },
+  created() {},
 };
 </script>
 <style scoped lang="scss">

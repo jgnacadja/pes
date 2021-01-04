@@ -33,82 +33,7 @@
         <b><g-link to="/"> Découvrez les autres sujets.</g-link></b>
       </p>
     </section>
-    <section class="section section-lightest-grey section-partners">
-      <div class="columns contentMarge row">
-        <div class="column card procedure-card">
-          <div class="card-content">
-            <div class="content">
-              <div class="block has-text-centered">
-                <g-image
-                  alt="picto1"
-                  title="picto1"
-                  class="procedure-card-image"
-                  src="~/assets/procedure/picto1.png"
-                />
-              </div>
-              <h2 class="title is-2">
-                Choisissez un sujet et
-                <span class="is-green">déposez votre demande</span>
-              </h2>
-              <p class="article_content">
-                Décrivez votre projet ou votre problème en donnant quelques
-                éléments de contexte.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="column card procedure-card">
-          <div class="card-content">
-            <div class="content">
-              <div class="block has-text-centered">
-                <g-image
-                  alt="picto2"
-                  title="picto2"
-                  class="procedure-card-image"
-                  src="~/assets/procedure/picto2.png"
-                />
-              </div>
-              <h2 class="title is-2">
-                Nous identifions
-                <span class="is-green">le bon conseiller sur</span> votre
-                territoire.
-              </h2>
-              <p class="article_content">
-                Nous identifions, parmi l’ensemble des partenaires publics et
-                parapublics, le conseiller compétent pour votre demande sur
-                votre territoire.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="column card procedure-card">
-          <div class="card-content">
-            <div class="content">
-              <div class="block has-text-centered">
-                <g-image
-                  alt="picto3"
-                  title="picto3"
-                  class="procedure-card-image"
-                  src="~/assets/procedure/picto3.png"
-                />
-              </div>
-              <h2 class="title is-2">
-                <span class="is-green">Le conseiller vous contacte</span>
-                directement pour vous aider sous 5 jours*.
-              </h2>
-              <p class="article_content">
-                Le conseiller compétent pour votre demande vous contacte et vous
-                accompagne en fonction de votre situation.
-                <br />
-                <em class="detail-info">* Délai moyen de prise en charge </em>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Workflow />
     <section class="section section-partners">
       <div class="subtitle has-text-centered decoration">
         <p>
@@ -192,6 +117,7 @@ query CategoryPage($id: String!) {
 
 <script>
 import Welcome from "~/components/Welcome.vue";
+import Workflow from "~/components/Workflow.vue";
 import Category from "~/components/Category.vue";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 
@@ -200,6 +126,7 @@ import VueMarkdown from "vue-markdown";
 export default {
   components: {
     Welcome,
+    Workflow,
     Category,
     Breadcrumb,
     VueMarkdown,

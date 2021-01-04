@@ -3,8 +3,7 @@
     <div class="block notification full-width error region-alerte">
       <div class="block container contentMarge">
         <p class="notif_content">
-          <b>Impulse</b> est un service public ouvert uniquement pour les
-          régions économiques du BENIN.
+          <b>Impulse</b> accélérateur du développement des entreprises.
         </p>
         <a
           class="button small warning is-link is-header-link"
