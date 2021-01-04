@@ -1,5 +1,5 @@
 ---
-title: Recruter ou former vos salariés, améliorer l’organisation du travail
+title: Recruter ou former vos salariés.
 category: "recrutement-formation"
 principal: true
 ---

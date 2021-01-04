@@ -157,15 +157,7 @@
         </div>
         <div class="subtitle decoration">
           <p>
-            Place des Entreprises vous met en relation avec le conseiller qui
-            peut vous aider.
-          </p>
-          <p>
-            Découvrez
-            <a href="/comment_ca_marche.html#liste-partenaires"
-              >plus de 50 partenaires</a
-            >
-            à votre service.
+            Impulse vous met en relation avec le conseiller qui peut vous aider.
           </p>
         </div>
       </div>

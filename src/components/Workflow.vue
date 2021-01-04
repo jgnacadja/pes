@@ -39,13 +39,13 @@
             </div>
             <h2 class="title is-2">
               Nous identifions
-              <span class="is-green">le bon conseiller sur</span> votre
-              territoire.
+              <span class="is-green">le bon conseiller sur</span> votre région
+              économique.
             </h2>
             <p class="article_content">
               Nous identifions, parmi l’ensemble des partenaires publics et
               parapublics, le conseiller compétent pour votre demande sur votre
-              territoire.
+              région économique
             </p>
           </div>
         </div>

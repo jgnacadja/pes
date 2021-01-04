@@ -46,7 +46,7 @@
           <g-link to="/stats/">Statistiques</g-link>
         </li>
         <li>
-          <g-link to="https://www.numerique.gouv.fr/dinum/">DINUM</g-link>
+          <g-link to="https://service-public.bj/">services publics</g-link>
         </li>
       </ul>
     </div>

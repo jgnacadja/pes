@@ -18,8 +18,8 @@
       <div class="container">
         <div class="columns has-text-centered">
           <div class="column is-12 title">
-            Impulse vous met en relation avec le conseiller qui peut vous aider
-            parmi plus de 50 partenaires publics et parapublics
+            Impulse vous met en relation avec le conseiller de votre région
+            économique
           </div>
         </div>
         <div class="text-center">
@@ -75,15 +75,8 @@
           </div>
           <div class="subtitle decoration">
             <p>
-              Place des Entreprises vous met en relation avec le conseiller qui
-              peut vous aider.
-            </p>
-            <p>
-              Découvrez
-              <a href="/comment_ca_marche.html#liste-partenaires"
-                >plus de 50 partenaires</a
-              >
-              à votre service.
+              Impulse vous met en relation avec le conseiller qui peut vous
+              aider.
             </p>
           </div>
         </div>
