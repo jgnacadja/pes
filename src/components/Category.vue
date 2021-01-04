@@ -15,7 +15,6 @@
 </template>
 
 <script>
-
 export default {
   props: {
     category: {
@@ -36,9 +35,9 @@ export default {
     //console.log(this.category);
   },
   mounted() {
-    if(this.toform != ''){
-      this.link = this.category.node.forms.[0].path;
-    }else{
+    if (this.toform != "") {
+      this.link = this.category.node.forms[0].path;
+    } else {
       this.link = this.category.node.path;
     }
   },

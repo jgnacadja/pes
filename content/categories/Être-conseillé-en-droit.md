@@ -1,5 +1,5 @@
 ---
-title: Être conseillé en droit du travail
+title: Être conseillé en droit des affaires
 category: "droit-du-travail"
 principal: true
 ---
