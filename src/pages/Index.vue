@@ -26,7 +26,8 @@
 
                   <div class="column is-8">
                     <h6 class="title is-6">
-                      #Impulse, accélérateur du développement des entreprises
+                      #Impulse, est un service public ouvert uniquement pour les
+                      régions économiques du BENIN.
                     </h6>
                   </div>
                 </div>
