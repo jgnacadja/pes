@@ -243,7 +243,7 @@ export default {
     Category,
   },
   metaInfo: {
-    title: "Place des entreprises!",
+    title: "",
   },
   data() {
     return {

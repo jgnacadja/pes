@@ -30,7 +30,7 @@
               <figure class="image">
                 <g-image
                   src="~/assets/logo/impulse.png"
-                  alt="Impulse: Place des entreprises"
+                  alt="Impulse"
                   class="navbar__domain"
                   fit="inside"
                 />
