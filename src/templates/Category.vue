@@ -24,7 +24,7 @@
             :key="node.id"
             v-bind:class="[isOnlyOne]"
           >
-            <Category :category="node" />
+            <Category :category="node" toform="true" />
           </div>
         </div>
       </div>
@@ -184,11 +184,14 @@ query CategoryPage($id: String!) {
         content
         parent
         path
+        forms {
+          path
+        }
       }
     }
   }
 }
-</page-query>Breadcrumb
+</page-query>Breadrumb
 
 <script>
 import Welcome from "~/components/Welcome.vue";

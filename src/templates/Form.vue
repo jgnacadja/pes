@@ -1,0 +1,593 @@
+<template>
+  <Layout>
+    <Welcome />
+    <section class="section-top section-light-grey">
+      <div class="container contentMarge">
+        <Breadcrumb :category="category" :fromform="true" />
+      </div>
+    </section>
+    <section class="section section-grey landing"  id='section-formulaire'>
+      <div class="container">
+        <div class="block notification warning contact-delay">
+            <span>
+                Déposez votre demande, un conseiller vous rappelle <b>dans les 5 jours</b> (Délai moyen de prise en charge).
+            </span>
+        </div>
+
+        <div class='columns is-full'>
+            <div class="column is-6">
+                <form 
+                  id="app"
+                  action
+                  method="post"
+                  name="form"
+                  @submit.prevent="checkForm"
+                >
+                    <input 
+                        type="hidden" 
+                        name="authenticity_token" 
+                        value="FG5P7OCqiKaTvmsal4TPUFVfOU6kBkgXUH5jxdqZZMUi+ketL0Ed7DvBhQiT1RsUKcDM0I/FfzwDS0NAWwAvoQ==" />
+                    <input 
+                        multiple="multiple" 
+                        type="hidden" 
+                        value="activite_partielle" 
+                        name="solicitation[landing_options_slugs][]" 
+                        id="solicitation_landing_options_slugs" />
+                    <input 
+                        type="hidden" 
+                        value="relance" 
+                        name="solicitation[landing_slug]" 
+                        id="solicitation_landing_slug" />
+                    
+            
+                    <div class='form__group'>
+                        <div class='form__group'>
+                            <label for="fullName">Prénom et nom</label>
+                            <input 
+                            placeholder="ex: Marie Dupont" 
+                            type="text" 
+                            required="required" 
+                            name="fullName" 
+                            id="fullName"
+                            v-model="data.data.fullName"
+                             />
+                            <div
+                              v-if="data.errors.fullName"
+                              style="
+                                color: red !important;
+                                text-align: left;
+                                padding-bottom: 5px;
+                              "
+                            >
+                              <strong>{{ data.errors.fullName }}</strong>
+                            </div>
+                        </div>
+                        <div class='form__group'>
+                            <label for="phone">Téléphone</label>
+                            <input 
+                                placeholder="06 12 34 56 78" 
+                                type="tel" 
+                                required="required" 
+                                name="phone" 
+                                id="phone"
+                                v-model="data.data.phone" />
+                            <div
+                              v-if="data.errors.phone"
+                              style="
+                                color: red !important;
+                                text-align: left;
+                                padding-bottom: 5px;
+                              "
+                            >
+                              <strong>{{ data.errors.phone }}</strong>
+                            </div>
+                        </div>
+                        <div class='form__group'>
+                            <label for="email">E-mail</label>
+                            <input 
+                                placeholder="marie.dupont@exemple.fr" 
+                                type="email" required="required" 
+                                name="email" 
+                                id="email"
+                                v-model="data.data.email" />
+                            <div
+                              v-if="data.errors.email"
+                              style="
+                                color: red !important;
+                                text-align: left;
+                                padding-bottom: 5px;
+                              "
+                            >
+                              <strong>{{ data.errors.email }}</strong>
+                            </div>
+                        </div>
+                        <div class='form__group'>
+                            <!-- / Duplication pour respecter l'accessibilité (id unique, field avec label...) -->
+                            <label for="ifu">IFU</label>
+                            <input 
+                                type="text" required="required" 
+                                name="ifu" 
+                                id="ifu"
+                                v-model="data.data.ifu" />
+                            <div
+                              v-if="data.errors.ifu"
+                              style="
+                                color: red !important;
+                                text-align: left;
+                                padding-bottom: 5px;
+                              "
+                            >
+                              <strong>{{ data.errors.ifu }}</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form__group'>
+                        <label for="">Description de votre demande</label>
+                        <div class='explanation contentMarges'>
+                            <div>
+                                <img alt="" src="/dist/img/infos-alert.png" />
+                                <span>
+                                Pour une meilleure prise en charge de votre demande, indiquez en quelques phrase :
+                                </span>
+                            </div>
+                            <div class="block contentMarges">
+                                <ul>
+                                    <li>votre activité</li>
+                                    <li>le nombre de salariés que vous envisagez de placer en activité partielle</li>
+                                    <li>les éléments de contexte sur votre baisse d'activité</li>
+                                    <li>vos questions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <textarea 
+                          placeholder="Décrivez votre demande." 
+                          rows="6" required="required" 
+                          name="description" 
+                          id="description"
+                          v-model="data.data.description">
+                        </textarea>
+                        <div
+                          v-if="data.errors.description"
+                          style="
+                            color: red !important;
+                            text-align: left;
+                            padding-bottom: 5px;
+                          "
+                        >
+                          <strong>{{ data.errors.description }}</strong>
+                        </div>
+                    </div></br></br>
+                    <div v-if="data.success" class="block container notification is-primary">
+                      <button class="delete"></button>
+                      {{data.success}}
+                    </div>
+
+                    <div class='form__group'>
+                        <input type="submit" name="commit" value="Envoyer ma demande" class="button large is-link" data-disable-with="Envoyer ma demande" />
+                    </div>
+                    <div class='legal-notice'>
+                        <p>Le Ministère du Travail (DGEFP) traite vos données personnelles dans le cadre d’une mission d’intérêt de service public. Place des Entreprises est un service de l’État qui vise à mettre en relation les TPE & PME avec les bons conseillers publics et ainsi de mobiliser les accompagnements publics existants (aides financières, conseils, accompagnements…) de manière adaptée. Pour mieux vous accompagner, vos données sont transmises aux partenaires publics et parapublics.</p>
+                        <p>Pour exercer vos droits ou pour toute question relative au traitement de vos données à caractère personnel dans le cadre de ce dispositif, vous pouvez contacter l’équipe Place de Entreprises par voie électronique <a target="_blank" href="mailto:dpo@placedesentreprises.beta.gouv.fr">dpo@placedesentreprises.beta.gouv.fr</a> ou par courrier postal, à l’adresse suivante : Ministères Sociaux – DGEFP – FIMOD MISI RGPD 14 avenue Duquesne, 75007, Paris.</p>
+                        <p>Pour en savoir plus, consultez les <a href="https://place-des-entreprises.beta.gouv.fr/mentions_d_information">mentions d’information</a>.</p>
+                    </div>
+                </form>
+            </div>
+            <div class='column is-6' style="margin-left: 0;">
+                <div>
+                    <h4 class="title is-4">
+                        Accompagnements :
+                    </h4>
+                    <p>
+                        S’informer sur la rémunération versée au salarié, sur l’allocation perçue par l’entreprise, le reste à charge, la consultation du CSE, la demande d’autorisation préalable, les conditions de l'activité partielle de longue durée. 
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="section section-lightest-grey section-partners">
+      <div class="columns contentMarge row">
+        <div class="column card procedure-card">
+          <div class="card-content">
+            <div class="content">
+              <div class="block has-text-centered">
+                <g-image
+                  alt="picto1"
+                  title="picto1"
+                  class="procedure-card-image"
+                  src="~/assets/procedure/picto1.png"
+                />
+              </div>
+              <h2 class="title is-2">
+                Choisissez un sujet et
+                <span class="is-green">déposez votre demande</span>
+              </h2>
+              <p class="article_content">
+                Décrivez votre projet ou votre problème en donnant quelques
+                éléments de contexte.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column card procedure-card">
+          <div class="card-content">
+            <div class="content">
+              <div class="block has-text-centered">
+                <g-image
+                  alt="picto2"
+                  title="picto2"
+                  class="procedure-card-image"
+                  src="~/assets/procedure/picto2.png"
+                />
+              </div>
+              <h2 class="title is-2">
+                Nous identifions
+                <span class="is-green">le bon conseiller sur</span> votre
+                territoire.
+              </h2>
+              <p class="article_content">
+                Nous identifions, parmi l’ensemble des partenaires publics et
+                parapublics, le conseiller compétent pour votre demande sur
+                votre territoire.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column card procedure-card">
+          <div class="card-content">
+            <div class="content">
+              <div class="block has-text-centered">
+                <g-image
+                  alt="picto3"
+                  title="picto3"
+                  class="procedure-card-image"
+                  src="~/assets/procedure/picto3.png"
+                />
+              </div>
+              <h2 class="title is-2">
+                <span class="is-green">Le conseiller vous contacte</span>
+                directement pour vous aider sous 5 jours*.
+              </h2>
+              <p class="article_content">
+                Le conseiller compétent pour votre demande vous contacte et vous
+                accompagne en fonction de votre situation.
+                <br />
+                <em class="detail-info">* Délai moyen de prise en charge </em>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-partners">
+      <div class="subtitle has-text-centered decoration">
+        <p>
+          Place des Entreprises est un service du Ministère de l’Economie et du
+          Ministère du Travail, en partenariat avec :
+        </p>
+      </div>
+      <div class="container text-center">
+        <div class="logo-list">
+          <g-image
+            alt="ANPME"
+            title="ANPME"
+            class="institution_logo"
+            src="~/assets/partners/ANPME.png"
+          />
+
+          <g-image
+            alt="APIEX_LOGO"
+            title="APIEX_LOGO"
+            class="institution_logo"
+            src="~/assets/partners/APIEX_LOGO.png"
+          />
+
+          <g-image
+            alt="CEPEPE-1"
+            title="CEPEPE-1"
+            class="institution_logo"
+            src="~/assets/partners/CEPEPE-1.png"
+          />
+
+          <g-image
+            alt="CNSS"
+            title="CNSS"
+            class="institution_logo"
+            src="~/assets/partners/CNSS.png"
+          />
+
+          <g-image
+            alt="DGI"
+            title="DGI"
+            class="institution_logo"
+            src="~/assets/partners/DGI.png"
+          />
+
+          <g-image
+            alt="Ecobank"
+            title="Ecobank"
+            class="institution_logo"
+            src="~/assets/partners/Ecobank.png"
+          />
+
+          <g-image
+            alt="UBA"
+            title="UBA"
+            class="institution_logo"
+            src="~/assets/partners/UBA.png"
+          />
+        </div>
+      </div>
+    </section>
+  </Layout>
+</template>
+
+<page-query>
+query CategoryPage($path: String!) {
+  form: allForm(filter: { path: { eq: $path } }) {
+    edges {
+      node {
+        id
+        path
+      }
+    }
+  }
+
+  categories: allCategory {
+    edges {
+      node {
+        id
+        title
+        meta
+        subcategory
+        content
+        parent
+        path
+        forms {
+          path
+        }
+      }
+    }
+  }
+}
+</page-query>Breadrumb 
+
+
+
+<script>
+import Welcome from "~/components/Welcome.vue";
+import Breadcrumb from "~/components/Breadcrumb.vue";
+
+import VueMarkdown from "vue-markdown";
+import emailjs from 'emailjs-com';
+
+export default {
+  components: {
+    Welcome,
+    Breadcrumb,
+    VueMarkdown,
+  },
+  metaInfo() {
+    return {
+      //title: this.$page.article.seoTitle,
+    };
+  },
+  filters: {
+    // Filter definitions
+    Upper(value) {
+      const leftletter = value.substring(0, 1);
+      const rightvalue = value.substring(1);
+      return leftletter.toUpperCase() + rightvalue;
+    },
+  },
+  
+  data() {
+    return {
+      cartegories: [],
+      cartegory: {},
+      data: {
+        errors: {
+          fullName: "",
+          phone: "",
+          email: "",
+          ifu: "",
+          description: "",
+        },
+        data: {
+          fullName: null,
+          phone: null,
+          email: null,
+          ifu: null,
+          description: null,
+        },
+        success: null 
+      },
+    };
+  },
+  mounted() {
+    // Get current url
+    var pathname = window.location.pathname; 
+    
+    // Get current cartegory
+    this.cartegory = this.$page.categories.edges.filter((item) => 
+      item.node.forms.length > 0 &&
+      item.node.forms[0].path==pathname)[0];
+
+    console.log(this.cartegory.node);
+
+  },
+  methods: {
+    chunkArray(arr, chunkCount) {
+      let result = new Array(Math.ceil(arr.length / chunkCount))
+        .fill()
+        .map((_) => arr.splice(0, chunkCount));
+      return result;
+    },
+    checkForm: function (e) {
+
+        this.data.errors = {
+          fullName: null,
+          phone: null,
+          email: null,
+          siret: null,
+          description: null,
+        };
+
+        const partenaire_mail =
+          process.env.GRIDSOME_MAILJET_CONTACT_FORM_PARTNER_MAIL;
+        const particulier_mail =
+          process.env.GRIDSOME_MAILJET_CONTACT_FORM_PARTICULIER_MAIL;
+        const api = process.env.GRIDSOME_MAILJET_API_SERVICE_SEND;
+
+        if (!this.data.data.fullName) {
+          this.data.errors.nom = "le nom et prénoms sont requis";
+        }
+        if (!this.data.data.phone) {
+          this.data.errors.phone = "Le téléphone est réquis";
+        }
+        if (!this.data.data.email) {
+          this.data.errors.email = "lL'addresse e-mail est réquis";
+        }
+        if (!this.data.data.ifu) {
+          this.data.errors.ifu = "Le numéro IFU est réquis";
+        }
+        if (!this.data.data.description) {
+          this.data.errors.description = "La description est réquise";
+        }
+
+        console.log(this.data.data)
+
+        if (
+          this.data.data.fullName != null &&
+          this.data.data.phone != null &&
+          this.data.data.email != null &&
+          this.data.data.ifu != null &&
+          this.data.data.description != null
+        ) {
+
+          try {
+            emailjs.sendForm(
+            'service_zo2s5ud', 
+            'template_tkt44iv', e.target,
+            'user_awurVWpPY1ipKOSkoyWx0', 
+            this.data.data)
+          } catch(error) {
+              console.log({error})
+          }
+
+          this.data.data.fullName = null
+          this.data.data.phone = null
+          this.data.data.email = null
+          this.data.data.ifu = null
+          this.data.data.description = null
+          this.data.success = "Votre Message a été envoyé"
+        }
+
+        e.preventDefault();
+    },
+    
+  },
+};
+</script>
+
+<style scoped lang="scss">
+@import "../variables.scss";
+
+.legal-notice{
+    font-size: 0.8em;
+    text-align: justify;
+}
+label {
+  font-weight: bold;
+  font-size: 0.85em;
+}
+ul {
+    list-style: inside !important;
+}
+.is-green {
+  color: #177c38;
+}
+
+.detail-info {
+  font-size: 0.8em;
+}
+
+.section-top {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #fafbfc;
+  background-color: var(--lightest-grey);
+}
+
+@media only screen and (min-width: 1024px) {
+
+  form{
+    margin-left:0 !important;
+  }
+
+  .contentMarges {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .is-category-touch {
+    margin-bottom: 2em;
+  }
+
+  .is-notif-description {
+    margin-top: -4em;
+  }
+
+  .card-section-header {
+    font-size: 1.7rem;
+    line-height: 1.25em;
+    font-family: "Evolventa", "lato", "sans-serif";
+    font-weight: bold;
+  }
+}
+
+.is-card-content a:hover {
+  text-decoration: none;
+  color: black;
+}
+.is-card-content a {
+  text-decoration: none;
+  color: black;
+}
+
+section .card {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+
+section .card:hover {
+  border: 2px solid #0053b3;
+  border: 2px solid var(--greenP);
+  background-color: transparent;
+  padding: 0px;
+}
+
+.procedure-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+
+.procedure-card:hover {
+  border: none;
+  border-color: transparent !important;
+  padding: 0px;
+}
+
+.procedure-card-image {
+  width: 30%;
+}
+</style>

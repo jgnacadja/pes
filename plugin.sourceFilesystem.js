@@ -10,6 +10,12 @@ module.exports = {
         typeName: "Category",
         create: true,
       },
+
+      forms: {
+        typeName: "Form",
+        create: true,
+      },
     },
   },
+
 };

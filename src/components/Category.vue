@@ -1,5 +1,5 @@
 <template>
-  <g-link :to="category.node.path">
+  <g-link :to="link">
     <div class="card__content">
       <div class="block">
         <h2 class="has-text-left is-2">
@@ -15,15 +15,32 @@
 </template>
 
 <script>
+
 export default {
   props: {
     category: {
       type: Object,
       default: () => [],
     },
+    toform: {
+      type: String,
+      default: () => [],
+    },
+  },
+  data() {
+    return {
+      link: "",
+    };
   },
   created() {
     //console.log(this.category);
+  },
+  mounted() {
+    if(this.toform != ''){
+      this.link = this.category.node.forms.[0].path;
+    }else{
+      this.link = this.category.node.path;
+    }
   },
 };
 </script>

@@ -4,9 +4,14 @@
       <a href="/">Acceuil</a>
       <span v-if="category != ''">
         &nbsp;&nbsp;
-        <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
+        <b-icon pack="fas" icon="greater-than" type="is-black" size="is-small" />
         &nbsp;&nbsp; Entreprises,
         {{ category }}
+      </span>
+      <span v-if="fromform != ''">
+        &nbsp;&nbsp;
+        <b-icon pack="fas" icon="greater-than" type="is-black" size="is-small" />
+        &nbsp;&nbsp; {{ fromform }}
       </span>
     </div>
   </div>
@@ -33,6 +38,12 @@ query CategoryPage($path: String!) {
 export default {
   props: {
     category: {
+      type: String,
+      default() {
+        return {};
+      },
+    },
+    fromform: {
       type: String,
       default() {
         return {};
