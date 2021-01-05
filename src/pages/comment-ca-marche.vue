@@ -11,7 +11,7 @@
       </div>
     </section>
     <section class="section section-light-grey landing small-padding">
-      <div class="container breadcrumbs"><Breadcrumb /></div>
+      <div class="container breadcrumbs"><Breadcrumb :category="category" :fromform="false" /></div>
     </section>
     <workflow />
     <Partner />
@@ -104,6 +104,7 @@ export default {
     return {
       isSubcategorie: false,
       categories: [],
+      category: "comment ça marche ?"
     };
   },
   mounted() {},
