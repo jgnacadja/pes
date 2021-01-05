@@ -7,7 +7,7 @@
         </p>
         <a
           class="button small warning is-link is-header-link"
-          href="/comment_ca_marche.html#section-newsletter"
+          href="/comment-ca-marche"
           >En savoir plus</a
         >
       </div>
