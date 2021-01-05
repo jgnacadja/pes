@@ -44,7 +44,7 @@
                 <div id="button-discover">
                   <a
                     class="button-outline small primary is-link"
-                    href="/aide-entreprises/comment-ca-marche"
+                    href="/comment-ca-marche"
                     >Découvrir les mesures</a
                   >
                 </div>
