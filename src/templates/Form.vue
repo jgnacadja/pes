@@ -141,7 +141,7 @@
                         Accompagnements :
                     </h4>
                     <p>
-                        S’informer sur la rémunération versée au salarié, sur l’allocation perçue par l’entreprise, le reste à charge, la consultation du CSE, la demande d’autorisation préalable, les conditions de l'activité partielle de longue durée. 
+                        S’informer sur la rémunération versée au salarié, sur l’allocation perçue par l’entreprise, le reste à charge,  les conditions de l'activité partielle de longue durée. 
                     </p>
                 </div>
             </div>

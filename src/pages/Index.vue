@@ -26,8 +26,7 @@
 
                   <div class="column is-8">
                     <h6 class="title is-6">
-                      #Impulse, est un service public ouvert uniquement pour les
-                      régions économiques du BENIN.
+                      #Impulse, est un service public de la chambre de commerce et d'industrie du BENIN.
                     </h6>
                   </div>
                 </div>
@@ -45,7 +44,7 @@
                 <div id="button-discover">
                   <a
                     class="button-outline small primary is-link"
-                    href="/aide-entreprises/"
+                    href="/aide-entreprises/comment-ca-marche"
                     >Découvrir les mesures</a
                   >
                 </div>
