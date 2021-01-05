@@ -9,6 +9,7 @@
     <section class="section section-grey landing"  id='section-formulaire'>
       <div class="container">
         <div class="block notification warning contact-delay">
+          <g-image alt="" src="~/assets/5days.png" />
             <span>
                 Déposez votre demande, un conseiller vous rappelle <b>dans les 5 jours</b> (Délai moyen de prise en charge).
             </span>
@@ -23,41 +24,22 @@
                   name="form"
                   @submit.prevent="checkForm"
                 >
-                    <input 
-                        type="hidden" 
-                        name="authenticity_token" 
-                        value="FG5P7OCqiKaTvmsal4TPUFVfOU6kBkgXUH5jxdqZZMUi+ketL0Ed7DvBhQiT1RsUKcDM0I/FfzwDS0NAWwAvoQ==" />
-                    <input 
-                        multiple="multiple" 
-                        type="hidden" 
-                        value="activite_partielle" 
-                        name="solicitation[landing_options_slugs][]" 
-                        id="solicitation_landing_options_slugs" />
-                    <input 
-                        type="hidden" 
-                        value="relance" 
-                        name="solicitation[landing_slug]" 
-                        id="solicitation_landing_slug" />
-                    
-            
                     <div class='form__group'>
                         <div class='form__group'>
                             <label for="fullName">Prénom et nom</label>
-                            <input 
-                            placeholder="ex: Marie Dupont" 
-                            type="text" 
-                            required="required" 
-                            name="fullName" 
-                            id="fullName"
-                            v-model="data.data.fullName"
-                             />
+                            <b-field>
+                              <input 
+                                placeholder="ex: Marie Dupont" 
+                                type="text" 
+                                required="required" 
+                                name="fullName" 
+                                id="fullName"
+                                v-model="data.data.fullName"
+                              />
+                             </b-field>
                             <div
                               v-if="data.errors.fullName"
-                              style="
-                                color: red !important;
-                                text-align: left;
-                                padding-bottom: 5px;
-                              "
+                              class="errorForm"
                             >
                               <strong>{{ data.errors.fullName }}</strong>
                             </div>
@@ -73,11 +55,7 @@
                                 v-model="data.data.phone" />
                             <div
                               v-if="data.errors.phone"
-                              style="
-                                color: red !important;
-                                text-align: left;
-                                padding-bottom: 5px;
-                              "
+                              class="errorForm"
                             >
                               <strong>{{ data.errors.phone }}</strong>
                             </div>
@@ -92,11 +70,7 @@
                                 v-model="data.data.email" />
                             <div
                               v-if="data.errors.email"
-                              style="
-                                color: red !important;
-                                text-align: left;
-                                padding-bottom: 5px;
-                              "
+                              class="errorForm"
                             >
                               <strong>{{ data.errors.email }}</strong>
                             </div>
@@ -111,11 +85,7 @@
                                 v-model="data.data.ifu" />
                             <div
                               v-if="data.errors.ifu"
-                              style="
-                                color: red !important;
-                                text-align: left;
-                                padding-bottom: 5px;
-                              "
+                              class="errorForm"
                             >
                               <strong>{{ data.errors.ifu }}</strong>
                             </div>
@@ -125,7 +95,7 @@
                         <label for="">Description de votre demande</label>
                         <div class='explanation contentMarges'>
                             <div>
-                                <img alt="" src="/dist/img/infos-alert.png" />
+                                <g-image alt="" src="~/assets/infos-alert.png" />
                                 <span>
                                 Pour une meilleure prise en charge de votre demande, indiquez en quelques phrase :
                                 </span>
@@ -148,22 +118,19 @@
                         </textarea>
                         <div
                           v-if="data.errors.description"
-                          style="
-                            color: red !important;
-                            text-align: left;
-                            padding-bottom: 5px;
-                          "
+                          class="errorForm"
                         >
                           <strong>{{ data.errors.description }}</strong>
                         </div>
-                    </div></br></br>
-                    <div v-if="data.success" class="block container notification is-primary">
-                      <button class="delete"></button>
-                      {{data.success}}
+                    </div>
+
+                    <div v-if="data.success" class="form__group container notif is-primary">
+                      <p><i class="fas fa-check"></i> {{data.success}}</p>
                     </div>
 
                     <div class='form__group'>
-                        <input type="submit" name="commit" value="Envoyer ma demande" class="button large is-link" data-disable-with="Envoyer ma demande" />
+                        <button v-if="data.loading" class="button large is-link is-loading"></button>
+                        <input v-if="!data.loading" type="submit" name="commit" value="Envoyer ma demande" class="button large is-link" data-disable-with="Envoyer ma demande" />
                     </div>
                     <div class='legal-notice'>
                         <p>Le Ministère du Travail (DGEFP) traite vos données personnelles dans le cadre d’une mission d’intérêt de service public. Place des Entreprises est un service de l’État qui vise à mettre en relation les TPE & PME avec les bons conseillers publics et ainsi de mobiliser les accompagnements publics existants (aides financières, conseils, accompagnements…) de manière adaptée. Pour mieux vous accompagner, vos données sont transmises aux partenaires publics et parapublics.</p>
@@ -395,6 +362,7 @@ export default {
           email: "",
           ifu: "",
           description: "",
+          loading: false,
         },
         data: {
           fullName: null,
@@ -427,7 +395,6 @@ export default {
       return result;
     },
     checkForm: function (e) {
-
         this.data.errors = {
           fullName: null,
           phone: null,
@@ -436,11 +403,15 @@ export default {
           description: null,
         };
 
-        const partenaire_mail =
-          process.env.GRIDSOME_MAILJET_CONTACT_FORM_PARTNER_MAIL;
-        const particulier_mail =
-          process.env.GRIDSOME_MAILJET_CONTACT_FORM_PARTICULIER_MAIL;
-        const api = process.env.GRIDSOME_MAILJET_API_SERVICE_SEND;
+        // const service_id =
+        //   process.env.EMAIL_JS_SERVICE_ID;
+        // const template_id =
+        //   process.env.EMAIL_JS_TEMPLATE_ID;
+        // const user_id = process.env.EMAIL_JS_USER_ID;
+
+        const service_id = "service_zo2s5ud";
+        const template_id ="template_tkt44iv";
+        const user_id = "user_awurVWpPY1ipKOSkoyWx0";
 
         if (!this.data.data.fullName) {
           this.data.errors.nom = "le nom et prénoms sont requis";
@@ -458,8 +429,7 @@ export default {
           this.data.errors.description = "La description est réquise";
         }
 
-        console.log(this.data.data)
-
+        
         if (
           this.data.data.fullName != null &&
           this.data.data.phone != null &&
@@ -469,32 +439,52 @@ export default {
         ) {
 
           try {
+            this.data.loading = true;
+            var vm = this
             emailjs.sendForm(
-            'service_zo2s5ud', 
-            'template_tkt44iv', e.target,
-            'user_awurVWpPY1ipKOSkoyWx0', 
-            this.data.data)
+              service_id, 
+              template_id, e.target,
+              user_id, 
+              this.data.data).then(function (results) {
+                console.log(results)
+                vm.data.loading = false
+                vm.data.data.fullName = null
+                vm.data.data.phone = null
+                vm.data.data.email = null
+                vm.data.data.ifu = null
+                vm.data.data.description = null
+                vm.data.success = "Votre demande a été envoyé"
+              });
           } catch(error) {
-              console.log({error})
+            this.data.loading = false;
+            console.log({error})
           }
-
-          this.data.data.fullName = null
-          this.data.data.phone = null
-          this.data.data.email = null
-          this.data.data.ifu = null
-          this.data.data.description = null
-          this.data.success = "Votre Message a été envoyé"
         }
 
         e.preventDefault();
     },
-    
   },
 };
 </script>
 
 <style scoped lang="scss">
 @import "../variables.scss";
+
+.notif {
+  background-color: #177C38;
+  padding: 1em;
+}
+.notif i{
+  color: white;
+}
+.notif p{
+  color: white;
+}
+.errorForm {
+  color: red !important;
+  text-align: left;
+  padding-bottom: 5px;
+}
 
 .legal-notice{
     font-size: 0.8em;
