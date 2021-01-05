@@ -327,7 +327,7 @@ query CategoryPage($path: String!) {
 <script>
 import Welcome from "~/components/Welcome.vue";
 import Breadcrumb from "~/components/Breadcrumb.vue";
-
+import Partner from "~/components/Partner.vue";
 import VueMarkdown from "vue-markdown";
 import emailjs from 'emailjs-com';
 
@@ -336,6 +336,7 @@ export default {
     Welcome,
     Breadcrumb,
     VueMarkdown,
+    Partner
   },
   metaInfo() {
     return {
