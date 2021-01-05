@@ -29,7 +29,7 @@
                             <label for="fullName">Prénom et nom</label>
                             <b-field>
                               <input 
-                                placeholder="ex: Marie Dupont" 
+                                placeholder="votre nom" 
                                 type="text" 
                                 required="required" 
                                 name="fullName" 
@@ -47,7 +47,7 @@
                         <div class='form__group'>
                             <label for="phone">Téléphone</label>
                             <input 
-                                placeholder="06 12 34 56 78" 
+                                placeholder="+229 00 00 00 00" 
                                 type="tel" 
                                 required="required" 
                                 name="phone" 
@@ -63,7 +63,7 @@
                         <div class='form__group'>
                             <label for="email">E-mail</label>
                             <input 
-                                placeholder="marie.dupont@exemple.fr" 
+                                placeholder="pseudo@email.com" 
                                 type="email" required="required" 
                                 name="email" 
                                 id="email"
@@ -132,11 +132,7 @@
                         <button v-if="data.loading" class="button large is-link is-loading"></button>
                         <input v-if="!data.loading" type="submit" name="commit" value="Envoyer ma demande" class="button large is-link" data-disable-with="Envoyer ma demande" />
                     </div>
-                    <div class='legal-notice'>
-                        <p>Le Ministère du Travail (DGEFP) traite vos données personnelles dans le cadre d’une mission d’intérêt de service public. Place des Entreprises est un service de l’État qui vise à mettre en relation les TPE & PME avec les bons conseillers publics et ainsi de mobiliser les accompagnements publics existants (aides financières, conseils, accompagnements…) de manière adaptée. Pour mieux vous accompagner, vos données sont transmises aux partenaires publics et parapublics.</p>
-                        <p>Pour exercer vos droits ou pour toute question relative au traitement de vos données à caractère personnel dans le cadre de ce dispositif, vous pouvez contacter l’équipe Place de Entreprises par voie électronique <a target="_blank" href="mailto:dpo@placedesentreprises.beta.gouv.fr">dpo@placedesentreprises.beta.gouv.fr</a> ou par courrier postal, à l’adresse suivante : Ministères Sociaux – DGEFP – FIMOD MISI RGPD 14 avenue Duquesne, 75007, Paris.</p>
-                        <p>Pour en savoir plus, consultez les <a href="https://place-des-entreprises.beta.gouv.fr/mentions_d_information">mentions d’information</a>.</p>
-                    </div>
+                    
                 </form>
             </div>
             <div class='column is-6' style="margin-left: 0;">
@@ -153,87 +149,11 @@
       </div>
 
     </section>
-    <section class="section section-lightest-grey section-partners">
-      <div class="columns contentMarge row">
-        <div class="column card procedure-card">
-          <div class="card-content">
-            <div class="content">
-              <div class="block has-text-centered">
-                <g-image
-                  alt="picto1"
-                  title="picto1"
-                  class="procedure-card-image"
-                  src="~/assets/procedure/picto1.png"
-                />
-              </div>
-              <h2 class="title is-2">
-                Choisissez un sujet et
-                <span class="is-green">déposez votre demande</span>
-              </h2>
-              <p class="article_content">
-                Décrivez votre projet ou votre problème en donnant quelques
-                éléments de contexte.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="column card procedure-card">
-          <div class="card-content">
-            <div class="content">
-              <div class="block has-text-centered">
-                <g-image
-                  alt="picto2"
-                  title="picto2"
-                  class="procedure-card-image"
-                  src="~/assets/procedure/picto2.png"
-                />
-              </div>
-              <h2 class="title is-2">
-                Nous identifions
-                <span class="is-green">le bon conseiller sur</span> votre
-                territoire.
-              </h2>
-              <p class="article_content">
-                Nous identifions, parmi l’ensemble des partenaires publics et
-                parapublics, le conseiller compétent pour votre demande sur
-                votre territoire.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="column card procedure-card">
-          <div class="card-content">
-            <div class="content">
-              <div class="block has-text-centered">
-                <g-image
-                  alt="picto3"
-                  title="picto3"
-                  class="procedure-card-image"
-                  src="~/assets/procedure/picto3.png"
-                />
-              </div>
-              <h2 class="title is-2">
-                <span class="is-green">Le conseiller vous contacte</span>
-                directement pour vous aider sous 5 jours*.
-              </h2>
-              <p class="article_content">
-                Le conseiller compétent pour votre demande vous contacte et vous
-                accompagne en fonction de votre situation.
-                <br />
-                <em class="detail-info">* Délai moyen de prise en charge </em>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Workflow/>
     <section class="section section-partners">
       <div class="subtitle has-text-centered decoration">
         <p>
-          Place des Entreprises est un service du Ministère de l’Economie et du
-          Ministère du Travail, en partenariat avec :
+          Impulse est un service de la chambre de commerce et d'industrie du BENIN, en partenariat avec :
         </p>
       </div>
       <div class="container text-center">
@@ -326,6 +246,7 @@ query CategoryPage($path: String!) {
 
 <script>
 import Welcome from "~/components/Welcome.vue";
+import Workflow from "~/components/Workflow.vue";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 
 import VueMarkdown from "vue-markdown";
@@ -335,6 +256,7 @@ export default {
   components: {
     Welcome,
     Breadcrumb,
+    Workflow,
     VueMarkdown,
   },
   metaInfo() {
