@@ -11,77 +11,10 @@
       </div>
     </section>
     <section class="section section-light-grey landing small-padding">
-      <div class="container breadcrumbs"><Breadcrumb /></div>
+      <div class="container breadcrumbs"><Breadcrumb :category="category" :fromform="false" /></div>
     </section>
     <workflow />
-    <section class="section section-grey section-partners">
-      <div class="container">
-        <div class="columns has-text-centered">
-          <div class="column is-12 title">
-            Impulse vous met en relation avec le conseiller de votre région
-            économique
-          </div>
-        </div>
-        <div class="text-center">
-          <div class="logo-list">
-            <g-image
-              alt="ANPME"
-              title="ANPME"
-              class="institution_logo"
-              src="~/assets/partners/ANPME.png"
-            />
-
-            <g-image
-              alt="APIEX_LOGO"
-              title="APIEX_LOGO"
-              class="institution_logo"
-              src="~/assets/partners/APIEX_LOGO.png"
-            />
-
-            <g-image
-              alt="CEPEPE-1"
-              title="CEPEPE-1"
-              class="institution_logo"
-              src="~/assets/partners/CEPEPE-1.png"
-            />
-
-            <g-image
-              alt="CNSS"
-              title="CNSS"
-              class="institution_logo"
-              src="~/assets/partners/CNSS.png"
-            />
-
-            <g-image
-              alt="DGI"
-              title="DGI"
-              class="institution_logo"
-              src="~/assets/partners/DGI.png"
-            />
-
-            <g-image
-              alt="Ecobank"
-              title="Ecobank"
-              class="institution_logo"
-              src="~/assets/partners/Ecobank.png"
-            />
-
-            <g-image
-              alt="UBA"
-              title="UBA"
-              class="institution_logo"
-              src="~/assets/partners/UBA.png"
-            />
-          </div>
-          <div class="subtitle decoration">
-            <p>
-              Impulse vous met en relation avec le conseiller qui peut vous
-              aider.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Partner />
 
     <section class="section background-orange has-text-white">
       <div class="columns container is-multiline has-text-centered is-centered">
@@ -156,10 +89,13 @@
 <script>
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import Workflow from "~/components/Workflow.vue";
+import Partner from "~/components/Partner.vue";
+
 export default {
   components: {
     Breadcrumb,
     Workflow,
+    Partner
   },
   metaInfo: {
     title: "Impulse : comment ça marche",
@@ -168,6 +104,7 @@ export default {
     return {
       isSubcategorie: false,
       categories: [],
+      category: "comment ça marche ?"
     };
   },
   mounted() {},
