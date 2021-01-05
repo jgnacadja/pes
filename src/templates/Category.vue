@@ -3,7 +3,7 @@
     <Welcome />
     <section class="section-top section-light-grey">
       <div class="container contentMarge">
-        <Breadcrumb :category="category" />
+        <Breadcrumb :category="category" :fromform="false" />
       </div>
     </section>
     <section class="section section-grey" id="section-thematiques">
@@ -24,7 +24,7 @@
             :key="node.id"
             v-bind:class="[isOnlyOne]"
           >
-            <Category :category="node" />
+            <Category :category="node" toform="true" />
           </div>
         </div>
       </div>
@@ -34,66 +34,7 @@
       </p>
     </section>
     <Workflow />
-    <section class="section section-partners">
-      <div class="subtitle has-text-centered decoration">
-        <p>
-          Place des Entreprises est un service du Ministère de l’Economie et du
-          Ministère du Travail, en partenariat avec :
-        </p>
-      </div>
-      <div class="container text-center">
-        <div class="logo-list">
-          <g-image
-            alt="ANPME"
-            title="ANPME"
-            class="institution_logo"
-            src="~/assets/partners/ANPME.png"
-          />
-
-          <g-image
-            alt="APIEX_LOGO"
-            title="APIEX_LOGO"
-            class="institution_logo"
-            src="~/assets/partners/APIEX_LOGO.png"
-          />
-
-          <g-image
-            alt="CEPEPE-1"
-            title="CEPEPE-1"
-            class="institution_logo"
-            src="~/assets/partners/CEPEPE-1.png"
-          />
-
-          <g-image
-            alt="CNSS"
-            title="CNSS"
-            class="institution_logo"
-            src="~/assets/partners/CNSS.png"
-          />
-
-          <g-image
-            alt="DGI"
-            title="DGI"
-            class="institution_logo"
-            src="~/assets/partners/DGI.png"
-          />
-
-          <g-image
-            alt="Ecobank"
-            title="Ecobank"
-            class="institution_logo"
-            src="~/assets/partners/Ecobank.png"
-          />
-
-          <g-image
-            alt="UBA"
-            title="UBA"
-            class="institution_logo"
-            src="~/assets/partners/UBA.png"
-          />
-        </div>
-      </div>
-    </section>
+    <Partner />
   </Layout>
 </template>
 
@@ -109,18 +50,21 @@ query CategoryPage($id: String!) {
         content
         parent
         path
+        forms {
+          path
+        }
       }
     }
   }
 }
-</page-query>Breadcrumb
+</page-query>Breadrumb
 
 <script>
 import Welcome from "~/components/Welcome.vue";
 import Workflow from "~/components/Workflow.vue";
 import Category from "~/components/Category.vue";
 import Breadcrumb from "~/components/Breadcrumb.vue";
-
+import Partner from "~/components/Partner.vue";
 import VueMarkdown from "vue-markdown";
 
 export default {
@@ -130,6 +74,7 @@ export default {
     Category,
     Breadcrumb,
     VueMarkdown,
+    Partner
   },
   metaInfo() {
     return {

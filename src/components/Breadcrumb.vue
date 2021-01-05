@@ -2,12 +2,34 @@
   <div class="columns is-variable is-2 is-vcentered">
     <div ref="breadcrumb" class="column is-12">
       <a href="/">Acceuil</a>
-      <span v-if="category != ''">
-        &nbsp;&nbsp;
-        <b-icon pack="fas" icon="less-than" type="is-black" size="is-small" />
-        &nbsp;&nbsp; Entreprises,
-        {{ category }}
-      </span>
+
+
+      <template v-if="category != '' && fromform == ''">
+        <span>
+          &nbsp;&nbsp;
+          <b-icon pack="fas" icon="greater-than" type="is-black" size="is-small" />
+          &nbsp;&nbsp; Entreprises,
+          {{ category }}
+        </span>
+      </template>
+      <template v-else>
+        
+        <span>
+          &nbsp;&nbsp;
+          <b-icon pack="fas" icon="greater-than" type="is-black" size="is-small" />
+          &nbsp;&nbsp;
+          <g-link :to="parentbreadsForm.path" >{{ parentbreadsForm.title }}</g-link>
+          
+        </span>
+
+        <span v-if="fromform != ''">
+          &nbsp;&nbsp;
+          <b-icon pack="fas" icon="greater-than" type="is-black" size="is-small" />
+          &nbsp;&nbsp; {{ breadsForm }}
+        </span>
+
+      </template>
+      
     </div>
   </div>
 </template>
@@ -23,6 +45,9 @@ query CategoryPage($path: String!) {
         category
         content
         path
+        forms {
+          path
+        }
       }
     }
   }
@@ -33,6 +58,12 @@ query CategoryPage($path: String!) {
 export default {
   props: {
     category: {
+      type: String,
+      default() {
+        return {};
+      },
+    },
+    fromform: {
       type: String,
       default() {
         return {};
@@ -50,9 +81,29 @@ export default {
   data() {
     return {
       breads: "",
+      breadsForm: "",
+      parentbreadsForm: {
+        title: "",
+        path: ""
+      }
     };
   },
   mounted() {
+    var cartegories = this.$page.categories.edges;
+
+    if(this.fromform != ''){
+      var pathname = window.location.pathname; 
+      var currentCartegory = cartegories.filter((item) => 
+        item.node.forms.length > 0 &&
+        item.node.forms[0].path==pathname)[0]   
+
+      var parent = cartegories.filter((item) => item.node.id == currentCartegory.node.parent)[0]
+
+      this.parentbreadsForm.title = parent.node.title
+      this.parentbreadsForm.path = parent.node.path
+      this.breadsForm = "vous souhaitez " + currentCartegory.node.title.toLowerCase() + " ?"
+    }
+
     //this.$refs["breadcrumb"].lastElementChild.className = "has-text-primary";
   },
 };

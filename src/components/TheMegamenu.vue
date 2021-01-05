@@ -7,7 +7,7 @@
         </p>
         <a
           class="button small warning is-link is-header-link"
-          href="/comment_ca_marche.html#section-newsletter"
+          href="/comment-ca-marche"
           >En savoir plus</a
         >
       </div>
@@ -30,7 +30,7 @@
               <figure class="image">
                 <g-image
                   src="~/assets/logo/impulse.png"
-                  alt="Impulse: Place des entreprises"
+                  alt="Impulse"
                   class="navbar__domain"
                   fit="inside"
                 />

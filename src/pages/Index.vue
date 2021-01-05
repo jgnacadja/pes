@@ -26,8 +26,7 @@
 
                   <div class="column is-8">
                     <h6 class="title is-6">
-                      #Impulse, est un service public ouvert uniquement pour les
-                      régions économiques du BENIN.
+                      #Impulse, est un service public de la chambre de commerce et d'industrie du BENIN.
                     </h6>
                   </div>
                 </div>
@@ -45,7 +44,7 @@
                 <div id="button-discover">
                   <a
                     class="button-outline small primary is-link"
-                    href="/aide-entreprises/"
+                    href="/comment-ca-marche"
                     >Découvrir les mesures</a
                   >
                 </div>
@@ -104,65 +103,7 @@
         </p>
       </div>
     </section>
-    <section class="section section-lightest-grey section-partners">
-      <div class="container text-center">
-        <div class="logo-list">
-          <g-image
-            alt="ANPME"
-            title="ANPME"
-            class="institution_logo"
-            src="~/assets/partners/ANPME.png"
-          />
-
-          <g-image
-            alt="APIEX_LOGO"
-            title="APIEX_LOGO"
-            class="institution_logo"
-            src="~/assets/partners/APIEX_LOGO.png"
-          />
-
-          <g-image
-            alt="CEPEPE-1"
-            title="CEPEPE-1"
-            class="institution_logo"
-            src="~/assets/partners/CEPEPE-1.png"
-          />
-
-          <g-image
-            alt="CNSS"
-            title="CNSS"
-            class="institution_logo"
-            src="~/assets/partners/CNSS.png"
-          />
-
-          <g-image
-            alt="DGI"
-            title="DGI"
-            class="institution_logo"
-            src="~/assets/partners/DGI.png"
-          />
-
-          <g-image
-            alt="Ecobank"
-            title="Ecobank"
-            class="institution_logo"
-            src="~/assets/partners/Ecobank.png"
-          />
-
-          <g-image
-            alt="UBA"
-            title="UBA"
-            class="institution_logo"
-            src="~/assets/partners/UBA.png"
-          />
-        </div>
-        <div class="subtitle decoration">
-          <p>
-            Impulse vous met en relation avec le conseiller qui peut vous aider.
-          </p>
-        </div>
-      </div>
-    </section>
+    <Partner />
     <section class="section section-white" id="container-newsletter">
       <div class="container">
         <h2 class="section__title title">
@@ -236,14 +177,16 @@ query {
 <script>
 import Welcome from "~/components/Welcome.vue";
 import Category from "~/components/Category.vue";
+import Partner from "~/components/Partner.vue"
 
 export default {
   components: {
     Welcome,
     Category,
+    Partner
   },
   metaInfo: {
-    title: "Place des entreprises!",
+    title: "",
   },
   data() {
     return {

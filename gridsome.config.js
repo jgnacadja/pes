@@ -17,5 +17,6 @@ module.exports = {
   plugins: [sourceFilesystem],
   templates: {
     Category: "/category/:title",
+    Form: "/form/:title",
   },
 };
