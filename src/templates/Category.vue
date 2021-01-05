@@ -3,7 +3,7 @@
     <Welcome />
     <section class="section-top section-light-grey">
       <div class="container contentMarge">
-        <Breadcrumb :category="category" />
+        <Breadcrumb :category="category" :fromform="false" />
       </div>
     </section>
     <section class="section section-grey" id="section-thematiques">

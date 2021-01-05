@@ -384,8 +384,6 @@ export default {
       item.node.forms.length > 0 &&
       item.node.forms[0].path==pathname)[0];
 
-    console.log(this.cartegory.node);
-
   },
   methods: {
     chunkArray(arr, chunkCount) {
