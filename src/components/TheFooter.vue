@@ -65,7 +65,8 @@ export default {
 <style scoped lang="scss">
 
 .footer_PE{
-  background-color: #EEF5DB;
+  // background-color: #FFA500;
+  background-color: #D67143;
 }
 
 .navbar__domain{
@@ -74,7 +75,7 @@ export default {
 
 .footer__links a {
   font-size: 1.02em;
-  color: #000000;
+  color: #ffffff;
 }
 
 .footer__links a:hover {
