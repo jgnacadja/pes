@@ -11,7 +11,7 @@
               </h1>
             </div>
             <div class="column is-10 subtitle">
-              Un service a mesure de vos besoins : vous êtes rappelé par le
+              Un service à la mesure de vos besoins : vous êtes rappelé par le
               conseiller qui peut vous aider.
             </div>
           </div>
