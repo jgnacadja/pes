@@ -102,7 +102,8 @@ if (typeof window !== "undefined") {
   }
 
   .navbar__domain {
-    width: 50%;
+    width: 70%;
+    margin-top: 5%;
   }
 }
 </style>

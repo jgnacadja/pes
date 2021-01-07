@@ -5,7 +5,7 @@
         <li class="marianne">
           <figure class="image">
             <g-image
-              src="~/assets/logo/logo-ccib.png"
+              src="~/assets/logo/logo-ccibFooter.png"
               alt="Chambre de commerce et d'industrie du BENIN"
               class="navbar__logo"
               fit="inside"
@@ -16,7 +16,7 @@
       <ul class="footer__links">
         <li class="title">
           <g-image
-            src="~/assets/logo/impulse.png"
+            src="~/assets/logo/impulseFooter.png"
             alt="Impulse"
             class="navbar__domain"
             fit="inside"
@@ -50,6 +50,7 @@
         </li>
       </ul>
     </div>
+    
   </footer>
 </template>
 <script type="text/javascript" src="https://app.mailjet.com/statics/js/iframeResizer.min.js"></script>
@@ -62,6 +63,26 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.footer_PE{
+  background-color: #EEF5DB;
+}
+
+.navbar__domain{
+  width: 10em;
+}
+
+.footer__links a {
+  font-size: 1.02em;
+  color: #000000;
+}
+
+.footer__links a:hover {
+  font-size: 1.02em;
+  background: #007452;
+  color: #ffffff;
+}
+
 @media only screen and (min-width: 416px) and (max-width: 768px) {
   .footer_PE {
     height: 70em;
