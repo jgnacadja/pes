@@ -11,7 +11,7 @@
         <div class="block notification warning contact-delay">
           <g-image alt="" src="~/assets/5days.png" />
             <span>
-                Déposez votre demande, un conseiller vous rappelle <b>dans les 5 jours</b> (Délai moyen de prise en charge).
+                Déposez votre demande, un conseiller d'entreprise vous rappelle <b>dans les 5 jours</b> (Délai moyen de prise en charge).
             </span>
         </div>
 

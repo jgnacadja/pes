@@ -12,7 +12,7 @@
             </div>
             <div class="column is-10 subtitle">
               Un service à la mesure de vos besoins : vous êtes rappelé par le
-              conseiller qui peut vous aider.
+              conseiller d'entreprise qui peut vous aider.
             </div>
           </div>
 

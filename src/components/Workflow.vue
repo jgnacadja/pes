@@ -39,12 +39,12 @@
             </div>
             <h2 class="title is-2">
               Nous identifions
-              <span class="is-green">le bon conseiller sur</span> votre région
+              <span class="is-green">le bon conseiller  d'entreprise sur</span> votre région
               économique.
             </h2>
             <p class="article_content">
               Nous identifions, parmi l’ensemble des partenaires publics et
-              parapublics, le conseiller compétent pour votre demande sur votre
+              parapublics, le conseiller  d'entreprise compétent pour votre demande sur votre
               région économique
             </p>
           </div>
@@ -63,11 +63,11 @@
               />
             </div>
             <h2 class="title is-2">
-              <span class="is-green">Le conseiller vous contacte</span>
+              <span class="is-green">Le conseiller d'entreprise vous contacte</span>
               directement pour vous aider sous 5 jours*.
             </h2>
             <p class="article_content">
-              Le conseiller compétent pour votre demande vous contacte et vous
+              Le conseiller d'entreprise compétent pour votre demande vous contacte et vous
               accompagne en fonction de votre situation.
               <br />
               <em class="detail-info">* Délai moyen de prise en charge </em>

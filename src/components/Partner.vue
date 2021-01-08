@@ -53,7 +53,7 @@
         </div>
         <div class="subtitle decoration">
           <p>
-            Impulse vous met en relation avec le conseiller qui peut vous aider.
+            Impulse vous met en relation avec le conseiller d'entreprise qui peut vous aider.
           </p>
         </div>
       </div>
