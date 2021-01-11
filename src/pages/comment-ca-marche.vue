@@ -11,7 +11,9 @@
       </div>
     </section>
     <section class="section section-light-grey landing small-padding">
-      <div class="container breadcrumbs"><Breadcrumb :category="category" :fromform="false" /></div>
+      <div class="container breadcrumbs">
+        <Breadcrumb :category="category" :fromform="false" />
+      </div>
     </section>
     <workflow />
     <Partner />
@@ -42,43 +44,7 @@
         </div>
       </div>
     </section>
-    <section class="section section-white" id="container-newsletter">
-      <div class="container">
-        <h2 class="section__title title">
-          Découvrez les nouveaux accompagnements publics :
-        </h2>
-        <p class="section__subtitle subtitle">
-          Découvrez chaque mois comment une administration ou un organisme
-          public peut aider votre entreprise
-        </p>
-        <form action="/newsletters" accept-charset="UTF-8" method="post">
-          <input
-            type="hidden"
-            name="authenticity_token"
-            value="EZccKzIkocsltvt1hz2IheF+GmElU7EpMa3eH/87Ts7zW3196DWEY3g++OwtwTXI2tDdST6K/gSOWG0uFmVHPg=="
-          />
-          <div class="form__group">
-            <div class="input__group">
-              <input
-                placeholder="Votre adresse email"
-                aria-label="Votre adresse email"
-                required="required"
-                type="email"
-                name="email"
-                id="email"
-              />
-              <input
-                type="submit"
-                name="commit"
-                value="S’abonner"
-                class="button"
-                data-disable-with="S’abonner"
-              />
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
+    <Partner />
   </Layout>
 </template>
 
@@ -95,7 +61,7 @@ export default {
   components: {
     Breadcrumb,
     Workflow,
-    Partner
+    Partner,
   },
   metaInfo: {
     title: "Impulse : comment ça marche",
@@ -104,7 +70,7 @@ export default {
     return {
       isSubcategorie: false,
       categories: [],
-      category: "comment ça marche ?"
+      category: "comment ça marche ?",
     };
   },
   mounted() {},

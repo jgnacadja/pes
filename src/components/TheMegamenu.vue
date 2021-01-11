@@ -5,9 +5,7 @@
         <p class="notif_content">
           <b>Impulse</b> accélérateur du développement des entreprises.
         </p>
-        <a
-          class="button small warning is-link is-header-link"
-          href="/comment-ca-marche"
+        <a class="button small is-link is-header-link" href="/comment-ca-marche"
           >En savoir plus</a
         >
       </div>
@@ -53,9 +51,6 @@
           <ul class="nav__links">
             <li class="nav__item">
               <a href="/comment-ca-marche">Comment ça marche ?</a>
-            </li>
-            <li class="nav__item">
-              <a id="experts_login" href="/mon-compte/">Accès conseillers</a>
             </li>
           </ul>
         </nav>

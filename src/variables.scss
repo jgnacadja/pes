@@ -6,10 +6,11 @@ $family-primary: Poppins, Arial, sans-serif;
 $family-secondary: "Open Sans", sans-serif;
 $body-family: $family-secondary;
 
-$secondary-color : #D67143;
+$primary-color :  #0d7f39;
+$secondary-color : #e6661e
 :root {
-    --greenP: #177C38;
-    --greenPSecondary: #D67143;
+    --greenP:  #e6661e; // ;
+    --greenPSecondary:#0d7f39; //;
     --light-blue: #007452;
     --dark-blue: #006b63;
     --darker-blue: #006069;
@@ -25,10 +26,10 @@ $secondary-color : #D67143;
     --black: #1c1c1c;
     --green: #03bd5b;
     --light-green: #daf5e7;
-    --orange: #D67143;
+    --orange: #e6661e;
     --dark-orange: #cc5c00;
     --light-orange: #fff0e4;
-    --red: #d52a03;
+    --red: ##e6661e;
     --dark-red: #ab2b1e;
     --light-red: #FFEFE5;
     --mobile-min: 400px;
@@ -1054,13 +1055,13 @@ fieldset {
 .notification.warning {
   background: #fff0e4;
   background: var(--theme-warning-bg);
-  border-color: #ff9947;
+  border-color: #0d7f39;
   border-color: var(--theme-warning-border);
 }
 .notification.error {
   background: rgba(239, 172, 166, 0.45882);
   background: var(--theme-error-bg);
-  border-color: #d63626;
+  border-color: #e6661e;
   border-color: var(--theme-error-border);
 }
 .tile {

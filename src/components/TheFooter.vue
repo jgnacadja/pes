@@ -50,7 +50,6 @@
         </li>
       </ul>
     </div>
-    
   </footer>
 </template>
 <script type="text/javascript" src="https://app.mailjet.com/statics/js/iframeResizer.min.js"></script>
@@ -63,13 +62,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-.footer_PE{
+.footer_PE {
   // background-color: #FFA500;
-  background-color: #D67143;
+  //  background-color: #D67143;
 }
 
-.navbar__domain{
+.navbar__domain {
   width: 10em;
 }
 
