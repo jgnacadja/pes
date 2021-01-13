@@ -6,209 +6,237 @@
         <Breadcrumb :category="category" :fromform="true" />
       </div>
     </section>
-    <section class="section section-grey landing"  id='section-formulaire'>
+    <section class="section section-grey landing" id="section-formulaire">
       <div class="container">
         <div class="block notification warning contact-delay">
           <g-image alt="" src="~/assets/5days.png" />
-            <span>
-                Déposez votre demande, un conseiller d'entreprise vous rappelle <b>dans les 5 jours</b> (Délai moyen de prise en charge).
-            </span>
+          <span>
+            Déposez votre demande, un conseiller d'entreprise vous rappelle
+            <b>dans les 5 jours</b> (Délai moyen de prise en charge).
+          </span>
         </div>
 
-        <div class='columns is-full'>
-            <div class="column is-6">
-                <form 
-                  id="app"
-                  action
-                  method="post"
-                  name="form"
-                  @submit.prevent="checkForm"
-                >
-                    <div class='form__group'>
-                        <div class='form__group'>
-                            <label for="fullName">Prénom et nom</label>
-                            <b-field>
-                              <input 
-                                placeholder="votre nom" 
-                                type="text" 
-                                required="required" 
-                                name="fullName" 
-                                id="fullName"
-                                v-model="data.data.fullName"
-                              />
-                             </b-field>
-                            <div
-                              v-if="data.errors.fullName"
-                              class="errorForm"
-                            >
-                              <strong>{{ data.errors.fullName }}</strong>
-                            </div>
-                        </div>
-                        <div class='form__group'>
-                            <label for="phone">Téléphone</label>
-                            <input 
-                                placeholder="+229 00 00 00 00" 
-                                type="tel" 
-                                required="required" 
-                                name="phone" 
-                                id="phone"
-                                v-model="data.data.phone" />
-                            <div
-                              v-if="data.errors.phone"
-                              class="errorForm"
-                            >
-                              <strong>{{ data.errors.phone }}</strong>
-                            </div>
-                        </div>
-                        <div class='form__group'>
-                            <label for="email">E-mail</label>
-                            <input 
-                                placeholder="pseudo@email.com" 
-                                type="email" required="required" 
-                                name="email" 
-                                id="email"
-                                v-model="data.data.email" />
-                            <div
-                              v-if="data.errors.email"
-                              class="errorForm"
-                            >
-                              <strong>{{ data.errors.email }}</strong>
-                            </div>
-                        </div>
-                        <div class='form__group'>
-                            <!-- / Duplication pour respecter l'accessibilité (id unique, field avec label...) -->
-                            <label for="ifu">IFU</label>
-                            <input 
-                                type="text" required="required" 
-                                name="ifu" 
-                                id="ifu"
-                                v-model="data.data.ifu" />
-                            <div
-                              v-if="data.errors.ifu"
-                              class="errorForm"
-                            >
-                              <strong>{{ data.errors.ifu }}</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='form__group'>
-                        <label for="">Description de votre demande</label>
-                        <div class='explanation contentMarges'>
-                            <div>
-                                <g-image alt="" src="~/assets/infos-alert.png" />
-                                <span>
-                                Pour une meilleure prise en charge de votre demande, indiquez en quelques phrase :
-                                </span>
-                            </div>
-                            <div class="block contentMarges">
-                                <ul>
-                                    <li>votre activité</li>
-                                    <li>le nombre de salariés que vous envisagez de placer en activité partielle</li>
-                                    <li>les éléments de contexte sur votre baisse d'activité</li>
-                                    <li>vos questions</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <textarea 
-                          placeholder="Décrivez votre demande." 
-                          rows="6" required="required" 
-                          name="description" 
-                          id="description"
-                          v-model="data.data.description">
-                        </textarea>
-                        <div
-                          v-if="data.errors.description"
-                          class="errorForm"
-                        >
-                          <strong>{{ data.errors.description }}</strong>
-                        </div>
-                    </div>
-
-                    <div v-if="data.success" class="form__group container notif is-primary">
-                      <p><i class="fas fa-check"></i> {{data.success}}</p>
-                    </div>
-
-                    <div class='form__group'>
-                        <button v-if="data.loading" class="button large is-link is-loading"></button>
-                        <input v-if="!data.loading" type="submit" name="commit" value="Envoyer ma demande" class="button large is-link" data-disable-with="Envoyer ma demande" />
-                    </div>
-                    
-                </form>
-            </div>
-            <div class='column is-6' style="margin-left: 0;">
-                <div>
-                    <h4 class="title is-4">
-                        Accompagnements :
-                    </h4>
-                    <p>
-                        S’informer sur la rémunération versée au salarié, sur l’allocation perçue par l’entreprise, le reste à charge,  les conditions de l'activité partielle de longue durée. 
-                    </p>
+        <div class="columns is-full">
+          <div class="column is-6">
+            <form
+              id="app"
+              action
+              method="post"
+              name="form"
+              @submit.prevent="checkForm"
+            >
+              <div class="form__group">
+                <div class="form__group">
+                  <label for="fullName">Raison sociale</label>
+                  <b-field>
+                    <input
+                      placeholder="votre entreprise"
+                      type="text"
+                      required="required"
+                      name="enterprise"
+                      id="enterprise"
+                      v-model="data.data.enterprise"
+                    />
+                  </b-field>
+                  <div v-if="data.errors.enterprise" class="errorForm">
+                    <strong>{{ data.errors.enterprise }}</strong>
+                  </div>
                 </div>
+                <div class="form__group">
+                  <div class="columns is-variable">
+                    <div class="column is-6">
+                      <label for="secteur">Secteur d'activité</label>
+                      <b-field>
+                        <b-select
+                          placeholder="Selectionnez"
+                          v-model="data.data.secteur"
+                          name="secteur"
+                          required
+                          is-large
+                          expanded
+                        >
+                          <option value="commerce">Commerce</option>
+                          <option value="industrie">Industrie</option>
+                          <option value="service">Service</option>
+                        </b-select>
+                      </b-field>
+                      <div v-if="data.errors.secteur" class="errorForm">
+                        <strong>{{ data.errors.secteur }}</strong>
+                      </div>
+                    </div>
+
+                    <div class="column is-6">
+                      <label for="fullName">Nombre d'employés</label>
+                      <b-field>
+                        <b-select
+                          placeholder="Selectionnez"
+                          v-model="data.data.taille"
+                          required
+                          expanded
+                        >
+                          <option value="100">Moins de 100</option>
+                          <option value="999">de 100 à 999</option>
+                          <option value="9999">de 1000 à 9999</option>
+                          <option value="10000">10000 et plus</option>
+                        </b-select>
+                      </b-field>
+                      <div v-if="data.errors.taille" class="errorForm">
+                        <strong>{{ data.errors.taille }}</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <label for="fullName">site web</label>
+                  <b-field>
+                    <input
+                      placeholder="https://"
+                      type="text"
+                      name="enterprise"
+                      id="enterprise"
+                      v-model="data.data.website"
+                    />
+                  </b-field>
+                  <div v-if="data.errors.website" class="errorForm">
+                    <strong>{{ data.errors.website }}</strong>
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <label for="fullName">Nom et Prénom</label>
+                  <b-field>
+                    <input
+                      placeholder="votre nom"
+                      type="text"
+                      required="required"
+                      name="fullName"
+                      id="fullName"
+                      v-model="data.data.fullName"
+                    />
+                  </b-field>
+                  <div v-if="data.errors.fullName" class="errorForm">
+                    <strong>{{ data.errors.fullName }}</strong>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <label for="phone">Téléphone</label>
+                  <input
+                    placeholder="+229 00 00 00 00"
+                    type="tel"
+                    required="required"
+                    name="phone"
+                    id="phone"
+                    v-model="data.data.phone"
+                  />
+                  <div v-if="data.errors.phone" class="errorForm">
+                    <strong>{{ data.errors.phone }}</strong>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <label for="email">E-mail</label>
+                  <input
+                    placeholder="pseudo@email.com"
+                    type="email"
+                    required="required"
+                    name="email"
+                    id="email"
+                    v-model="data.data.email"
+                  />
+                  <div v-if="data.errors.email" class="errorForm">
+                    <strong>{{ data.errors.email }}</strong>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <!-- / Duplication pour respecter l'accessibilité (id unique, field avec label...) -->
+                  <label for="ifu">IFU</label>
+                  <input
+                    type="text"
+                    required="required"
+                    name="ifu"
+                    id="ifu"
+                    v-model="data.data.ifu"
+                  />
+                  <div v-if="data.errors.ifu" class="errorForm">
+                    <strong>{{ data.errors.ifu }}</strong>
+                  </div>
+                </div>
+              </div>
+              <div class="form__group">
+                <label for="">Description de votre demande</label>
+                <div class="explanation contentMarges">
+                  <div>
+                    <g-image alt="" src="~/assets/infos-alert.png" />
+                    <span>
+                      Pour une meilleure prise en charge de votre demande,
+                      indiquez en quelques phrase :
+                    </span>
+                  </div>
+                  <div class="block contentMarges">
+                    <ul>
+                      <li>votre activité</li>
+                      <li>
+                        le nombre de salariés que vous envisagez de placer en
+                        activité partielle
+                      </li>
+                      <li>
+                        les éléments de contexte sur votre baisse d'activité
+                      </li>
+                      <li>vos questions</li>
+                    </ul>
+                  </div>
+                </div>
+                <textarea
+                  placeholder="Décrivez votre demande."
+                  rows="6"
+                  required="required"
+                  name="description"
+                  id="description"
+                  v-model="data.data.description"
+                >
+                </textarea>
+                <div v-if="data.errors.description" class="errorForm">
+                  <strong>{{ data.errors.description }}</strong>
+                </div>
+              </div>
+
+              <div
+                v-if="data.success"
+                class="form__group container notif is-primary"
+              >
+                <p><i class="fas fa-check"></i> {{ data.success }}</p>
+              </div>
+
+              <div class="form__group">
+                <button
+                  v-if="data.loading"
+                  class="button large is-link is-loading"
+                ></button>
+                <input
+                  v-if="!data.loading"
+                  type="submit"
+                  name="commit"
+                  value="Envoyer ma demande"
+                  class="button large is-link"
+                  data-disable-with="Envoyer ma demande"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="column is-6" style="margin-left: 0">
+            <div>
+              <h4 class="title is-4">Accompagnements :</h4>
+              <p>
+                S’informer sur la rémunération versée au salarié, sur
+                l’allocation perçue par l’entreprise, le reste à charge, les
+                conditions de l'activité partielle de longue durée.
+              </p>
             </div>
-        </div>
-      </div>
-
-    </section>
-    <Workflow/>
-    <section class="section section-partners">
-      <div class="subtitle has-text-centered decoration">
-        <p>
-          Impulse est un service de la chambre de commerce et d'industrie du BENIN, en partenariat avec :
-        </p>
-      </div>
-      <div class="container text-center">
-        <div class="logo-list">
-          <g-image
-            alt="ANPME"
-            title="ANPME"
-            class="institution_logo"
-            src="~/assets/partners/ANPME.png"
-          />
-
-          <g-image
-            alt="APIEX_LOGO"
-            title="APIEX_LOGO"
-            class="institution_logo"
-            src="~/assets/partners/APIEX_LOGO.png"
-          />
-
-          <g-image
-            alt="CEPEPE-1"
-            title="CEPEPE-1"
-            class="institution_logo"
-            src="~/assets/partners/CEPEPE-1.png"
-          />
-
-          <g-image
-            alt="CNSS"
-            title="CNSS"
-            class="institution_logo"
-            src="~/assets/partners/CNSS.png"
-          />
-
-          <g-image
-            alt="DGI"
-            title="DGI"
-            class="institution_logo"
-            src="~/assets/partners/DGI.png"
-          />
-
-          <g-image
-            alt="Ecobank"
-            title="Ecobank"
-            class="institution_logo"
-            src="~/assets/partners/Ecobank.png"
-          />
-
-          <g-image
-            alt="UBA"
-            title="UBA"
-            class="institution_logo"
-            src="~/assets/partners/UBA.png"
-          />
+          </div>
         </div>
       </div>
     </section>
+    <Workflow />
+    <Partner />
   </Layout>
 </template>
 
@@ -250,7 +278,7 @@ import Workflow from "~/components/Workflow.vue";
 import Breadcrumb from "~/components/Breadcrumb.vue";
 import Partner from "~/components/Partner.vue";
 import VueMarkdown from "vue-markdown";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 export default {
   components: {
@@ -258,7 +286,7 @@ export default {
     Breadcrumb,
     Workflow,
     VueMarkdown,
-    Partner
+    Partner,
   },
   metaInfo() {
     return {
@@ -273,7 +301,7 @@ export default {
       return leftletter.toUpperCase() + rightvalue;
     },
   },
-  
+
   data() {
     return {
       cartegories: [],
@@ -286,6 +314,10 @@ export default {
           ifu: "",
           description: "",
           loading: false,
+          enterprise: "",
+          secteur: "",
+          website: "",
+          taille: "",
         },
         data: {
           fullName: null,
@@ -293,20 +325,24 @@ export default {
           email: null,
           ifu: null,
           description: null,
+          enterprise: null,
+          secteur: null,
+          website: "",
+          taille: 100,
         },
-        success: null 
+        success: null,
       },
     };
   },
   mounted() {
     // Get current url
-    var pathname = window.location.pathname; 
-    
-    // Get current cartegory
-    this.cartegory = this.$page.categories.edges.filter((item) => 
-      item.node.forms.length > 0 &&
-      item.node.forms[0].path==pathname)[0];
+    var pathname = window.location.pathname;
 
+    // Get current cartegory
+    this.cartegory = this.$page.categories.edges.filter(
+      (item) =>
+        item.node.forms.length > 0 && item.node.forms[0].path == pathname
+    )[0];
   },
   methods: {
     chunkArray(arr, chunkCount) {
@@ -316,73 +352,78 @@ export default {
       return result;
     },
     checkForm: function (e) {
-        this.data.errors = {
-          fullName: null,
-          phone: null,
-          email: null,
-          siret: null,
-          description: null,
-        };
+      this.data.errors = {
+        fullName: null,
+        phone: null,
+        email: null,
+        siret: null,
+        description: null,
+      };
 
-        const service_id =
-          process.env.EMAIL_JS_SERVICE_ID;
-        const template_id =
-          process.env.EMAIL_JS_TEMPLATE_ID;
-        const user_id = process.env.EMAIL_JS_USER_ID;
+      const service_id = process.env.EMAIL_JS_SERVICE_ID;
+      const template_id = process.env.EMAIL_JS_TEMPLATE_ID;
+      const user_id = process.env.EMAIL_JS_USER_ID;
 
-        // const service_id = "service_zo2s5ud";
-        // const template_id ="template_tkt44iv";
-        // const user_id = "user_awurVWpPY1ipKOSkoyWx0";
+      if (!this.data.data.enterprise) {
+        this.data.errors.enterprise = "Le nom de l'entreprise est requis";
+      }
+      if (!this.data.data.fullName) {
+        this.data.errors.nom = "le nom et prénoms sont requis";
+      }
+      if (!this.data.data.secteur) {
+        this.data.errors.secteur = "Veuillez choisir un secteur d'activite";
+      }
+      if (!this.data.data.phone) {
+        this.data.errors.phone = "Le téléphone est réquis";
+      }
+      if (!this.data.data.email) {
+        this.data.errors.email = "lL'addresse e-mail est réquis";
+      }
+      if (!this.data.data.ifu) {
+        this.data.errors.ifu = "Le numéro IFU est réquis";
+      }
+      if (!this.data.data.description) {
+        this.data.errors.description = "La description est réquise";
+      }
 
-        if (!this.data.data.fullName) {
-          this.data.errors.nom = "le nom et prénoms sont requis";
+      if (
+        this.data.data.fullName != null &&
+        this.data.data.phone != null &&
+        this.data.data.email != null &&
+        this.data.data.ifu != null &&
+        this.data.data.description != null &&
+        this.data.data.enterprise != null &&
+        this.data.data.secteur != null
+      ) {
+        try {
+          this.data.loading = true;
+          var vm = this;
+          emailjs
+            .sendForm(
+              service_id,
+              template_id,
+              e.target,
+              user_id,
+              this.data.data
+            )
+            .then(function (results) {
+              vm.data.loading = false;
+              vm.data.data.fullName = null;
+              vm.data.data.phone = null;
+              vm.data.data.email = null;
+              vm.data.data.ifu = null;
+              vm.data.data.description = null;
+              vm.data.data.secteur = null;
+              vm.data.data.taille = 100;
+              vm.data.data.website = "";
+              vm.data.success = "Votre demande a été envoyé";
+            });
+        } catch (error) {
+          this.data.loading = false;
         }
-        if (!this.data.data.phone) {
-          this.data.errors.phone = "Le téléphone est réquis";
-        }
-        if (!this.data.data.email) {
-          this.data.errors.email = "lL'addresse e-mail est réquis";
-        }
-        if (!this.data.data.ifu) {
-          this.data.errors.ifu = "Le numéro IFU est réquis";
-        }
-        if (!this.data.data.description) {
-          this.data.errors.description = "La description est réquise";
-        }
+      }
 
-        
-        if (
-          this.data.data.fullName != null &&
-          this.data.data.phone != null &&
-          this.data.data.email != null &&
-          this.data.data.ifu != null &&
-          this.data.data.description != null
-        ) {
-
-          try {
-            this.data.loading = true;
-            var vm = this
-            emailjs.sendForm(
-              service_id, 
-              template_id, e.target,
-              user_id, 
-              this.data.data).then(function (results) {
-                console.log(results)
-                vm.data.loading = false
-                vm.data.data.fullName = null
-                vm.data.data.phone = null
-                vm.data.data.email = null
-                vm.data.data.ifu = null
-                vm.data.data.description = null
-                vm.data.success = "Votre demande a été envoyé"
-              });
-          } catch(error) {
-            this.data.loading = false;
-            console.log({error})
-          }
-        }
-
-        e.preventDefault();
+      e.preventDefault();
     },
   },
 };
@@ -392,13 +433,13 @@ export default {
 @import "../variables.scss";
 
 .notif {
-  background-color: #177C38;
+  background-color: #177c38;
   padding: 1em;
 }
-.notif i{
+.notif i {
   color: white;
 }
-.notif p{
+.notif p {
   color: white;
 }
 .errorForm {
@@ -407,16 +448,16 @@ export default {
   padding-bottom: 5px;
 }
 
-.legal-notice{
-    font-size: 0.8em;
-    text-align: justify;
+.legal-notice {
+  font-size: 0.8em;
+  text-align: justify;
 }
 label {
   font-weight: bold;
   font-size: 0.85em;
 }
 ul {
-    list-style: inside !important;
+  list-style: inside !important;
 }
 .is-green {
   color: #177c38;
@@ -434,9 +475,8 @@ ul {
 }
 
 @media only screen and (min-width: 1024px) {
-
-  form{
-    margin-left:0 !important;
+  form {
+    margin-left: 0 !important;
   }
 
   .contentMarges {
