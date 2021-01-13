@@ -16,6 +16,15 @@
       </div>
     </section>
     <workflow />
+    <section class="section container">
+      <div class="columns is-mobile has-text-centered">
+        <div class="column is-12 has-text-white">
+          <b-button tag="a" href="/" size="is-large" type="is-success">
+            Deposez votre demande
+          </b-button>
+        </div>
+      </div>
+    </section>
     <Partner />
 
     <section class="section background-orange has-text-white">
@@ -44,7 +53,6 @@
         </div>
       </div>
     </section>
-    <Partner />
   </Layout>
 </template>
 

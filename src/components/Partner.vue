@@ -1,16 +1,14 @@
 <template>
   <section class="section section-lightest-grey section-partners">
     <div class="container text-center">
-      <div class="columns multiline">
-        <div
-          class="column is-10-desktop is-12-mobile subtitle has-text-centered decoration"
-        >
+      <div class="columns is-multiline has-text-centered">
+        <div class="column is-12 subtitle has-text-centered">
           <p>
             Impulse est une initiative de la chambre de commerce et d'industrie
             du BENIN, en partenariat avec :
           </p>
         </div>
-        <div class="column is-10-desktop is-12-mobile logo-list">
+        <div class="column is-12 logo-list">
           <g-image
             alt="APIEX_LOGO"
             title="APIEX_LOGO"
@@ -60,7 +58,7 @@
             src="~/assets/partners/assa.png"
           />
         </div>
-        <div class="column is-10-desktop is-12-mobile subtitle decoration">
+        <div class="column is-12">
           <p>
             Impulse vous met en relation avec le conseiller d'entreprise qui
             peut vous aider.
