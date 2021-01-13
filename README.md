@@ -18,3 +18,6 @@ This is the project you get when you run `gridsome create new-project`.
 1. Create an account on `https://www.emailjs.com/`
 2. Generate service and template identifiers
 3. Then configure the environment files
+    - put `service_id` in `EMAIL_JS_SERVICE_ID`
+    - put `template_id` in `EMAIL_JS_TEMPLATE_ID`
+    - put `user_id` in `EMAIL_JS_USER_ID`

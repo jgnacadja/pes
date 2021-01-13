@@ -324,15 +324,15 @@ export default {
           description: null,
         };
 
-        // const service_id =
-        //   process.env.EMAIL_JS_SERVICE_ID;
-        // const template_id =
-        //   process.env.EMAIL_JS_TEMPLATE_ID;
-        // const user_id = process.env.EMAIL_JS_USER_ID;
+        const service_id =
+          process.env.EMAIL_JS_SERVICE_ID;
+        const template_id =
+          process.env.EMAIL_JS_TEMPLATE_ID;
+        const user_id = process.env.EMAIL_JS_USER_ID;
 
-        const service_id = "service_zo2s5ud";
-        const template_id ="template_tkt44iv";
-        const user_id = "user_awurVWpPY1ipKOSkoyWx0";
+        // const service_id = "service_zo2s5ud";
+        // const template_id ="template_tkt44iv";
+        // const user_id = "user_awurVWpPY1ipKOSkoyWx0";
 
         if (!this.data.data.fullName) {
           this.data.errors.nom = "le nom et prénoms sont requis";
