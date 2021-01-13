@@ -66,11 +66,12 @@
                     </div>
 
                     <div class="column is-6">
-                      <label for="fullName">Nombre d'employés</label>
+                      <label for="taille">Nombre d'employés</label>
                       <b-field>
                         <b-select
                           placeholder="Selectionnez"
                           v-model="data.data.taille"
+                          name="taille"
                           required
                           expanded
                         >
@@ -87,13 +88,13 @@
                   </div>
                 </div>
                 <div class="form__group">
-                  <label for="fullName">site web</label>
+                  <label for="website">site web</label>
                   <b-field>
                     <input
                       placeholder="https://"
                       type="text"
-                      name="enterprise"
-                      id="enterprise"
+                      name="website"
+                      id="website"
                       v-model="data.data.website"
                     />
                   </b-field>
@@ -328,7 +329,7 @@ export default {
           enterprise: null,
           secteur: null,
           website: "",
-          taille: 100,
+          taille: "100",
         },
         success: null,
       },
@@ -360,9 +361,13 @@ export default {
         description: null,
       };
 
-      const service_id = process.env.EMAIL_JS_SERVICE_ID;
-      const template_id = process.env.EMAIL_JS_TEMPLATE_ID;
-      const user_id = process.env.EMAIL_JS_USER_ID;
+      // const service_id = process.env.EMAIL_JS_SERVICE_ID;
+      // const template_id = process.env.EMAIL_JS_TEMPLATE_ID;
+      // const user_id = process.env.EMAIL_JS_USER_ID;
+
+      const service_id = "service_zo2s5ud";
+      const template_id = "template_tkt44iv";
+      const user_id = "user_awurVWpPY1ipKOSkoyWx0";
 
       if (!this.data.data.enterprise) {
         this.data.errors.enterprise = "Le nom de l'entreprise est requis";
@@ -398,6 +403,7 @@ export default {
         try {
           this.data.loading = true;
           var vm = this;
+          
           emailjs
             .sendForm(
               service_id,
@@ -415,7 +421,7 @@ export default {
               vm.data.data.description = null;
               vm.data.data.secteur = null;
               vm.data.data.taille = 100;
-              vm.data.data.website = "";
+              vm.data.data.website = null;
               vm.data.success = "Votre demande a été envoyé";
             });
         } catch (error) {
