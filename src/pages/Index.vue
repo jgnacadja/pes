@@ -92,6 +92,7 @@
       </div>
     </section>
     <Partner />
+    <Statistique />
   </Layout>
 </template>
 
@@ -129,12 +130,13 @@ query {
 import Welcome from "~/components/Welcome.vue";
 import Category from "~/components/Category.vue";
 import Partner from "~/components/Partner.vue";
-
+import Statistique from "~/components/Statistique.vue";
 export default {
   components: {
     Welcome,
     Category,
     Partner,
+    Statistique,
   },
   metaInfo: {
     title: "",
