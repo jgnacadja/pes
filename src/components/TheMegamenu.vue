@@ -1,7 +1,7 @@
 <template>
   <header class="section">
     <div class="block notification full-width error region-alerte">
-      <div class="block container contentMarge">
+      <div class="block container contentMarge container">
         <p class="notif_content">
           <b>Impulse</b> accélérateur du développement des entreprises.
         </p>
@@ -11,49 +11,45 @@
       </div>
     </div>
     <div class="container">
-      <div class="navbar__container contentMarge">
-        <a class="navbar__home" href="/">
-          <div class="columns is-mobile">
-            <div class="column is-5-desktop">
-              <figure class="image">
-                <g-image
-                  src="~/assets/logo/logo-ccib.png"
-                  alt="Chambre de commerce et d'industrie du BENIN"
-                  class="navbar__logo"
-                  fit="inside"
-                />
-              </figure>
-            </div>
-            <div class="column is-5-desktop">
-              <figure class="image">
-                <g-image
-                  src="~/assets/logo/impulse.png"
-                  alt="Impulse"
-                  class="navbar__domain"
-                  fit="inside"
-                />
-              </figure>
-              <br />
-            </div>
-          </div>
-
-          <button
-            aria-label="Déplier menu"
-            class="burger-btn"
-            data-action="toggle-nav"
-          >
-            <span class="burger-btn__bar"></span>
-            <span class="burger-btn__bar"></span>
-            <span class="burger-btn__bar"></span>
-          </button>
-        </a>
-        <nav data-target="toggle-nav">
-          <ul class="nav__links">
-            <li class="nav__item">
-              <a href="/comment-ca-marche">Comment ça marche ?</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="columns is-multiline">
+        <div class="column is-1"></div>
+        <div class="column is-2 is-8-mobile">
+          <a href="https://ccibenin.org" target="_blank">
+            <figure class="image">
+              <g-image
+                src="~/assets/logo/ccib.png"
+                alt="Chambre de commerce et d'industrie du BENIN"
+                class="navbar__logo"
+                fit="inside"
+              />
+            </figure>
+          </a>
+        </div>
+        <div class="column is-3">
+          <a href="/">
+            <figure class="image">
+              <g-image
+                src="~/assets/logo/impulse.png"
+                alt="Impulse"
+                class="navbar__domain"
+                fit="inside"
+              />
+            </figure>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container has-text-right has-text-centered-mobile">
+      <div class="container">
+        <div class="column is-12">
+          <nav data-target="toggle-nav">
+            <ul class="nav__links">
+              <li class="nav__item">
+                <a href="/comment-ca-marche">Comment ça marche ?</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>

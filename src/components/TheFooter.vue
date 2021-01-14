@@ -3,24 +3,30 @@
     <div class="container">
       <ul class="footer__links">
         <li class="marianne">
-          <figure class="image">
-            <g-image
-              src="~/assets/logo/logo-ccibFooter.png"
-              alt="Chambre de commerce et d'industrie du BENIN"
-              class="navbar__logo"
-              fit="inside"
-            />
-          </figure>
+          <a href="https://ccibenin.org" target="_blank">
+            <figure class="image">
+              <g-image
+                src="~/assets/logo/ccib_bn.png"
+                alt="Chambre de commerce et d'industrie du BENIN"
+                class="navbar__logo"
+                fit="inside"
+              />
+            </figure>
+          </a>
         </li>
       </ul>
       <ul class="footer__links">
         <li class="title">
-          <g-image
-            src="~/assets/logo/impulseFooter.png"
-            alt="Impulse"
-            class="navbar__domain"
-            fit="inside"
-          />
+          <a href="/">
+            <figure class="image">
+              <g-image
+                src="~/assets/logo/impulse_bn.png"
+                alt="Impulse"
+                class="navbar__domain"
+                fit="inside"
+              />
+            </figure>
+          </a>
         </li>
         <li class="social-network">
           <a
@@ -43,9 +49,6 @@
           <g-link to="/mentions_legales/">Mentions légales</g-link>
         </li>
         <li>
-          <g-link to="/stats/">Statistiques</g-link>
-        </li>
-        <li>
           <g-link to="https://service-public.bj/">services publics</g-link>
         </li>
       </ul>
@@ -63,7 +66,7 @@ export default {
 
 <style scoped lang="scss">
 .footer_PE {
-  // background-color: #FFA500;
+  background-color: #000;
   //  background-color: #D67143;
 }
 

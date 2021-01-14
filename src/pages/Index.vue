@@ -15,7 +15,7 @@
             >
               <div class="column is-4-desktop is-12-mobile">
                 <h6 class="title is-6">
-                  #Impulse, est un service public de la chambre de commerce et
+                  #Impulse, est une initiative de la chambre de commerce et
                   d'industrie du BENIN.
                 </h6>
               </div>
