@@ -1,6 +1,7 @@
 ---
 title: cgu
 ---
+
 Les présentes Conditions Générales d’Utilisation (CGU) fixent le cadre juridique de l’initiative « Impulse accélérateur du développement des entreprises » et définissent les conditions d’accès et d’utilisation des services par les utilisateurs.
 Article 1 - Champ d’application 
 L’utilisation de l’initiative est ouverte à tout Chef d’entreprise souhaitant être accompagné par un Conseiller d’Entreprise, sous réserve du respect des présentes Conditions Générales d’Utilisation.

@@ -11,14 +11,14 @@ const blogFilesystem = require("./plugin.blogFilesystem");
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: "Impulse",
-  siteDescription:
-    "Un dispositif de la chambre de commerce et d'industrie du BENIN",
+    siteName: "Impulse",
+    siteDescription:
+        "Un dispositif de la chambre de commerce et d'industrie du BENIN",
 
-  plugins: [sourceFilesystem, blogFilesystem],
-  templates: {
-    Category: "/category/:title",
-    Form: "/form/:title",
-    BlogPost: "/blog/:title"
-  },
+    plugins: [sourceFilesystem, blogFilesystem],
+    templates: {
+        Category: "/category/:title",
+        Form: "/form/:title",
+        BlogPost: "/blog/:title"
+    },
 };
