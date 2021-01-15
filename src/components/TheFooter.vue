@@ -40,7 +40,9 @@
       </ul>
       <ul class="footer__links">
         <li>
-          <g-link to="/cgu/">Conditions d’utilisation</g-link>
+          <g-link to="/blog/conditions-generale-d'utilisation"
+            >Conditions d’utilisation</g-link
+          >
         </li>
         <li>
           <g-link to="/mentions_d_information/">Mentions d'information</g-link>
