@@ -19,6 +19,6 @@ module.exports = {
     templates: {
         Category: "/category/:title",
         Form: "/form/:title",
-        BlogPost: "/blog/:title"
+        Post: "/blog/:title"
     },
 };

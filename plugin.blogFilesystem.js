@@ -3,12 +3,12 @@ module.exports = {
     use: "@gridsome/source-filesystem",
     options:
     {
-        typeName: "Blog",
+        typeName: "Post",
         path: "content/blog/*.md",
         refs: {
             // Creates a GraphQL collection from 'categories' in front-matter and adds a reference.
-            blogs: {
-                typeName: "BlogPost",
+            posts: {
+                typeName: "Post",
                 create: true,
             }
         }

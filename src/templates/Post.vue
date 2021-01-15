@@ -5,33 +5,39 @@
       <div class="container contentMarge">
         <div class="columns is-mobile has-text-centered">
           <div class="column is-12">
-            <h1 class="section title has-text-white has-text-left">
-              {{ $page.blogPost.title | Upper }}
+            <h1 class="section title has-text-dark has-text-left is-title">
+              {{ $page.post.strongTitle | Upper }}
             </h1>
           </div>
         </div>
         <div class="columns">
-          {{ $page.blogPost.content }}
+            <vue-markdown>{{ $page.post.content }}</vue-markdown>
         </div>
       </div>
+      <br>
+      <br>
+      <br>
     </section>
   </Layout>
 </template>
 
 <page-query>
   query BlogPage($path: String!) {
-    BlogPost: blog (path: $path) {   
+    post: post (path: $path) {   
       title
+      strongTitle
       content
     }
 }
 </page-query>
 <script>
 import Welcome from "~/components/Welcome.vue";
+import VueMarkdown from "vue-markdown";
 
 export default {
   components: {
     Welcome,
+    VueMarkdown
   },
   metaInfo() {
     return {
@@ -48,15 +54,15 @@ export default {
   },
   data() {
     return {
-      categories: [],
+      //categories: [],
       split: 2,
-      category: "",
+      //category: "",
       isOnlyOne: "",
     };
   },
   mounted() {
-    this.categories = this.chunkArray(this.$page.categories.edges, this.split);
-    this.category = this.categories[0][0].node.meta;
+    //this.categories = this.chunkArray(this.$page.categories.edges, this.split);
+    //this.category = this.categories[0][0].node.meta;
   },
   methods: {
     chunkArray(arr, chunkCount) {
@@ -71,4 +77,9 @@ export default {
 
 <style scoped lang="scss">
 @import "../variables.scss";
+
+.is-title {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 </style>
