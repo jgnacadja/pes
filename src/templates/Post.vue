@@ -5,18 +5,18 @@
       <div class="container contentMarge">
         <div class="columns is-mobile has-text-centered">
           <div class="column is-12">
-            <h1 class="section title has-text-dark has-text-left is-title">
+            <h1 class="title has-text-dark has-text-left is-title">
               {{ $page.post.strongTitle | Upper }}
             </h1>
           </div>
         </div>
-        <div class="columns">
-            <vue-markdown>{{ $page.post.content }}</vue-markdown>
+        <div class="columns has-text-justified blog">
+          <vue-markdown>{{ $page.post.content }}</vue-markdown>
         </div>
       </div>
-      <br>
-      <br>
-      <br>
+      <br />
+      <br />
+      <br />
     </section>
   </Layout>
 </template>
@@ -37,7 +37,7 @@ import VueMarkdown from "vue-markdown";
 export default {
   components: {
     Welcome,
-    VueMarkdown
+    VueMarkdown,
   },
   metaInfo() {
     return {
@@ -81,5 +81,10 @@ export default {
 .is-title {
   padding-top: 1em;
   padding-bottom: 1em;
+}
+
+.blog {
+  font-size: 0.9 rem;
+  color: gray;
 }
 </style>

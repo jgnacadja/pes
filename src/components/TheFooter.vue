@@ -40,15 +40,15 @@
       </ul>
       <ul class="footer__links">
         <li>
-          <g-link to="/blog/conditions-generale-d'utilisation"
-            >Conditions d’utilisation</g-link
+          <g-link to="/blog/cgu">Conditions d’utilisation</g-link>
+        </li>
+        <li>
+          <g-link to="/blog/mentions-dinformations"
+            >Mentions d'information</g-link
           >
         </li>
         <li>
-          <g-link to="/mentions_d_information/">Mentions d'information</g-link>
-        </li>
-        <li>
-          <g-link to="/mentions_legales/">Mentions légales</g-link>
+          <g-link to="/blog/mentions-legales">Mentions légales</g-link>
         </li>
         <li>
           <g-link to="https://service-public.bj/">services publics</g-link>
