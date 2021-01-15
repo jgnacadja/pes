@@ -10,8 +10,7 @@
             </h1>
           </div>
         </div>
-        <div class="columns has-text-justified blog">
-          <vue-markdown>{{ $page.post.content }}</vue-markdown>
+        <div class="columns has-text-justified blog" v-html="$page.post.content">
         </div>
       </div>
       <br />
