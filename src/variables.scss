@@ -7,10 +7,11 @@ $family-secondary: "Open Sans", sans-serif;
 $body-family: $family-secondary;
 
 $primary-color :  #0d7f39;
-$secondary-color : #e6661e
+$secondary-color : #e6661e;
+$success : $primary-color;
 :root {
     --greenP:  #e6661e; // ;
-    --greenPSecondary:#0d7f39; //;
+    --greenSecondary:#0d7f39; //;
     --light-blue: #007452;
     --dark-blue: #006b63;
     --darker-blue: #006069;
@@ -79,7 +80,7 @@ div .subtitle {
 }
 
 .notif_content {
-  margin: 1.25em !important;
+  //margin: 1.25em !important;
   font-size: 0.875em;
 }
 
@@ -192,7 +193,7 @@ a:focus,
 a:visited,
 a:active {
   text-decoration: underline;
-  color: #0053b3;
+  color: $primary-color;
   color: var(--theme-primary);
 }
 a:hover {
@@ -1038,9 +1039,9 @@ fieldset {
   padding-right: var(--space-xl);
 }
 .notification.full-width {
-  width: 100%;
+  //width: 100%;
   margin-bottom: 0;
-  text-align: center;
+ // text-align: center;
   border: 0;
 }
 .notification.full-width.closable .close {
@@ -1190,13 +1191,13 @@ select.pagination__display {
   background-color: var(--lightest-grey);
   pointer-events: none;
 }
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+// .container {
+//   position: relative;
+//   width: 100%;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 0 20px;
+// }
 .container.container-medium {
   max-width: 750px;
 }

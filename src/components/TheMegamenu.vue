@@ -1,19 +1,22 @@
 <template>
   <header class="section">
     <div class="block notification full-width error region-alerte">
-      <div class="block container contentMarge container">
-        <p class="notif_content">
+      <div class="columns is-multiline is-vcentered">
+        <div class="column is-3"></div>
+        <div class="column is-5">
           <b>Impulse</b> accélérateur du développement des entreprises.
-        </p>
-        <a class="button small is-link is-header-link" href="/comment-ca-marche"
-          >En savoir plus</a
-        >
+        </div>
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <a class="button is-small is-success help" href="/comment-ca-marche"
+            >En savoir plus</a
+          >
+        </div>
       </div>
     </div>
     <div class="container">
-      <div class="columns is-multiline">
+      <div class="columns is-mobile is-vcentered">
         <div class="column is-1"></div>
-        <div class="column is-2 is-8-mobile">
+        <div class="column is-2-desktop is-5-mobile">
           <a href="https://ccibenin.org" target="_blank">
             <figure class="image">
               <g-image
@@ -25,9 +28,9 @@
             </figure>
           </a>
         </div>
-        <div class="column is-3">
+        <div class="column is-3-desktop is-5-mobile">
           <a href="/">
-            <figure class="image">
+            <figure class="image is-3by1">
               <g-image
                 src="~/assets/logo/impulse.png"
                 alt="Impulse"
@@ -74,8 +77,6 @@ if (typeof window !== "undefined") {
       if (elements[i].contains(e.target)) {
       } else {
         elements[i].style.display = "none";
-        //document.getElementById('searchform').reset();
-        //document.getElementById('search-field').value = '';
       }
     }
   });
@@ -83,18 +84,18 @@ if (typeof window !== "undefined") {
 </script>
 
 <style scoped lang="scss">
-.is-header-link {
-  padding-top: 0.5em !important;
+@import "../variables.scss";
+.help {
+  background-color: green !important;
 }
-
 @media only screen and (max-width: 415px) {
-  .notification {
-    margin-bottom: -2em !important;
-  }
+  // .notification {
+  //   margin-bottom: -2em !important;
+  // }
 
-  .navbar__domain {
-    width: 70%;
-    margin-top: 5%;
-  }
+  // .navbar__domain {
+  //   width: 70%;
+  //   margin-top: 5%;
+  // }
 }
 </style>
