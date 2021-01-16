@@ -16,8 +16,8 @@
             </div>
           </div>
 
-          <div class="columns has-text-center">
-            <div class="column links is-6-desktop">
+          <div class="columns has-text-center is-vcentered is-multiline">
+            <div class="column is-5">
               <b-button
                 tag="a"
                 href="#scroll-section"
@@ -25,10 +25,10 @@
                 size="is-large"
               >
                 <i class="fas fa-phone-alt"></i>
-                <strong class="callcenter"> Échanger avec un conseiller</strong>
+                Échanger avec un conseiller
               </b-button>
             </div>
-            <div class="column links decoration itworks">
+            <div class="column is-5 itworks">
               <a href="/comment-ca-marche">Comment ça marche</a>
             </div>
           </div>
