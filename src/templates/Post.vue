@@ -1,22 +1,20 @@
 <template>
   <Layout>
     <Welcome />
-    <section class="section-top section-light-grey">
-      <div class="container contentMarge">
-        <div class="columns is-mobile has-text-centered">
-          <div class="column is-12">
-            <h1 class="title has-text-dark has-text-left is-title">
-              {{ $page.post.strongTitle | Upper }}
-            </h1>
-          </div>
+    <section class="section-top section-light-grey container">
+      <div class="columns is-centered has-text-justified is-multiline">
+        <div class="column is-8">
+          <h1 class="title has-text-dark has-text-centered is-title">
+            {{ $page.post.strongTitle | Upper }}
+          </h1>
         </div>
-        <div class="columns has-text-justified blog" v-html="$page.post.content">
-        </div>
+        <div
+          class="column is-8 has-text-justified blog"
+          v-html="$page.post.content"
+        ></div>
       </div>
-      <br />
-      <br />
-      <br />
     </section>
+    <br /><br />
   </Layout>
 </template>
 
