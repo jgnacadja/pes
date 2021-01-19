@@ -39,8 +39,17 @@
 </template>
 
 <page-query>
-query CategoryPage($id: String!) {
-  categories: allCategory(filter: { parent: { eq: $id } }) {
+query CategoryPage($path: String!) {
+  form: allForm(filter: { path: { eq: $path } }) {
+    edges {
+      node {
+        id
+        path
+      }
+    }
+  }
+
+  categories: allCategory {
     edges {
       node {
         id
@@ -98,8 +107,22 @@ export default {
     };
   },
   mounted() {
-    this.categories = this.chunkArray(this.$page.categories.edges, this.split);
-    this.category = this.categories[0][0].node.meta;
+    var allCategories = this.$page.categories.edges;
+    var pathname = window.location.pathname;
+
+    var parentCart = allCategories.filter(
+      (item) => item.node.path == pathname
+    )
+
+    var allCart = allCategories.filter(
+      (item) => item.node.parent == parentCart[0].node.id
+    )
+
+    this.categories = this.chunkArray(allCart, this.split);
+    if(this.categories.length > 0){
+      this.category = this.categories[0][0].node.meta;
+    }
+    
   },
   methods: {
     chunkArray(arr, chunkCount) {

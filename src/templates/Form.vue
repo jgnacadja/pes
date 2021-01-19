@@ -269,7 +269,7 @@ query CategoryPage($path: String!) {
     }
   }
 }
-</page-query>Breadrumb 
+</page-query> 
 
 
 
