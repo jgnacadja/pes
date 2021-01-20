@@ -1,6 +1,6 @@
 <template>
   <section class="section background-orange has-text-white">
-    <div class="columns container is-multiline has-text-centered is-centered">
+    <div class="columns is-multiline has-text-centered is-centered">
       <div class="column is-3">
         <div class="columns is-multiline">
           <div class="column is-12">
