@@ -45,13 +45,16 @@
                 <div class="form__group">
                   <div class="columns is-variable">
                     <div class="column is-6">
-                      <label for="secteur">Secteur d'activité</label>
+                      <label for="secteur"
+                        >Secteur d'activité
+                        <span class="has-text-danger">*</span></label
+                      >
                       <b-field>
                         <b-select
                           placeholder="Selectionnez"
                           v-model="data.data.secteur"
                           name="secteur"
-                          required
+                          required="required"
                           is-large
                           expanded
                         >
@@ -66,13 +69,16 @@
                     </div>
 
                     <div class="column is-6">
-                      <label for="taille">Nombre d'employés</label>
+                      <label for="taille"
+                        >Nombre d'employés
+                        <span class="has-text-danger">*</span></label
+                      >
                       <b-field>
                         <b-select
                           placeholder="Selectionnez"
                           v-model="data.data.taille"
                           name="taille"
-                          required
+                          required="required"
                           expanded
                         >
                           <option value="100">Moins de 100</option>
@@ -109,7 +115,6 @@
                     <input
                       placeholder="votre nom"
                       type="text"
-                      required="required"
                       name="fullName"
                       id="fullName"
                       v-model="data.data.fullName"
@@ -120,7 +125,9 @@
                   </div>
                 </div>
                 <div class="form__group">
-                  <label for="phone">Téléphone</label>
+                  <label for="phone"
+                    >Téléphone <span class="has-text-danger">*</span></label
+                  >
                   <input
                     placeholder="+229 00 00 00 00"
                     type="tel"
@@ -134,7 +141,9 @@
                   </div>
                 </div>
                 <div class="form__group">
-                  <label for="email">E-mail</label>
+                  <label for="email"
+                    >E-mail <span class="has-text-danger">*</span></label
+                  >
                   <input
                     placeholder="pseudo@email.com"
                     type="email"
@@ -149,7 +158,9 @@
                 </div>
                 <div class="form__group">
                   <!-- / Duplication pour respecter l'accessibilité (id unique, field avec label...) -->
-                  <label for="ifu">IFU</label>
+                  <label for="ifu"
+                    >IFU <span class="has-text-danger">*</span></label
+                  >
                   <input
                     type="text"
                     required="required"
@@ -163,7 +174,10 @@
                 </div>
               </div>
               <div class="form__group">
-                <label for="">Description de votre demande</label>
+                <label for=""
+                  >Description de votre demande
+                  <span class="has-text-danger">*</span></label
+                >
                 <div class="explanation contentMarges">
                   <div>
                     <g-image alt="" src="~/assets/infos-alert.png" />
@@ -403,7 +417,7 @@ export default {
         try {
           this.data.loading = true;
           var vm = this;
-          
+
           emailjs
             .sendForm(
               service_id,
