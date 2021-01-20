@@ -38,12 +38,7 @@
           id="image-home"
         >
           <figure class="image">
-            <g-image
-              src="~/assets/header.png"
-              alt="Impulse"
-              class="is-rounded"
-              fit="inside"
-            />
+            <g-image src="~/assets/header.png" alt="Impulse" fit="inside" />
           </figure>
         </div>
       </div>
