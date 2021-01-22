@@ -87,7 +87,7 @@
 
         <p class="block text-center contact-us decoration">
           <b>Pour toute autre demande,</b>
-          <b><a href="/aide-entreprises/contactez-nous"> cliquez ici !</a></b>
+          <b><a href="contactez-nous/"> cliquez ici !</a></b>
         </p>
       </div>
     </section>

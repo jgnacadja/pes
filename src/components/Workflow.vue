@@ -1,6 +1,9 @@
 <template>
   <section class="section section-lightest-grey section-partners">
-    <div
+
+    <div class="container text-center">
+    
+      <div
       class="columns contentMarge row container is-centered has-text-centered"
     >
       <div class="column card procedure-card has-text-justified">
@@ -76,6 +79,9 @@
         </div>
       </div>
     </div>
+    
+    </div>
+    
   </section>
 </template>
 
