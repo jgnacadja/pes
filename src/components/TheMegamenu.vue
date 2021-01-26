@@ -3,10 +3,10 @@
     <div class="block notification full-width error region-alerte">
       <div class="columns is-multiline is-vcentered">
         <div class="column is-3"></div>
-        <div class="column is-5">
+        <div class="column is-5 has-text-centered-mobile">
           <b>Impulse</b> accélérateur du développement des entreprises.
         </div>
-        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+        <div class="column is-4-desktop is-12-touch is-12-tablet is-12-mobile">
           <a class="button is-small is-success help" href="/comment-ca-marche"
             >En savoir plus</a
           >
@@ -45,13 +45,9 @@
     <div class="container has-text-right has-text-centered-mobile">
       <div class="container">
         <div class="column is-12">
-          <nav data-target="toggle-nav">
-            <ul class="nav__links">
-              <li class="nav__item">
-                <a href="/comment-ca-marche">Comment ça marche ?</a>
-              </li>
-            </ul>
-          </nav>
+          <li class="nav__item">
+            <a href="/comment-ca-marche">Comment ça marche ?</a>
+          </li>
         </div>
       </div>
     </div>
