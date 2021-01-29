@@ -38,7 +38,7 @@ export default {
     if (this.toform != "") {
       this.link = this.category.node.forms[0].path;
     } else {
-      this.link = this.category.node.path;
+      this.link = this.category.node.path + "#section-thematiques";
     }
   },
 };

@@ -1,10 +1,10 @@
 <template>
   <section class="section section-lightest-grey section-partners">
 
-    <div class="container text-center">
+    <div class="container">
     
       <div
-      class="columns contentMarge row container is-centered has-text-centered"
+      class="columns contentMarge row is-centered has-text-centered"
     >
       <div class="column card procedure-card has-text-justified">
         <div class="card-content">
