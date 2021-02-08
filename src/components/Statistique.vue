@@ -8,7 +8,7 @@
           </div>
           <div class="column is-12 is-size-6">
             <!-- text  -->
-            +500 entreprises accompagnées
+            +{{entreprise}} entreprises accompagnées
           </div>
         </div>
       </div>
@@ -19,13 +19,44 @@
           </div>
           <div class="column is-12 is-size-6">
             <!-- text  -->
-            +2500 employés bénéficiaires
+            +{{employe}} employés bénéficiaires
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+import axios from 'axios'
+
+export default {
+  props: {},
+  created() {},
+  data () {
+    return {
+      entreprise: 0,
+      employe: 0
+    }
+  },
+  async mounted () {
+    try {
+      var userId = 'user_awurVWpPY1ipKOSkoyWx0';
+      var accessToken = '51b9c536531862f2bed1d4d69a7fedd8'; 
+      
+      const results = await axios.get(
+        'https://api.emailjs.com/api/v1.1/history?user_id='+userId+'&accessToken='+accessToken
+      );
+
+      this.entreprise = results.data.rows.length;
+      this.employe = this.entreprise * 10;
+      
+    } catch (error) {
+      console.log(error)
+    }
+  }
+};
+</script>
 
 <style scoped lang="scss">
 @import "../variables.scss";
