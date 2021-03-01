@@ -10,34 +10,22 @@
       <div class="container contentMarge">
         <div class="block-link">
           <div class="emphasis notification warning">
-            <div class="columns is-vcentered has-text-centered is-variable">
+            <div
+              class="columns is-vcentered has-text-centered is-variable is-centered"
+            >
               <div class="column is-4-desktop is-12-mobile">
-                <div class="columns is-variable has-text-left">
-                  <div class="column is-4-desktop is-3-mobile">
-                    <figure class="is-128x128">
-                      <g-image
-                        src="~/assets/logo/logoMini.png"
-                        alt="Impulse"
-                        class="is-rounded"
-                        fit="inside"
-                      />
-                    </figure>
-                  </div>
-
-                  <div class="column is-8">
-                    <h6 class="title is-6">
-                      #Impulse, est un service public de la chambre de commerce et d'industrie du BENIN.
-                    </h6>
-                  </div>
-                </div>
+                <h6 class="title is-6">
+                  #Impulse, est une initiative de la chambre de commerce et
+                  d'industrie du BENIN.
+                </h6>
               </div>
 
               <div class="column is-6 has-text-justified">
                 Impulse vous aide à vous structurer et vous développer pour
-                gagner en performance. Des conseillers, consultants et
-                formateurs vous accompagnent dans la réalisation de diagnostics
-                et de plans d’actions personnalisés, jusqu’à la mesure des
-                résultats concrets.
+                gagner en performance. Des conseillers d'entreprise, consultants
+                et formateurs vous accompagnent dans la réalisation de
+                diagnostics et de plans d’actions personnalisés, jusqu’à la
+                mesure des résultats concrets.
               </div>
 
               <div class="column is-2-desktop is-8-mobile">
@@ -99,48 +87,12 @@
 
         <p class="block text-center contact-us decoration">
           <b>Pour toute autre demande,</b>
-          <b><a href="/aide-entreprises/contactez-nous"> cliquez ici !</a></b>
+          <b><a href="contactez-nous/"> cliquez ici !</a></b>
         </p>
       </div>
     </section>
     <Partner />
-    <section class="section section-white" id="container-newsletter">
-      <div class="container">
-        <h2 class="section__title title">
-          Découvrez les nouveaux accompagnements publics :
-        </h2>
-        <p class="section__subtitle subtitle">
-          Découvrez chaque mois comment une administration ou un organisme
-          public peut aider votre entreprise
-        </p>
-        <form action="/newsletters" accept-charset="UTF-8" method="post">
-          <input
-            type="hidden"
-            name="authenticity_token"
-            value="EZccKzIkocsltvt1hz2IheF+GmElU7EpMa3eH/87Ts7zW3196DWEY3g++OwtwTXI2tDdST6K/gSOWG0uFmVHPg=="
-          />
-          <div class="form__group">
-            <div class="input__group">
-              <input
-                placeholder="Votre adresse email"
-                aria-label="Votre adresse email"
-                required="required"
-                type="email"
-                name="email"
-                id="email"
-              />
-              <input
-                type="submit"
-                name="commit"
-                value="S’abonner"
-                class="button"
-                data-disable-with="S’abonner"
-              />
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
+    <Statistique />
   </Layout>
 </template>
 
@@ -177,13 +129,14 @@ query {
 <script>
 import Welcome from "~/components/Welcome.vue";
 import Category from "~/components/Category.vue";
-import Partner from "~/components/Partner.vue"
-
+import Partner from "~/components/Partner.vue";
+import Statistique from "~/components/Statistique.vue";
 export default {
   components: {
     Welcome,
     Category,
-    Partner
+    Partner,
+    Statistique,
   },
   metaInfo: {
     title: "",

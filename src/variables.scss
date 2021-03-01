@@ -6,10 +6,12 @@ $family-primary: Poppins, Arial, sans-serif;
 $family-secondary: "Open Sans", sans-serif;
 $body-family: $family-secondary;
 
-$secondary-color : #D67143;
+$primary-color :  #0d7f39;
+$secondary-color : #e6661e;
+$success : $primary-color;
 :root {
-    --greenP: #177C38;
-    --greenPSecondary: #D67143;
+    --greenP:  #e6661e; // ;
+    --greenSecondary:#0d7f39; //;
     --light-blue: #007452;
     --dark-blue: #006b63;
     --darker-blue: #006069;
@@ -25,10 +27,10 @@ $secondary-color : #D67143;
     --black: #1c1c1c;
     --green: #03bd5b;
     --light-green: #daf5e7;
-    --orange: #D67143;
+    --orange: #e6661e;
     --dark-orange: #cc5c00;
     --light-orange: #fff0e4;
-    --red: #d52a03;
+    --red: ##e6661e;
     --dark-red: #ab2b1e;
     --light-red: #FFEFE5;
     --mobile-min: 400px;
@@ -78,7 +80,7 @@ div .subtitle {
 }
 
 .notif_content {
-  margin: 1.25em !important;
+  //margin: 1.25em !important;
   font-size: 0.875em;
 }
 
@@ -191,7 +193,7 @@ a:focus,
 a:visited,
 a:active {
   text-decoration: underline;
-  color: #0053b3;
+  color: $primary-color;
   color: var(--theme-primary);
 }
 a:hover {
@@ -1037,9 +1039,9 @@ fieldset {
   padding-right: var(--space-xl);
 }
 .notification.full-width {
-  width: 100%;
+  //width: 100%;
   margin-bottom: 0;
-  text-align: center;
+ // text-align: center;
   border: 0;
 }
 .notification.full-width.closable .close {
@@ -1054,13 +1056,13 @@ fieldset {
 .notification.warning {
   background: #fff0e4;
   background: var(--theme-warning-bg);
-  border-color: #ff9947;
+  border-color: #0d7f39;
   border-color: var(--theme-warning-border);
 }
 .notification.error {
   background: rgba(239, 172, 166, 0.45882);
   background: var(--theme-error-bg);
-  border-color: #d63626;
+  border-color: #e6661e;
   border-color: var(--theme-error-border);
 }
 .tile {
@@ -1189,13 +1191,13 @@ select.pagination__display {
   background-color: var(--lightest-grey);
   pointer-events: none;
 }
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+// .container {
+//   position: relative;
+//   width: 100%;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 0 20px;
+// }
 .container.container-medium {
   max-width: 750px;
 }
@@ -2766,7 +2768,7 @@ input.button[type="submit"] {
   -webkit-appearance: none;
 }
 footer .marianne img {
-  width: 8rem;
+  width: 15rem;
 }
 footer .france-relance img {
   width: 6rem;

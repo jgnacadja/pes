@@ -1,64 +1,54 @@
 <template>
   <header class="section">
     <div class="block notification full-width error region-alerte">
-      <div class="block container contentMarge">
-        <p class="notif_content">
+      <div class="columns is-multiline is-vcentered">
+        <div class="column is-3"></div>
+        <div class="column is-5 has-text-centered-mobile">
           <b>Impulse</b> accélérateur du développement des entreprises.
-        </p>
-        <a
-          class="button small warning is-link is-header-link"
-          href="/comment-ca-marche"
-          >En savoir plus</a
-        >
+        </div>
+        <div class="column is-4-desktop is-12-touch is-12-tablet is-12-mobile">
+          <a class="button is-small is-success help" href="/comment-ca-marche"
+            >En savoir plus</a
+          >
+        </div>
       </div>
     </div>
     <div class="container">
-      <div class="navbar__container contentMarge">
-        <a class="navbar__home" href="/">
-          <div class="columns is-mobile">
-            <div class="column is-5-desktop">
-              <figure class="image">
-                <g-image
-                  src="~/assets/logo/logo-ccib.png"
-                  alt="Chambre de commerce et d'industrie du BENIN"
-                  class="navbar__logo"
-                  fit="inside"
-                />
-              </figure>
-            </div>
-            <div class="column is-5-desktop">
-              <figure class="image">
-                <g-image
-                  src="~/assets/logo/impulse.png"
-                  alt="Impulse"
-                  class="navbar__domain"
-                  fit="inside"
-                />
-              </figure>
-              <br />
-            </div>
-          </div>
-
-          <button
-            aria-label="Déplier menu"
-            class="burger-btn"
-            data-action="toggle-nav"
-          >
-            <span class="burger-btn__bar"></span>
-            <span class="burger-btn__bar"></span>
-            <span class="burger-btn__bar"></span>
-          </button>
-        </a>
-        <nav data-target="toggle-nav">
-          <ul class="nav__links">
-            <li class="nav__item">
-              <a href="/comment-ca-marche">Comment ça marche ?</a>
-            </li>
-            <li class="nav__item">
-              <a id="experts_login" href="/mon-compte/">Accès conseillers</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="columns is-mobile is-vcentered">
+        <div class="column is-1"></div>
+        <div class="column is-2-desktop is-5-mobile">
+          <a href="https://ccibenin.org" target="_blank">
+            <figure class="image">
+              <g-image
+                src="~/assets/logo/ccib.png"
+                alt="Chambre de commerce et d'industrie du BENIN"
+                class="navbar__logo"
+                fit="inside"
+              />
+            </figure>
+          </a>
+        </div>
+        <div class="column is-3-desktop is-5-mobile">
+          <a href="/">
+            <figure class="image is-3by1">
+              <g-image
+                src="~/assets/logo/impulse.png"
+                alt="Impulse"
+                class="navbar__domain"
+                fit="inside"
+              />
+            </figure>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container has-text-right has-text-centered-mobile">
+      <div class="container">
+        <div class="column is-12">
+          <li class="nav__item">
+            <a href="/comment-ca-marche">Comment ça marche ?</a>
+          </li>
+        </div>
       </div>
     </div>
   </header>
@@ -83,8 +73,6 @@ if (typeof window !== "undefined") {
       if (elements[i].contains(e.target)) {
       } else {
         elements[i].style.display = "none";
-        //document.getElementById('searchform').reset();
-        //document.getElementById('search-field').value = '';
       }
     }
   });
@@ -92,17 +80,18 @@ if (typeof window !== "undefined") {
 </script>
 
 <style scoped lang="scss">
-.is-header-link {
-  padding-top: 0.5em !important;
+@import "../variables.scss";
+.help {
+  background-color: green !important;
 }
-
 @media only screen and (max-width: 415px) {
-  .notification {
-    margin-bottom: -2em !important;
-  }
+  // .notification {
+  //   margin-bottom: -2em !important;
+  // }
 
-  .navbar__domain {
-    width: 50%;
-  }
+  // .navbar__domain {
+  //   width: 70%;
+  //   margin-top: 5%;
+  // }
 }
 </style>

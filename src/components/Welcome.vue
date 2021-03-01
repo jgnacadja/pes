@@ -11,13 +11,13 @@
               </h1>
             </div>
             <div class="column is-10 subtitle">
-              Un service a mesure de vos besoins : vous êtes rappelé par le
-              conseiller qui peut vous aider.
+              Une initiative à la mesure de vos besoins : vous êtes rappelé par
+              le conseiller d'entreprise qui peut vous aider.
             </div>
           </div>
 
-          <div class="columns has-text-center">
-            <div class="column links is-6-desktop">
+          <div class="columns has-text-center is-vcentered is-multiline">
+            <div class="column is-5">
               <b-button
                 tag="a"
                 href="#scroll-section"
@@ -25,10 +25,10 @@
                 size="is-large"
               >
                 <i class="fas fa-phone-alt"></i>
-                <strong class="callcenter"> Échanger avec un conseiller</strong>
+                Échanger avec un conseiller
               </b-button>
             </div>
-            <div class="column links decoration itworks">
+            <div class="column is-5 itworks">
               <a href="/comment-ca-marche">Comment ça marche</a>
             </div>
           </div>
@@ -38,12 +38,7 @@
           id="image-home"
         >
           <figure class="image">
-            <g-image
-              src="~/assets/header.png"
-              alt="Impulse"
-              class="is-rounded"
-              fit="inside"
-            />
+            <g-image src="~/assets/header.png" alt="Impulse" fit="inside" />
           </figure>
         </div>
       </div>

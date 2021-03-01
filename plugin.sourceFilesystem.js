@@ -14,8 +14,7 @@ module.exports = {
       forms: {
         typeName: "Form",
         create: true,
-      },
+      }
     },
-  },
-
+  }
 };

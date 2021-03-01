@@ -1,12 +1,57 @@
 <template>
   <Layout>
     <Welcome />
-    <section class="section-top section-light-grey">
-      <div class="container contentMarge">
-        <Breadcrumb :category="category" :fromform="true" />
+    <section v-if="seenContent" class="section section-grey content-section" id="section-thematiques">
+      <div class="container contentMarge is-card-content">
+        <div class="block">
+          <p class="card-section-header title">Vous souhaitez</p>
+          <br /><br />
+        </div>
+
+        <div class="columns row pb-6 contentMarge">
+          <div class="column card block-link">
+            <a v-on:click="resoudre">
+                <div class="card__content">
+                <div class="block">
+                        <h2 class="has-text-justified">
+                        Résoudre un problématique réglementaire
+                        </h2>
+                    </div>
+                </div>
+                <div class="discover_button">
+                    <button class="button small is-link">Choisir</button>
+                </div>
+            </a>
+            
+          </div>
+
+          <div class="column card block-link">
+            <a v-on:click="demande">
+                <div class="card__content">
+                <div class="block">
+                        <h2 class="has-text-justified">
+                        Faire une autre demande
+                        </h2>
+                    </div>
+                </div>
+                <div class="discover_button">
+                    <button class="button small is-link">Choisir</button>
+                </div>
+            </a>
+            
+          </div>
+          
+        </div>
       </div>
+      <p class="block text-center contact-us decoration">
+        <b>Vous souhaitez être accompagné sur un autre sujet ?</b>
+        <b><g-link to="/"> Découvrez les autres sujets.</g-link></b>
+      </p>
     </section>
-    <section class="section section-grey landing" id="section-formulaire">
+
+
+
+    <section v-if="seenform" class="section section-grey landing form-section" id="section-formulaire">
       <div class="container">
         <div class="block notification warning contact-delay">
           <g-image alt="" src="~/assets/5days.png" />
@@ -239,50 +284,27 @@
           </div>
           <div class="column is-6" style="margin-left: 0">
             <div>
-              <h4 class="title is-4">Accompagnements :</h4>
               <p>
-                S’informer sur la rémunération versée au salarié, sur
-                l’allocation perçue par l’entreprise, le reste à charge, les
-                conditions de l'activité partielle de longue durée.
+                {{content}}
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+
+    
+
     <Workflow />
+
     <Partner />
   </Layout>
 </template>
 
-<page-query>
-query CategoryPage($path: String!) {
-  form: allForm(filter: { path: { eq: $path } }) {
-    edges {
-      node {
-        id
-        path
-      }
-    }
-  }
 
-  categories: allCategory {
-    edges {
-      node {
-        id
-        title
-        meta
-        subcategory
-        content
-        parent
-        path
-        forms {
-          path
-        }
-      }
-    }
-  }
-}
+<page-query>
+
 </page-query> 
 
 
@@ -321,6 +343,9 @@ export default {
     return {
       cartegories: [],
       cartegory: {},
+      seenform: false,
+      seenContent: true,
+      content: "",
       data: {
         errors: {
           fullName: "",
@@ -354,10 +379,7 @@ export default {
     var pathname = window.location.pathname;
 
     // Get current cartegory
-    this.cartegory = this.$page.categories.edges.filter(
-      (item) =>
-        item.node.forms.length > 0 && item.node.forms[0].path == pathname
-    )[0];
+    this.cartegory = ""
   },
   methods: {
     chunkArray(arr, chunkCount) {
@@ -365,6 +387,16 @@ export default {
         .fill()
         .map((_) => arr.splice(0, chunkCount));
       return result;
+    },
+    resoudre: function (e){
+      this.seenform =  true;
+      this.seenContent = false;
+      this.content = "Résoudre un problématique réglementaire"
+    },
+    demande: function (e){
+      this.seenform =  true;
+      this.seenContent = false;
+      this.content = "Nous allons rechercher quel est le conseiller compétent pour votre demande parmi l'ensemble des partenaires publics et parapublics du service."
     },
     checkForm: function (e) {
       this.data.errors = {
@@ -437,6 +469,11 @@ export default {
               vm.data.data.taille = 100;
               vm.data.data.website = null;
               vm.data.success = "Votre demande a été envoyé";
+
+
+               vm.seenform =  false;
+               vm.seenContent = true;
+
             });
         } catch (error) {
           this.data.loading = false;
@@ -452,33 +489,6 @@ export default {
 <style scoped lang="scss">
 @import "../variables.scss";
 
-.notif {
-  background-color: #177c38;
-  padding: 1em;
-}
-.notif i {
-  color: white;
-}
-.notif p {
-  color: white;
-}
-.errorForm {
-  color: red !important;
-  text-align: left;
-  padding-bottom: 5px;
-}
-
-.legal-notice {
-  font-size: 0.8em;
-  text-align: justify;
-}
-label {
-  font-weight: bold;
-  font-size: 0.85em;
-}
-ul {
-  list-style: inside !important;
-}
 .is-green {
   color: #177c38;
 }
@@ -495,10 +505,6 @@ ul {
 }
 
 @media only screen and (min-width: 1024px) {
-  form {
-    margin-left: 0 !important;
-  }
-
   .contentMarges {
     padding-left: 0.8em;
     padding-right: 0.8em;

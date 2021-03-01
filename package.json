@@ -26,7 +26,8 @@
     "vue-infinite-loading": "^2.4.5",
     "vue-instantsearch": "^3.4.2",
     "vue-markdown": "^2.2.4",
-    "vue-smooth-scrollbar": "^0.1.2"
+    "vue-smooth-scrollbar": "^0.1.2",
+    "watchman": "^1.0.0"
   },
   "devDependencies": {
     "@testing-library/vue": "^5.6.1",

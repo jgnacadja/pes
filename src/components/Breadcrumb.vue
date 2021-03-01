@@ -106,6 +106,11 @@ export default {
 
     //this.$refs["breadcrumb"].lastElementChild.className = "has-text-primary";
   },
+  methods: {
+    backUrl: function(e) {
+      
+    }
+  }
 };
 </script>
 <style scoped lang="scss">

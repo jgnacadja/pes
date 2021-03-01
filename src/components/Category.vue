@@ -2,11 +2,11 @@
   <g-link :to="link">
     <div class="card__content">
       <div class="block">
-        <h2 class="has-text-left is-2">
+        <h2 class="has-text-justified">
           {{ category.node.title }}
         </h2>
       </div>
-      <div class="has-text-left" v-html="category.node.content"></div>
+      <div class="has-text-justified" v-html="category.node.content"></div>
     </div>
     <div class="discover_button">
       <button class="button small is-link">Choisir</button>
@@ -38,7 +38,7 @@ export default {
     if (this.toform != "") {
       this.link = this.category.node.forms[0].path;
     } else {
-      this.link = this.category.node.path;
+      this.link = this.category.node.path + "#section-thematiques";
     }
   },
 };
