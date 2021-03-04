@@ -49,7 +49,6 @@
 <script>
 export default {
   props: {},
-  created() {},
 };
 </script>
 <style scoped lang="scss">

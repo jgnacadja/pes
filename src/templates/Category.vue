@@ -126,10 +126,9 @@ export default {
   },
   methods: {
     chunkArray(arr, chunkCount) {
-      let result = new Array(Math.ceil(arr.length / chunkCount))
+      return new Array(Math.ceil(arr.length / chunkCount))
         .fill()
         .map((_) => arr.splice(0, chunkCount));
-      return result;
     },
   },
 };

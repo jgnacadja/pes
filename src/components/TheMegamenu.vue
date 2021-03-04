@@ -57,8 +57,6 @@
 </template>
 
 <script scoped>
-// import TheSearch from "~/components/TheSearch.vue";
-
 export default {
   data() {
     return {
@@ -71,9 +69,7 @@ if (typeof window !== "undefined") {
   window.addEventListener("click", function (e) {
     var elements = document.getElementsByClassName("smooth-scroll-area-d");
     for (var i = 0; i < elements.length; i++) {
-      //console.log(elements[i]);
-      if (elements[i].contains(e.target)) {
-      } else {
+      if (!elements[i].contains(e.target)) {
         elements[i].style.display = "none";
       }
     }

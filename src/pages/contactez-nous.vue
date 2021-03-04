@@ -375,9 +375,6 @@ export default {
     };
   },
   mounted() {
-    // Get current url
-    var pathname = window.location.pathname;
-
     // Get current cartegory
     this.cartegory = ""
   },
@@ -406,10 +403,6 @@ export default {
         siret: null,
         description: null,
       };
-
-      // const service_id = process.env.EMAIL_JS_SERVICE_ID;
-      // const template_id = process.env.EMAIL_JS_TEMPLATE_ID;
-      // const user_id = process.env.EMAIL_JS_USER_ID;
 
       const service_id = "service_zo2s5ud";
       const template_id = "template_tkt44iv";

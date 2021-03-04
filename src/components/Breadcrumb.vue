@@ -103,13 +103,8 @@ export default {
       this.parentbreadsForm.path = parent.node.path
       this.breadsForm = "vous souhaitez " + currentCartegory.node.title.toLowerCase() + " ?"
     }
-
-    //this.$refs["breadcrumb"].lastElementChild.className = "has-text-primary";
   },
   methods: {
-    backUrl: function(e) {
-      
-    }
   }
 };
 </script>

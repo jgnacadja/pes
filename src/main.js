@@ -5,11 +5,6 @@ import DefaultLayout from "~/layouts/Default.vue";
 
 import Buefy from "buefy";
 import "~/main.scss";
-// import VueDisqus from "vue-disqus";
-import axios from "axios";
-// import InfiniteLoading from "vue-infinite-loading";
-// import SmoothScrollbar from "vue-smooth-scrollbar";
-// import InstantSearch from "vue-instantsearch";
 import Axios from "axios";
 
 export default function (Vue, { router, head, isClient }) {

@@ -32,7 +32,6 @@ import axios from 'axios'
 
 export default {
   props: {},
-  created() {},
   data () {
     return {
       entreprise: 0,

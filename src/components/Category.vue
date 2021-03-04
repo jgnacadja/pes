@@ -31,9 +31,6 @@ export default {
       link: "",
     };
   },
-  created() {
-    //console.log(this.category);
-  },
   mounted() {
     if (this.toform != "") {
       this.link = this.category.node.forms[0].path;
