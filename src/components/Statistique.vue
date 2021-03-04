@@ -4,7 +4,7 @@
       <div class="column is-3">
         <div class="columns is-multiline">
           <div class="column is-12">
-            <span style="font-size: 3em"><i class="fas fa-desktop"></i></span>
+            <span style="font-size: 3em"><em class="fas fa-desktop"></em></span>
           </div>
           <div class="column is-12 is-size-6">
             <!-- text  -->
@@ -15,7 +15,7 @@
       <div class="column is-3">
         <div class="columns is-multiline">
           <div class="column is-12">
-            <span style="font-size: 3em"><i class="fas fa-users"></i></span>
+            <span style="font-size: 3em"><em class="fas fa-users"></em></span>
           </div>
           <div class="column is-12 is-size-6">
             <!-- text  -->

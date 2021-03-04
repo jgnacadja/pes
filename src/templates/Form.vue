@@ -12,7 +12,7 @@
           <g-image alt="" src="~/assets/5days.png" />
           <span>
             Déposez votre demande, un conseiller d'entreprise vous rappelle
-            <b>dans les 5 jours</b> (Délai moyen de prise en charge).
+            <strong>dans les 5 jours</strong> (Délai moyen de prise en charge).
           </span>
         </div>
 
@@ -215,7 +215,7 @@
                 v-if="data.success"
                 class="form__group container notif is-primary"
               >
-                <p><i class="fas fa-check"></i> {{ data.success }}</p>
+                <p><em class="fas fa-check"></em> {{ data.success }}</p>
               </div>
 
               <div class="form__group">
@@ -415,7 +415,6 @@ export default {
         this.data.data.enterprise != null &&
         this.data.data.secteur != null
       ) {
-        try {
           this.data.loading = true;
           var vm = this;
 
@@ -438,10 +437,12 @@ export default {
               vm.data.data.taille = 100;
               vm.data.data.website = null;
               vm.data.success = "Votre demande a été envoyé";
+            })
+            .catch(e => {
+              this.data.loading = false;
+              console.log("Failed to run promise", e)
             });
-        } catch (error) {
-          this.data.loading = false;
-        }
+        
       }
 
       e.preventDefault();
@@ -518,7 +519,7 @@ ul {
   .card-section-header {
     font-size: 1.7rem;
     line-height: 1.25em;
-    font-family: "Evolventa", "lato", "sans-serif";
+    font-family: "Evolventa", "lato", sans-serif;
     font-weight: bold;
   }
 }

@@ -128,7 +128,7 @@ export default {
   .card-section-header {
     font-size: 1.7rem;
     line-height: 1.25em;
-    font-family: "Evolventa", "lato", "sans-serif";
+    font-family: "Evolventa", "lato", sans-serif;
     font-weight: bold;
   }
 }
