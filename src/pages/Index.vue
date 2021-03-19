@@ -86,8 +86,8 @@
         </div>
 
         <p class="block text-center contact-us decoration">
-          <b>Pour toute autre demande,</b>
-          <b><a href="contactez-nous/"> cliquez ici !</a></b>
+          <strong>Pour toute autre demande,</strong>
+          <strong><a href="contactez-nous/"> cliquez ici !</a></strong>
         </p>
       </div>
     </section>
@@ -190,7 +190,7 @@ export default {
   .card-section-header {
     font-size: 1.7rem;
     line-height: 1.25em;
-    font-family: "Evolventa", "lato", "sans-serif";
+    font-family: "Evolventa", "lato", sans-serif;
     font-weight: bold;
   }
 }

@@ -29,8 +29,8 @@
         </div>
       </div>
       <p class="block text-center contact-us decoration">
-        <b>Vous souhaitez être accompagné sur un autre sujet ?</b>
-        <b><g-link to="/"> Découvrez les autres sujets.</g-link></b>
+        <strong>Vous souhaitez être accompagné sur un autre sujet ?</strong>
+        <strong><g-link to="/"> Découvrez les autres sujets.</g-link></strong>
       </p>
     </section>
     <Workflow />
@@ -126,10 +126,9 @@ export default {
   },
   methods: {
     chunkArray(arr, chunkCount) {
-      let result = new Array(Math.ceil(arr.length / chunkCount))
+      return new Array(Math.ceil(arr.length / chunkCount))
         .fill()
         .map((_) => arr.splice(0, chunkCount));
-      return result;
     },
   },
 };
@@ -172,7 +171,7 @@ export default {
   .card-section-header {
     font-size: 1.7rem;
     line-height: 1.25em;
-    font-family: "Evolventa", "lato", "sans-serif";
+    font-family: "Evolventa", "lato", sans-serif;
     font-weight: bold;
   }
 }

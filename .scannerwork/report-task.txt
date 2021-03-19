@@ -1,0 +1,7 @@
+organization=sylvere
+projectKey=pes
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.17928
+dashboardUrl=https://sonarcloud.io/dashboard?id=pes
+ceTaskId=AXf-erUFzGJi0VOD7QoF
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXf-erUFzGJi0VOD7QoF

@@ -57,9 +57,7 @@ export default {
       category: "comment ça marche ?",
     };
   },
-  mounted() {},
   methods: {
-    filterCategory() {},
   },
   filters: {
     // Filter definitions

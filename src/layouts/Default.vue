@@ -21,8 +21,3 @@ export default {
   },
 };
 </script>
-
-
-<style scooped>
-
-</style>

@@ -24,7 +24,7 @@
                 type="is-primary"
                 size="is-large"
               >
-                <i class="fas fa-phone-alt"></i>
+                <em class="fas fa-phone-alt"></em>
                 Échanger avec un conseiller
               </b-button>
             </div>
@@ -49,7 +49,6 @@
 <script>
 export default {
   props: {},
-  created() {},
 };
 </script>
 <style scoped lang="scss">

@@ -157,7 +157,7 @@ code {
   border-radius: 3px;
   border-radius: var(--theme-border-radius);
   padding: 0 0.5em;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 0.9em;
   word-wrap: break-word;
   white-space: pre-wrap;
@@ -794,7 +794,7 @@ fieldset {
   border-radius: 2px;
   -webkit-box-shadow: 0 1px 2px rgba(201, 211, 223, 0.2);
   box-shadow: 0 1px 2px rgba(201, 211, 223, 0.2);
-  -webkit-box-shadow: var(--theme-box-shadow);
+  //-webkit-box-shadow: var(--theme-box-shadow);
   box-shadow: var(--theme-box-shadow);
   position: relative;
   overflow: hidden;
@@ -882,7 +882,7 @@ fieldset {
   border-radius: var(--theme-border-radius);
   -webkit-box-shadow: 0 1px 2px rgba(201, 211, 223, 0.2);
   box-shadow: 0 1px 2px rgba(201, 211, 223, 0.2);
-  -webkit-box-shadow: var(--theme-box-shadow);
+  // -webkit-box-shadow: var(--theme-box-shadow);
   box-shadow: var(--theme-box-shadow);
   padding: 1.5em;
   padding: var(--space-m);
@@ -982,7 +982,7 @@ fieldset {
   border-radius: var(--theme-border-radius);
   -webkit-box-shadow: 0 1px 2px rgba(201, 211, 223, 0.2);
   box-shadow: 0 1px 2px rgba(201, 211, 223, 0.2);
-  -webkit-box-shadow: var(--theme-box-shadow);
+  // -webkit-box-shadow: var(--theme-box-shadow);
   box-shadow: var(--theme-box-shadow);
   background: #fff;
   background: var(--white);
@@ -1285,7 +1285,7 @@ select.pagination__display {
   color: var(--white);
 }
 a.navbar__home {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1794,7 +1794,7 @@ a.article__link {
   float: right;
 }
 .side-pane__title h3 {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   padding-bottom: 1em;
   padding-bottom: var(--space-s);
@@ -2394,7 +2394,7 @@ section#section-thematiques.section .contact-us {
 .card-section-header {
   font-size: 1.7rem;
   line-height: 1.25em;
-  font-family: "Poppins", "lato", "sans-serif";
+  font-family: "Poppins", "lato", sans-serif;
   font-weight: bold;
 }
 @media (max-width: 750px) {
@@ -2669,13 +2669,13 @@ html {
   }
 }
 @font-face {
-  font-family: "Signika";
+  font-family: "Signika", sans-serif;
   src: url("/assets/Signika-Regular-ac82404203adfc1c7265e92814414711dce092be60d71b70256a7f137f1907a6.ttf");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  font-family: "Signika";
+  font-family: "Signika", sans-serif;
   src: url("/assets/Signika-Bold-97c28e1ed2addfcf4d8e36de80e5b44531be12749448e17642ed967b3eb0c2a2.ttf");
   font-weight: 800;
   font-display: swap;
@@ -2907,7 +2907,7 @@ form .notification.error:empty {
 .branding span {
   font-size: 19px;
   margin-bottom: 4px;
-  font-family: "Poppins", "lato", "sans-serif" !important;
+  font-family: "Poppins", "lato", sans-serif !important;
   font-weight: 400;
 }
 @media (max-width: 549px) {

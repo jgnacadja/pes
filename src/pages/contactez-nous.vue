@@ -44,8 +44,8 @@
         </div>
       </div>
       <p class="block text-center contact-us decoration">
-        <b>Vous souhaitez être accompagné sur un autre sujet ?</b>
-        <b><g-link to="/"> Découvrez les autres sujets.</g-link></b>
+        <strong>Vous souhaitez être accompagné sur un autre sujet ?</strong>
+        <strong><g-link to="/"> Découvrez les autres sujets.</g-link></strong>
       </p>
     </section>
 
@@ -57,7 +57,7 @@
           <g-image alt="" src="~/assets/5days.png" />
           <span>
             Déposez votre demande, un conseiller d'entreprise vous rappelle
-            <b>dans les 5 jours</b> (Délai moyen de prise en charge).
+            <strong>dans les 5 jours</strong> (Délai moyen de prise en charge).
           </span>
         </div>
 
@@ -263,7 +263,7 @@
                 v-if="data.success"
                 class="form__group container notif is-primary"
               >
-                <p><i class="fas fa-check"></i> {{ data.success }}</p>
+                <p><em class="fas fa-check"></em> {{ data.success }}</p>
               </div>
 
               <div class="form__group">
@@ -375,9 +375,6 @@ export default {
     };
   },
   mounted() {
-    // Get current url
-    var pathname = window.location.pathname;
-
     // Get current cartegory
     this.cartegory = ""
   },
@@ -406,10 +403,6 @@ export default {
         siret: null,
         description: null,
       };
-
-      // const service_id = process.env.EMAIL_JS_SERVICE_ID;
-      // const template_id = process.env.EMAIL_JS_TEMPLATE_ID;
-      // const user_id = process.env.EMAIL_JS_USER_ID;
 
       const service_id = "service_zo2s5ud";
       const template_id = "template_tkt44iv";
@@ -446,7 +439,6 @@ export default {
         this.data.data.enterprise != null &&
         this.data.data.secteur != null
       ) {
-        try {
           this.data.loading = true;
           var vm = this;
 
@@ -474,10 +466,11 @@ export default {
                vm.seenform =  false;
                vm.seenContent = true;
 
+            })
+            .catch(e => {
+              this.data.loading = false;
+              console.log("Failed to run promise", e)
             });
-        } catch (error) {
-          this.data.loading = false;
-        }
       }
 
       e.preventDefault();
@@ -523,7 +516,7 @@ export default {
   .card-section-header {
     font-size: 1.7rem;
     line-height: 1.25em;
-    font-family: "Evolventa", "lato", "sans-serif";
+    font-family: "Evolventa", "lato", sans-serif;
     font-weight: bold;
   }
 }

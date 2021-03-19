@@ -3,7 +3,7 @@
     <div class="container">
       <ul class="footer__links">
         <li class="marianne">
-          <a href="https://ccibenin.org" target="_blank">
+          <a href="https://ccibenin.org" target="_blank" rel="noopener">
             <figure class="image">
               <g-image
                 src="~/assets/logo/ccib_bn.png"
