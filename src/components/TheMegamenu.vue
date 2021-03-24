@@ -49,7 +49,7 @@
             <li class="nav__item">
               <a href="/comment-ca-marche">Comment ça marche ?</a>
             </li>
-          <ul>
+          </ul>
         </div>
       </div>
     </div>

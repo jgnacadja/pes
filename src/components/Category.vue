@@ -33,7 +33,7 @@ export default {
   },
   mounted() {
     if (this.toform != "") {
-      this.link = this.category.node.forms[0].path;
+      this.link = this.category.node.forms[0].path + "#section-formulaire";
     } else {
       this.link = this.category.node.path + "#section-thematiques";
     }
