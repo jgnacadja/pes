@@ -380,9 +380,13 @@ export default {
       // const template_id = process.env.EMAIL_JS_TEMPLATE_ID;
       // const user_id = process.env.EMAIL_JS_USER_ID;
 
-      const service_id = "service_zo2s5ud";
-      const template_id = "template_tkt44iv";
-      const user_id = "user_awurVWpPY1ipKOSkoyWx0";
+      // const service_id = "service_zo2s5ud";
+      // const template_id = "template_tkt44iv";
+      // const user_id = "user_awurVWpPY1ipKOSkoyWx0";
+
+      const service_id = "service_b5nbvqf";
+      const template_id = "template_vtmddjc";
+      const user_id = "user_PsWE48TyrajqLoU176FPb";
 
       if (!this.data.data.enterprise) {
         this.data.errors.enterprise = "Le nom de l'entreprise est requis";
