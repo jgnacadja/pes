@@ -224,6 +224,14 @@
                   class="button large is-link is-loading"
                 ></button>
                 <input
+                    type="hidden"
+                    required="required"
+                    name="sujetMessage"
+                    id="sujetMessage"
+                    value=sujet
+                    v-model="data.data.sujetMessage"
+                  />
+                <input
                   v-if="!data.loading"
                   type="submit"
                   name="commit"
@@ -320,6 +328,7 @@ export default {
       cartegories: [],
       cartegory: {},
       formContent: "",
+      sujet: "",
       data: {
         errors: {
           fullName: "",
@@ -332,6 +341,7 @@ export default {
           secteur: "",
           website: "",
           taille: "",
+          sujetMessage: ""
         },
         data: {
           fullName: null,
@@ -343,6 +353,7 @@ export default {
           secteur: null,
           website: "",
           taille: "100",
+          sujetMessage: null
         },
         success: null,
       },
@@ -351,14 +362,26 @@ export default {
   mounted() {
     // Get current url
     var pathname = window.location.pathname;
+    var cartegories = this.$page.categories.edges;
 
     // Get current cartegory
-    this.cartegory = this.$page.categories.edges.filter(
+    this.cartegory = cartegories.filter(
       (item) =>
         item.node.forms.length > 0 && item.node.forms[0].path == pathname
     )[0];
 
     this.formContent = this.cartegory.node.formContent;
+
+
+    // Sujet Email
+    var currentCartegory = cartegories.filter((item) => 
+      item.node.forms.length > 0 &&
+      item.node.forms[0].path==pathname)[0]   
+
+    var parent = cartegories.filter((item) => item.node.id == currentCartegory.node.parent)[0];
+
+    this.sujet = parent.node.title + " - " + currentCartegory.node.title.toLowerCase();
+    this.data.data.sujetMessage = parent.node.title + " - " + currentCartegory.node.title.toLowerCase();
   },
   methods: {
     chunkArray(arr, chunkCount) {
@@ -368,6 +391,7 @@ export default {
       return result;
     },
     checkForm: function (e) {
+
       this.data.errors = {
         fullName: null,
         phone: null,
@@ -379,10 +403,6 @@ export default {
       // const service_id = process.env.EMAIL_JS_SERVICE_ID;
       // const template_id = process.env.EMAIL_JS_TEMPLATE_ID;
       // const user_id = process.env.EMAIL_JS_USER_ID;
-
-      // const service_id = "service_zo2s5ud";
-      // const template_id = "template_tkt44iv";
-      // const user_id = "user_awurVWpPY1ipKOSkoyWx0";
 
       const service_id = "service_b5nbvqf";
       const template_id = "template_vtmddjc";
@@ -417,10 +437,15 @@ export default {
         this.data.data.ifu != null &&
         this.data.data.description != null &&
         this.data.data.enterprise != null &&
-        this.data.data.secteur != null
+        this.data.data.secteur != null &&
+        this.data.data.sujetMessage != null
       ) {
-          this.data.loading = true;
+          this.data.loading = true;    
+          
           var vm = this;
+          console.log(this.data.data); 
+          console.log("data pret à envoyer : " + this.data.data); 
+          console.log("Le sujetMessage de ma demande : " + this.data.data.sujetMessage); 
 
           emailjs
             .sendForm(
