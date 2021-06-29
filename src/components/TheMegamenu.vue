@@ -47,7 +47,7 @@
         <div class="column is-12">
           <ul>
             <li class="nav__item">
-              <a href="/comment-ca-marche">Comment ça marche ?</a>
+              <a href="/comment-ca-marche">Comment ça marche arsene ?</a>
             </li>
           </ul>
         </div>
