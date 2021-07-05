@@ -181,22 +181,21 @@
                 <div class="explanation contentMarges">
                   <div>
                     <g-image alt="" src="~/assets/infos-alert.png" />
-                    <span>
-                      {{ formContent }} <br><br>
-                    </span>
+                    <span> {{ formContent }} <br /><br /> </span>
                   </div>
                   <span>
-                      Pour une meilleure prise en charge de votre demande, indiquez en quelques phrases :
-                  </span> <br>
+                    Pour une meilleure prise en charge de votre demande,
+                    indiquez en quelques phrases :
+                  </span>
+                  <br />
                   <div class="block contentMarges">
                     <ul>
                       <li>votre activité</li>
-                      <li>
-                        vos préoccupations
-                      </li>
+                      <li>vos préoccupations</li>
                     </ul>
-                  </div> 
-                </div> <br>
+                  </div>
+                </div>
+                <br />
                 <textarea
                   placeholder="Décrivez votre demande."
                   rows="6"
@@ -224,13 +223,13 @@
                   class="button large is-link is-loading"
                 ></button>
                 <input
-                    type="hidden"
-                    required="required"
-                    name="sujetMessage"
-                    id="sujetMessage"
-                    value=sujet
-                    v-model="data.data.sujetMessage"
-                  />
+                  type="hidden"
+                  required="required"
+                  name="sujetMessage"
+                  id="sujetMessage"
+                  value="sujet"
+                  v-model="data.data.sujetMessage"
+                />
                 <input
                   v-if="!data.loading"
                   type="submit"
@@ -341,7 +340,7 @@ export default {
           secteur: "",
           website: "",
           taille: "",
-          sujetMessage: ""
+          sujetMessage: "",
         },
         data: {
           fullName: null,
@@ -353,7 +352,7 @@ export default {
           secteur: null,
           website: "",
           taille: "100",
-          sujetMessage: null
+          sujetMessage: null,
         },
         success: null,
       },
@@ -372,16 +371,20 @@ export default {
 
     this.formContent = this.cartegory.node.formContent;
 
-
     // Sujet Email
-    var currentCartegory = cartegories.filter((item) => 
-      item.node.forms.length > 0 &&
-      item.node.forms[0].path==pathname)[0]   
+    var currentCartegory = cartegories.filter(
+      (item) =>
+        item.node.forms.length > 0 && item.node.forms[0].path == pathname
+    )[0];
 
-    var parent = cartegories.filter((item) => item.node.id == currentCartegory.node.parent)[0];
+    var parent = cartegories.filter(
+      (item) => item.node.id == currentCartegory.node.parent
+    )[0];
 
-    this.sujet = parent.node.title + " - " + currentCartegory.node.title.toLowerCase();
-    this.data.data.sujetMessage = parent.node.title + " - " + currentCartegory.node.title.toLowerCase();
+    this.sujet =
+      parent.node.title + " - " + currentCartegory.node.title.toLowerCase();
+    this.data.data.sujetMessage =
+      parent.node.title + " - " + currentCartegory.node.title.toLowerCase();
   },
   methods: {
     chunkArray(arr, chunkCount) {
@@ -391,7 +394,6 @@ export default {
       return result;
     },
     checkForm: function (e) {
-
       this.data.errors = {
         fullName: null,
         phone: null,
@@ -399,10 +401,6 @@ export default {
         siret: null,
         description: null,
       };
-
-      // const service_id = process.env.EMAIL_JS_SERVICE_ID;
-      // const template_id = process.env.EMAIL_JS_TEMPLATE_ID;
-      // const user_id = process.env.EMAIL_JS_USER_ID;
 
       const service_id = "service_b5nbvqf";
       const template_id = "template_vtmddjc";
@@ -440,38 +438,33 @@ export default {
         this.data.data.secteur != null &&
         this.data.data.sujetMessage != null
       ) {
-          this.data.loading = true;    
-          
-          var vm = this;
-          console.log(this.data.data); 
-          console.log("data pret à envoyer : " + this.data.data); 
-          console.log("Le sujetMessage de ma demande : " + this.data.data.sujetMessage); 
+        this.data.loading = true;
 
-          emailjs
-            .sendForm(
-              service_id,
-              template_id,
-              e.target,
-              user_id,
-              this.data.data
-            )
-            .then(function (results) {
-              vm.data.loading = false;
-              vm.data.data.fullName = null;
-              vm.data.data.phone = null;
-              vm.data.data.email = null;
-              vm.data.data.ifu = null;
-              vm.data.data.description = null;
-              vm.data.data.secteur = null;
-              vm.data.data.taille = 100;
-              vm.data.data.website = null;
-              vm.data.success = "Votre demande a été envoyé";
-            })
-            .catch(e => {
-              this.data.loading = false;
-              console.log("Failed to run promise", e)
-            });
-        
+        var vm = this;
+        console.log(this.data.data);
+        console.log("data pret à envoyer : " + this.data.data);
+        console.log(
+          "Le sujetMessage de ma demande : " + this.data.data.sujetMessage
+        );
+
+        emailjs
+          .sendForm(service_id, template_id, e.target, user_id, this.data.data)
+          .then(function (results) {
+            vm.data.loading = false;
+            vm.data.data.fullName = null;
+            vm.data.data.phone = null;
+            vm.data.data.email = null;
+            vm.data.data.ifu = null;
+            vm.data.data.description = null;
+            vm.data.data.secteur = null;
+            vm.data.data.taille = 100;
+            vm.data.data.website = null;
+            vm.data.success = "Votre demande a été envoyé";
+          })
+          .catch((e) => {
+            this.data.loading = false;
+            console.log("Failed to run promise", e);
+          });
       }
 
       e.preventDefault();

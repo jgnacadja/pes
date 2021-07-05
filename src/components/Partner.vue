@@ -45,15 +45,15 @@
           />
 
           <g-image
-            alt="Ecobank"
-            title="Ecobank"
+            alt="apbef"
+            title="apbef"
             class="institution_logo"
             src="~/assets/partners/apbef.png"
           />
 
           <g-image
-            alt="UBA"
-            title="UBA"
+            alt="ASSA BENIN"
+            title="ASSA BENIN"
             class="institution_logo"
             src="~/assets/partners/assa.png"
           />

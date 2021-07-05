@@ -8,7 +8,7 @@
           </div>
           <div class="column is-12 is-size-6">
             <!-- text  -->
-            +{{entreprise}} entreprises accompagnées
+            +{{ entreprise }} entreprises accompagnées
           </div>
         </div>
       </div>
@@ -19,7 +19,7 @@
           </div>
           <div class="column is-12 is-size-6">
             <!-- text  -->
-            +{{employe}} employés bénéficiaires
+            +{{ employe }} employés bénéficiaires
           </div>
         </div>
       </div>
@@ -28,32 +28,34 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 
 export default {
   props: {},
-  data () {
+  data() {
     return {
       entreprise: 0,
-      employe: 0
+      employe: 0,
+    };
+  },
+  async mounted() {
+    try {
+      var userId = "user_PsWE48TyrajqLoU176FPb";
+      var accessToken = "cb80a1ee9737bb20190c99a92acc4dd0";
+
+      const results = await axios.get(
+        "https://api.emailjs.com/api/v1.1/history?user_id=" +
+          userId +
+          "&accessToken=" +
+          accessToken
+      );
+      this.entreprise =
+        results.data.rows.length === 0 ? 10 : results.data.rows.length;
+      this.employe = this.entreprise * 10;
+    } catch (error) {
+      console.log(error);
     }
   },
-  async mounted () {
-    try {
-      var userId = 'user_awurVWpPY1ipKOSkoyWx0';
-      var accessToken = '51b9c536531862f2bed1d4d69a7fedd8'; 
-      
-      const results = await axios.get(
-        'https://api.emailjs.com/api/v1.1/history?user_id='+userId+'&accessToken='+accessToken
-      );
-
-      this.entreprise = results.data.rows.length;
-      this.employe = this.entreprise * 10;
-      
-    } catch (error) {
-      console.log(error)
-    }
-  }
 };
 </script>
 
