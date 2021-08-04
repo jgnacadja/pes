@@ -4,7 +4,8 @@
       <div class="columns is-multiline is-vcentered">
         <div class="column is-3"></div>
         <div class="column is-5 has-text-centered-mobile">
-          <strong>Impulse</strong> accélérateur du développement des entreprises.
+          <strong>Impulse</strong> accélérateur du développement des
+          entreprises.
         </div>
         <div class="column is-4-desktop is-12-touch is-12-tablet is-12-mobile">
           <a class="button is-small is-success help" href="/comment-ca-marche"
@@ -47,7 +48,7 @@
         <div class="column is-12">
           <ul>
             <li class="nav__item">
-              <a href="/comment-ca-marche">Comment ça marche arsene ?</a>
+              <a href="/comment-ca-marche">Comment ça marche ?</a>
             </li>
           </ul>
         </div>
