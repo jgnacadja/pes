@@ -22,7 +22,7 @@
     "gridsome-plugin-bundle-analyzer": "^1.0.0",
     "klaro-gridsome": "^1.0.3",
     "unist-util-is": "^4.0.4",
-    "urijs": "^1.19.7",
+    "urijs": "^1.19.11",
     "vue-infinite-loading": "^2.4.5",
     "vue-instantsearch": "^3.4.2",
     "vue-markdown": "^2.2.4",
