@@ -21,11 +21,7 @@
               </div>
 
               <div class="column is-6 has-text-justified">
-                Impulse vous aide à vous structurer et vous développer pour
-                gagner en performance. Des conseillers d'entreprise, consultants
-                et formateurs vous accompagnent dans la réalisation de
-                diagnostics et de plans d’actions personnalisés, jusqu’à la
-                mesure des résultats concrets.
+                FORMATION DEVOPS
               </div>
 
               <div class="column is-2-desktop is-8-mobile">
